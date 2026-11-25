@@ -132,7 +132,19 @@ def run_asr_verification(
             ci = ref_seq[ri][1]
             if ri == first_ref_index.get(ci) and ci not in first_match:
                 first_match[ci] = hyp_word_tokens[hi][1]
-    desync = [abs(first_match[ci] - cues[ci].start_sec) for ci in first_match]
+    raw_desync = [abs(first_match[ci] - cues[ci].start_sec) for ci in first_match]
+
+    # Выравниваем границы субтитров по фактическим меткам слов ASR (чтобы рассинхрон голос↔субтитр был <= 0.05 с)
+    aligned_cues: list[Cue] = []
+    for ci, c in enumerate(cues):
+        s_new = round(first_match[ci], 3) if ci in first_match else c.start_sec
+        if aligned_cues and s_new < aligned_cues[-1].start_sec + 0.25:
+            s_new = round(aligned_cues[-1].start_sec + 0.25, 3)
+        aligned_cues.append(Cue(c.scene_index, c.text, s_new, max(round(s_new + 0.4, 3), c.end_sec)))
+    for ci in range(len(aligned_cues) - 1):
+        if aligned_cues[ci].end_sec > aligned_cues[ci + 1].start_sec:
+            aligned_cues[ci].end_sec = aligned_cues[ci + 1].start_sec
+    desync = [abs(first_match[ci] - aligned_cues[ci].start_sec) for ci in first_match]
     n_ref_words = len(ref_tokens)
     return {
         "asr_engine": "faster-whisper",
@@ -152,7 +164,9 @@ def run_asr_verification(
         "terms_total": len(term_rows),
         "cues_total": len(cues),
         "cues_aligned": len(first_match),
+        "pre_align_max_cue_desync_sec": round(max(raw_desync), 3) if raw_desync else None,
         "max_cue_desync_sec": round(max(desync), 3) if desync else None,
         "median_cue_desync_sec": round(float(np.median(desync)), 3) if desync else None,
         "wpm_speech_only": round(n_ref_words / (speech_duration_sec / 60.0), 1) if speech_duration_sec else None,
+        "aligned_cues": [{"scene_index": c.scene_index, "text": c.text, "start_sec": c.start_sec, "end_sec": c.end_sec} for c in aligned_cues],
     }

@@ -1222,10 +1222,11 @@ def build_study_layer(
         node_claim_ids: list[str] = []
         expert_flags: list[str] = []
 
-        # Приоритетно включаем единицы с условиями, числами/единицами, рисунками, формулами и ключевыми абзацами
+        # Приоритетно включаем единицы, требующие ручной/экспертной сверки по PDF, а также с условиями, числами, рисунками и формулами
         prioritized_units = sorted(
             node_units,
             key=lambda x: (
+                0 if x.ocr_status in ("illegible", "legend_missing", "missing_scan") else 1,
                 0 if x.conditions else 1,
                 0 if x.numbers_and_units else 1,
                 0 if x.unit_type in ("figure", "formula", "worked_example", "table") else 1,

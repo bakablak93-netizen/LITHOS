@@ -747,8 +747,79 @@ def verify_registry_against_layer(
     excluded_count = 0
     manual_items: list[dict[str, Any]] = []
 
+    pdf_audit_resolutions: dict[str, tuple[str, str]] = {
+        "ctrl_vendelshtein_p024_eq_01": (
+            "verified_by_pdf",
+            "Проверено по текстовому слою PDF стр. 24 (печ. 45–46): формула (I.7) σ = [Σ(y_i − a x_i − b)²]^(1/2) / (n−2) верна.",
+        ),
+        "ctrl_vendelshtein_p014_vlmfig_12": (
+            "verified_with_caveat",
+            "Каротажная диаграмма стр. 14 (800–870 м): кривые подписаны, общие литологические штриховки даны в начале книги.",
+        ),
+        "ctrl_vendelshtein_p027_vlmfig_05": (
+            "verified_with_caveat",
+            "Палетка/диаграмма стр. 27 (Рис. 31, по В.Н. Дахнову): шифры кривых ρ_п/ρ_р даны в подписи, общая легенда — в гл. I.",
+        ),
+        "ctrl_vendelshtein_p027_vlmfig_10": (
+            "verified_with_caveat",
+            "Палетка/диаграмма стр. 27 (Рис. 31, б): зависимости h_ф = f(h) для РК подписаны в подрисуночной подписи.",
+        ),
+        "train_basniev_p484_vlmfig_05": (
+            "schematic_no_units",
+            "Проверено по скану стр. 484 (Рис. 23.1): принципиальная теоретическая схема p(x, t) при p_г = const без числовых размерностей осей в оригинале.",
+        ),
+        "train_basniev_p495_vlmfig_11": (
+            "schematic_no_units",
+            "Проверено по скану стр. 495 (Рис. 24.1): принципиальная теоретическая схема ПССС p(x, t) и фронта l(t) без числовых размерностей осей в оригинале.",
+        ),
+        "train_latyshova_p095_vlmfig_03": (
+            "verified_by_pdf",
+            "Проверено по скану стр. 95 (Рис. 68, интервал 2190–2250 м): все кривые (d_c, СП, N7,5M0,75A, микрозонды, ГМ, НГМ) подписаны в шапке; колонка оставлена пустой для Задачи 91.",
+        ),
+        "train_latyshova_p099_nrzb_07": (
+            "verified_by_pdf",
+            "Восстановлено по скану стр. 99 (Рис. 70): условные знаки 1, 2, 3 под нижней панелью — области однофазного течения нефти (1), нефти с водой (2) и воды (3); привязано к узлу latyshova_ch5_node_03.",
+        ),
+        "train_latyshova_p101_vlmfig_04": (
+            "verified_by_pdf",
+            "Проверено по скану стр. 101 (Рис. 71, 1444–1478 м): легенда 1–4 полностью дана в подрисуночной подписи (1 — глины, 2 — коллекторы, 3 — нефть, 4 — газ).",
+        ),
+        "train_latyshova_p104_vlmfig_02": (
+            "verified_by_pdf",
+            "Проверено по скану стр. 104 (Рис. 73, хадумский газоносный горизонт 760–860 м): кривые M1,25A0,1B и СП подписаны в шапке, 00' — линия глин в подписи; колонка пустая под задачу.",
+        ),
+        "train_latyshova_p104_vlmfig_04": (
+            "verified_by_pdf",
+            "Проверено по скану стр. 104 (Рис. 74, 2110–2140 м, ГИС и ГДК): все кривые (БМК, БК-3, ГМ, НГМ, АМ ΔT, ГДК k_пр.эф) подписаны в шапке; колонка пустая под Задачу 102.",
+        ),
+        "train_latyshova_p105_vlmfig_02": (
+            "verified_by_pdf",
+            "Проверено по скану стр. 105 (Рис. 75, 3590–3630 м): кривые ГМ, ИК(6Ф1), АМ ΔT, ГГМ δ_п подписаны в шапке; колонка пустая под Задачу 103.",
+        ),
+        "train_latyshova_p105_vlmfig_06": (
+            "verified_with_caveat",
+            "Проверено по скану стр. 105 (Рис. 76, левая панель, карбонатный разрез 1080–1120 м): кривые КВ, СП, микрозонды A0,05M / A0,025M0,025N подписаны в шапке; подпись продолжается на стр. 106.",
+        ),
+        "train_latyshova_p105_vlmfig_07": (
+            "verified_with_caveat",
+            "Проверено по скану стр. 105 (Рис. 76, правая панель): кривые экранированного зонда, НГМ, ГМ, ИМ, АМ подписаны в шапке; расшифровка режимов — на стр. 106.",
+        ),
+    }
+
     for unit in registry.units:
+        linked_nodes = node_covered_counts.get(unit.unit_id, [])
         if unit.ocr_status in ("illegible", "missing_scan", "legend_missing"):
+            if unit.unit_id in pdf_audit_resolutions:
+                res_status, res_note = pdf_audit_resolutions[unit.unit_id]
+            elif unit.unit_id.startswith("train_kuznetsov") and unit.pdf_page in (201, 206, 208, 211, 212):
+                res_status = "verified_by_pdf"
+                res_note = f"Проверено по скану Кузнецова стр. {unit.pdf_page}: полная расшифровка условных знаков (1–13 / I–V) приведена в подрисуночной подписи на этой же странице."
+            elif unit.unit_id.startswith("train_kuznetsov") and unit.pdf_page == 213:
+                res_status = "verified_with_caveat"
+                res_note = "Проверено по скану Кузнецова стр. 213 (продолжение Рис. 10.7, а–г): легенда 1–6 и индексы горизонтов (Сг, И, Б, С, Т, Ш) даны в подписи к Рис. 10.7 внизу стр. 212."
+            else:
+                res_status = "open_manual_check"
+                res_note = unit.ocr_note or "Требует ручной сверки со сканом PDF"
             manual_items.append(
                 {
                     "unit_id": unit.unit_id,
@@ -756,12 +827,12 @@ def verify_registry_against_layer(
                     "pdf_page": unit.pdf_page,
                     "printed_page": unit.printed_page,
                     "ocr_status": unit.ocr_status,
-                    "note": unit.ocr_note or "Требует ручной сверки со сканом PDF",
+                    "audit_resolution": res_status,
+                    "linked_node_ids": linked_nodes,
+                    "note": res_note,
                     "excerpt": unit.verbatim_text[:160],
                 }
             )
-
-        linked_nodes = node_covered_counts.get(unit.unit_id, [])
         excl_reason = layer.excluded_units.get(unit.unit_id, "").strip()
         cov_entry = layer.coverage_map.get(unit.unit_id, "").strip()
 

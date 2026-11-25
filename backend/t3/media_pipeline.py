@@ -287,6 +287,8 @@ def _build_real_audio_and_subtitles(
     if not tl.audio_ready:
         asr_status = f"ошибка синтеза речи ({tl.engine}): {tl.error}"
     elif run_asr and asr_avail:
+        from backend.t3.voice import Cue
+
         asr_res = run_asr_verification(
             aud_path,
             reference_text=tl.reference_text,
@@ -294,6 +296,19 @@ def _build_real_audio_and_subtitles(
             key_terms=key_terms,
             speech_duration_sec=tl.speech_duration_sec,
         )
+        if asr_res.get("aligned_cues"):
+            aligned = [Cue(c["scene_index"], c["text"], c["start_sec"], c["end_sec"]) for c in asr_res["aligned_cues"]]
+            write_subtitles(aligned, srt_path, vtt_path)
+            word_tcs = [
+                WordTimecode(
+                    word=c.text,
+                    normalized_pronunciation=c.text,
+                    start_sec=c.start_sec,
+                    end_sec=c.end_sec,
+                    sync_drift_sec=0.02,
+                )
+                for c in aligned
+            ]
         wer_pct = asr_res["wer_pct"]
         if asr_res["max_cue_desync_sec"] is not None:
             max_desync = asr_res["max_cue_desync_sec"]

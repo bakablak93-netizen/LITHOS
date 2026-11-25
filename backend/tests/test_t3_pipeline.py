@@ -595,3 +595,17 @@ def test_stage3_tts_silence_fallback_marks_audio_error(tmp_path: Path, monkeypat
     assert tl.error is not None and "ОШИБКА СИНТЕЗА РЕЧИ" in tl.error
     assert out_mp3.exists()
 
+
+def test_python_and_typescript_latyshova_physics_sync() -> None:
+    """
+    Регрессионный тест согласованности физической модели ГИС Латышовой между Python (latyshova_gis.py)
+    и TypeScript 3D-лабораторией (LatyshovaProbeLab.tsx): температурный коэффициент ПС при 65 °C и отсечка K_п >= 0,12.
+    """
+    py_src = (Path(__file__).resolve().parents[1] / "physics_engine" / "latyshova_gis.py").read_text(encoding="utf-8")
+    ts_src = (Path(__file__).resolve().parents[2] / "web_ui" / "src" / "labs" / "LatyshovaProbeLab.tsx").read_text(encoding="utf-8")
+    assert "69.6 * (273.0 + temp_c) / 291.0" in py_src
+    assert "(69.6 * (273.0 + 65.0)) / 291.0" in ts_src
+    assert "kp_cutoff = 0.12" in py_src
+    assert "asp >= 0.45 && kp >= 0.12" in ts_src
+
+
