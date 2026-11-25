@@ -6,14 +6,18 @@ FastAPI роутер Т3 «Глава → курс» (backend/study_api.py).
 from __future__ import annotations
 
 import json
+import threading
+import uuid
+from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any
 
-from fastapi import APIRouter, HTTPException
+from fastapi import APIRouter, File, Form, HTTPException, UploadFile
 from fastapi.responses import FileResponse
 from pydantic import BaseModel
 
 from backend.t3.bookmarks_verifier import run_internal_calibration_benchmark
+from backend.t3.custom_book import BookExtractError, build_custom_course_package, extract_book_pages
 from backend.t3.models import StudyCoursePackage
 from backend.t3.pipeline import (
     build_all_six_t3_courses,
@@ -92,6 +96,7 @@ def list_t3_courses() -> list[dict[str, Any]]:
                 "book_title": pkg.book_title,
                 "chapter_title": pkg.chapter_title,
                 "is_training": pkg.is_training,
+                "is_custom": False,
                 "steps_count": len(pkg.steps),
                 "tasks_count": len(pkg.tasks),
                 "flashcards_count": len(pkg.flashcards),
@@ -104,6 +109,34 @@ def list_t3_courses() -> list[dict[str, Any]]:
                 "media_passports_count": len(pkg.media_passports),
             }
         )
+    # Добавляем пользовательские курсы (custom_*), созданные через мастер загрузки
+    for pkg_file in sorted(output_dir.glob("custom_*/t3_course_package.json"), reverse=True):
+        try:
+            pkg = StudyCoursePackage.model_validate_json(pkg_file.read_text(encoding="utf-8"))
+            summaries.insert(
+                0,
+                {
+                    "course_id": pkg.course_id,
+                    "book_file": pkg.book_file,
+                    "pdf_file": pkg.pdf_file,
+                    "book_title": pkg.book_title,
+                    "chapter_title": pkg.chapter_title,
+                    "is_training": False,
+                    "is_custom": True,
+                    "steps_count": len(pkg.steps),
+                    "tasks_count": len(pkg.tasks),
+                    "flashcards_count": len(pkg.flashcards),
+                    "registry_passed": pkg.registry_report.passed,
+                    "registry_units_total": pkg.registry_report.total_registry_units,
+                    "needs_model_steps": pkg.routing_report.needs_model_steps,
+                    "offline_html_url": pkg.offline_html_url,
+                    "offline_zip_url": pkg.offline_zip_url,
+                    "offline_package_size_mb": pkg.offline_package_size_mb,
+                    "media_passports_count": len(pkg.media_passports),
+                },
+            )
+        except Exception:
+            continue
     return summaries
 
 
@@ -196,3 +229,208 @@ def download_t3_offline_zip(course_id: str) -> FileResponse:
     if not zip_path.exists():
         raise HTTPException(status_code=404, detail="ZIP-архив автономного курса не найден.")
     return FileResponse(path=str(zip_path), filename=zip_path.name, media_type="application/zip")
+
+
+# ------------------------------------------------------------------
+# Реальный мастер «Своя книга → Глава → Курс» с сохранением статуса
+# ------------------------------------------------------------------
+
+_JOBS_LOCK = threading.Lock()
+
+
+def _jobs_path(output_dir: Path) -> Path:
+    return output_dir / "_custom_jobs.json"
+
+
+def _load_jobs(output_dir: Path) -> dict[str, dict[str, Any]]:
+    p = _jobs_path(output_dir)
+    if not p.exists():
+        return {}
+    try:
+        return json.loads(p.read_text(encoding="utf-8"))
+    except Exception:
+        return {}
+
+
+def _save_job(output_dir: Path, job_id: str, data: dict[str, Any]) -> None:
+    with _JOBS_LOCK:
+        jobs = _load_jobs(output_dir)
+        jobs[job_id] = data
+        _jobs_path(output_dir).write_text(json.dumps(jobs, ensure_ascii=False, indent=2), encoding="utf-8")
+
+
+class CustomBuildRequest(BaseModel):
+    book_id: str = ""
+    library_book: str = ""
+    chapter_title: str = "Выбранная глава"
+    start_page: int = 1
+    end_page: int = 10
+
+
+@router.post("/books/inspect")
+async def inspect_book_for_course(
+    file: UploadFile | None = File(default=None),
+    library_book: str = Form(default=""),
+) -> dict[str, Any]:
+    """Принимает загруженный .pdf / .md / .txt или библиотечную книгу, возвращает главы и предпросмотр страниц."""
+    data_dir, output_dir = _get_dirs()
+    upload_dir = output_dir / "_uploaded_books"
+    upload_dir.mkdir(parents=True, exist_ok=True)
+
+    if file and file.filename:
+        safe_name = Path(file.filename).name
+        book_id = f"up_{uuid.uuid4().hex[:10]}"
+        raw_path = upload_dir / f"{book_id}_{safe_name}"
+        content = await file.read()
+        if not content:
+            raise HTTPException(status_code=400, detail=f"Файл «{safe_name}» пустой. Выберите непустой файл (.pdf, .md, .txt).")
+        raw_path.write_bytes(content)
+        try:
+            meta = extract_book_pages(raw_path, safe_name)
+        except BookExtractError as exc:
+            raw_path.unlink(missing_ok=True)
+            raise HTTPException(status_code=422, detail=str(exc)) from exc
+        meta["book_id"] = book_id
+        (upload_dir / f"{book_id}.json").write_text(json.dumps(meta, ensure_ascii=False), encoding="utf-8")
+        return {
+            "book_id": book_id,
+            "file_name": meta["file_name"],
+            "format": meta["format"],
+            "total_pages": meta["total_pages"],
+            "chapters": meta["chapters"],
+            "warnings": meta["warnings"],
+            "is_library": False,
+        }
+
+    if library_book:
+        src = data_dir / "books" / Path(library_book).name
+        if not src.exists():
+            raise HTTPException(status_code=404, detail=f"Книга «{library_book}» не найдена в библиотеке.")
+        cat = BOOK_CATALOG.get(src.name)
+        book_id = f"lib_{src.stem}"
+        try:
+            meta = extract_book_pages(src, src.name)
+        except BookExtractError as exc:
+            raise HTTPException(status_code=422, detail=str(exc)) from exc
+        meta["book_id"] = book_id
+        (upload_dir / f"{book_id}.json").write_text(json.dumps(meta, ensure_ascii=False), encoding="utf-8")
+        chapters = meta["chapters"]
+        if cat:
+            # Ставим штатную главу Т3 первой в списке
+            r0 = cat["pdf_ranges"][0]
+            chapters = [
+                {
+                    "index": 0,
+                    "title": cat["chapter_title"],
+                    "start_page": r0["start_pdf_page"],
+                    "end_page": cat["pdf_ranges"][-1]["end_pdf_page"],
+                    "preview": f"Штатная глава Т3 ({cat['book_title']}). Диапазон PDF: {r0['start_pdf_page']}–{cat['pdf_ranges'][-1]['end_pdf_page']}.",
+                    "is_t3_default": True,
+                }
+            ] + [dict(ch, index=ch["index"] + 1) for ch in chapters[:12]]
+        return {
+            "book_id": book_id,
+            "library_book": src.name,
+            "file_name": src.name,
+            "format": "md",
+            "total_pages": meta["total_pages"],
+            "chapters": chapters,
+            "warnings": meta["warnings"],
+            "is_library": True,
+        }
+
+    raise HTTPException(status_code=400, detail="Передайте файл книги (.pdf, .md, .txt) или выберите книгу из библиотеки.")
+
+
+@router.post("/books/build-custom")
+def start_custom_course_build(req: CustomBuildRequest) -> dict[str, Any]:
+    """Запускает реальную сборку курса по выбранной главе/диапазону страниц и сохраняет прогресс на диск."""
+    data_dir, output_dir = _get_dirs()
+    upload_dir = output_dir / "_uploaded_books"
+    job_id = f"job_{uuid.uuid4().hex[:10]}"
+    now = datetime.now(timezone.utc).isoformat()
+
+    job_state: dict[str, Any] = {
+        "job_id": job_id,
+        "status": "queued",
+        "progress_pct": 5,
+        "stage": "Подготовка сборки",
+        "chapter_title": req.chapter_title,
+        "start_page": req.start_page,
+        "end_page": req.end_page,
+        "course_id": None,
+        "error": None,
+        "pipeline_used": "T3 (полный конвейер)" if req.library_book and req.library_book in BOOK_CATALOG else "T3 Custom Book (PDF/MD/TXT → слой → задания → ZIP)",
+        "created_at": now,
+        "updated_at": now,
+    }
+    _save_job(output_dir, job_id, job_state)
+
+    def _worker() -> None:
+        def _upd(pct: int, stage: str) -> None:
+            job_state["status"] = "running"
+            job_state["progress_pct"] = pct
+            job_state["stage"] = stage
+            job_state["updated_at"] = datetime.now(timezone.utc).isoformat()
+            _save_job(output_dir, job_id, job_state)
+
+        try:
+            if req.library_book and req.library_book in BOOK_CATALOG:
+                _upd(25, "Сверка независимого реестра и построение учебного слоя Т3")
+                cid = f"t3_{BOOK_CATALOG[req.library_book]['book_id']}"
+                existing = output_dir / cid / "t3_course_package.json"
+                if existing.exists():
+                    _upd(75, "Загрузка готового верифицированного пакета Т3")
+                    pkg = StudyCoursePackage.model_validate_json(existing.read_text(encoding="utf-8"))
+                else:
+                    pkg = build_t3_course_package(
+                        data_dir=data_dir,
+                        output_dir=output_dir,
+                        book_file=req.library_book,
+                        render_mp4=False,
+                    )
+            else:
+                meta_path = upload_dir / f"{req.book_id}.json"
+                if not meta_path.exists():
+                    raise BookExtractError("Загруженная книга не найдена. Загрузите файл повторно.")
+                meta = json.loads(meta_path.read_text(encoding="utf-8"))
+                pkg = build_custom_course_package(
+                    book_meta=meta,
+                    chapter_title=req.chapter_title,
+                    start_page=req.start_page,
+                    end_page=req.end_page,
+                    output_dir=output_dir,
+                    progress_cb=_upd,
+                )
+            job_state["status"] = "completed"
+            job_state["progress_pct"] = 100
+            job_state["stage"] = "Курс готов"
+            job_state["course_id"] = pkg.course_id
+            job_state["updated_at"] = datetime.now(timezone.utc).isoformat()
+            _save_job(output_dir, job_id, job_state)
+        except Exception as exc:
+            job_state["status"] = "failed"
+            job_state["stage"] = "Ошибка сборки"
+            job_state["error"] = str(exc)
+            job_state["updated_at"] = datetime.now(timezone.utc).isoformat()
+            _save_job(output_dir, job_id, job_state)
+
+    threading.Thread(target=_worker, daemon=True).start()
+    return job_state
+
+
+@router.get("/jobs/{job_id}")
+def get_custom_job(job_id: str) -> dict[str, Any]:
+    _, output_dir = _get_dirs()
+    jobs = _load_jobs(output_dir)
+    if job_id not in jobs:
+        raise HTTPException(status_code=404, detail=f"Задача сборки '{job_id}' не найдена.")
+    return jobs[job_id]
+
+
+@router.get("/jobs")
+def list_custom_jobs() -> list[dict[str, Any]]:
+    _, output_dir = _get_dirs()
+    jobs = _load_jobs(output_dir)
+    return sorted(jobs.values(), key=lambda j: j.get("created_at", ""), reverse=True)[:15]
+
