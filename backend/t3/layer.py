@@ -1561,9 +1561,11 @@ def verify_layer_pedagogical_invariants(layer: StudyLayer) -> dict[str, Any]:
     5) устойчивость ссылок и заголовки шагов 3–7 слов.
     """
     node_orders = {n.node_id: n.order for n in layer.nodes}
+    claim_ids_set = {c.claim_id for c in layer.claims}
 
     prereq_violations: list[str] = []
     prereq_cycles: list[str] = []
+    dangling_links: list[str] = []
     title_word_violations: list[str] = []
     unbacked_nodes: list[str] = []
     missing_modern_analogs: list[str] = []
@@ -1580,10 +1582,17 @@ def verify_layer_pedagogical_invariants(layer: StudyLayer) -> dict[str, Any]:
         if not node.claim_ids or not node.quotes_and_pages:
             unbacked_nodes.append(node.node_id)
 
+        for cid in node.claim_ids:
+            if cid not in claim_ids_set:
+                dangling_links.append(f"{node.node_id}->missing_claim:{cid}")
+
         if not node.modern_equivalents:
             missing_modern_analogs.append(node.node_id)
 
         for link in node.typed_links:
+            if link.source_node_id not in node_orders or link.target_node_id not in node_orders:
+                dangling_links.append(f"missing_node:{link.source_node_id}->{link.target_node_id}")
+                continue
             if link.link_type == "prerequisite":
                 adj.setdefault(link.source_node_id, []).append(link.target_node_id)
                 src_ord = node_orders.get(link.source_node_id, 0)
@@ -1617,6 +1626,7 @@ def verify_layer_pedagogical_invariants(layer: StudyLayer) -> dict[str, Any]:
     all_passed = (
         not prereq_violations
         and not prereq_cycles
+        and not dangling_links
         and not title_word_violations
         and not unbacked_nodes
         and not missing_modern_analogs
@@ -1628,13 +1638,15 @@ def verify_layer_pedagogical_invariants(layer: StudyLayer) -> dict[str, Any]:
         "early_term_definition_ok": len(late_term_definitions) == 0,
         "prerequisite_order_ok": len(prereq_violations) == 0,
         "prerequisite_dag_acyclic_ok": len(prereq_cycles) == 0,
+        "dangling_links_ok": len(dangling_links) == 0,
         "modern_equivalents_ok": len(missing_modern_analogs) == 0,
         "claims_linked_to_evidence_ok": len(unbacked_nodes) == 0,
         "step_titles_3_to_7_words_ok": len(title_word_violations) == 0,
-        "stable_ids_ok": True,
+        "stable_ids_ok": len(dangling_links) == 0,
         "violations": {
             "prerequisite_violations": prereq_violations,
             "prerequisite_cycles": prereq_cycles,
+            "dangling_links": dangling_links,
             "title_word_violations": title_word_violations,
             "unbacked_nodes": unbacked_nodes,
             "missing_modern_analogs": missing_modern_analogs,

@@ -520,3 +520,78 @@ def test_t3_v2_official_ranges_dag_domain_package_scene_specs_and_external_bookm
     assert ext_rep.counts_by_verdict.get("confirmed_violation", 0) >= 1
     assert ext_rep.counts_by_verdict.get("insufficient_evidence", 0) >= 1
 
+
+def test_stage1_negative_wrong_quote_page_number_cycle_and_dangling_id() -> None:
+    """
+    Негативные проверки Т3:
+    1) подмена страницы у цитаты;
+    2) подмена числа в утверждении;
+    3) цикл в графе предпосылок (DAG);
+    4) висячий идентификатор связи/утверждения.
+    """
+    from backend.t3.models import TypedNodeLink
+
+    reg = build_independent_registry(DATA_DIR, "train_latyshova.md")
+    layer, _ = build_study_layer(DATA_DIR, "train_latyshova.md", registry=reg)
+
+    # 1. Подмена страницы цитаты
+    bad_page = copy.deepcopy(layer)
+    bad_page.nodes[0].quotes_and_pages[0].pdf_page = 99 if bad_page.nodes[0].quotes_and_pages[0].pdf_page != 99 else 101
+    rep_page = verify_registry_against_layer(reg, bad_page)
+    assert rep_page.passed is False
+    assert any(d.discrepancy_type == "wrong_page" for d in rep_page.discrepancies)
+
+    # 2. Подмена числа в утверждении
+    bad_num = copy.deepcopy(layer)
+    target_cl = next(c for c in bad_num.claims if reg.units and any(u.unit_id == c.unit_id and u.numbers_and_units for u in reg.units))
+    target_cl.claim_text = "Искусственно подменённое число 999999 Ом·м без исходных значений"
+    target_cl.numbers_and_units = [{"value": "999999", "unit": "Ом·м"}]
+    rep_num = verify_registry_against_layer(reg, bad_num)
+    assert rep_num.passed is False
+    assert any(d.discrepancy_type in ("wrong_number", "wrong_unit") for d in rep_num.discrepancies)
+
+    # 3. Цикл в графе предпосылок
+    bad_cycle = copy.deepcopy(layer)
+    n0, n1 = bad_cycle.nodes[0], bad_cycle.nodes[1]
+    n0.typed_links.append(
+        TypedNodeLink(
+            source_node_id=n1.node_id,
+            target_node_id=n0.node_id,
+            link_type="prerequisite",
+            link_label_ru="Обратная циклическая предпосылка",
+            rationale="Тест обнаружения цикла",
+        )
+    )
+    inv_cycle = verify_layer_pedagogical_invariants(bad_cycle)
+    assert inv_cycle["passed"] is False
+    assert inv_cycle["prerequisite_dag_acyclic_ok"] is False
+
+    # 4. Висячий ID (несуществующий claim_id и несуществующий node_id)
+    bad_dangling = copy.deepcopy(layer)
+    bad_dangling.nodes[0].claim_ids.append("non_existent_claim_999")
+    bad_dangling.nodes[0].typed_links.append(
+        TypedNodeLink(
+            source_node_id=bad_dangling.nodes[0].node_id,
+            target_node_id="non_existent_node_999",
+            link_type="example",
+            link_label_ru="Висячая ссылка",
+            rationale="Тест висячей ссылки",
+        )
+    )
+    inv_dangling = verify_layer_pedagogical_invariants(bad_dangling)
+    assert inv_dangling["passed"] is False
+    assert inv_dangling["dangling_links_ok"] is False
+
+
+def test_stage3_tts_silence_fallback_marks_audio_error(tmp_path: Path, monkeypatch: pytest.MonkeyPatch) -> None:
+    """Если синтез речи недоступен (silence fallback), отчёт обязан выставить audio_ready=False и явную ошибку."""
+    from backend.t3.voice import build_voice_timeline
+
+    monkeypatch.setenv("LITHOS_TTS_ENGINE", "none")
+    out_mp3 = tmp_path / "silent.mp3"
+    tl = build_voice_timeline(["Проверка реакции на отказ синтеза речи."], out_mp3, cache_dir=tmp_path / "cache")
+    assert tl.audio_ready is False
+    assert tl.engine == "silence_fallback_error"
+    assert tl.error is not None and "ОШИБКА СИНТЕЗА РЕЧИ" in tl.error
+    assert out_mp3.exists()
+

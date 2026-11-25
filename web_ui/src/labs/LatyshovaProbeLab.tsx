@@ -123,7 +123,9 @@ function computeLocalLatyshova(params: {
   };
   const win = (z: number, a: number, b: number) => smoothStep(z, a) * (1 - smoothStep(z, b));
 
-  const deltaEMax = -75.0 * Math.log10(Math.max(params.rho_f, 0.01) / Math.max(params.rho_v, 0.005));
+  // Согласовано с backend/physics_engine/latyshova_gis.py (t = 65 °C: K_сп(t) = 69.6 * (273 + 65) / 291 ≈ 80.84 мВ)
+  const kSpT = (69.6 * (273.0 + 65.0)) / 291.0;
+  const deltaEMax = -kSpT * Math.log10(Math.max(params.rho_f, 0.01) / Math.max(params.rho_v, 0.005));
   const kpRes = Math.min(0.34, Math.max(0.06, params.kp_pct / 100));
   const kpWat = Math.min(0.32, Math.max(0.06, kpRes * 0.92));
   const kvOilMin = Math.min(0.92, Math.max(0.1, 1 - params.kng_pct / 100));
@@ -165,7 +167,7 @@ function computeLocalLatyshova(params: {
     const rzp = (1 / Math.pow(kvFlush, params.n)) * pi * pp * params.rho_f;
     const rmbk = (1 - shaleW) * (0.85 * rzp + 0.15 * rbk) + shaleW * 3.8;
 
-    const res = asp >= 0.45 && kp >= 0.11;
+    const res = asp >= 0.45 && kp >= 0.12;
     let sat = "non_reservoir";
     if (res) {
       sat = pn >= 4.5 && kv <= 0.48 ? "oil" : pn >= 2.2 ? "transition_oil_water" : "water";

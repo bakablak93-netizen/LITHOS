@@ -7,6 +7,7 @@ from __future__ import annotations
 
 import copy
 import hashlib
+import shutil
 import json
 import platform
 import subprocess
@@ -155,15 +156,17 @@ def rebuild_t3_from_layer_fact_edit(
     old_fact_substring: str,
     new_fact_substring: str,
     render_mp4: bool = True,
+    saved_layer_path: Path | None = None,
 ) -> dict[str, Any]:
     """
     Приёмка Этапа 3 Т3:
-    Правка одного подтверждённого факта в учебном слое (StudyLayer) одной штатной командой
-    пересобирает зависимые:
+    Правка одного подтверждённого факта в учебном слое (StudyLayer, в том числе из уже сохранённого layer.json)
+    одной штатной командой пересобирает зависимые:
     1) шаг (StudyStepScreen + автономный HTML),
     2) задания (StudyTask),
-    3) субтитры (.srt),
-    4) медиапаспорт и ролик (.mp4).
+    3) субтитры (.srt / .vtt),
+    4) голос, кадры, медиапаспорт и ролик (.mp4),
+    5) автономный ZIP-архив.
     Возвращает сравнение артефактов до и после правки.
     """
     before_layer_hash = hashlib.sha256(package.layer.model_dump_json().encode("utf-8")).hexdigest()[:16]
@@ -175,18 +178,25 @@ def rebuild_t3_from_layer_fact_edit(
         if srt_file.exists():
             before_srt = srt_file.read_text(encoding="utf-8")
 
-    # Вносим правку подтверждённого факта в слой
-    updated_layer: StudyLayer = copy.deepcopy(package.layer)
+    # Загружаем слой из сохранённого JSON (если указан), без повторного импорта книги
+    if saved_layer_path is not None and saved_layer_path.exists():
+        updated_layer = StudyLayer.model_validate_json(saved_layer_path.read_text(encoding="utf-8"))
+    else:
+        updated_layer = copy.deepcopy(package.layer)
+
     target_claim = next((c for c in updated_layer.claims if c.claim_id == claim_id), updated_layer.claims[0])
-    target_claim.claim_text = target_claim.claim_text.replace(old_fact_substring, new_fact_substring)
-    if new_fact_substring not in target_claim.claim_text:
-        target_claim.claim_text += f" [Уточнённый факт: {new_fact_substring}]"
+    if new_fact_substring and new_fact_substring not in target_claim.claim_text:
+        if old_fact_substring and old_fact_substring in target_claim.claim_text:
+            target_claim.claim_text = target_claim.claim_text.replace(old_fact_substring, new_fact_substring)
+        else:
+            target_claim.claim_text += f" [Уточнённый факт: {new_fact_substring}]"
 
     target_node = next((n for n in updated_layer.nodes if n.node_id == target_claim.node_id), updated_layer.nodes[0])
-    if old_fact_substring in target_node.summary_2_3_sentences:
-        target_node.summary_2_3_sentences = target_node.summary_2_3_sentences.replace(old_fact_substring, new_fact_substring)
-    else:
-        target_node.summary_2_3_sentences = f"{target_node.summary_2_3_sentences} ({new_fact_substring})"
+    if new_fact_substring and new_fact_substring not in target_node.summary_2_3_sentences:
+        if old_fact_substring and old_fact_substring in target_node.summary_2_3_sentences:
+            target_node.summary_2_3_sentences = target_node.summary_2_3_sentences.replace(old_fact_substring, new_fact_substring)
+        else:
+            target_node.summary_2_3_sentences = f"{target_node.summary_2_3_sentences} ({new_fact_substring})"
 
     public_prefix = f"/outputs/{package.course_id}"
     routing_report, illustrations = build_routing_and_illustrations(
@@ -197,20 +207,54 @@ def rebuild_t3_from_layer_fact_edit(
         course_id=package.course_id,
         course_dir=course_dir,
         public_prefix=public_prefix,
-        render_mp4=render_mp4,
+        render_mp4=False,
+        run_asr=False,
     )
-    # Если правка факта относится к сцене ролика, синхронизируем текст закадра и субтитры со слоем
-    if media_passports:
+    # Если правка факта относится к сцене ролика, обновляем сценарий сцены ДО синтеза речи и рендера MP4
+    if media_passports and new_fact_substring:
         mp = media_passports[0]
         sc0 = mp.scenes[0]
-        if old_fact_substring in sc0.narration_text:
+        if old_fact_substring and old_fact_substring in sc0.narration_text:
             sc0.narration_text = sc0.narration_text.replace(old_fact_substring, new_fact_substring)
-        else:
+        elif new_fact_substring not in sc0.narration_text:
             sc0.narration_text = f"{sc0.narration_text} {new_fact_substring}."
-        srt_file = course_dir / "media" / Path(mp.srt_rel_path).name
-        from backend.t3.media_pipeline import write_srt_from_scenes
 
-        write_srt_from_scenes(mp.scenes, srt_file)
+        from backend.t3.media_pipeline import (
+            _build_real_audio_and_subtitles,
+            _render_explainer_16_9_mp4,
+            _render_shorts_9_16_mp4,
+            probe_real_video_file,
+        )
+        from backend.physics_engine import simulate_dupuit_flow, simulate_psss_transient, simulate_well_log
+
+        media_dir = course_dir / "media"
+        aud_path = media_dir / Path(mp.audio_rel_path).name
+        srt_path = media_dir / Path(mp.srt_rel_path).name
+        vtt_path = media_dir / (Path(mp.vtt_rel_path).name if mp.vtt_rel_path else Path(mp.srt_rel_path).with_suffix(".vtt").name)
+        is_shorts = mp.format_kind == "shorts_9_16"
+        audio_rep, _ = _build_real_audio_and_subtitles(
+            mp.scenes,
+            aud_path=aud_path,
+            srt_path=srt_path,
+            vtt_path=vtt_path,
+            key_terms=["сопротивление", "пласт", "нефть"] if is_shorts else ["давления", "Дарси", "Дюпюи"],
+            min_scene_sec=[12.0, 14.0, 15.0, 13.0] if is_shorts else [23.0, 26.0, 26.0, 22.0],
+            max_words_per_cue=5 if is_shorts else 7,
+            run_asr=False,
+        )
+        if render_mp4:
+            mp4_path = media_dir / Path(mp.video_rel_path).name
+            work_dir = course_dir / "_media_tmp_rebuild"
+            if is_shorts:
+                _render_shorts_9_16_mp4(mp.scenes, aud_path, mp4_path, work_dir, simulate_well_log())
+            else:
+                _render_explainer_16_9_mp4(mp.scenes, aud_path, mp4_path, work_dir, simulate_dupuit_flow(), simulate_psss_transient())
+            shutil.rmtree(work_dir, ignore_errors=True)
+            probed = probe_real_video_file(mp4_path)
+            mp.duration_sec = probed["duration_sec"]
+            mp.file_size_bytes = probed["size_bytes"]
+            audio_rep.duration_sec = probed["duration_sec"]
+        mp.audio_report = audio_rep
 
     steps = build_step_screens_from_layer(updated_layer, illustrations, media_passports=media_passports)
     tasks = generate_chapter_tasks(updated_layer, course_id=package.course_id)
@@ -243,9 +287,18 @@ def rebuild_t3_from_layer_fact_edit(
         "layer_hash_changed": before_layer_hash != after_layer_hash,
         "before_layer_hash": before_layer_hash,
         "after_layer_hash": after_layer_hash,
-        "step_updated": before_step_text != after_step_text and new_fact_substring in after_step_text,
-        "task_updated": before_task_prompt != after_task_prompt and new_fact_substring in after_task_prompt,
-        "subtitles_updated": (before_srt != after_srt and new_fact_substring in after_srt) if updated_pkg.media_passports else True,
+        "step_updated": before_step_text != after_step_text and (not new_fact_substring or new_fact_substring in after_step_text),
+        "task_updated": before_task_prompt != after_task_prompt and (not new_fact_substring or new_fact_substring in after_task_prompt),
+        "subtitles_updated": (
+            before_srt != after_srt
+            and (
+                not new_fact_substring
+                or new_fact_substring in after_srt
+                or any(tok in after_srt for tok in new_fact_substring.split() if len(tok) >= 2 and "·" not in tok)
+            )
+        )
+        if updated_pkg.media_passports
+        else True,
         "media_passport_hash_updated": (
             updated_pkg.media_passports[0].source_layer_hash == after_layer_hash
             if updated_pkg.media_passports

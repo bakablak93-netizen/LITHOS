@@ -601,7 +601,10 @@ def build_independent_registry(
                 )
             else:
                 # Проверяем, является ли короткая строка артефактом подписи оси на скане (например "а", "б", "Уровень моря")
-                is_axis_artifact = len(para_text) < 22 and not any(ch in para_text for ch in ".,:;=")
+                is_substantive_heading = bool(
+                    re.match(r"^(?:таблица|данные\s+к|пример|задача|упражнение|рис\.?|глава|§)\b", para_text.strip(), re.I)
+                )
+                is_axis_artifact = (not is_substantive_heading) and len(para_text) < 22 and not any(ch in para_text for ch in ".,:;=")
                 units.append(
                     SourceUnit(
                         unit_id=f"{book_id}_p{pdf_page:03d}_par_{unit_seq:02d}",

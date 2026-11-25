@@ -509,10 +509,12 @@ class StudyStepScreen(BaseModel):
     deeper_branch: str
     illustration: IllustrationSpec
     video_url: str | None = None
+    video_vtt_url: str | None = None
     video_aspect: str | None = None
     media_passport_id: str | None = None
     ocr_corrections_applied: list[OCRCorrectionEntry] = Field(default_factory=list)
     practicum: dict[str, Any] | None = None
+    data_decision_card: dict[str, Any] | None = None
 
 
 class SceneSpec(BaseModel):
@@ -549,7 +551,22 @@ class AudioQualityReport(BaseModel):
     """Аудиометрики ролика: громкость LUFS, пик, темп речи, словарь произношений и статус WER."""
 
     voice_id: str
-    synthesis_mode: Literal["edge_tts_neural", "offline_formant_synthesizer"]
+    synthesis_mode: Literal[
+        "edge_tts_neural",
+        "espeak_ng_local",
+        "mixed_edge_espeak",
+        "mixed_with_errors",
+        "silence_fallback_error",
+        "offline_formant_synthesizer",  # устаревший режим (тон, не речь) — оставлен для чтения старых пакетов
+    ]
+    audio_ready: bool = False
+    audio_error: str | None = None
+    engine_detail: str = ""
+    speech_duration_sec: float = 0.0
+    measured_rms_dbfs: float | None = None
+    clipped_samples: int = 0
+    subtitle_cues: int = 0
+    asr_report: dict[str, Any] | None = None
     duration_sec: float
     integrated_lufs: float
     true_peak_dbfs: float
@@ -627,6 +644,7 @@ class MediaPassport(BaseModel):
     srt_rel_path: str
     audio_rel_path: str
     scene_spec_rel_path: str = ""
+    vtt_rel_path: str = ""
     file_size_bytes: int
     hook_question_0_3s: str
     prediction_pause_sec: float = Field(..., ge=1.0, le=1.8)
@@ -713,3 +731,4 @@ class StudyCoursePackage(BaseModel):
     offline_html_url: str = ""
     offline_zip_url: str = ""
     offline_package_size_mb: float = 0.0
+    offline_size_without_video_mb: float = 0.0

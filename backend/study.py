@@ -103,11 +103,15 @@ def main(argv: list[str] | None = None) -> int:
 
     p_reb = sub.add_parser("rebuild-fact", help="Проверить реактивную пересборку шага, заданий, субтитров и ролика от правки факта")
     p_reb.add_argument("--book", default="train_latyshova.md")
+    p_reb.add_argument("--layer-json", default="", help="Путь к уже сохранённому (отредактированному) layer.json")
     p_reb.add_argument("--claim-id", default="")
     p_reb.add_argument("--old", default="2425")
     p_reb.add_argument("--new", default="2426")
     p_reb.add_argument("--data-dir", default=str(DEFAULT_DATA_DIR))
     p_reb.add_argument("--output-dir", default=str(DEFAULT_OUTPUT_DIR / "rebuild_verify"))
+
+    p_asr = sub.add_parser("asr-check", help="Прогнать локальный ASR (faster-whisper) на MP4/MP3 ролике курса")
+    p_asr.add_argument("--course-dir", required=True)
 
     p_cmp = sub.add_parser("check-compat", help="Проверить обратную совместимость сохранённого курса JSON")
     p_cmp.add_argument("--manifest", required=True)
@@ -193,12 +197,27 @@ def main(argv: list[str] | None = None) -> int:
 
     if args.cmd == "rebuild-fact":
         out_dir = Path(args.output_dir)
-        pkg = build_t3_course_package(
-            data_dir=Path(args.data_dir),
-            output_dir=out_dir,
-            book_file=args.book,
-            render_mp4=True,
-        )
+        layer_json_p = Path(args.layer_json) if args.layer_json else None
+        if layer_json_p and layer_json_p.exists():
+            from backend.t3.models import StudyCoursePackage
+
+            pkg_json_p = layer_json_p.parent / "t3_course_package.json"
+            if pkg_json_p.exists():
+                pkg = StudyCoursePackage.model_validate_json(pkg_json_p.read_text(encoding="utf-8"))
+            else:
+                pkg = build_t3_course_package(
+                    data_dir=Path(args.data_dir),
+                    output_dir=out_dir,
+                    book_file=args.book,
+                    render_mp4=False,
+                )
+        else:
+            pkg = build_t3_course_package(
+                data_dir=Path(args.data_dir),
+                output_dir=out_dir,
+                book_file=args.book,
+                render_mp4=True,
+            )
         cid = args.claim_id or pkg.layer.claims[0].claim_id
         diff = rebuild_t3_from_layer_fact_edit(
             package=pkg,
@@ -207,9 +226,34 @@ def main(argv: list[str] | None = None) -> int:
             old_fact_substring=args.old,
             new_fact_substring=args.new,
             render_mp4=True,
+            saved_layer_path=layer_json_p,
         )
         summary = {k: v for k, v in diff.items() if k != "updated_package"}
         print(json.dumps(summary, ensure_ascii=False, indent=2))
+        return 0
+
+    if args.cmd == "asr-check":
+        from backend.t3.asr_check import run_asr_verification
+        from backend.t3.models import StudyCoursePackage
+        from backend.t3.voice import Cue
+
+        cdir = Path(args.course_dir)
+        pkg = StudyCoursePackage.model_validate_json((cdir / "t3_course_package.json").read_text(encoding="utf-8"))
+        if not pkg.media_passports:
+            print(json.dumps({"status": "no_media_passport"}, ensure_ascii=False))
+            return 0
+        mp = pkg.media_passports[0]
+        mp4 = cdir / "media" / Path(mp.video_rel_path).name
+        ref_text = " ".join(sc.narration_text for sc in mp.scenes)
+        cues = [Cue(i, w.word, w.start_sec, w.end_sec) for i, w in enumerate(mp.audio_report.word_timecodes)]
+        res = run_asr_verification(
+            mp4,
+            reference_text=ref_text,
+            cues=cues,
+            key_terms=["сопротивление", "пласт", "нефть"] if "latyshova" in pkg.course_id else ["давления", "Дарси", "Дюпюи"],
+            speech_duration_sec=mp.audio_report.speech_duration_sec or mp.duration_sec,
+        )
+        print(json.dumps(res, ensure_ascii=False, indent=2))
         return 0
 
     if args.cmd == "check-compat":

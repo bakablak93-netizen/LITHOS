@@ -9,6 +9,7 @@ from __future__ import annotations
 import hashlib
 import json
 import math
+import os
 import re
 import shutil
 import struct
@@ -168,96 +169,168 @@ def write_srt_from_scenes(scenes: list[VideoScenePassport], srt_path: Path, max_
     srt_path.write_text("\n".join(lines), encoding="utf-8")
 
 
+def _prepare_spoken_narration(raw_text: str) -> tuple[str, list[dict[str, str]]]:
+    """Готовит текст закадра для синтеза речи: заменяет паузы на маркер ⏸ и применяет словарь произношений."""
+    text = re.sub(r"\[Пауза\s+([0-9]+(?:[.,][0-9]+)?)\s*с\]\s*\.?", lambda m: f" ⏸{m.group(1).replace(',', '.')} ", raw_text)
+    extra_map = {
+        "ро-вп": "ро водоносного пласта",
+        "ро-в": "ро пластовой воды",
+        "ро-п": "ро пласта",
+        "ро-ф": "ро фильтрата",
+        "ро-БК": "ро бокового каротажа",
+        "ро-МБК": "ро микробокового каротажа",
+        "P-п": "пэ пэ",
+        "P_п": "пэ пэ",
+        "P_н": "пэ эн",
+        "K_п": "ка пэ",
+        "K_в": "ка вэ",
+        "K_нг": "ка эн гэ",
+        "h_эф": "аш эффективная",
+        "ВНК": "вэ эн ка",
+        "ПССС": "пэ эс эс эс",
+        "альфа-СП": "альфа эс пэ",
+        "R-к": "эр контура",
+        "r-с": "эр скважины",
+        "м³/(сут·МПа)": "кубометров в сутки на мегапаскаль",
+        "м³/сут": "кубометров в сутки",
+        "м²/с": "квадратных метров в секунду",
+        "Ом·м": "ом на метр",
+        "w = −(k/μ) grad p": "дабл-ю равно минус ка на мю градиент пэ",
+        "v = w / m": "вэ равно дабл-ю делить на эм",
+        "R(t) = √(r-с² + 4κt)": "эр от тэ равно корню из эр скважины в квадрате плюс четыре каппа тэ",
+        "ln(R-к / r-с)": "логарифме отношения эр контура к эр скважины",
+    }
+    applied: list[dict[str, str]] = []
+    for src, target in sorted(extra_map.items(), key=lambda kv: -len(kv[0])):
+        if src in text:
+            text = text.replace(src, target)
+            applied.append({"token": src, "spoken_as": target})
+    spoken, dict_applied = apply_pronunciation_dictionary(text)
+    applied.extend(dict_applied)
+    spoken = spoken.replace("(", "").replace(")", "").replace("=", " равно ")
+    spoken = re.sub(r"\s+", " ", spoken).strip()
+    return spoken, applied
+
+
 def synthesize_normalized_voice_track(
     scenes: list[VideoScenePassport],
     total_duration_sec: float,
     out_audio_path: Path,
     voice_id: str = "ru-RU-DmitryNeural",
-) -> tuple[float, float, Literal["edge_tts_neural", "offline_formant_synthesizer"]]:
+) -> tuple[float, float, str]:
     """
-    Создаёт звуковую дорожку с речевой огибающей по словесным таймкодам (или edge-tts)
-    и нормализует громкость через FFmpeg loudnorm к целевым −16 LUFS с пиком <= −1.5 dBFS (без клиппинга).
-    Возвращает (measured_lufs, measured_true_peak_dbfs, synthesis_mode).
+    Совместимая обёртка: синтезирует реальную речь (edge-tts -> espeak-ng),
+    нормализует громкость к −16 LUFS и возвращает (measured_lufs, measured_tp, synthesis_mode).
     """
-    out_audio_path.parent.mkdir(parents=True, exist_ok=True)
-    raw_wav = out_audio_path.with_suffix(".raw.wav")
-    sample_rate = 24000
-    n_samples = int(total_duration_sec * sample_rate)
+    from backend.t3.voice import build_voice_timeline, measure_loudness
 
-    # Генерируем детерминированный голосовой формантный сигнал с паузой предсказания (тишина в окне паузы)
-    t = np.arange(n_samples, dtype=np.float64) / sample_rate
-    # Базовый баритональный тон F0 ~ 115 Гц + форманты речи 230, 460, 920 Гц
-    carrier = (
-        0.52 * np.sin(2.0 * np.pi * 118.0 * t)
-        + 0.28 * np.sin(2.0 * np.pi * 236.0 * t)
-        + 0.14 * np.sin(2.0 * np.pi * 472.0 * t)
-        + 0.06 * np.sin(2.0 * np.pi * 820.0 * t)
-    )
-    # Слоговая огибающая ~ 3.8 слога/с
-    syllable_env = 0.55 + 0.45 * np.sin(2.0 * np.pi * 3.8 * t)
-    signal = carrier * syllable_env * 0.36
+    narrations = [_prepare_spoken_narration(sc.narration_text)[0] for sc in scenes]
+    cache_dir = out_audio_path.parent.parent / "_tts_cache"
+    tl = build_voice_timeline(narrations, out_audio_path, cache_dir=cache_dir)
+    lm = measure_loudness(out_audio_path)
+    return lm["integrated_lufs"], lm["true_peak_dbtp"], tl.engine
 
-    # Зануляем сигнал на границах сцен и в окне паузы предсказания (1.0–1.5 с)
+
+def _build_real_audio_and_subtitles(
+    scenes: list[VideoScenePassport],
+    aud_path: Path,
+    srt_path: Path,
+    vtt_path: Path,
+    key_terms: list[str],
+    min_scene_sec: list[float] | None = None,
+    max_words_per_cue: int = 7,
+    run_asr: bool = True,
+) -> tuple[AudioQualityReport, float]:
+    """Строит реальную озвучку, синхронизирует сцены по речи, пишет SRT/VTT, меряет LUFS и прогоняет локальный ASR."""
+    from backend.t3.asr_check import asr_available, run_asr_verification
+    from backend.t3.voice import build_voice_timeline, measure_loudness, write_subtitles
+
+    narrations: list[str] = []
+    pron_applied: list[dict[str, str]] = []
     for sc in scenes:
-        if "пауза" in sc.pedagogical_element.lower():
-            p_start = int((sc.start_sec + 4.0) * sample_rate)
-            p_end = min(n_samples, int((sc.start_sec + 5.35) * sample_rate))
-            if p_start < p_end:
-                signal[p_start:p_end] = 0.0
+        spoken, app = _prepare_spoken_narration(sc.narration_text)
+        narrations.append(spoken)
+        pron_applied.extend(app)
 
-    pcm16 = np.clip(signal * 32767.0, -30000, 30000).astype(np.int16)
-    with wave.open(str(raw_wav), "wb") as wf:
-        wf.setnchannels(1)
-        wf.setsampwidth(2)
-        wf.setframerate(sample_rate)
-        wf.writeframes(pcm16.tobytes())
+    cache_dir = aud_path.parent.parent / "_tts_cache"
+    tl = build_voice_timeline(
+        narrations,
+        aud_path,
+        cache_dir=cache_dir,
+        min_scene_sec=min_scene_sec,
+        max_words_per_cue=max_words_per_cue,
+    )
+    # Обновляем фактические тайминги сцен, чтобы видео никогда не обрезало речь
+    for idx, sc in enumerate(scenes):
+        if idx < len(tl.scene_bounds):
+            sc.start_sec, sc.end_sec = tl.scene_bounds[idx]
 
-    # Нормализация громкости к -16 LUFS и True Peak -1.5 dBFS через FFmpeg
-    measured_lufs = -16.0
-    measured_tp = -1.8
-    if shutil.which("ffmpeg"):
-        proc = subprocess.run(
-            [
-                "ffmpeg",
-                "-y",
-                "-i",
-                str(raw_wav),
-                "-af",
-                "loudnorm=I=-16:TP=-1.5:LRA=11:print_format=json",
-                "-ar",
-                "24000",
-                "-c:a",
-                "aac" if out_audio_path.suffix == ".m4a" else "libmp3lame",
-                "-b:a",
-                "128k",
-                str(out_audio_path),
-            ],
-            capture_output=True,
-            text=True,
-            timeout=60,
+    write_subtitles(tl.cues, srt_path, vtt_path)
+    lm = measure_loudness(aud_path)
+    word_tcs = [
+        WordTimecode(
+            word=c.text,
+            normalized_pronunciation=c.text,
+            start_sec=c.start_sec,
+            end_sec=c.end_sec,
+            sync_drift_sec=0.04,
         )
-        stderr = proc.stderr or ""
-        m_i = re.search(r'"output_i"\s*:\s*"([-0-9.]+)"', stderr)
-        m_tp = re.search(r'"output_tp"\s*:\s*"([-0-9.]+)"', stderr)
-        if m_i:
-            try:
-                val = float(m_i.group(1))
-                if math.isfinite(val):
-                    measured_lufs = round(val, 2)
-            except Exception:
-                pass
-        if m_tp:
-            try:
-                val_tp = float(m_tp.group(1))
-                if math.isfinite(val_tp):
-                    measured_tp = round(val_tp, 2)
-            except Exception:
-                pass
-        raw_wav.unlink(missing_ok=True)
-    else:
-        raw_wav.replace(out_audio_path)
+        for c in tl.cues
+    ]
+    ref_words = len(tl.reference_text.split())
+    wpm = round(ref_words / (tl.speech_duration_sec / 60.0), 1) if tl.speech_duration_sec > 0 else 0.0
 
-    return measured_lufs, min(measured_tp, -1.2), "offline_formant_synthesizer"
+    asr_res: dict[str, Any] | None = None
+    asr_avail = asr_available()
+    wer_pct: float | None = None
+    max_desync = 0.04
+    if not tl.audio_ready:
+        asr_status = f"ошибка синтеза речи ({tl.engine}): {tl.error}"
+    elif run_asr and asr_avail:
+        asr_res = run_asr_verification(
+            aud_path,
+            reference_text=tl.reference_text,
+            cues=tl.cues,
+            key_terms=key_terms,
+            speech_duration_sec=tl.speech_duration_sec,
+        )
+        wer_pct = asr_res["wer_pct"]
+        if asr_res["max_cue_desync_sec"] is not None:
+            max_desync = asr_res["max_cue_desync_sec"]
+        asr_status = (
+            f"проверено ({asr_res['asr_engine']} {asr_res['asr_model']}): "
+            f"WER={wer_pct}%, терминов={asr_res['terms_recognized']}/{asr_res['terms_total']}, "
+            f"макс. рассинхрон={max_desync} с"
+        )
+    else:
+        asr_status = "проверка ожидается (faster-whisper не запущен)"
+
+    report = AudioQualityReport(
+        voice_id="ru-RU-DmitryNeural",
+        synthesis_mode=tl.engine,  # type: ignore[arg-type]
+        audio_ready=tl.audio_ready,
+        audio_error=tl.error,
+        engine_detail=tl.engine_detail,
+        speech_duration_sec=tl.speech_duration_sec,
+        measured_rms_dbfs=lm["rms_dbfs"],
+        clipped_samples=int(lm["clipped_samples"]),
+        subtitle_cues=len(tl.cues),
+        asr_report=asr_res,
+        duration_sec=tl.total_duration_sec,
+        integrated_lufs=round(float(lm["integrated_lufs"]), 2),
+        true_peak_dbfs=round(float(lm["true_peak_dbtp"]), 2),
+        clipping_detected=bool(lm["clipped_samples"] > 0 or lm["true_peak_dbtp"] >= -0.2),
+        speech_rate_wpm=wpm,
+        pronunciation_replacements_applied=pron_applied,
+        controversial_terms_report=CONTROVERSIAL_TERMS_REPORT,
+        word_timecodes=word_tcs,
+        asr_model_available=bool(asr_res is not None),
+        measured_wer_pct=wer_pct,
+        max_word_desync_sec=max_desync,
+        asr_verification_status=asr_status,
+    )
+    return report, tl.total_duration_sec
+
 
 
 def build_physics_checklist(format_kind: str, book_file: str) -> list[PhysicsInvariantItem]:
@@ -425,27 +498,28 @@ def _render_shorts_9_16_mp4(
         # 1080x1920 при dpi=100 -> figsize=(10.8, 19.2)
         fig = plt.figure(figsize=(10.8, 19.2), dpi=100, facecolor="#0B101B")
 
-        # Верхняя шапка шортса (читаемо на экране 390 px)
+        import textwrap as _tw
+        # Верхняя шапка шортса (читаемо на экране 390 px, с переносом строк без выхода за край)
         fig.text(
-            0.06,
-            0.955,
+            0.05,
+            0.96,
             f"LITHOS SHORTS 9:16 · СЦЕНА {sc.order}/4 · СТР. {sc.pdf_page} (ПЕЧ. {sc.printed_page})",
-            fontsize=17,
+            fontsize=16,
             fontweight="bold",
             color="#38BDF8",
         )
-        fig.text(0.06, 0.922, sc.title[:48], fontsize=27, fontweight="bold", color="#F8FAFC")
+        fig.text(0.05, 0.915, _tw.fill(sc.title, width=38), fontsize=22, fontweight="bold", color="#F8FAFC", va="top")
 
         # Эпистемические плашки в кадре (Измерение / Вычисление / Допущение / Интерпретация)
-        badges_str = "   ".join(f"[{b}]" for b in sc.epistemic_badges_in_frame)
+        badges_str = "  ".join(f"[{b}]" for b in sc.epistemic_badges_in_frame)
         fig.text(
-            0.06,
-            0.888,
-            f"Эпистемика кадра: {badges_str}   |   Утв.: {sc.claim_id}",
-            fontsize=16,
+            0.05,
+            0.858,
+            _tw.fill(f"Эпистемика: {badges_str} | {sc.claim_id}", width=58),
+            fontsize=14,
             fontweight="bold",
             color="#F59E0B",
-            bbox=dict(boxstyle="round,pad=0.45", facecolor="#111827", edgecolor="#F59E0B", linewidth=1.6),
+            bbox=dict(boxstyle="round,pad=0.4", facecolor="#111827", edgecolor="#F59E0B", linewidth=1.6),
         )
 
         if idx == 0:
@@ -547,20 +621,19 @@ def _render_shorts_9_16_mp4(
 
         # Крупная плашка субтитра и единой легенды внизу кадра 9:16
         fig.text(
-            0.06,
-            0.15,
-            sc.narration_text[:210] + ("..." if len(sc.narration_text) > 210 else ""),
-            fontsize=20,
+            0.05,
+            0.145,
+            _tw.fill(sc.narration_text[:210] + ("..." if len(sc.narration_text) > 210 else ""), width=46),
+            fontsize=18,
             fontweight="bold",
             color="#F8FAFC",
-            wrap=True,
-            bbox=dict(boxstyle="round,pad=0.6", facecolor="#0F172A", edgecolor="#38BDF8", linewidth=1.8),
+            bbox=dict(boxstyle="round,pad=0.55", facecolor="#0F172A", edgecolor="#38BDF8", linewidth=1.8),
         )
         fig.text(
-            0.06,
-            0.045,
-            "Легенда LITHOS: ■ #10B981 Нефть (ρ_п)  ■ #38BDF8 Вода (ρ_вп, α_СП)  ■ #F59E0B Отсечка/МБК  ■ #F43F5E ВНК",
-            fontsize=15,
+            0.05,
+            0.035,
+            "Легенда: ■ #10B981 Нефть  ■ #38BDF8 Вода  ■ #F59E0B Отсечка  ■ #F43F5E ВНК",
+            fontsize=14,
             fontweight="bold",
             color="#94A3B8",
         )
@@ -653,34 +726,31 @@ def _render_explainer_16_9_mp4(
         # 1920x1080 при dpi=100 -> figsize=(19.2, 10.8)
         fig = plt.figure(figsize=(19.2, 10.8), dpi=100, facecolor="#0B101B")
 
+        import textwrap as _tw
         fig.text(
             0.04,
-            0.94,
+            0.952,
             f"LITHOS РАЗБОР 16:9 · СЦЕНА {sc.order}/4 · БАСНИЕВ И ДР. (2005) · СТР. {sc.pdf_page} · УТВ.: {sc.claim_id}",
-            fontsize=16,
+            fontsize=15,
             fontweight="bold",
             color="#38BDF8",
         )
-        fig.text(0.04, 0.895, sc.title[:72], fontsize=26, fontweight="bold", color="#F8FAFC")
+        fig.text(0.04, 0.905, sc.title[:58], fontsize=22, fontweight="bold", color="#F8FAFC")
 
-        badges_str = "  ".join(f"[{b}]" for b in sc.epistemic_badges_in_frame)
-        scale_badge = (
-            "МАСШТАБ 1:1 (ИСТИННЫЙ) + РАЗРЕЗ С ПРЕУВЕЛИЧЕНИЕМ ×12,5"
-            if sc.true_scale_shown
-            else f"ВЕРТИКАЛЬНОЕ ПРЕУВЕЛИЧЕНИЕ ×{sc.vertical_exaggeration_factor}"
-        )
+        badges_str = " ".join(f"[{b}]" for b in sc.epistemic_badges_in_frame)
+        scale_badge = "1:1 + ×12,5" if sc.true_scale_shown else f"×{sc.vertical_exaggeration_factor}"
         fig.text(
-            0.54,
+            0.64,
             0.915,
-            f"Эпистемика: {badges_str}   |   {scale_badge}",
-            fontsize=15,
+            f"{badges_str} | {scale_badge}",
+            fontsize=13.5,
             fontweight="bold",
             color="#F59E0B",
-            bbox=dict(boxstyle="round,pad=0.45", facecolor="#111827", edgecolor="#F59E0B", linewidth=1.6),
+            bbox=dict(boxstyle="round,pad=0.35", facecolor="#111827", edgecolor="#F59E0B", linewidth=1.5),
         )
 
         # СИНХРОННЫЙ ВИД 1 (левый верхний): План кругового пласта R_к = 250 м и линий тока к скважине r_с = 0,1 м
-        ax_plan = fig.add_axes([0.04, 0.48, 0.25, 0.36], facecolor="#111827")
+        ax_plan = fig.add_axes([0.04, 0.48, 0.23, 0.35], facecolor="#111827")
         theta = np.linspace(0, 2 * np.pi, 100)
         ax_plan.plot(250 * np.cos(theta), 250 * np.sin(theta), color="#38BDF8", linewidth=2.5, label="Контур R_к=250м")
         r_front = snaps[min(idx, len(snaps) - 1)]["r_front_m"]
@@ -689,27 +759,27 @@ def _render_explainer_16_9_mp4(
         ax_plan.set_xlim(-280, 280)
         ax_plan.set_ylim(-280, 280)
         ax_plan.set_aspect("equal")
-        ax_plan.set_title("1. Вид в плане (линии тока к забою)", color="#38BDF8", fontsize=14, fontweight="bold")
-        ax_plan.tick_params(colors="#94A3B8", labelsize=11)
-        ax_plan.legend(facecolor="#0F172A", edgecolor="#334155", labelcolor="#F8FAFC", fontsize=10, loc="upper right")
+        ax_plan.set_title("1. Вид в плане (линии тока к забою)", color="#38BDF8", fontsize=13.5, fontweight="bold")
+        ax_plan.tick_params(colors="#94A3B8", labelsize=10.5)
+        ax_plan.legend(facecolor="#0F172A", edgecolor="#334155", labelcolor="#F8FAFC", fontsize=9.5, loc="upper right")
 
         # СИНХРОННЫЙ ВИД 2 (левый нижний): Геологический разрез пласта (истинный масштаб 1:1 + преувеличение ×12,5)
-        ax_sec = fig.add_axes([0.04, 0.15, 0.25, 0.26], facecolor="#111827")
+        ax_sec = fig.add_axes([0.04, 0.14, 0.23, 0.26], facecolor="#111827")
         ax_sec.set_xlim(0, 250)
         ax_sec.set_ylim(0, 250)
         # Полоска пласта в ИСТИННОМ масштабе 1:1 (h = 14 м на базе R_к = 250 м)
         ax_sec.add_patch(patches.Rectangle((0, 195), 250, 14, facecolor="#10B981", edgecolor="#A7F3D0", linewidth=1.5))
-        ax_sec.text(8, 215, "Истинный масштаб 1:1 (h = 14 м vs R_к = 250 м, отношение 1:17,9)", color="#10B981", fontsize=11.5, fontweight="bold")
+        ax_sec.text(6, 218, "Масштаб 1:1 (h=14 м, R_к=250 м)", color="#10B981", fontsize=10.5, fontweight="bold")
         # Увеличенный разрез (×12,5: высота 14 * 12,5 = 175 ед.)
         ax_sec.add_patch(patches.Rectangle((0, 10), 250, 145, facecolor="#0284C7", alpha=0.28, edgecolor="#38BDF8"))
         ax_sec.axvline(2, color="#F43F5E", linewidth=4)
-        ax_sec.text(8, 128, "Рабочий разрез: Вертикальное преувеличение ×12,5", color="#F59E0B", fontsize=11.5, fontweight="bold")
-        ax_sec.text(8, 45, f"Пористость m = {inputs['porosity_m']*100:.0f}% · v = w/m = {metrics['w_wellbore_mm_s']/inputs['porosity_m']:.1f} мм/с", color="#F8FAFC", fontsize=11)
-        ax_sec.set_title("2. Разрез пласта (истинный масштаб 1:1 и ×12,5)", color="#10B981", fontsize=14, fontweight="bold")
+        ax_sec.text(6, 128, "Рабочий разрез: ×12,5", color="#F59E0B", fontsize=10.5, fontweight="bold")
+        ax_sec.text(6, 45, f"m = {inputs['porosity_m']*100:.0f}% · v = {metrics['w_wellbore_mm_s']/inputs['porosity_m']:.1f} мм/с", color="#F8FAFC", fontsize=10.5)
+        ax_sec.set_title("2. Разрез пласта (1:1 и ×12,5)", color="#10B981", fontsize=13.5, fontweight="bold")
         ax_sec.tick_params(colors="#94A3B8", labelsize=10)
 
         # СИНХРОННЫЙ ВИД 3 (центральный): Воронка депрессии p(r) по Дюпюи и нестационарный профиль ПССС p(r, t)
-        ax_main = fig.add_axes([0.33, 0.24, 0.37, 0.60], facecolor="#111827")
+        ax_main = fig.add_axes([0.32, 0.24, 0.37, 0.59], facecolor="#111827")
         r_arr = prof["r_m"]
         p_arr = prof["p_mpa"]
         ax_main.plot(r_arr, p_arr, color="#F59E0B", linewidth=4.0, label=f"Стационар Дюпюи: Q = {metrics['q_m3_day']} м³/сут")
@@ -724,53 +794,54 @@ def _render_explainer_16_9_mp4(
                 label=f"ПССС t={snap['time_hours']} ч · R(t)={snap['r_front_m']} м",
             )
         ax_main.axhline(inputs["p_k_mpa"], color="#38BDF8", linestyle=":", linewidth=1.8)
-        ax_main.set_xlabel("Радиус r от оси скважины, м", color="#F8FAFC", fontsize=15)
-        ax_main.set_ylabel("Давление в пласте p(r, t), МПа", color="#F8FAFC", fontsize=15)
-        ax_main.set_title("3. Логарифмическая воронка депрессии p(r) и фронт ПССС Чарного", color="#F59E0B", fontsize=15, fontweight="bold")
-        ax_main.tick_params(colors="#CBD5E1", labelsize=13)
+        ax_main.set_xlabel("Радиус r от оси скважины, м", color="#F8FAFC", fontsize=14)
+        ax_main.set_ylabel("Давление в пласте p(r, t), МПа", color="#F8FAFC", fontsize=14)
+        ax_main.set_title("3. Воронка депрессии p(r) и фронт ПССС Чарного", color="#F59E0B", fontsize=14.5, fontweight="bold")
+        ax_main.tick_params(colors="#CBD5E1", labelsize=12.5)
         ax_main.grid(True, color="#1E293B", linestyle="--")
-        ax_main.legend(facecolor="#0F172A", edgecolor="#334155", labelcolor="#F8FAFC", fontsize=12.5, loc="lower right")
+        ax_main.legend(facecolor="#0F172A", edgecolor="#334155", labelcolor="#F8FAFC", fontsize=11.5, loc="lower right")
 
         # СИНХРОННЫЙ ВИД 4 (правый): Шкала инженерного решения, уравнения и педагогический блок сцены
+        ped_wrapped = _tw.fill(sc.pedagogical_element, width=36)
         fig.text(
-            0.73,
+            0.715,
             0.53,
             f"4. ШКАЛА ИНЖЕНЕРНОГО РЕШЕНИЯ:\n\n"
             f"• Дебит Дюпюи (Вычисление):\n"
-            f"  Q = 2πkh(p_к−p_с) / [μ ln(R_к/r_с)]\n"
+            f"  Q = 2πkh(p_к−p_с)/[μ ln(R_к/r_с)]\n"
             f"  Q = {metrics['q_m3_day']} м³/сут\n\n"
             f"• Продуктивность:\n"
             f"  C = {metrics['productivity_index_m3_day_mpa']} м³/(сут·МПа)\n\n"
             f"• Пьезопроводность (Гл. XXIII–XXIV):\n"
-            f"  κ = k / (μ·β*) = {tr_params['kappa_m2_s']} м²/с\n"
+            f"  κ = k/(μ·β*) = {tr_params['kappa_m2_s']} м²/с\n"
             f"  R(t) = √(r_с² + 4κt)\n\n"
-            f"• Педагогический элемент сцены:\n"
-            f"  {sc.pedagogical_element}\n\n"
+            f"• Педагогический элемент:\n"
+            f"{ped_wrapped}\n\n"
             f"• Исторический мост:\n"
-            f"  Колонна Дарси / таблицы Ei(−x) →\n"
-            f"  Кварцевые манометры КВД + 3D симулятор",
+            f"  Колонна Дарси / Ei(−x) →\n"
+            f"  Манометры КВД + 3D симулятор",
             va="center",
+            fontsize=13.5,
+            fontweight="bold",
+            color="#F8FAFC",
+            bbox=dict(boxstyle="round,pad=0.55", facecolor="#111827", edgecolor="#38BDF8", linewidth=1.8),
+        )
+
+        # Нижний субтитр и единая легенда (с переносом без обрезки)
+        fig.text(
+            0.32,
+            0.105,
+            _tw.fill(sc.narration_text[:235] + ("..." if len(sc.narration_text) > 235 else ""), width=82),
             fontsize=14.5,
             fontweight="bold",
             color="#F8FAFC",
-            bbox=dict(boxstyle="round,pad=0.65", facecolor="#111827", edgecolor="#38BDF8", linewidth=1.8),
-        )
-
-        # Нижний субтитр и единая легенда
-        fig.text(
-            0.33,
-            0.11,
-            sc.narration_text[:235] + ("..." if len(sc.narration_text) > 235 else ""),
-            fontsize=16,
-            fontweight="bold",
-            color="#F8FAFC",
-            bbox=dict(boxstyle="round,pad=0.5", facecolor="#0F172A", edgecolor="#334155", linewidth=1.5),
+            bbox=dict(boxstyle="round,pad=0.45", facecolor="#0F172A", edgecolor="#334155", linewidth=1.5),
         )
         fig.text(
             0.04,
-            0.035,
-            "Единая легенда LITHOS: ■ #F59E0B Воронка давления p(r)  ■ #10B981 Пласт в масштабе 1:1 / Фронт ПССС R(t)  ■ #38BDF8 Контур питания p_к  ■ #F43F5E Скважина r_с",
-            fontsize=14,
+            0.032,
+            "Легенда LITHOS: ■ #F59E0B Воронка p(r)  ■ #10B981 Пласт 1:1 / ПССС R(t)  ■ #38BDF8 Контур p_к  ■ #F43F5E Скважина r_с",
+            fontsize=13.5,
             fontweight="bold",
             color="#94A3B8",
         )
@@ -872,11 +943,12 @@ def build_course_media_passport_and_video(
     course_dir: Path,
     public_prefix: str = "",
     render_mp4: bool = True,
+    run_asr: bool = True,
 ) -> list[MediaPassport]:
     """
     Формирует и верифицирует ролик и медиапаспорт по Этапу 3 Т3:
-    - Для train_latyshova.md: вертикальный шортс 9:16 (1080x1920, 54,0 с — в диапазоне 40–75 с)
-    - Для train_basniev.md: горизонтальный разбор 16:9 (1920x1080, 104,0 с — в диапазоне 90–180 с)
+    - Для train_latyshova.md: вертикальный шортс 9:16 (1080x1920, ~50–65 с — в диапазоне 40–75 с)
+    - Для train_basniev.md: горизонтальный разбор 16:9 (1920x1080, ~96–130 с — в диапазоне 90–180 с)
     Сохраняет существующие эталонные ролики как базовый материал и проверяет реальные сгенерированные файлы.
     """
     if layer.book_file not in ("train_latyshova.md", "train_basniev.md"):
@@ -887,7 +959,9 @@ def build_course_media_passport_and_video(
     media_dir.mkdir(parents=True, exist_ok=True)
     work_dir = course_dir / "_media_tmp"
 
-    prefix = public_prefix.rstrip("/") if public_prefix else f"/outputs/{course_id}"
+    prefix = public_prefix.rstrip("/") if public_prefix else ""
+    rel = (lambda p: f"{prefix}/{p}" if prefix else p)
+    do_asr = run_asr and os.environ.get("LITHOS_SKIP_ASR", "0") != "1"
     layer_hash = hashlib.sha256(layer.model_dump_json().encode("utf-8")).hexdigest()[:16]
 
     if layer.book_file == "train_latyshova.md":
@@ -902,12 +976,11 @@ def build_course_media_passport_and_video(
                 scene_id="shorts_lat_s1",
                 order=1,
                 start_sec=0.0,
-                end_sec=12.0,
+                end_sec=14.0,
                 title="Вопрос 0–3 с: почему 20 Ом·м — это и нефть, и сухой камень?",
                 narration_text=(
-                    "Почему два пласта с одинаковым сопротивлением 20 Ом·м дают в одной скважине фонтан нефти, "
-                    "а в другой — сухую плотную породу? В терригенном разрезе кварцевый скелет — изолятор, "
-                    "а ток течёт по поровой воде ро-в, поэтому водоносное сопротивление ро-вп равно P-п умножить на ро-в."
+                    "Почему два пласта с одинаковым сопротивлением 20 ом на метр дают в одной скважине нефть, а в другой — сухой камень? "
+                    "Кварцевый скелет — изолятор, и ток течёт только по поровой воде."
                 ),
                 claim_id=c0.claim_id,
                 node_id=n0.node_id,
@@ -926,13 +999,13 @@ def build_course_media_passport_and_video(
             VideoScenePassport(
                 scene_id="shorts_lat_s2",
                 order=2,
-                start_sec=12.0,
-                end_sec=26.0,
+                start_sec=14.0,
+                end_sec=30.0,
                 title="Пауза предсказания 1,3 с и параметр насыщения P_н Арчи–Дахнова",
                 narration_text=(
-                    "Сделайте предсказание: у какого пласта отношение ро-п к ро-вп выше? [Пауза 1,3 с]. "
-                    f"В пористом песчанике (K_п = 22%) нефть вытесняет воду и поднимает параметр насыщения P_н до {summary['max_p_n']}, "
-                    "давая коэффициент нефтегазонасыщения K_нг = 78%."
+                    "Сделайте предсказание: где отношение сопротивления пласта к водоносному выше? [Пауза 1,3 с] "
+                    f"В пористом песчанике нефть вытесняет воду, поднимает параметр насыщения до {summary['max_p_n']} "
+                    "и даёт нефтенасыщенность 78 процентов."
                 ),
                 claim_id=c1.claim_id,
                 node_id=n1.node_id,
@@ -951,13 +1024,12 @@ def build_course_media_passport_and_video(
             VideoScenePassport(
                 scene_id="shorts_lat_s3",
                 order=3,
-                start_sec=26.0,
-                end_sec=41.0,
+                start_sec=30.0,
+                end_sec=48.0,
                 title="Комплекс ГИС: отсечка α_СП ≥ 0,45, понижающее проникновение и ВНК",
                 narration_text=(
-                    f"В комплексе ГИС проницаемый коллектор выделяется по глинистой корке и аномалии альфа-СП выше 0,45. "
-                    f"В нефтяной части пресный фильтрат создаёт понижающее проникновение ро-МБК меньше ро-БК ({summary['max_rho_bk_ohmm']} Ом·м), "
-                    f"а резкий спад сопротивления на глубине {params['vnk_depth_m']} м фиксирует ВНК и эффективную толщину h_эф = {summary['net_pay_oil_m']} м."
+                    "Проницаемый коллектор выделяют по глинистой корке и амплитуде собственной поляризации выше 0,45. "
+                    f"На глубине {int(round(params['vnk_depth_m']))} метров резкий спад сопротивления отбивает водонефтяной контакт."
                 ),
                 claim_id=c2.claim_id,
                 node_id=n2.node_id,
@@ -976,13 +1048,12 @@ def build_course_media_passport_and_video(
             VideoScenePassport(
                 scene_id="shorts_lat_s4",
                 order=4,
-                start_sec=41.0,
-                end_sec=54.0,
+                start_sec=48.0,
+                end_sec=62.0,
                 title="Контрпример плотного прослоя и вопрос на перенос",
                 narration_text=(
-                    "Контрпример: в интервале 2409–2416 м сопротивление тоже высокое, но альфа-СП = 0,18 и корки нет — это плотный неколлектор! "
-                    "Вопрос на перенос: как изменится соотношение ро-МБК и ро-БК против нефтеносного пласта, "
-                    "если бурение перевести с пресного раствора на солёный (ро-ф равно ро-в)?"
+                    "Контрпример: в интервале 2409 — 2416 метров сопротивление высокое, но корки нет — это плотная порода! "
+                    "Вопрос на перенос: как изменятся показания зондов, если бурить на солёном растворе?"
                 ),
                 claim_id=c3.claim_id,
                 node_id=n3.node_id,
@@ -1003,9 +1074,11 @@ def build_course_media_passport_and_video(
         total_dur = 54.0
         mp4_name = "shorts_9_16_latyshova.mp4"
         srt_name = "shorts_9_16_latyshova.srt"
+        vtt_name = "shorts_9_16_latyshova.vtt"
         aud_name = "shorts_9_16_latyshova.mp3"
         mp4_path = media_dir / mp4_name
         srt_path = media_dir / srt_name
+        vtt_path = media_dir / vtt_name
         aud_path = media_dir / aud_name
 
         # Предрендерная спецификация сцены (сохраняется до рендера в scene_specs/*.json)
@@ -1031,34 +1104,22 @@ def build_course_media_passport_and_video(
         )
         (spec_dir / spec_name).write_text(shorts_spec.model_dump_json(indent=2), encoding="utf-8")
 
-        write_srt_from_scenes(scenes, srt_path, max_words_per_line=5)
-        lufs, tp, synth_mode = synthesize_normalized_voice_track(scenes, total_dur, aud_path)
+        audio_rep, total_dur = _build_real_audio_and_subtitles(
+            scenes,
+            aud_path=aud_path,
+            srt_path=srt_path,
+            vtt_path=vtt_path,
+            key_terms=["сопротивление", "пласт", "нефть", "пористость", "Арчи", "глинистой", "ВНК", "альфа"],
+            min_scene_sec=[12.0, 14.0, 15.0, 13.0],
+            max_words_per_cue=5,
+            run_asr=do_asr,
+        )
         if render_mp4:
             _render_shorts_9_16_mp4(scenes, aud_path, mp4_path, work_dir, lat_data)
             shutil.rmtree(work_dir, ignore_errors=True)
 
         probed = probe_real_video_file(mp4_path) if mp4_path.exists() else {"duration_sec": total_dur, "size_bytes": 0}
-        full_narration = " ".join(s.narration_text for s in scenes)
-        _, pron_applied = apply_pronunciation_dictionary(full_narration)
-        word_tcs = build_word_timecodes(scenes)
-        wpm = round(len(word_tcs) / (total_dur / 60.0), 1)
-
-        audio_rep = AudioQualityReport(
-            voice_id="ru-RU-DmitryNeural",
-            synthesis_mode=synth_mode,
-            duration_sec=probed["duration_sec"],
-            integrated_lufs=lufs,
-            true_peak_dbfs=tp,
-            clipping_detected=tp >= -0.2,
-            speech_rate_wpm=wpm,
-            pronunciation_replacements_applied=pron_applied,
-            controversial_terms_report=CONTROVERSIAL_TERMS_REPORT,
-            word_timecodes=word_tcs,
-            asr_model_available=False,
-            measured_wer_pct=None,
-            max_word_desync_sec=0.04,
-            asr_verification_status="проверка ожидается (модель локального ASR не установлена в окружении; расчётный рассинхрон таймкодов ≤ 0,04 с)",
-        )
+        audio_rep.duration_sec = probed["duration_sec"]
 
         return [
             MediaPassport(
@@ -1071,10 +1132,11 @@ def build_course_media_passport_and_video(
                 resolution="1080x1920",
                 fps=30,
                 duration_sec=probed["duration_sec"],
-                video_rel_path=f"{prefix}/media/{mp4_name}",
-                srt_rel_path=f"{prefix}/media/{srt_name}",
-                audio_rel_path=f"{prefix}/media/{aud_name}",
-                scene_spec_rel_path=f"{prefix}/scene_specs/{spec_name}",
+                video_rel_path=rel(f"media/{mp4_name}"),
+                srt_rel_path=rel(f"media/{srt_name}"),
+                vtt_rel_path=rel(f"media/{vtt_name}"),
+                audio_rel_path=rel(f"media/{aud_name}"),
+                scene_spec_rel_path=rel(f"scene_specs/{spec_name}"),
                 file_size_bytes=probed["size_bytes"],
                 hook_question_0_3s="Почему два пласта с одинаковым сопротивлением 20 Ом·м дают в одной скважине фонтан нефти, а в другой — сухую плотную породу?",
                 prediction_pause_sec=1.3,
@@ -1110,8 +1172,8 @@ def build_course_media_passport_and_video(
             title="Вопрос 0–3 с: где теряется половина пластового давления и закон Дарси",
             narration_text=(
                 "Вопрос: где теряется половина пластового давления на пути нефти от контура питания 250 метров до скважины радиуса 10 сантиметров? "
-                "В подземной гидромеханике скорость фильтрации w определяется законом Дарси w = −(k/μ) grad p, "
-                f"а истинная скорость жидкости в поровых каналах v = w / m при пористости {inputs['porosity_m']*100:.0f}% в 5,5 раза выше скорости фильтрации."
+                "В подземной гидромеханике скорость фильтрации определяется законом Дарси, "
+                f"а истинная скорость жидкости в поровых каналах при пористости {int(round(inputs['porosity_m']*100))} процентов в 5,5 раза выше скорости фильтрации."
             ),
             claim_id=c0.claim_id,
             node_id=n0.node_id,
@@ -1134,9 +1196,9 @@ def build_course_media_passport_and_video(
             end_sec=52.0,
             title="Синхронные виды, кадр пласта в истинном масштабе 1:1 и пауза предсказания 1,4 с",
             narration_text=(
-                "Посмотрите на кадр пласта в истинном масштабе 1:1 (толщина 14 метров против радиуса 250 метров, отношение 1 к 17,9) "
-                "и рабочий разрез с вертикальным преувеличением 12,5 раза. Сделайте предсказание: на каком радиусе срабатывается 50% депрессии? [Пауза 1,4 с]. "
-                "Из-за сужения цилиндрического сечения 2πrh скорость растёт как 1/r, и половина всей депрессии 7,5 МПа теряется в первых 5 метрах у ствола!"
+                "Посмотрите на кадр пласта в истинном масштабе 1 к 1: толщина 14 метров против радиуса 250 метров, "
+                "и рабочий разрез с вертикальным преувеличением в 12,5 раза. Сделайте предсказание: на каком радиусе срабатывается половина депрессии? [Пауза 1,4 с] "
+                "Из-за сужения цилиндрического сечения скорость растёт обратно пропорционально радиусу, и половина депрессии теряется в первых 5 метрах у ствола!"
             ),
             claim_id=c1.claim_id,
             node_id=n1.node_id,
@@ -1159,9 +1221,9 @@ def build_course_media_passport_and_video(
             end_sec=80.0,
             title="Формула Дюпюи, шкала решения и контрпример радиуса скважины под логарифмом",
             narration_text=(
-                f"Интегрирование закона Дарси даёт формулу Дюпюи: при проницаемости {inputs['k_md']} миллидарси и депрессии {inputs['delta_p_mpa']} мегапаскаль "
-                f"дебит равен {metrics['q_m3_day']} кубометров в сутки, а коэффициент продуктивности C = {metrics['productivity_index_m3_day_mpa']} м³/(сут·МПа). "
-                "Контрпример: двукратное расширение ствола скважины r-с под знаком логарифма ln(R-к / r-с) увеличивает дебит менее чем на 10%, "
+                f"Интегрирование закона Дарси даёт формулу Дюпюи: при проницаемости {int(round(inputs['k_md']))} миллидарси и депрессии {inputs['delta_p_mpa']} мегапаскаль "
+                f"дебит равен {round(metrics['q_m3_day'], 1)} кубометров в сутки, а коэффициент продуктивности {round(metrics['productivity_index_m3_day_mpa'], 1)}. "
+                "Контрпример: двукратное расширение ствола скважины под знаком логарифма увеличивает дебит менее чем на 10 процентов, "
                 "тогда как рост проницаемости призабойной зоны увеличивает дебит кратно!"
             ),
             claim_id=c2.claim_id,
@@ -1185,10 +1247,10 @@ def build_course_media_passport_and_video(
             end_sec=104.0,
             title="Упругий режим, пьезопроводность κ, метод ПССС Чарного и вопрос на перенос",
             narration_text=(
-                f"При пуске скважины волна депрессии распространяется со скоростью пьезопроводности каппа = {tr_params['kappa_m2_s']} м²/с. "
-                "В методе последовательной смены стационарных состояний Исаака Чарного подвижный радиус возмущения растёт как R(t) = √(r-с² + 4κt), "
-                "достигая 135 метров через 6 часов. Вопрос на перенос: во сколько раз нужно увеличить время исследования скважины t, "
-                "чтобы радиус охвата воронки депрессии R(t) вырос ровно в 3 раза?"
+                f"При пуске скважины волна депрессии распространяется со скоростью пьезопроводности {tr_params['kappa_m2_s']} квадратных метров в секунду. "
+                "В методе последовательной смены стационарных состояний Исаака Чарного подвижный радиус возмущения растёт как корень из времени, "
+                "достигая 135 метров через 6 часов. Вопрос на перенос: во сколько раз нужно увеличить время исследования скважины, "
+                "чтобы радиус охвата воронки депрессии вырос ровно в 3 раза?"
             ),
             claim_id=c3.claim_id,
             node_id=n3.node_id,
@@ -1209,9 +1271,11 @@ def build_course_media_passport_and_video(
     total_dur_16_9 = 104.0
     mp4_name = "explainer_16_9_basniev.mp4"
     srt_name = "explainer_16_9_basniev.srt"
+    vtt_name = "explainer_16_9_basniev.vtt"
     aud_name = "explainer_16_9_basniev.mp3"
     mp4_path = media_dir / mp4_name
     srt_path = media_dir / srt_name
+    vtt_path = media_dir / vtt_name
     aud_path = media_dir / aud_name
 
     # Предрендерная спецификация сцены 16:9 (сохраняется до рендера в scene_specs/*.json)
@@ -1237,34 +1301,22 @@ def build_course_media_passport_and_video(
     )
     (spec_dir / spec_name).write_text(expl_spec.model_dump_json(indent=2), encoding="utf-8")
 
-    write_srt_from_scenes(scenes_16_9, srt_path, max_words_per_line=7)
-    lufs, tp, synth_mode = synthesize_normalized_voice_track(scenes_16_9, total_dur_16_9, aud_path)
+    audio_rep, total_dur_16_9 = _build_real_audio_and_subtitles(
+        scenes_16_9,
+        aud_path=aud_path,
+        srt_path=srt_path,
+        vtt_path=vtt_path,
+        key_terms=["давления", "Дарси", "депрессии", "Дюпюи", "дебит", "логарифма", "пьезопроводности", "Чарного"],
+        min_scene_sec=[23.0, 26.0, 26.0, 22.0],
+        max_words_per_cue=7,
+        run_asr=do_asr,
+    )
     if render_mp4:
         _render_explainer_16_9_mp4(scenes_16_9, aud_path, mp4_path, work_dir, dup_data, tr_data)
         shutil.rmtree(work_dir, ignore_errors=True)
 
     probed = probe_real_video_file(mp4_path) if mp4_path.exists() else {"duration_sec": total_dur_16_9, "size_bytes": 0}
-    full_narration = " ".join(s.narration_text for s in scenes_16_9)
-    _, pron_applied = apply_pronunciation_dictionary(full_narration)
-    word_tcs = build_word_timecodes(scenes_16_9)
-    wpm = round(len(word_tcs) / (total_dur_16_9 / 60.0), 1)
-
-    audio_rep = AudioQualityReport(
-        voice_id="ru-RU-DmitryNeural",
-        synthesis_mode=synth_mode,
-        duration_sec=probed["duration_sec"],
-        integrated_lufs=lufs,
-        true_peak_dbfs=tp,
-        clipping_detected=tp >= -0.2,
-        speech_rate_wpm=wpm,
-        pronunciation_replacements_applied=pron_applied,
-        controversial_terms_report=CONTROVERSIAL_TERMS_REPORT,
-        word_timecodes=word_tcs,
-        asr_model_available=False,
-        measured_wer_pct=None,
-        max_word_desync_sec=0.04,
-        asr_verification_status="проверка ожидается (модель локального ASR не установлена в окружении; расчётный рассинхрон таймкодов ≤ 0,04 с)",
-    )
+    audio_rep.duration_sec = probed["duration_sec"]
 
     return [
         MediaPassport(
@@ -1277,10 +1329,11 @@ def build_course_media_passport_and_video(
             resolution="1920x1080",
             fps=30,
             duration_sec=probed["duration_sec"],
-            video_rel_path=f"{prefix}/media/{mp4_name}",
-            srt_rel_path=f"{prefix}/media/{srt_name}",
-            audio_rel_path=f"{prefix}/media/{aud_name}",
-            scene_spec_rel_path=f"{prefix}/scene_specs/{spec_name}",
+            video_rel_path=rel(f"media/{mp4_name}"),
+            srt_rel_path=rel(f"media/{srt_name}"),
+            vtt_rel_path=rel(f"media/{vtt_name}"),
+            audio_rel_path=rel(f"media/{aud_name}"),
+            scene_spec_rel_path=rel(f"scene_specs/{spec_name}"),
             file_size_bytes=probed["size_bytes"],
             hook_question_0_3s="Где теряется половина пластового давления на пути нефти от контура питания 250 метров до скважины радиуса 10 сантиметров?",
             prediction_pause_sec=1.4,

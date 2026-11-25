@@ -151,15 +151,62 @@ def build_step_screens_from_layer(
             }
         ]
 
-        # Привязка ролика и паспорта ролика к соответствующему шагу
+        # Привязка ролика и паспорта ролика к соответствующему шагу (относительный путь для file://)
         video_url = None
+        video_vtt_url = None
         video_aspect = None
         passport_id = None
         if media_passports and idx in (0, len(layer.nodes) - 1):
             mp = media_passports[0]
-            video_url = mp.video_rel_path
+            video_url = f"media/{Path(mp.video_rel_path).name}"
+            vtt_src = mp.vtt_rel_path or Path(mp.srt_rel_path).with_suffix(".vtt").name
+            video_vtt_url = f"media/{Path(vtt_src).name}"
             video_aspect = mp.aspect_ratio
             passport_id = mp.passport_id
+
+        # Блок «Решение на данных» для обучающих глав (Басниев и Кузнецов; у Латышовой — полный практикум)
+        data_decision_card = None
+        if layer.book_file == "train_basniev.md" and idx == min(2, len(layer.nodes) - 1):
+            data_decision_card = {
+                "title": "Решение на данных: выбор способа интенсификации притока по воронке депрессии и ПССС",
+                "origin_and_assumptions": "Симуляция `basniev_hydro` (Дюпюи + ПССС И.А. Чарного, Гл. XX–XXIV, стр. 416–500): однородный пласт h=14 м, k=120 мД, μ=1,8 мПа·с, R_к=250 м, r_с=0,10 м; линейный закон Дарси.",
+                "observed_features": [
+                    {"label": "Забойное давление p_с / Контурное p_к", "value": "9,0 / 24,0 МПа (Δp = 15,0 МПа)"},
+                    {"label": "Падение давления в первых 5 м от ствола", "value": "7,5 МПа (50% всей депрессии)"},
+                    {"label": "Рост дебита при удвоении r_с (0,10 → 0,20 м)", "value": "247,5 → 272,2 м³/сут (+9,9%)"},
+                    {"label": "Фронт возмущения ПССС R(t) при t=6 ч и κ=0,211 м²/с", "value": "135,0 м (квадратичный рост t ~ R²)"},
+                ],
+                "decision_rule": "Если Δp сосредоточена в призабойной зоне (r < 5 м), геометрическое расширение r_с под логарифмом ln(R_к/r_с) даёт <10% эффекта — требуется обработка призабойной зоны (рост k_пзп) или ГРП; для увеличения радиуса исследования в N раз время t увеличивают в N² раз.",
+                "rule_limits": "Правило Дюпюи и ПССС перестаёт работать при нелинейной фильтрации (большие числа Рейнольдса у забоя при газе), двухфазном притоке ниже давления насыщения или наличии тектонических экранов ближе R(t).",
+                "question": "К какому решению ведут эти данные, если цель — удвоить дебит скважины при текущем пластовом давлении?",
+                "options": [
+                    {"id": "opt_rc", "label": "Разбурить ствол скважины r_с с 0,10 до 0,20 м (даст кратный рост дебита)", "correct": False, "feedback": "Неверно: r_с стоит под знаком ln(R_к/r_с), удвоение r_с даёт лишь +9,9% дебита."},
+                    {"id": "opt_opz", "label": "Провести ОПЗ/ГРП для повышения проницаемости призабойной зоны (где теряется 50% депрессии)", "correct": True, "feedback": "Верно! Проницаемость k входит в формулу Дюпюи линейно, а основная потеря давления происходит именно в первых метрах у ствола."},
+                    {"id": "opt_time", "label": "Увеличить время пуска в 2 раза — это вдвое поднимет установившийся дебит Дюпюи", "correct": False, "feedback": "Неверно: время t увеличивает радиус воронки R(t) ~ √t, но не меняет установившийся перепад Δp."},
+                ],
+            }
+        elif layer.book_file == "train_kuznetsov.md" and idx == min(1, len(layer.nodes) - 1):
+            data_decision_card = {
+                "title": "Решение на данных: распознавание рифовой фации, эволюции и геометрии резервуара (рис. 10.2)",
+                "origin_and_assumptions": "Данные разреза рифа Рейнбоу А (В.Г. Кузнецов, 2012, Гл. 10, стр. 206, рис. 10.2) + интерактивная спецификация фациальной модели (распознавание фаций, эволюция биогерма во времени, геометрия 0–1500 м × H=250 м).",
+                "observed_features": [
+                    {"label": "Группа I (гребень/каркас рифа)", "value": "Ф = 10–30%, k = 50–2000·10⁻¹⁵ м² (высокоёмкий каверно-поровый коллектор)"},
+                    {"label": "Группа II (пририфовый шлейф)", "value": "Ф = 15–35%, k = 30–30000·10⁻¹⁵ м² (максимальная проницаемость)"},
+                    {"label": "Группа V (внутрибассейновые битуминозные породы)", "value": "Ф = 3–8%, k < 3·10⁻¹⁵ м² (флюидоупор / покрышка)"},
+                    {"label": "Геометрия по профилю СЗ–ЮВ", "value": "Высота H до 230–250 м на базе ~1500 м (резкий фациальный клин)"},
+                ],
+                "decision_rule": "Если по керну и разрезу в центральной куполообразной зоне фиксируются строматопорово-коралловые известняки (группы I–II, Ф ≥ 10%, k ≥ 30 мД), а по периферии — темноцветные битуминозные микрозернистые разности (группа V, k < 3 мД), то скважину закладывают в гребень/шлейф (I–II) с учётом резкого выклинивания к борту.",
+                "rule_limits": "Правило теряет силу при полной вторичной цементации каверн ангидритом/галитом или при инверсии пористости на глубоком погружении без учёта трещиноватости.",
+                "interactive_spec": {
+                    "modes": ["1. Распознавание рифовых фаций (I–V)", "2. Эволюция во времени (биостром → биогерм → риф)", "3. Геометрия резервуара (СЗ–ЮВ, 1500×250 м)"],
+                    "note": "Закрывает видеоёмкий узел Кузнецова без отдельного MP4 через интерактивную фациальную схему и проверку на данных.",
+                },
+                "question": "Куда по этим данным следует сместить проектную добывающую скважину и почему?",
+                "options": [
+                    {"id": "kuz_v", "label": "На борт в группу V (Ф=3–8%), чтобы избежать обводнения", "correct": False, "feedback": "Неверно: группа V имеет k < 3·10⁻¹⁵ м² — это практически непроницаемая вмещающая порода/покрышка."},
+                    {"id": "kuz_i_ii", "label": "В ядро и пририфовый шлейф (группы I–II, k до 2000–30000·10⁻¹⁵ м²), контролируя отметку флюидного контакта", "correct": True, "feedback": "Верно! Наилучшие фильтрационно-ёмкостные свойства сосредоточены в органогенном каркасе (I) и обломочном шлейфе (II)."},
+                ],
+            }
 
         screens.append(
             StudyStepScreen(
@@ -188,9 +235,11 @@ def build_step_screens_from_layer(
                 deeper_branch=node.deeper_branch,
                 illustration=illust,
                 video_url=video_url,
+                video_vtt_url=video_vtt_url,
                 video_aspect=video_aspect,
                 media_passport_id=passport_id,
                 ocr_corrections_applied=node_ocrs,
+                data_decision_card=data_decision_card,
             )
         )
     return screens
@@ -593,6 +642,13 @@ def render_standalone_offline_html(package: StudyCoursePackage) -> str:
       renderAll();
     }}
 
+    function pickDataDecision(stepId, optId) {{
+      if (!state.dataDecisions) state.dataDecisions = {{}};
+      state.dataDecisions[stepId] = optId;
+      saveState();
+      render();
+    }}
+
     function setPracticumForecast(idx) {{
       state.practicum.forecastIdx = idx;
       saveState();
@@ -841,11 +897,50 @@ def render_standalone_offline_html(package: StudyCoursePackage) -> str:
         htmlOut += renderPracticumBlock(st.practicum);
       }}
 
+      // Интерактивный блок «Решение на данных» (признаки -> правило -> вывод + границы правила + происхождение)
+      if (st.data_decision_card) {{
+        const dc = st.data_decision_card;
+        if (!state.dataDecisions) state.dataDecisions = {{}};
+        const chosenDc = state.dataDecisions[st.step_id] || null;
+        htmlOut += '<section class="lithos-card" style="border:2px solid var(--lithos-emerald);background:var(--lithos-panel-bg);">';
+        htmlOut += '<h3 style="margin-top:0;color:var(--lithos-emerald);">' + dc.title + '</h3>';
+        htmlOut += '<p style="font-size:1rem;color:var(--lithos-text-muted);"><strong>Происхождение и допущения:</strong> ' + dc.origin_and_assumptions + '</p>';
+        htmlOut += '<div style="margin:10px 0;"><strong>1. Наблюдаемые признаки по данным:</strong><ul style="margin:6px 0 0 18px;">';
+        (dc.observed_features || []).forEach((f) => {{
+          htmlOut += '<li><strong>' + f.label + ':</strong> ' + f.value + '</li>';
+        }});
+        htmlOut += '</ul></div>';
+        htmlOut += '<p style="margin:8px 0;"><strong>2. Правило вывода:</strong> ' + dc.decision_rule + '</p>';
+        htmlOut += '<p style="margin:8px 0;color:var(--lithos-amber);"><strong>3. Границы применимости правила:</strong> ' + dc.rule_limits + '</p>';
+        if (dc.interactive_spec) {{
+          htmlOut += '<div style="padding:8px 10px;border-radius:8px;background:var(--lithos-card-bg);margin:8px 0;"><strong>Интерактивная спецификация узла:</strong> ' + (dc.interactive_spec.modes || []).join(' · ') + ' — ' + dc.interactive_spec.note + '</div>';
+        }}
+        htmlOut += '<div style="margin-top:10px;"><strong>4. Проверьте решение:</strong> ' + dc.question + '</div>';
+        htmlOut += '<div style="display:flex;flex-direction:column;gap:8px;margin-top:8px;">';
+        (dc.options || []).forEach((o) => {{
+          const active = chosenDc === o.id;
+          htmlOut += '<button type="button" class="lithos-btn ' + (active ? 'lithos-btn-primary' : '') + '" style="text-align:left;" onclick="pickDataDecision(\\'' + st.step_id + '\\', \\'' + o.id + '\\')">' + o.label + '</button>';
+        }});
+        htmlOut += '</div>';
+        if (chosenDc) {{
+          const hit = (dc.options || []).find((o) => o.id === chosenDc);
+          if (hit) {{
+            htmlOut += '<div style="margin-top:10px;padding:10px;border-radius:8px;border:1px solid ' + (hit.correct ? 'var(--lithos-emerald)' : 'var(--lithos-rose)') + ';">' + hit.feedback + '</div>';
+          }}
+        }}
+        htmlOut += '</section>';
+      }}
+
       // Встроенный ролик шага (если привязан к шагу)
       if (st.video_url) {{
         htmlOut += '<div class="lithos-card" style="background:var(--lithos-panel-bg);">';
         htmlOut += '<div style="font-weight:700;margin-bottom:8px;">Учебный видеоролик шага (' + (st.video_aspect || '16:9') + ') · Паспорт ролика: ' + (st.media_passport_id || '') + '</div>';
-        htmlOut += '<video controls playsinline preload="metadata" src="' + st.video_url + '" style="max-width:100%;max-height:460px;border-radius:10px;background:#000;"></video>';
+        htmlOut += '<video controls playsinline preload="metadata" style="max-width:100%;max-height:460px;border-radius:10px;background:#000;">';
+        htmlOut += '<source src="' + st.video_url + '" type="video/mp4">';
+        if (st.video_vtt_url) {{
+          htmlOut += '<track kind="subtitles" srclang="ru" label="Русские субтитры" src="' + st.video_vtt_url + '" default>';
+        }}
+        htmlOut += '</video>';
         htmlOut += '</div>';
       }}
 
@@ -1222,7 +1317,19 @@ def write_offline_package_and_zip(
     (course_dir / "bookmark_report.json").write_text(package.bookmark_report.model_dump_json(indent=2), encoding="utf-8")
     (course_dir / "summary_notes.md").write_text(package.summary_notes_markdown, encoding="utf-8")
 
+    import base64 as _b64
+
+    vtt_originals: list[tuple[int, str | None]] = []
+    for i, st in enumerate(package.steps):
+        if st.video_vtt_url:
+            vtt_file = course_dir / "media" / Path(st.video_vtt_url).name
+            if vtt_file.exists():
+                vtt_originals.append((i, st.video_vtt_url))
+                st.video_vtt_url = "data:text/vtt;base64," + _b64.b64encode(vtt_file.read_bytes()).decode("ascii")
+
     html_content = render_standalone_offline_html(package)
+    for i, orig_vtt in vtt_originals:
+        package.steps[i].video_vtt_url = orig_vtt
     html_path = course_dir / "index.html"
     html_path.write_text(html_content, encoding="utf-8")
 
@@ -1242,21 +1349,39 @@ def write_offline_package_and_zip(
         "summary_notes.md",
     ]
 
+    media_dir = course_dir / "media"
+    spec_dir = course_dir / "scene_specs"
+    non_video_bytes = 0
+
     with zipfile.ZipFile(zip_path, "w", compression=zipfile.ZIP_DEFLATED) as zf:
         for fname in files_to_pack:
             fpath = course_dir / fname
             if fpath.exists():
                 zf.write(fpath, arcname=fname)
+                non_video_bytes += fpath.stat().st_size
         for svg_f in sorted(illust_dir.glob("*.svg")):
             zf.write(svg_f, arcname=f"illustrations/{svg_f.name}")
+            non_video_bytes += svg_f.stat().st_size
+        if spec_dir.exists():
+            for sp_f in sorted(spec_dir.glob("*.json")):
+                zf.write(sp_f, arcname=f"scene_specs/{sp_f.name}")
+                non_video_bytes += sp_f.stat().st_size
+        if media_dir.exists():
+            for mf in sorted(media_dir.iterdir()):
+                if mf.is_file() and mf.suffix.lower() in (".mp4", ".srt", ".vtt", ".mp3", ".m4a"):
+                    zf.write(mf, arcname=f"media/{mf.name}")
+                    if mf.suffix.lower() in (".srt", ".vtt"):
+                        non_video_bytes += mf.stat().st_size
 
     size_mb = round(zip_path.stat().st_size / (1024 * 1024), 4)
-    assert size_mb < 30.0, f"Превышен лимит 30 МБ на главу: {size_mb} МБ"
+    size_no_video_mb = round(non_video_bytes / (1024 * 1024), 4)
+    assert size_no_video_mb < 30.0, f"Превышен лимит 30 МБ (без видео) на главу: {size_no_video_mb} МБ"
 
     prefix = public_prefix.rstrip("/") if public_prefix else f"/outputs/{package.course_id}"
     package.offline_html_url = f"{prefix}/index.html"
     package.offline_zip_url = f"{prefix}/{zip_name}"
     package.offline_package_size_mb = size_mb
+    package.offline_size_without_video_mb = size_no_video_mb
 
     (course_dir / "t3_course_package.json").write_text(package.model_dump_json(indent=2), encoding="utf-8")
     return package

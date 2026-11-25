@@ -767,7 +767,9 @@ async def _try_llm_enrich_scenes(
     passport: dict[str, Any],
     base_scenes: list[SceneSpec],
 ) -> list[SceneSpec]:
-    """Если в .env задан реальный LLM_API_KEY, уточняет нарратив сцен по тексту главы и паспорту."""
+    """Если явно разрешён внешний вызов (LITHOS_ALLOW_EXTERNAL_CHAPTER_LLM=1) и задан LLM_API_KEY, уточняет нарратив сцен."""
+    if os.getenv("LITHOS_ALLOW_EXTERNAL_CHAPTER_LLM", "0").strip() != "1":
+        return base_scenes
     api_key = os.getenv("LLM_API_KEY", "").strip()
     if not api_key or api_key == "PASTE_YOUR_KEY_HERE":
         return base_scenes
