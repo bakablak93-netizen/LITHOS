@@ -281,6 +281,10 @@ def compute_basniev_physics(params: BasnievLabParams) -> dict[str, Any]:
     return {"dupuit": dup, "transient_psss": tr}
 
 
+from backend.study_api import router as t3_study_router  # noqa: E402
+
+app.include_router(t3_study_router)
+
 # Раздача собранного React-интерфейса (production Docker режим)
 if WEB_DIST_DIR.exists():
     app.mount("/assets", StaticFiles(directory=str(WEB_DIST_DIR / "assets")), name="web_assets")
