@@ -42,6 +42,9 @@ def _num_to_words(match: re.Match[str]) -> str:
 def normalize_ru(text: str) -> list[str]:
     t = text.lower().replace("ё", "е")
     t = t.replace("%", " процент ").replace("·", " ").replace("−", "-")
+    t = re.sub(r"\bсм\b", "сантиметров", t)
+    t = re.sub(r"\bмлд\b", "миллидарси", t)
+    t = re.sub(r"\bпроцента\b|\bпроцентов\b", "процент", t)
     t = re.sub(r"(?<=\d)\s(?=\d{3}\b)", "", t)  # «1 000» → «1000»
     t = re.sub(r"\d+(?:[.,]\d+)?", _num_to_words, t)
     t = re.sub(r"[^a-zа-я0-9 ]+", " ", t)
