@@ -1,0 +1,17 @@
+services:
+  lithos-course-studio:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: kmg-chapter-to-course
+    ports:
+      - "8000:8000"
+    env_file:
+      - .env
+    environment:
+      - DATA_DIR=/app/data
+      - OUTPUT_DIR=/app/outputs
+    volumes:
+      - ./data:/app/data
+      - ./outputs:/app/outputs
+    restart: unless-stopped

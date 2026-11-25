@@ -1,0 +1,11 @@
+.env
+__pycache__/
+*.pyc
+.venv/
+venv/
+outputs/
+node_modules/
+web_ui/dist/
+remotion_studio/out/
+manim_scenes/media/
+.DS_Store
