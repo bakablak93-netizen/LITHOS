@@ -1,0 +1,14 @@
+{
+  "package_id": "test_asquith",
+  "package_sha256": "bede51f46bafac39c21dbb4362e46b4c8dca8df3c8e12d501877841d5f55a124",
+  "freeze_tag": "freeze-2026-11-26",
+  "freeze_commit": "666813d198708089c894b2b673454413c51f975c",
+  "module": "python -m backend.study verify-bookmarks --data-dir <dir> --book asquith_ch7.md --input <original-package.json>",
+  "result": {
+    "checked_items": 86,
+    "confirmed_findings": 0,
+    "insufficient_evidence": 86,
+    "reason": "Вход использует page_pdf, а модуль ожидает pdf_page. Для книги вне каталога берётся диапазон 1–15. Кадры проверены отдельно вручную."
+  },
+  "manual_remarks": 20
+}
