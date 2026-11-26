@@ -1,0 +1,145 @@
+{
+  "course_id": "t3_ctrl_baraboshkin_b",
+  "chapter_id": "baraboshkin_s1_2",
+  "book_file": "ctrl_baraboshkin_b.md",
+  "domain_package_id": "oil_gas_ru",
+  "total_steps": 3,
+  "covered_steps": 3,
+  "needs_model_steps": 0,
+  "class_a_b_count": 2,
+  "hook_shorts_share_pct": 0.0,
+  "video_heavy_template_coverage": [
+    {
+      "node_id": "baraboshkin_s1_2_node_01",
+      "step_title": "Морфология и классификация дельтовых систем",
+      "video_capacity_score": "8",
+      "selected_format": "interactive_domain_animation",
+      "template_id": "tpl_class_b_brb_fluvial_pointbar",
+      "state_model": "parametric_geology",
+      "status": "template_ready"
+    },
+    {
+      "node_id": "baraboshkin_s1_2_node_02",
+      "step_title": "Флювиальные дельты и проградационные разрезы",
+      "video_capacity_score": "9",
+      "selected_format": "interactive_domain_animation",
+      "template_id": "tpl_class_b_brb_delta_galloway",
+      "state_model": "parametric_geology",
+      "status": "template_ready"
+    },
+    {
+      "node_id": "baraboshkin_s1_2_node_03",
+      "step_title": "Волновые и приливные дельтовые системы",
+      "video_capacity_score": "7",
+      "selected_format": "code_redraw_figure",
+      "template_id": "tpl_redraw_generic_domain",
+      "state_model": "scan_code_redraw",
+      "status": "template_ready"
+    }
+  ],
+  "entries": [
+    {
+      "node_id": "baraboshkin_s1_2_node_01",
+      "step_id": "baraboshkin_s1_2_step_01",
+      "step_title": "Морфология и классификация дельтовых систем",
+      "video_capacity_score": 8,
+      "video_capacity_features": [
+        "sedimentological_log",
+        "fining_upward_bell_curve",
+        "meandering_vs_braided"
+      ],
+      "selected_format": "interactive_domain_animation",
+      "routing_rationale": "Видеоёмкость 8/10 (sedimentological_log, fining_upward_bell_curve, meandering_vs_braided): узел сопоставлен с шаблоном tpl_class_b_brb_fluvial_pointbar (класс B, состояние модели parametric_geology) и подтверждён реальным артефактом illustrations/baraboshkin_s1_2_step_01_illust.svg.",
+      "visual_class": "B",
+      "template_id": "tpl_class_b_brb_fluvial_pointbar",
+      "model_state": "parametric_geology",
+      "coverage_status": "covered",
+      "artifact_path": "illustrations/baraboshkin_s1_2_step_01_illust.svg",
+      "missing_requirement": "",
+      "illustration_id": "baraboshkin_s1_2_step_01_illust",
+      "source_ref": "рис. 1.2 и рис. 1.7, стр. 21, 24 (меандрирующие и ветвящиеся реки, тренд Fining-upward)"
+    },
+    {
+      "node_id": "baraboshkin_s1_2_node_02",
+      "step_id": "baraboshkin_s1_2_step_02",
+      "step_title": "Флювиальные дельты и проградационные разрезы",
+      "video_capacity_score": 9,
+      "video_capacity_features": [
+        "galloway_ternary_diagram",
+        "coarsening_upward_funnel_curve",
+        "progradation_clinoforms"
+      ],
+      "selected_format": "interactive_domain_animation",
+      "routing_rationale": "Видеоёмкость 9/10 (galloway_ternary_diagram, coarsening_upward_funnel_curve, progradation_clinoforms): узел сопоставлен с шаблоном tpl_class_b_brb_delta_galloway (класс B, состояние модели parametric_geology) и подтверждён реальным артефактом illustrations/baraboshkin_s1_2_step_02_illust.svg.",
+      "visual_class": "B",
+      "template_id": "tpl_class_b_brb_delta_galloway",
+      "model_state": "parametric_geology",
+      "coverage_status": "covered",
+      "artifact_path": "illustrations/baraboshkin_s1_2_step_02_illust.svg",
+      "missing_requirement": "",
+      "illustration_id": "baraboshkin_s1_2_step_02_illust",
+      "source_ref": "рис. 1.15 и рис. 1.18, стр. 30, 32 (треугольник дельт Гэллоуэя и тренд Coarsening-upward)"
+    },
+    {
+      "node_id": "baraboshkin_s1_2_node_03",
+      "step_id": "baraboshkin_s1_2_step_03",
+      "step_title": "Волновые и приливные дельтовые системы",
+      "video_capacity_score": 7,
+      "video_capacity_features": [
+        "domain_diagram",
+        "source_grounded"
+      ],
+      "selected_format": "code_redraw_figure",
+      "routing_rationale": "Видеоёмкость 7/10 (domain_diagram, source_grounded): узел сопоставлен с шаблоном tpl_redraw_generic_domain (класс C, состояние модели scan_code_redraw) и подтверждён реальным артефактом illustrations/baraboshkin_s1_2_step_03_illust.svg.",
+      "visual_class": "C",
+      "template_id": "tpl_redraw_generic_domain",
+      "model_state": "scan_code_redraw",
+      "coverage_status": "covered",
+      "artifact_path": "illustrations/baraboshkin_s1_2_step_03_illust.svg",
+      "missing_requirement": "",
+      "illustration_id": "baraboshkin_s1_2_step_03_illust",
+      "source_ref": "рис. 3, стр. 40"
+    }
+  ],
+  "step_illustration_source_links": [
+    {
+      "step_id": "baraboshkin_s1_2_step_01",
+      "node_id": "baraboshkin_s1_2_node_01",
+      "step_title": "Морфология и классификация дельтовых систем",
+      "illustration_id": "baraboshkin_s1_2_step_01_illust",
+      "visual_class": "B",
+      "redraw_caption": "перерисовано по рис. 1.7, стр. 24",
+      "source_ref": "рис. 1.2 и рис. 1.7, стр. 21, 24 (меандрирующие и ветвящиеся реки, тренд Fining-upward)",
+      "pdf_page": "24",
+      "printed_page": "29",
+      "claim_id": "baraboshkin_s1_2_node_01_claim_01",
+      "artifact_path": "illustrations/baraboshkin_s1_2_step_01_illust.svg"
+    },
+    {
+      "step_id": "baraboshkin_s1_2_step_02",
+      "node_id": "baraboshkin_s1_2_node_02",
+      "step_title": "Флювиальные дельты и проградационные разрезы",
+      "illustration_id": "baraboshkin_s1_2_step_02_illust",
+      "visual_class": "B",
+      "redraw_caption": "перерисовано по рис. 1.15, стр. 30",
+      "source_ref": "рис. 1.15 и рис. 1.18, стр. 30, 32 (треугольник дельт Гэллоуэя и тренд Coarsening-upward)",
+      "pdf_page": "30",
+      "printed_page": "38",
+      "claim_id": "baraboshkin_s1_2_node_02_claim_01",
+      "artifact_path": "illustrations/baraboshkin_s1_2_step_02_illust.svg"
+    },
+    {
+      "step_id": "baraboshkin_s1_2_step_03",
+      "node_id": "baraboshkin_s1_2_node_03",
+      "step_title": "Волновые и приливные дельтовые системы",
+      "illustration_id": "baraboshkin_s1_2_step_03_illust",
+      "visual_class": "C",
+      "redraw_caption": "перерисовано по рис. 3, стр. 40",
+      "source_ref": "рис. 3, стр. 40",
+      "pdf_page": "40",
+      "printed_page": "39",
+      "claim_id": "baraboshkin_s1_2_node_03_claim_01",
+      "artifact_path": "illustrations/baraboshkin_s1_2_step_03_illust.svg"
+    }
+  ]
+}

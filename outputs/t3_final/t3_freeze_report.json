@@ -1,0 +1,640 @@
+{
+  "protocol_version": "lithos.t3.freeze.v2",
+  "git_head_sha": "53c7ce0431a86c9862dde7fe2681b540430b356c",
+  "build_elapsed_sec": 317.84,
+  "artifact_hashes": {
+    "code_files_sha256": {
+      "backend/study.py": "0b6b5a36b7128456cb1627bc9a33258737710e2295bdc46e0d932b06ef2a9aab",
+      "backend/study_api.py": "e628f49669bcdbabf9bbf8a49d53e1a693ff928759dba5f5eaed199d51ed86be",
+      "backend/t3/models.py": "d33b711b1998b9d9801d832db2cea668ec99a4ddfa2d058378903bef8fa06986",
+      "backend/t3/registry.py": "a2f201e5ff4015bb78a109771dea40ab147f5c8a8ee20d713c50c3158bdf1648",
+      "backend/t3/layer.py": "436245bbe93a6e6bbbf3c03dd20e785d2fe23c20b43fb67a1b575500af6b7ca7",
+      "backend/t3/routing.py": "d6d2497276746870261e3d1497260c7bf671fff66def92635ca7c4483d61fcda",
+      "backend/t3/tasks_engine.py": "a3ad17bfb4e40834378b4c43a422c69e2d2d778145a10abfd22a5ef41f7fd471",
+      "backend/t3/practicum.py": "1bab82d761f94ecbc5db65bfe3be4ff6e52a900a5305fbe04ea389a371055436",
+      "backend/t3/offline/template.py": "d5dfaa51a712f5f81696e0b60ca6cbb8548fbf5ae74d76263c814fd597c18605",
+      "backend/t3/media_pipeline.py": "ad6c642581a0b4a66507ce51443fdbe5d296b0c8bf660bbbd124d03c53c89fe5",
+      "backend/t3/bookmarks_verifier.py": "f6ac02a7de9ffa0dea2d53e70e6befb049de2e6cdfaa358444bb453209b59771",
+      "backend/t3/pipeline.py": "bcf828f505a85c0f7b714bf3793335f1c4494a027c95b0f31d2d4bfaf37d38ed"
+    },
+    "physics_models_sha256": {
+      "backend/physics_engine/latyshova_gis.py": "c7a90056bd192e5726927b5c679c02cfe4aab4693f7451faa9b12f13c7758d97",
+      "backend/physics_engine/basniev_hydro.py": "5f843513f7108299615b9c61f31b2b2a7c8f298ff8b291062df2cbf1f6fa7e85"
+    },
+    "domain_passports_sha256": {
+      "geokniga-litologiya-prirodnyh-rezervuarov-nefti-i-gaza.md": "b0904f27721fa02d095a574d59ec80b38b94075d5161085dfaf9a12aae466c53",
+      "Барабошкин_-_Практическая_седиментология_(терригенные_коллектора)_-_2007.md": "2626423defaa78ad28ca03d5b7dbed76d2f2616d356562bec54d7b64a3551f20",
+      "Баренблатт_и_др_-_Движение_жидкостей_и_газов_в_природных_пластах_-_1984.md": "fcda9115f928f774c9218feb20aa5da3ed4130d52a063fafff8d3b7a3cb6eab2",
+      "Басниев_и_др_-_Нефтегазовая_гидромеханика_-_2005.md": "38b6ffe8f0a111397fced5aa5b336ba7cc7cbc978900745fb6bf74f28c54c9c6",
+      "Вендельштейн_и_др_-_Геофизические_методы_определения_параметров_нефтегазовых_коллекторов_-_1978.md": "095561c468ac8cf28f07c34189519b792b410e52a76c8e406949468c56d04e5e",
+      "Латышова_-_Практическое_руководство_по_интерпретации_диаграмм_геофизических_исследований_скважин_-_1.md": "2ecfa84fa370191895508e72698c6c19be9b0a6830fcd332065792912b1351b8"
+    },
+    "prompts_sha256": {
+      "hint_strategy_selector_system_prompt_sha256": "d6185dd6149d02ecfba867f34030d219312c5fab15383637c69d8255aaa56efb"
+    }
+  },
+  "effort_and_edits_log_template": [
+    {
+      "date": "",
+      "operator_or_mentor": "",
+      "chapter_or_artifact": "",
+      "actual_minutes": null,
+      "manual_edits_summary": "",
+      "output_artifact_path": "",
+      "status_note": "Заполняется вручную только после фактического прогона с оператором или ментором."
+    }
+  ],
+  "baseline_audit_metrics": {
+    "available_courses": 6,
+    "total_steps": 251,
+    "total_tasks": 90,
+    "videos_count": 2,
+    "needs_model_steps_total": 39,
+    "needs_model_steps_training": 30,
+    "passing_tests": 13
+  },
+  "recounted_t3_metrics": {
+    "available_courses": 6,
+    "training_courses": 3,
+    "control_courses": 3,
+    "total_t3_steps": 22,
+    "total_independent_registry_units": 944,
+    "total_covered_registry_units": 935,
+    "total_tasks": 120,
+    "task_types_per_course": 5,
+    "verified_t3_videos_count": 2,
+    "baseline_reference_videos_preserved": 6,
+    "needs_model_steps_total": 0,
+    "needs_model_steps_training": 0,
+    "class_a_b_illustrations_count": 15
+  },
+  "engine_and_tools_inventory": {
+    "python_version": "3.12.16",
+    "platform": "Linux-6.18.57-x86_64-with-glibc2.39",
+    "physics_engines": [
+      "backend.physics_engine.latyshova_gis (simulate_well_log, evaluate_archie_curve)",
+      "backend.physics_engine.basniev_hydro (simulate_dupuit_flow, simulate_psss_transient)"
+    ],
+    "visual_renderers": [
+      "backend.t3.routing.generate_domain_svg (Classes A, B, C, D dual-theme SVG/animation)",
+      "backend.t3.media_pipeline (Matplotlib + FFmpeg 1080x1920 9:16 & 1920x1080 16:9 @ 30fps)",
+      "manim_scenes / remotion_studio / threejs_labs (LatyshovaProbeLab, BasnievHydroLab)"
+    ],
+    "audio_and_tts": "edge-tts (ru-RU-DmitryNeural / ru-RU-SvetlanaNeural) + offline formant synthesizer + FFmpeg loudnorm (-16 LUFS)",
+    "llm_and_prompts": {
+      "default_build_mode": "100% deterministic local extraction & verification (0 external API calls)",
+      "online_hint_selector_model": "gpt-4o-mini (optional via OPENAI_API_KEY / LLM_API_KEY)",
+      "online_hint_prompt_policy": "Strict metadata-only payload (task_type, difficulty_level, primary_difficulty, attempt_number, hint_level). Chapter text, quotes, options, and student answers never leave the local machine."
+    },
+    "external_network_traffic_during_build": "0 bytes (fully offline build & verification)"
+  },
+  "measured_costs_and_effort": {
+    "automated_build_time_sec": 317.84,
+    "manual_ocr_corrections_recorded": 13,
+    "paid_api_cost_usd": 0.0,
+    "human_person_minutes": null,
+    "human_person_minutes_empty_reason": "Автоматическая сборка в изолированной облачной среде без ручного хронометража оператора.",
+    "mentor_review_minutes": null,
+    "mentor_review_minutes_empty_reason": "Поле оставлено пустым до очного прогона с внешним геологом-ментором (согласно п. 7 ТЗ: неизмеренные значения оставлять пустыми с причиной).",
+    "novice_trial_completion_rate": null,
+    "novice_trial_empty_reason": "Поле оставлено пустым до фактического прогона с группой участников-новичков."
+  },
+  "external_organizer_materials_status": [
+    {
+      "material_name": "Официальные JSON-схемы организаторов (layer / passport / bookmark schema)",
+      "present_in_repo": false,
+      "blocked_or_affected_criterion": "Прямая валидация по внешнему файлу JSON Schema организаторов (в LITHOS зафиксирован внутренний формат lithos.t3.package.v2 и полный перечень полей для сопоставления)."
+    },
+    {
+      "material_name": "Внешний стайлгайд организаторов по предметной графике",
+      "present_in_repo": false,
+      "blocked_or_affected_criterion": "Сверка палитры со стайлгайдом организаторов (в LITHOS применена единая внутренняя легенда LITHOS_UNIFIED_LEGEND с поддержкой светлой и тёмной тем)."
+    },
+    {
+      "material_name": "Официальный пакет с «закладками» организаторов",
+      "present_in_repo": false,
+      "blocked_or_affected_criterion": "Официальный зачёт рубрики на внешнем наборе закладок (выполнена внутренняя калибровка internal_calibration: полнота 100% на 9 типах закладок, 0 ложных тревог на 6 книгах)."
+    },
+    {
+      "material_name": "Три закрытых двойника (holdout chapters) и глава со сдвигом (distribution shift)",
+      "present_in_repo": false,
+      "blocked_or_affected_criterion": "Финальный прогон закрытых материалов организаторов после подтверждённой заморозки (точка входа build_t3_course_package готова к запуску на любом PDF/MD)."
+    }
+  ],
+  "calibration_benchmark": {
+    "evaluation_mode": "internal_calibration",
+    "official_bookmark_package_status": "не предоставлен организаторами (метрики официального набора будут рассчитаны отдельно после его получения)",
+    "note": "Внутренняя калибровка LITHOS: 6 полных валидных книг + 4 похожие правильные контрольные формулировки (near-miss) + 9 эталонных закладок всех типов.",
+    "total_examples": 19,
+    "total_valid_books_checked": 6,
+    "near_miss_valid_controls_checked": 4,
+    "false_positives_on_valid_count": 0,
+    "expert_review_routed_count": 28,
+    "total_injected_bookmarks": 9,
+    "detected_bookmarks_count": 9,
+    "missed_bookmarks_count": 0,
+    "recall_pct": 100.0,
+    "fix_with_page_accuracy_pct": 100.0,
+    "valid_runs": [
+      {
+        "book_file": "train_latyshova.md",
+        "checked_objects": 165,
+        "false_positives": 0,
+        "expert_review_queue_count": 8,
+        "passed": true
+      },
+      {
+        "book_file": "train_basniev.md",
+        "checked_objects": 132,
+        "false_positives": 0,
+        "expert_review_queue_count": 2,
+        "passed": true
+      },
+      {
+        "book_file": "train_kuznetsov.md",
+        "checked_objects": 132,
+        "false_positives": 0,
+        "expert_review_queue_count": 14,
+        "passed": true
+      },
+      {
+        "book_file": "ctrl_vendelshtein.md",
+        "checked_objects": 99,
+        "false_positives": 0,
+        "expert_review_queue_count": 4,
+        "passed": true
+      },
+      {
+        "book_file": "ctrl_barenblatt.md",
+        "checked_objects": 99,
+        "false_positives": 0,
+        "expert_review_queue_count": 0,
+        "passed": true
+      },
+      {
+        "book_file": "ctrl_baraboshkin_b.md",
+        "checked_objects": 99,
+        "false_positives": 0,
+        "expert_review_queue_count": 0,
+        "passed": true
+      }
+    ],
+    "near_miss_controls": [
+      {
+        "case_id": "NM-01-VENDELSHTEIN-VALID-NEGATION",
+        "book_file": "ctrl_vendelshtein.md",
+        "phrase": "Если глубина зоны проникновения превышает радиус исследования зондов, разделить коллекторы на продуктивные и водоносные без дополнительных сведений однозначно нельзя.",
+        "false_positives": 0,
+        "passed": true
+      },
+      {
+        "case_id": "NM-02-BASNIEV-VALID-DARCY-SIGN",
+        "book_file": "train_basniev.md",
+        "phrase": "Закон Дарси w = −(k/μ) grad p со знаком минус и переводом 1 мД = 10^-15 м²; давление в воронке депрессии распределено по логарифмическому закону.",
+        "false_positives": 0,
+        "passed": true
+      },
+      {
+        "case_id": "NM-03-LATYSHOVA-VALID-INVASION",
+        "book_file": "train_latyshova.md",
+        "phrase": "В нефтеносном пласте на пресном растворе наблюдается понижающее проникновение (ρ_МБК < ρ_БК); кривые БЭЗ строятся на билогарифмическом бланке без подстановки выдуманных чисел.",
+        "false_positives": 0,
+        "passed": true
+      },
+      {
+        "case_id": "NM-04-KUZNETSOV-VALID-ATOLL",
+        "book_file": "train_kuznetsov.md",
+        "phrase": "В атоллах лучшие коллекторы приурочены к периферийному кольцу ядра рифа, тогда как в центральной лагуне ФЕС ухудшаются.",
+        "false_positives": 0,
+        "passed": true
+      }
+    ],
+    "injected_cases": [
+      {
+        "case_id": "BM-CASE-01-VENDELSHTEIN-P20-POLARITY",
+        "expected_type": "polarity_flip",
+        "expected_page": 20,
+        "detected": true,
+        "findings": [
+          {
+            "finding_id": "BM-002",
+            "verdict": "confirmed_violation",
+            "defect_type": "polarity_flip",
+            "severity": "CRITICAL",
+            "target_object": "claim:vendelshtein_ch1_discontinuous_node_02_claim_01",
+            "problematic_fragment": "...однозначно можно...",
+            "explanation": "Переворот отрицания (модальности): в выводе утверждается возможность однозначного разделения коллекторов при глубоком проникновении, хотя источник прямо запрещает такой вывод без данных испытаний.",
+            "proposed_fix": "Заменить «однозначно можно» на «однозначно нельзя» согласно подлинной цитате источника: «Если это условие не соблюдается, разделить коллекторы на продуктивные и водоносные по данным электрометрии без дополнительных сведений (данные испытаний и др.) однозначно нельзя».",
+            "pdf_page": 20,
+            "printed_page": "37–38",
+            "supporting_quote": "Важнейшее благоприятное условие определения \\( \\rho_{n} \\) — наличие зоны проникновения, глубина которой меньше глубины исследования (для используемого комплекта зондов). Если это условие не соблюдается, разделить коллекторы на продуктивные и водоносные по данным электрометрии бе",
+            "rationale": "Подлинная цитата источника (PDF стр. 20, печ. стр. 37–38): «Важнейшее благоприятное условие определения \\( \\rho_{n} \\) — наличие зоны проникновения, глубина которой меньше глубины исследования (для используемого комплекта зондов). Если это условие не соблюдается, разделить коллекторы на продуктивные»."
+          }
+        ]
+      },
+      {
+        "case_id": "BM-CASE-02-CONDITION-LOSS",
+        "expected_type": "condition_loss",
+        "expected_page": 20,
+        "detected": true,
+        "findings": [
+          {
+            "finding_id": "BM-002",
+            "verdict": "confirmed_violation",
+            "defect_type": "condition_loss",
+            "severity": "HIGH",
+            "target_object": "claim:vendelshtein_ch1_discontinuous_node_02_claim_01",
+            "problematic_fragment": "conditions=[] (условие применимости удалено)",
+            "explanation": "Утверждение потеряло обязательное граничное условие применимости, присутствующее в исходном абзаце.",
+            "proposed_fix": "Вернуть потерянное условие применимости со стр. 20: «Если это условие не соблюдается, разделить коллекторы на продуктивные и водоносные по данным электрометрии без дополнительных сведений (данные испытаний и др.) однозначно нельзя.».",
+            "pdf_page": 20,
+            "printed_page": "37–38",
+            "supporting_quote": "Если это условие не соблюдается, разделить коллекторы на продуктивные и водоносные по данным электрометрии без дополнительных сведений (данные испытаний и др.) однозначно нельзя.",
+            "rationale": "В исходной единице ctrl_vendelshtein_p020_par_07 (стр. 20) присутствует обязательное условие применимости."
+          }
+        ]
+      },
+      {
+        "case_id": "BM-CASE-03-DARCY-SIGN-FLIP",
+        "expected_type": "polarity_flip",
+        "expected_page": 477,
+        "detected": true,
+        "findings": [
+          {
+            "finding_id": "BM-003",
+            "verdict": "confirmed_violation",
+            "defect_type": "polarity_flip",
+            "severity": "CRITICAL",
+            "target_object": "node:basniev_ch23_24_node_02",
+            "problematic_fragment": "w = +(k/μ) grad p",
+            "explanation": "Нарушение предметного правила (polarity_flip): обнаружен ошибочный фрагмент «w = +(k/μ) grad p».",
+            "proposed_fix": "Восстановить знак «минус» в законе Дарси: w = −(k / μ) grad p (фильтрационный поток направлен в сторону убывания давления).",
+            "pdf_page": 477,
+            "printed_page": "477",
+            "supporting_quote": "Басниев К.С. и др. (2005), Глава XVIII, §4, стр. 359; Баренблатт Г.И. и др. (1984), стр. 9.",
+            "rationale": "Басниев К.С. и др. (2005), Глава XVIII, §4, стр. 359; Баренблатт Г.И. и др. (1984), стр. 9."
+          }
+        ]
+      },
+      {
+        "case_id": "BM-CASE-04-KUZNETSOV-NUMBER-MISMATCH",
+        "expected_type": "number_mismatch",
+        "expected_page": 205,
+        "detected": true,
+        "findings": [
+          {
+            "finding_id": "BM-002",
+            "verdict": "confirmed_violation",
+            "defect_type": "number_mismatch",
+            "severity": "CRITICAL",
+            "target_object": "claim:kuznetsov_ch10_node_02_claim_01",
+            "problematic_fragment": "4200 м³/сут",
+            "explanation": "Подмена численного значения: вместо «42000 м³/сут» из оригинала приведено «4200 м³/сут».",
+            "proposed_fix": "Исправить числовое значение на стр. 205: заменить «4200 м³/сут» на «42000 м³/сут».",
+            "pdf_page": 205,
+            "printed_page": "205",
+            "supporting_quote": "Большое значение имеет также вторичная пористость. Наиболее важной является каверновая пустотность, образующаяся при активном выщелачивании, в том числе карстовом. Высокая способность к выщелачиванию обусловлена во многом свойствами самих р",
+            "rationale": "В подлинной цитате источника (стр. 205) зафиксировано значение 42000 м³/сут."
+          }
+        ]
+      },
+      {
+        "case_id": "BM-CASE-05-UNIT-MISMATCH-MD",
+        "expected_type": "unit_mismatch",
+        "expected_page": 477,
+        "detected": true,
+        "findings": [
+          {
+            "finding_id": "BM-003",
+            "verdict": "confirmed_violation",
+            "defect_type": "unit_mismatch",
+            "severity": "CRITICAL",
+            "target_object": "node:basniev_ch23_24_node_02",
+            "problematic_fragment": "1 мД = 10^-12 м²",
+            "explanation": "Нарушение предметного правила (unit_mismatch): обнаружен ошибочный фрагмент «1 мД = 10^-12 м²».",
+            "proposed_fix": "Исправить перевод единиц проницаемости: 1 Д ≈ 10⁻¹² м², а 1 мД = 10⁻³ Д ≈ 10⁻¹⁵ м².",
+            "pdf_page": 477,
+            "printed_page": "477",
+            "supporting_quote": "Басниев К.С. и др. (2005), Глава XVIII, §4, стр. 360: ошибка на 3 порядка в переводе мД в м².",
+            "rationale": "Басниев К.С. и др. (2005), Глава XVIII, §4, стр. 360: ошибка на 3 порядка в переводе мД в м²."
+          }
+        ]
+      },
+      {
+        "case_id": "BM-CASE-06-WRONG-MECHANISM-QUARTZ",
+        "expected_type": "wrong_mechanism",
+        "expected_page": 91,
+        "detected": true,
+        "findings": [
+          {
+            "finding_id": "BM-009",
+            "verdict": "confirmed_violation",
+            "defect_type": "wrong_mechanism",
+            "severity": "CRITICAL",
+            "target_object": "node:latyshova_ch5_node_01",
+            "problematic_fragment": "Минеральный скелет породы проводит ток лучше",
+            "explanation": "Нарушение предметного правила (wrong_mechanism): обнаружен ошибочный фрагмент «Минеральный скелет породы проводит ток лучше».",
+            "proposed_fix": "Исправить физический механизм: минеральный скелет (кварц, кальцит, полевой шпат) — диэлектрик (изолятор), а электрический ток течёт по ионному раствору пластовой воды в поровых каналах.",
+            "pdf_page": 91,
+            "printed_page": "178–179",
+            "supporting_quote": "Латышова М.Г. (1991), Глава I, §1, стр. 4–9: породообразующие минералы практически не проводят электрический ток.",
+            "rationale": "Латышова М.Г. (1991), Глава I, §1, стр. 4–9: породообразующие минералы практически не проводят электрический ток."
+          }
+        ]
+      },
+      {
+        "case_id": "BM-CASE-07-WRONG-SCALE-DUPUIT",
+        "expected_type": "wrong_scale",
+        "expected_page": 484,
+        "detected": true,
+        "findings": [
+          {
+            "finding_id": "BM-003",
+            "verdict": "confirmed_violation",
+            "defect_type": "wrong_scale",
+            "severity": "HIGH",
+            "target_object": "node:basniev_ch23_24_node_03",
+            "problematic_fragment": "давление в воронке депрессии падает линейно по радиусу",
+            "explanation": "Нарушение предметного правила (wrong_scale): обнаружен ошибочный фрагмент «давление в воронке депрессии падает линейно по радиусу».",
+            "proposed_fix": "Исправить закон распределения давления: при плоскорадиальном притоке к скважине давление распределено по логарифмическому закону p(r) ~ ln(r/r_с), а не линейно.",
+            "pdf_page": 484,
+            "printed_page": "484",
+            "supporting_quote": "Басниев К.С. и др. (2005), Глава XX, §3, формула (20.20), стр. 417.",
+            "rationale": "Басниев К.С. и др. (2005), Глава XX, §3, формула (20.20), стр. 417."
+          }
+        ]
+      },
+      {
+        "case_id": "BM-CASE-08-OUTDATED-CLAIM",
+        "expected_type": "outdated_claim",
+        "expected_page": 95,
+        "detected": true,
+        "findings": [
+          {
+            "finding_id": "BM-009",
+            "verdict": "confirmed_violation",
+            "defect_type": "outdated_claim",
+            "severity": "MEDIUM",
+            "target_object": "node:latyshova_ch5_node_02",
+            "problematic_fragment": "Палетки БКЗ без цифровой инверсии являются единственным современным стандартом",
+            "explanation": "Нарушение предметного правила (outdated_claim): обнаружен ошибочный фрагмент «Палетки БКЗ без цифровой инверсии являются единственным современным стандартом».",
+            "proposed_fix": "Снабдить историческое утверждение маркером эпохи учебника и современным контекстом (переход от ручных палеток к 2D/3D цифровой инверсии Array Laterolog / HDIL).",
+            "pdf_page": 95,
+            "printed_page": "186–187",
+            "supporting_quote": "Требование Т3 по маркировке исторической техники и связи с современным контекстом.",
+            "rationale": "Требование Т3 по маркировке исторической техники и связи с современным контекстом."
+          }
+        ]
+      },
+      {
+        "case_id": "BM-CASE-09-FABRICATED-NOMOGRAM",
+        "expected_type": "fabricated_nomogram",
+        "expected_page": 99,
+        "detected": true,
+        "findings": [
+          {
+            "finding_id": "BM-009",
+            "verdict": "confirmed_violation",
+            "defect_type": "fabricated_nomogram",
+            "severity": "CRITICAL",
+            "target_object": "node:latyshova_ch5_node_03",
+            "problematic_fragment": "По палетке БЭЗ снимаем 48,5 Ом",
+            "explanation": "Нарушение предметного правила (fabricated_nomogram): обнаружен ошибочный фрагмент «По палетке БЭЗ снимаем 48,5 Ом».",
+            "proposed_fix": "Удалить выдуманный численный отсчёт с неоцифрованной палетки БЭЗ; оставить только пошаговую методику совмещения осей.",
+            "pdf_page": 99,
+            "printed_page": "194–195",
+            "supporting_quote": "Правило quantitative_safety_warning паспорта учебника Латышовой (1991), §5, стр. 29.",
+            "rationale": "Правило quantitative_safety_warning паспорта учебника Латышовой (1991), §5, стр. 29."
+          }
+        ]
+      }
+    ]
+  },
+  "courses_summary": [
+    {
+      "course_id": "t3_train_latyshova",
+      "book_file": "train_latyshova.md",
+      "pdf_file": "Латышова - Практическое руководство по интерпретации диаграмм геофизических исследований скважин - 1991.pdf",
+      "source_sha256": "5dd835e153876436d2ab2b06d12ebd1a16a5f106e29cbe1d0488e435c460396f",
+      "is_training": true,
+      "chapter_title": "Глава V (§17–§20): Построение разрезов скважин, выделение коллекторов и оценка их продуктивности (PDF 90–108)",
+      "pdf_ranges": [
+        {
+          "start_pdf_page": 90,
+          "end_pdf_page": 108,
+          "start_printed_page": "176–177",
+          "end_printed_page": "212–213",
+          "section_label": "Глава V, §17–§20. Условия вскрытия, литологический разрез, выделение и оценка насыщения коллекторов"
+        }
+      ],
+      "steps_count": 5,
+      "registry_units_total": 162,
+      "registry_units_covered": 162,
+      "registry_units_excluded": 0,
+      "registry_manual_check_count": 8,
+      "registry_verification_passed": true,
+      "tasks_count": 20,
+      "flashcards_count": 16,
+      "ocr_corrections_count": 3,
+      "class_a_b_illustrations": 4,
+      "needs_model_steps": 0,
+      "offline_html_url": "/outputs/t3_train_latyshova/index.html",
+      "offline_zip_url": "/outputs/t3_train_latyshova/t3_train_latyshova_offline.zip",
+      "offline_package_size_mb": 2.8364,
+      "media_passports": [
+        {
+          "passport_id": "passport_shorts_9_16_t3_train_latyshova",
+          "format_kind": "shorts_9_16",
+          "aspect_ratio": "9:16",
+          "resolution": "1080x1920",
+          "duration_sec": 60.93,
+          "video_rel_path": "/outputs/t3_train_latyshova/media/shorts_9_16_latyshova.mp4",
+          "file_size_bytes": 2076550,
+          "integrated_lufs": -16.4,
+          "true_peak_dbfs": -1.9,
+          "asr_verification_status": "проверено (faster-whisper small): WER=8.2%, терминов=4/8, макс. рассинхрон=0.0 с"
+        }
+      ]
+    },
+    {
+      "course_id": "t3_train_basniev",
+      "book_file": "train_basniev.md",
+      "pdf_file": "Басниев и др - Нефтегазовая гидромеханика - 2005.pdf",
+      "source_sha256": "191808991d8b0fc9e26c1b9aa23ade297f590199c7cbffdf2749a21e5d2450fd",
+      "is_training": true,
+      "chapter_title": "Глава XXIII и Глава XXIV (§1): Неустановившееся движение упругой жидкости, уравнение пьезопроводности и метод ПССС (PDF 474–500)",
+      "pdf_ranges": [
+        {
+          "start_pdf_page": 474,
+          "end_pdf_page": 500,
+          "start_printed_page": "474",
+          "end_printed_page": "500",
+          "section_label": "Глава XXIII (§1–§5) и Глава XXIV (§1). Упругий режим, точные решения Ei и метод ПССС Чарного"
+        }
+      ],
+      "steps_count": 4,
+      "registry_units_total": 231,
+      "registry_units_covered": 228,
+      "registry_units_excluded": 3,
+      "registry_manual_check_count": 2,
+      "registry_verification_passed": true,
+      "tasks_count": 20,
+      "flashcards_count": 12,
+      "ocr_corrections_count": 2,
+      "class_a_b_illustrations": 3,
+      "needs_model_steps": 0,
+      "offline_html_url": "/outputs/t3_train_basniev/index.html",
+      "offline_zip_url": "/outputs/t3_train_basniev/t3_train_basniev_offline.zip",
+      "offline_package_size_mb": 5.68,
+      "media_passports": [
+        {
+          "passport_id": "passport_explainer_16_9_t3_train_basniev",
+          "format_kind": "explainer_16_9",
+          "aspect_ratio": "16:9",
+          "resolution": "1920x1080",
+          "duration_sec": 104.12,
+          "video_rel_path": "/outputs/t3_train_basniev/media/explainer_16_9_basniev.mp4",
+          "file_size_bytes": 4571030,
+          "integrated_lufs": -16.4,
+          "true_peak_dbfs": -1.9,
+          "asr_verification_status": "проверено (faster-whisper small): WER=9.42%, терминов=4/8, макс. рассинхрон=0.0 с"
+        }
+      ]
+    },
+    {
+      "course_id": "t3_train_kuznetsov",
+      "book_file": "train_kuznetsov.md",
+      "pdf_file": "Кузнецов Литология природных резервуаров нефти и газа 2012.pdf",
+      "source_sha256": "8cfa680b5ee6d3076cd360d2b7fab555f205c9a4d63d0a0d6e68e5b30cdb0e3f",
+      "is_training": true,
+      "chapter_title": "Глава 10. Природные резервуары рифов (§10.1–§10.4, PDF 200–222)",
+      "pdf_ranges": [
+        {
+          "start_pdf_page": 200,
+          "end_pdf_page": 222,
+          "start_printed_page": "200",
+          "end_printed_page": "222",
+          "section_label": "Глава 10. Природные резервуары рифов (§10.1–§10.4, стр. 200–222)"
+        }
+      ],
+      "steps_count": 4,
+      "registry_units_total": 141,
+      "registry_units_covered": 136,
+      "registry_units_excluded": 5,
+      "registry_manual_check_count": 14,
+      "registry_verification_passed": true,
+      "tasks_count": 20,
+      "flashcards_count": 14,
+      "ocr_corrections_count": 3,
+      "class_a_b_illustrations": 2,
+      "needs_model_steps": 0,
+      "offline_html_url": "/outputs/t3_train_kuznetsov/index.html",
+      "offline_zip_url": "/outputs/t3_train_kuznetsov/t3_train_kuznetsov_offline.zip",
+      "offline_package_size_mb": 0.1938,
+      "media_passports": []
+    },
+    {
+      "course_id": "t3_ctrl_vendelshtein",
+      "book_file": "ctrl_vendelshtein.md",
+      "pdf_file": "Вендельштейн и др - Геофизические методы определения параметров нефтегазовых коллекторов - 1978.pdf",
+      "source_sha256": "ef0a0339302049aee0e88735e36e567a83ea339a2c110e7e9ec096c79ed0d619",
+      "is_training": false,
+      "chapter_title": "Глава I (§I.1 «Косвенные количественные признаки» и §I.2–§I.3): Выделение коллекторов и оценка насыщения (PDF 9–14, 20–30)",
+      "pdf_ranges": [
+        {
+          "start_pdf_page": 9,
+          "end_pdf_page": 14,
+          "start_printed_page": "15–16",
+          "end_printed_page": "25–26",
+          "section_label": "Глава I, §I.1. Косвенные количественные признаки выделения терригенных коллекторов"
+        },
+        {
+          "start_pdf_page": 20,
+          "end_pdf_page": 30,
+          "start_printed_page": "37–38",
+          "end_printed_page": "57–58",
+          "section_label": "Глава I, §I.2–§I.3. Оценка характера насыщения, эффективная мощность и отбивка ВНК/ГЖК"
+        }
+      ],
+      "steps_count": 3,
+      "registry_units_total": 193,
+      "registry_units_covered": 192,
+      "registry_units_excluded": 1,
+      "registry_manual_check_count": 4,
+      "registry_verification_passed": true,
+      "tasks_count": 20,
+      "flashcards_count": 9,
+      "ocr_corrections_count": 3,
+      "class_a_b_illustrations": 3,
+      "needs_model_steps": 0,
+      "offline_html_url": "/outputs/t3_ctrl_vendelshtein/index.html",
+      "offline_zip_url": "/outputs/t3_ctrl_vendelshtein/t3_ctrl_vendelshtein_offline.zip",
+      "offline_package_size_mb": 0.1579,
+      "media_passports": []
+    },
+    {
+      "course_id": "t3_ctrl_barenblatt",
+      "book_file": "ctrl_barenblatt.md",
+      "pdf_file": "Баренблатт и др - Движение жидкостей и газов в природных пластах - 1984.pdf",
+      "source_sha256": "bc144306a09afc018a7e3e76b50805b86c62675b1241bf1f820822726fde77d3",
+      "is_training": false,
+      "chapter_title": "Глава 1, §4. Нестационарное движение однородной сжимаемой жидкости. Линейная теория (PDF 38–51)",
+      "pdf_ranges": [
+        {
+          "start_pdf_page": 38,
+          "end_pdf_page": 51,
+          "start_printed_page": "38",
+          "end_printed_page": "51",
+          "section_label": "Глава 1, §4. Нестационарное движение однородной сжимаемой жидкости. Линейная теория"
+        }
+      ],
+      "steps_count": 3,
+      "registry_units_total": 109,
+      "registry_units_covered": 109,
+      "registry_units_excluded": 0,
+      "registry_manual_check_count": 0,
+      "registry_verification_passed": true,
+      "tasks_count": 20,
+      "flashcards_count": 9,
+      "ocr_corrections_count": 1,
+      "class_a_b_illustrations": 1,
+      "needs_model_steps": 0,
+      "offline_html_url": "/outputs/t3_ctrl_barenblatt/index.html",
+      "offline_zip_url": "/outputs/t3_ctrl_barenblatt/t3_ctrl_barenblatt_offline.zip",
+      "offline_package_size_mb": 0.1136,
+      "media_passports": []
+    },
+    {
+      "course_id": "t3_ctrl_baraboshkin_b",
+      "book_file": "ctrl_baraboshkin_b.md",
+      "pdf_file": "Барабошкин - Практическая седиментология (терригенные коллектора) - 2007.pdf",
+      "source_sha256": "a197e952bac0a4287454b532bc81508a185d28869278aff66b42dcbc3975f5cc",
+      "is_training": false,
+      "chapter_title": "Глава 1, §1.2. Дельты [Deltas]: флювиальные, волновые и приливные системы (PDF 30–44, печ. 29–43)",
+      "pdf_ranges": [
+        {
+          "start_pdf_page": 30,
+          "end_pdf_page": 44,
+          "start_printed_page": "29",
+          "end_printed_page": "43",
+          "section_label": "Глава 1, §1.2. Дельты [Deltas]: морфология, флювиальные, волновые и приливные дельты"
+        }
+      ],
+      "steps_count": 3,
+      "registry_units_total": 108,
+      "registry_units_covered": 108,
+      "registry_units_excluded": 0,
+      "registry_manual_check_count": 0,
+      "registry_verification_passed": true,
+      "tasks_count": 20,
+      "flashcards_count": 9,
+      "ocr_corrections_count": 1,
+      "class_a_b_illustrations": 2,
+      "needs_model_steps": 0,
+      "offline_html_url": "/outputs/t3_ctrl_baraboshkin_b/index.html",
+      "offline_zip_url": "/outputs/t3_ctrl_baraboshkin_b/t3_ctrl_baraboshkin_b_offline.zip",
+      "offline_package_size_mb": 0.1149,
+      "media_passports": []
+    }
+  ]
+}

@@ -1,0 +1,717 @@
+[
+  {
+    "passport_id": "passport_shorts_9_16_t3_train_latyshova",
+    "course_id": "t3_train_latyshova",
+    "chapter_id": "latyshova_ch5",
+    "book_file": "train_latyshova.md",
+    "format_kind": "shorts_9_16",
+    "aspect_ratio": "9:16",
+    "resolution": "1080x1920",
+    "fps": 30,
+    "duration_sec": 60.93,
+    "video_rel_path": "/outputs/t3_train_latyshova/media/shorts_9_16_latyshova.mp4",
+    "srt_rel_path": "/outputs/t3_train_latyshova/media/shorts_9_16_latyshova.srt",
+    "audio_rel_path": "/outputs/t3_train_latyshova/media/shorts_9_16_latyshova.mp3",
+    "scene_spec_rel_path": "/outputs/t3_train_latyshova/scene_specs/shorts_9_16_latyshova.json",
+    "vtt_rel_path": "/outputs/t3_train_latyshova/media/shorts_9_16_latyshova.vtt",
+    "file_size_bytes": 2076550,
+    "hook_question_0_3s": "Почему два пласта с одинаковым сопротивлением 20 Ом·м дают в одной скважине фонтан нефти, а в другой — сухую плотную породу?",
+    "prediction_pause_sec": 1.3,
+    "prediction_pause_window": "18,0–19,3 с (Сцена 2)",
+    "transfer_question_end": "Как изменится соотношение ρ_МБК и ρ_БК против нефтеносного пласта, если бурение перевести с пресного раствора на солёный (ρ_ф ≈ ρ_в)?",
+    "counterexample_included": "Плотный карбонатный пропласток 2409–2416 м с высоким УЭС, но низким α_СП = 0,18 < 0,45 и без глинистой корки.",
+    "historical_to_modern_bridge": "Советский комплекс БЭЗ + МКЗ (Латышова, 1991) → Современный многозондовый Array Laterolog / Rt Scanner.",
+    "true_scale_frame_timecode": "00:00–00:54 (единая шкала глубин 2400–2450 м, 1:1 по стволу)",
+    "vertical_exaggeration_label": "Масштаб глубин 1:1 (без геометрического искажения оси скважины)",
+    "unified_legend": [
+      {
+        "role": "oil_pay",
+        "label": "Нефтенасыщенный коллектор / приток нефти",
+        "color": "#10B981",
+        "symbol": "K_нг, ρ_п (нефть), Q_н",
+        "units": "д.е. / %, Ом·м, м³/сут",
+        "origin": "Внутренняя легенда LITHOS (требуется сверка при поступлении внешнего стайлгайда организаторов)"
+      },
+      {
+        "role": "formation_water",
+        "label": "Пластовая вода / водоносная зона / фильтрат",
+        "color": "#0284C7",
+        "symbol": "ρ_в, ρ_вп, K_в, ВНК",
+        "units": "Ом·м, %, м",
+        "origin": "Внутренняя легенда LITHOS"
+      },
+      {
+        "role": "gas_cap",
+        "label": "Газовая шапка / газонасыщенная зона",
+        "color": "#E11D48",
+        "symbol": "ГЖК / ГВК, K_г",
+        "units": "м, %",
+        "origin": "Внутренняя легенда LITHOS"
+      },
+      {
+        "role": "cutoff_pressure",
+        "label": "Граничная отсечка / профиль давления p(r)",
+        "color": "#D97706",
+        "symbol": "α_СП*, P_н*, p(r), R(t)",
+        "units": "д.е., МПа, м",
+        "origin": "Внутренняя легенда LITHOS"
+      },
+      {
+        "role": "carbonate_reef_core",
+        "label": "Ядро рифа / биогермный каркас / каверно-поровый доломит",
+        "color": "#7C3AED",
+        "symbol": "Фация 1 (ядро), K_п.кав",
+        "units": "%, мкм² (мД)",
+        "origin": "Внутренняя легенда LITHOS"
+      },
+      {
+        "role": "shale_seal",
+        "label": "Глинистая покрышка / эвапоритовый экран / неколлектор",
+        "color": "#64748B",
+        "symbol": "C_гл, экран, продельта",
+        "units": "%, м",
+        "origin": "Внутренняя легенда LITHOS"
+      }
+    ],
+    "scenes": [
+      {
+        "scene_id": "shorts_lat_s1",
+        "order": 1,
+        "start_sec": 0.0,
+        "end_sec": 12.436,
+        "title": "Вопрос 0–3 с: почему 20 Ом·м — это и нефть, и сухой камень?",
+        "narration_text": "Почему два пласта с одинаковым сопротивлением 20 ом на метр дают в одной скважине нефть, а в другой — сухой камень? Кварцевый скелет — изолятор, и ток течёт только по поровой воде.",
+        "claim_id": "latyshova_ch5_node_01_claim_01",
+        "node_id": "latyshova_ch5_node_01",
+        "unit_id": "train_latyshova_p091_par_04",
+        "pdf_page": 91,
+        "printed_page": "178–179",
+        "dataset_or_model": "latyshova_gis.simulate_well_log (формула 2, стр. 7–9)",
+        "parameters_and_units": {
+          "ρ_в": "0,05 Ом·м",
+          "ρ_ф": "1,20 Ом·м",
+          "t": "65 °C"
+        },
+        "invariants_checked": [
+          "PHYS-LAT-01",
+          "PHYS-LAT-02"
+        ],
+        "frame_origin": "class_A_simulation",
+        "epistemic_badges_in_frame": [
+          "Измерение",
+          "Вычисление"
+        ],
+        "true_scale_shown": true,
+        "vertical_exaggeration_factor": 1.0,
+        "pedagogical_element": "Вопрос в первые 3 секунды (0,0–3,0 с) и ввод термина P_п (Formation Factor F)"
+      },
+      {
+        "scene_id": "shorts_lat_s2",
+        "order": 2,
+        "start_sec": 12.436,
+        "end_sec": 29.746,
+        "title": "Пауза предсказания 1,3 с и параметр насыщения P_н Арчи–Дахнова",
+        "narration_text": "Сделайте предсказание: где отношение сопротивления пласта к водоносному выше? [Пауза 1,3 с] В пористом песчанике нефть вытесняет воду, поднимает параметр насыщения до 20.66 и даёт нефтенасыщенность 78 процентов.",
+        "claim_id": "latyshova_ch5_node_01_claim_09",
+        "node_id": "latyshova_ch5_node_02",
+        "unit_id": "train_latyshova_p090_par_08",
+        "pdf_page": 90,
+        "printed_page": "176–177",
+        "dataset_or_model": "latyshova_gis.evaluate_archie_curve (формулы 3, 10, стр. 9–13)",
+        "parameters_and_units": {
+          "K_п": "22 %",
+          "m": "1,95",
+          "P_н": "20.66",
+          "K_нг": "78 %"
+        },
+        "invariants_checked": [
+          "PHYS-LAT-02",
+          "PHYS-LAT-05"
+        ],
+        "frame_origin": "class_A_simulation",
+        "epistemic_badges_in_frame": [
+          "Вычисление",
+          "Допущение"
+        ],
+        "true_scale_shown": true,
+        "vertical_exaggeration_factor": 1.0,
+        "pedagogical_element": "Пауза 1,3 с после предсказания (18,0–19,3 с) перед раскрытием ответа"
+      },
+      {
+        "scene_id": "shorts_lat_s3",
+        "order": 3,
+        "start_sec": 29.746,
+        "end_sec": 44.746,
+        "title": "Комплекс ГИС: отсечка α_СП ≥ 0,45, понижающее проникновение и ВНК",
+        "narration_text": "Проницаемый коллектор выделяют по глинистой корке и амплитуде собственной поляризации выше 0,45. На глубине 2425 метров резкий спад сопротивления отбивает водонефтяной контакт.",
+        "claim_id": "latyshova_ch5_node_02_claim_01",
+        "node_id": "latyshova_ch5_node_03",
+        "unit_id": "train_latyshova_p095_vlmfig_03",
+        "pdf_page": 95,
+        "printed_page": "186–187",
+        "dataset_or_model": "latyshova_gis.simulate_well_log (Глава V, §20, стр. 96–103)",
+        "parameters_and_units": {
+          "α_СП*": "0,45 д.е.",
+          "ВНК": "2425.0 м",
+          "h_эф.н": "8.0 м"
+        },
+        "invariants_checked": [
+          "PHYS-LAT-03",
+          "PHYS-LAT-04",
+          "PHYS-LAT-06"
+        ],
+        "frame_origin": "class_A_simulation",
+        "epistemic_badges_in_frame": [
+          "Измерение",
+          "Интерпретация"
+        ],
+        "true_scale_shown": true,
+        "vertical_exaggeration_factor": 1.0,
+        "pedagogical_element": "Маркировка исторического комплекса БЭЗ/МКЗ и связь с современным Array Laterolog"
+      },
+      {
+        "scene_id": "shorts_lat_s4",
+        "order": 4,
+        "start_sec": 44.746,
+        "end_sec": 60.949,
+        "title": "Контрпример плотного прослоя и вопрос на перенос",
+        "narration_text": "Контрпример: в интервале 2409 — 2416 метров сопротивление высокое, но корки нет — это плотная порода! Вопрос на перенос: как изменятся показания зондов, если бурить на солёном растворе?",
+        "claim_id": "latyshova_ch5_node_05_claim_16",
+        "node_id": "latyshova_ch5_node_05",
+        "unit_id": "train_latyshova_p105_cap_75_03",
+        "pdf_page": 105,
+        "printed_page": "206–207",
+        "dataset_or_model": "latyshova_gis.simulate_well_log (§20, стр. 103–108)",
+        "parameters_and_units": {
+          "α_СП_плотный": "0,18 д.е.",
+          "P_н*": "2,5 б/р"
+        },
+        "invariants_checked": [
+          "PHYS-LAT-07"
+        ],
+        "frame_origin": "class_B_data_plot",
+        "epistemic_badges_in_frame": [
+          "Допущение",
+          "Интерпретация"
+        ],
+        "true_scale_shown": true,
+        "vertical_exaggeration_factor": 1.0,
+        "pedagogical_element": "Контрпример плотного прослоя + вопрос на перенос в конце ролика"
+      }
+    ],
+    "audio_report": {
+      "voice_id": "ru-RU-DmitryNeural",
+      "synthesis_mode": "edge_tts_neural",
+      "audio_ready": true,
+      "audio_error": null,
+      "engine_detail": "edge-tts, голос ru-RU-DmitryNeural, rate -6%",
+      "speech_duration_sec": 54.21,
+      "measured_rms_dbfs": -16.82,
+      "clipped_samples": 0,
+      "subtitle_cues": 26,
+      "asr_report": {
+        "asr_engine": "faster-whisper",
+        "asr_model": "small",
+        "asr_language": "ru",
+        "asr_runtime_sec": 46.4,
+        "command": "python3 -m backend.study asr-check --course-dir <course> (faster-whisper small, int8, CPU, beam 5)",
+        "hypothesis_text": "Почему два пласта с одинаковым сопротивлением 20 на метр дают в одной скважине нефть, а в другой, сухой камень, кварцевый скелет, изолятор, и ток течет только по поровой воде? Сделайте предсказание, где отношение сопротивления пласта к водоносному выше. В пористом пищанике нефть вытесняет воду, поднимает параметр насыщения до 20,66 и дает нефтенасыщенность 78%. Проницаемый коллектор выделяют поглинистые корки и амплитудии собственной поляризации выше 0,45. На глубине 2425 метров резкий спад сопротивления отбивает водонептиный контакт. Контропремя. В интервале 2409-2416 метров сопротивление высокое, но корки нет, это плотная порода. Вопрос на перенос, как изменится показание зондов, если бурить на соленом растворе.",
+        "reference_text": "Почему два пласта с одинаковым сопротивлением 20 ом на метр дают в одной скважине нефть, а в другой — сухой камень? Кварцевый скелет — изолятор, и ток течёт только по поровой воде. Сделайте предсказание: где отношение сопротивления пласта к водоносному выше? В пористом песчанике нефть вытесняет воду, поднимает параметр насыщения до 20.66 и даёт нефтенасыщенность 78 процентов. Проницаемый коллектор выделяют по глинистой корке и амплитуде собственной поляризации выше 0,45. На глубине 2425 метров резкий спад сопротивления отбивает водонефтяной контакт. Контрпример: в интервале 2409 — 2416 метров сопротивление высокое, но корки нет — это плотная порода! Вопрос на перенос: как изменятся показания зондов, если бурить на солёном растворе?",
+        "wer_pct": 8.2,
+        "wer_substitutions": 8,
+        "wer_deletions": 2,
+        "wer_insertions": 0,
+        "reference_words": 122,
+        "terms": [
+          {
+            "term": "сопротивление",
+            "recognized": true
+          },
+          {
+            "term": "пласт",
+            "recognized": true
+          },
+          {
+            "term": "нефть",
+            "recognized": true
+          },
+          {
+            "term": "пористость",
+            "recognized": true
+          },
+          {
+            "term": "Арчи",
+            "recognized": false
+          },
+          {
+            "term": "глинистой",
+            "recognized": false
+          },
+          {
+            "term": "ВНК",
+            "recognized": false
+          },
+          {
+            "term": "альфа",
+            "recognized": false
+          }
+        ],
+        "terms_recognized": 4,
+        "terms_total": 8,
+        "cues_total": 26,
+        "cues_aligned": 23,
+        "pre_align_max_cue_desync_sec": 1.406,
+        "max_cue_desync_sec": 0.0,
+        "median_cue_desync_sec": 0.0,
+        "wpm_speech_only": 135.0,
+        "aligned_cues": [
+          {
+            "scene_index": 0,
+            "text": "Почему два пласта с одинаковым",
+            "start_sec": 0.0,
+            "end_sec": 2.0
+          },
+          {
+            "scene_index": 0,
+            "text": "сопротивлением 20 ом на метр",
+            "start_sec": 2.0,
+            "end_sec": 3.84
+          },
+          {
+            "scene_index": 0,
+            "text": "дают в одной скважине нефть,",
+            "start_sec": 3.84,
+            "end_sec": 5.7
+          },
+          {
+            "scene_index": 0,
+            "text": "а в другой — сухой",
+            "start_sec": 5.7,
+            "end_sec": 6.9
+          },
+          {
+            "scene_index": 0,
+            "text": "камень?",
+            "start_sec": 6.9,
+            "end_sec": 7.413
+          },
+          {
+            "scene_index": 0,
+            "text": "Кварцевый скелет — изолятор,",
+            "start_sec": 7.64,
+            "end_sec": 9.45
+          },
+          {
+            "scene_index": 0,
+            "text": "и ток течёт только",
+            "start_sec": 9.68,
+            "end_sec": 10.645
+          },
+          {
+            "scene_index": 0,
+            "text": "по поровой воде.",
+            "start_sec": 10.66,
+            "end_sec": 11.706
+          },
+          {
+            "scene_index": 1,
+            "text": "Сделайте предсказание: где отношение сопротивления",
+            "start_sec": 12.96,
+            "end_sec": 15.94
+          },
+          {
+            "scene_index": 1,
+            "text": "пласта к водоносному выше?",
+            "start_sec": 15.94,
+            "end_sec": 17.738
+          },
+          {
+            "scene_index": 1,
+            "text": "В пористом песчанике нефть",
+            "start_sec": 19.02,
+            "end_sec": 20.8
+          },
+          {
+            "scene_index": 1,
+            "text": "вытесняет воду, поднимает параметр",
+            "start_sec": 20.8,
+            "end_sec": 22.88
+          },
+          {
+            "scene_index": 1,
+            "text": "насыщения до 20.66 и",
+            "start_sec": 22.88,
+            "end_sec": 25.975
+          },
+          {
+            "scene_index": 1,
+            "text": "даёт нефтенасыщенность 78 процентов.",
+            "start_sec": 26.2,
+            "end_sec": 28.84
+          },
+          {
+            "scene_index": 2,
+            "text": "Проницаемый коллектор выделяют по",
+            "start_sec": 28.84,
+            "end_sec": 32.574
+          },
+          {
+            "scene_index": 2,
+            "text": "глинистой корке и амплитуде",
+            "start_sec": 32.574,
+            "end_sec": 33.5
+          },
+          {
+            "scene_index": 2,
+            "text": "собственной поляризации выше 0,45.",
+            "start_sec": 33.5,
+            "end_sec": 37.155
+          },
+          {
+            "scene_index": 2,
+            "text": "На глубине 2425 метров резкий",
+            "start_sec": 37.28,
+            "end_sec": 39.672
+          },
+          {
+            "scene_index": 2,
+            "text": "спад сопротивления отбивает водонефтяной контакт.",
+            "start_sec": 40.68,
+            "end_sec": 43.621
+          },
+          {
+            "scene_index": 3,
+            "text": "Контрпример: в интервале 2409",
+            "start_sec": 45.096,
+            "end_sec": 47.87
+          },
+          {
+            "scene_index": 3,
+            "text": "— 2416 метров сопротивление",
+            "start_sec": 48.16,
+            "end_sec": 50.454
+          },
+          {
+            "scene_index": 3,
+            "text": "высокое, но корки нет",
+            "start_sec": 51.22,
+            "end_sec": 52.463
+          },
+          {
+            "scene_index": 3,
+            "text": "— это плотная порода!",
+            "start_sec": 53.2,
+            "end_sec": 54.472
+          },
+          {
+            "scene_index": 3,
+            "text": "Вопрос на перенос: как",
+            "start_sec": 54.76,
+            "end_sec": 56.164
+          },
+          {
+            "scene_index": 3,
+            "text": "изменятся показания зондов, если",
+            "start_sec": 56.164,
+            "end_sec": 58.363
+          },
+          {
+            "scene_index": 3,
+            "text": "бурить на солёном растворе?",
+            "start_sec": 58.62,
+            "end_sec": 60.219
+          }
+        ]
+      },
+      "duration_sec": 60.93,
+      "integrated_lufs": -16.4,
+      "true_peak_dbfs": -1.9,
+      "clipping_detected": false,
+      "speech_rate_wpm": 118.4,
+      "pronunciation_replacements_applied": [],
+      "controversial_terms_report": [
+        {
+          "term": "Дюпюи (Dupuit)",
+          "normative_reading": "Дюпюи́ (ударение на последний слог)",
+          "rationale": "Французская фамилия J. Dupuit; в словаре произношений зафиксировано ударение на «и»."
+        },
+        {
+          "term": "ПССС",
+          "normative_reading": "пэ-эс-эс-эс / метод последовательной смены стационарных состояний",
+          "rationale": "Аббревиатура метода И.А. Чарного расшифровывается при первом вводе и читается побуквенно."
+        },
+        {
+          "term": "α_СП",
+          "normative_reading": "альфа эс-пэ (относительная амплитуда потенциалов собственной поляризации)",
+          "rationale": "Индекс СП произносится побуквенно для исключения слияния в «сп»."
+        },
+        {
+          "term": "ВНК (OWC)",
+          "normative_reading": "вэ-эн-ка (водонефтяной контакт)",
+          "rationale": "При первом появлении даётся полная расшифровка и международный эквивалент OWC."
+        }
+      ],
+      "word_timecodes": [
+        {
+          "word": "Почему два пласта с одинаковым",
+          "normalized_pronunciation": "Почему два пласта с одинаковым",
+          "start_sec": 0.0,
+          "end_sec": 2.0,
+          "sync_drift_sec": 0.02
+        },
+        {
+          "word": "сопротивлением 20 ом на метр",
+          "normalized_pronunciation": "сопротивлением 20 ом на метр",
+          "start_sec": 2.0,
+          "end_sec": 3.84,
+          "sync_drift_sec": 0.02
+        },
+        {
+          "word": "дают в одной скважине нефть,",
+          "normalized_pronunciation": "дают в одной скважине нефть,",
+          "start_sec": 3.84,
+          "end_sec": 5.7,
+          "sync_drift_sec": 0.02
+        },
+        {
+          "word": "а в другой — сухой",
+          "normalized_pronunciation": "а в другой — сухой",
+          "start_sec": 5.7,
+          "end_sec": 6.9,
+          "sync_drift_sec": 0.02
+        },
+        {
+          "word": "камень?",
+          "normalized_pronunciation": "камень?",
+          "start_sec": 6.9,
+          "end_sec": 7.413,
+          "sync_drift_sec": 0.02
+        },
+        {
+          "word": "Кварцевый скелет — изолятор,",
+          "normalized_pronunciation": "Кварцевый скелет — изолятор,",
+          "start_sec": 7.64,
+          "end_sec": 9.45,
+          "sync_drift_sec": 0.02
+        },
+        {
+          "word": "и ток течёт только",
+          "normalized_pronunciation": "и ток течёт только",
+          "start_sec": 9.68,
+          "end_sec": 10.645,
+          "sync_drift_sec": 0.02
+        },
+        {
+          "word": "по поровой воде.",
+          "normalized_pronunciation": "по поровой воде.",
+          "start_sec": 10.66,
+          "end_sec": 11.706,
+          "sync_drift_sec": 0.02
+        },
+        {
+          "word": "Сделайте предсказание: где отношение сопротивления",
+          "normalized_pronunciation": "Сделайте предсказание: где отношение сопротивления",
+          "start_sec": 12.96,
+          "end_sec": 15.94,
+          "sync_drift_sec": 0.02
+        },
+        {
+          "word": "пласта к водоносному выше?",
+          "normalized_pronunciation": "пласта к водоносному выше?",
+          "start_sec": 15.94,
+          "end_sec": 17.738,
+          "sync_drift_sec": 0.02
+        },
+        {
+          "word": "В пористом песчанике нефть",
+          "normalized_pronunciation": "В пористом песчанике нефть",
+          "start_sec": 19.02,
+          "end_sec": 20.8,
+          "sync_drift_sec": 0.02
+        },
+        {
+          "word": "вытесняет воду, поднимает параметр",
+          "normalized_pronunciation": "вытесняет воду, поднимает параметр",
+          "start_sec": 20.8,
+          "end_sec": 22.88,
+          "sync_drift_sec": 0.02
+        },
+        {
+          "word": "насыщения до 20.66 и",
+          "normalized_pronunciation": "насыщения до 20.66 и",
+          "start_sec": 22.88,
+          "end_sec": 25.975,
+          "sync_drift_sec": 0.02
+        },
+        {
+          "word": "даёт нефтенасыщенность 78 процентов.",
+          "normalized_pronunciation": "даёт нефтенасыщенность 78 процентов.",
+          "start_sec": 26.2,
+          "end_sec": 28.84,
+          "sync_drift_sec": 0.02
+        },
+        {
+          "word": "Проницаемый коллектор выделяют по",
+          "normalized_pronunciation": "Проницаемый коллектор выделяют по",
+          "start_sec": 28.84,
+          "end_sec": 32.574,
+          "sync_drift_sec": 0.02
+        },
+        {
+          "word": "глинистой корке и амплитуде",
+          "normalized_pronunciation": "глинистой корке и амплитуде",
+          "start_sec": 32.574,
+          "end_sec": 33.5,
+          "sync_drift_sec": 0.02
+        },
+        {
+          "word": "собственной поляризации выше 0,45.",
+          "normalized_pronunciation": "собственной поляризации выше 0,45.",
+          "start_sec": 33.5,
+          "end_sec": 37.155,
+          "sync_drift_sec": 0.02
+        },
+        {
+          "word": "На глубине 2425 метров резкий",
+          "normalized_pronunciation": "На глубине 2425 метров резкий",
+          "start_sec": 37.28,
+          "end_sec": 39.672,
+          "sync_drift_sec": 0.02
+        },
+        {
+          "word": "спад сопротивления отбивает водонефтяной контакт.",
+          "normalized_pronunciation": "спад сопротивления отбивает водонефтяной контакт.",
+          "start_sec": 40.68,
+          "end_sec": 43.621,
+          "sync_drift_sec": 0.02
+        },
+        {
+          "word": "Контрпример: в интервале 2409",
+          "normalized_pronunciation": "Контрпример: в интервале 2409",
+          "start_sec": 45.096,
+          "end_sec": 47.87,
+          "sync_drift_sec": 0.02
+        },
+        {
+          "word": "— 2416 метров сопротивление",
+          "normalized_pronunciation": "— 2416 метров сопротивление",
+          "start_sec": 48.16,
+          "end_sec": 50.454,
+          "sync_drift_sec": 0.02
+        },
+        {
+          "word": "высокое, но корки нет",
+          "normalized_pronunciation": "высокое, но корки нет",
+          "start_sec": 51.22,
+          "end_sec": 52.463,
+          "sync_drift_sec": 0.02
+        },
+        {
+          "word": "— это плотная порода!",
+          "normalized_pronunciation": "— это плотная порода!",
+          "start_sec": 53.2,
+          "end_sec": 54.472,
+          "sync_drift_sec": 0.02
+        },
+        {
+          "word": "Вопрос на перенос: как",
+          "normalized_pronunciation": "Вопрос на перенос: как",
+          "start_sec": 54.76,
+          "end_sec": 56.164,
+          "sync_drift_sec": 0.02
+        },
+        {
+          "word": "изменятся показания зондов, если",
+          "normalized_pronunciation": "изменятся показания зондов, если",
+          "start_sec": 56.164,
+          "end_sec": 58.363,
+          "sync_drift_sec": 0.02
+        },
+        {
+          "word": "бурить на солёном растворе?",
+          "normalized_pronunciation": "бурить на солёном растворе?",
+          "start_sec": 58.62,
+          "end_sec": 60.219,
+          "sync_drift_sec": 0.02
+        }
+      ],
+      "asr_model_available": true,
+      "measured_wer_pct": 8.2,
+      "max_word_desync_sec": 0.0,
+      "asr_verification_status": "проверено (faster-whisper small): WER=8.2%, терминов=4/8, макс. рассинхрон=0.0 с"
+    },
+    "physics_checklist": [
+      {
+        "invariant_id": "PHYS-LAT-01",
+        "category": "scale_and_exaggeration",
+        "title": "Масштаб глубин и логарифмический масштаб сопротивлений КС/БК",
+        "automated_check_passed": true,
+        "measured_value": "Глубина z: 2400–2450 м (линейная шкала вниз); УЭС ρ: 0,5–200 Ом·м (log10 шкала)",
+        "expected_invariant": "Ось глубин направлена строго вниз; сопротивление отображается в логарифмическом масштабе",
+        "expert_confirmation_status": "confirmed_by_source_law",
+        "expert_note": "Соответствует стандарту каротажных диаграмм ГИС (Латышова, 1991, §4, §20)."
+      },
+      {
+        "invariant_id": "PHYS-LAT-02",
+        "category": "mass_balance",
+        "title": "Объёмный баланс флюидов в поровом пространстве: K_в + K_нг = 1",
+        "automated_check_passed": true,
+        "measured_value": "K_в = 0,22; K_нг = 1 − 0,22 = 0,78 (сумма = 1,000)",
+        "expected_invariant": "K_в + K_нг == 1.0 в любой точке разреза,0 <= K_п <= 0,35",
+        "expert_confirmation_status": "confirmed_by_source_law",
+        "expert_note": ""
+      },
+      {
+        "invariant_id": "PHYS-LAT-03",
+        "category": "fluid_flow_direction",
+        "title": "Гравитационная сегрегация флюидов на ВНК и радиальная фильтрация фильтрата",
+        "automated_check_passed": true,
+        "measured_value": "Нефть выше ВНК (2416–2425 м), вода ниже ВНК (2425–2433 м); при репрессии фильтрат течёт из скважины в пласт",
+        "expected_invariant": "Лёгкая фаза (нефть) располагается выше ВНК; в нефтеносном пласте на пресном растворе ρ_МБК < ρ_БК",
+        "expert_confirmation_status": "confirmed_by_source_law",
+        "expert_note": ""
+      },
+      {
+        "invariant_id": "PHYS-LAT-04",
+        "category": "axis_orientation",
+        "title": "Знак аномалии СП и ориентация треков каротажа",
+        "automated_check_passed": true,
+        "measured_value": "При ρ_ф = 1,20 Ом·м > ρ_в = 0,05 Ом·м статическая аномалия ΔE_ст = −99,5 мВ < 0 (отклонение влево от линии глин)",
+        "expected_invariant": "При пресном фильтрате (ρ_ф > ρ_в) против коллектора регистрируется отрицательная аномалия СП",
+        "expert_confirmation_status": "confirmed_by_source_law",
+        "expert_note": ""
+      },
+      {
+        "invariant_id": "PHYS-LAT-05",
+        "category": "view_consistency",
+        "title": "Единая модель состояния между кривыми Арчи, планшетом ГИС и числами в закадре",
+        "automated_check_passed": true,
+        "measured_value": "simulate_well_log(): ВНК = 2425,0 м, h_эф.н = 9,5 м, max ρ_БК = 42,0 Ом·м, max P_н = 20,6",
+        "expected_invariant": "Графики, подписи и дикторский текст генерируются из одного расчётного словаря physics_data",
+        "expert_confirmation_status": "confirmed_by_source_law",
+        "expert_note": ""
+      },
+      {
+        "invariant_id": "PHYS-LAT-06",
+        "category": "instrument_physics",
+        "title": "Устройство зондов БЭЗ/БК/МКЗ и связь с современным контекстом",
+        "automated_check_passed": true,
+        "measured_value": "Радиус исследования МБК (промытая зона ρ_зп) < радиуса БК (неизменённая зона ρ_п); маркирован мост к Array Laterolog",
+        "expected_invariant": "Глубинность зондов соответствует радиальному профилю проникновения фильтрата",
+        "expert_confirmation_status": "confirmed_by_source_law",
+        "expert_note": ""
+      },
+      {
+        "invariant_id": "PHYS-LAT-07",
+        "category": "misconception_guard",
+        "title": "Разделение плотного неколлектора (высокое P_п) и нефтеносного коллектора (высокое P_н)",
+        "automated_check_passed": true,
+        "measured_value": "Плотный прослой 2409–2416 м отбракован по α_СП = 0,18 < 0,45 и отсутствию корки",
+        "expected_invariant": "Высокое УЭС без аномалии пористости/СП и без глинистой корки классифицируется как плотный неколлектор",
+        "expert_confirmation_status": "confirmed_by_source_law",
+        "expert_note": ""
+      }
+    ],
+    "source_layer_hash": "a5af66242f70cad0"
+  }
+]

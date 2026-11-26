@@ -1,0 +1,127 @@
+{
+  "passed": true,
+  "registry_id": "reg_latyshova_ch5",
+  "layer_id": "layer_latyshova_ch5",
+  "book_file": "train_latyshova.md",
+  "pdf_ranges": [
+    {
+      "start_pdf_page": 90,
+      "end_pdf_page": 108,
+      "start_printed_page": "176–177",
+      "end_printed_page": "212–213",
+      "section_label": "Глава V, §17–§20. Условия вскрытия, литологический разрез, выделение и оценка насыщения коллекторов"
+    }
+  ],
+  "total_registry_units": 162,
+  "covered_units_count": 162,
+  "excluded_units_count": 0,
+  "manual_verification_required_count": 8,
+  "discrepancies": [],
+  "manual_verification_items": [
+    {
+      "unit_id": "train_latyshova_p095_vlmfig_03",
+      "unit_type": "figure",
+      "pdf_page": 95,
+      "printed_page": "186–187",
+      "ocr_status": "legend_missing",
+      "audit_resolution": "verified_by_pdf",
+      "linked_node_ids": [
+        "latyshova_ch5_node_02"
+      ],
+      "note": "Проверено по скану стр. 95 (Рис. 68, интервал 2190–2250 м): все кривые (d_c, СП, N7,5M0,75A, микрозонды, ГМ, НГМ) подписаны в шапке; колонка оставлена пустой для Задачи 91.",
+      "excerpt": "━━━ FORMAT 2: WELL LOG / КАРОТАЖНАЯ ДИАГРАММА ━━━\nГлубина: 2190–2250 м; шкала глубины направлена вниз, глубина увеличивается вниз.\nКаротажные кривые слева напра"
+    },
+    {
+      "unit_id": "train_latyshova_p099_nrzb_07",
+      "unit_type": "ocr_illegible",
+      "pdf_page": 99,
+      "printed_page": "194–195",
+      "ocr_status": "illegible",
+      "audit_resolution": "verified_by_pdf",
+      "linked_node_ids": [
+        "latyshova_ch5_node_03"
+      ],
+      "note": "Восстановлено по скану стр. 99 (Рис. 70): условные знаки 1, 2, 3 под нижней панелью — области однофазного течения нефти (1), нефти с водой (2) и воды (3); привязано к узлу latyshova_ch5_node_03.",
+      "excerpt": "━━━ FORMAT 13: LEGEND / УСЛОВНЫЕ ОБОЗНАЧЕНИЯ ━━━ Под нижней панелью расположены два условных знака без явного текстового пояснения (текст не читается / отсутств"
+    },
+    {
+      "unit_id": "train_latyshova_p101_vlmfig_04",
+      "unit_type": "figure",
+      "pdf_page": 101,
+      "printed_page": "198–199",
+      "ocr_status": "legend_missing",
+      "audit_resolution": "verified_by_pdf",
+      "linked_node_ids": [
+        "latyshova_ch5_node_04"
+      ],
+      "note": "Проверено по скану стр. 101 (Рис. 71, 1444–1478 м): легенда 1–4 полностью дана в подрисуночной подписи (1 — глины, 2 — коллекторы, 3 — нефть, 4 — газ).",
+      "excerpt": "━━━ FORMAT 2: WELL LOG / КАРОТАЖНАЯ ДИАГРАММА ━━━\nГлубина: 1444–1478 м, ось глубин направлена вниз (возрастание вниз).\nТреки слева направо:\n1. «Глубина, м» — чи"
+    },
+    {
+      "unit_id": "train_latyshova_p104_vlmfig_02",
+      "unit_type": "figure",
+      "pdf_page": 104,
+      "printed_page": "204–205",
+      "ocr_status": "legend_missing",
+      "audit_resolution": "verified_by_pdf",
+      "linked_node_ids": [
+        "latyshova_ch5_node_04"
+      ],
+      "note": "Проверено по скану стр. 104 (Рис. 73, хадумский газоносный горизонт 760–860 м): кривые M1,25A0,1B и СП подписаны в шапке, 00' — линия глин в подписи; колонка пустая под задачу.",
+      "excerpt": "━━━ FORMAT 2: WELL LOG / КАРОТАЖНАЯ ДИАГРАММА ━━━\nОбщий вид: планшет каротажной диаграммы, разбитый на 4 сближенных фрагмента разреза (внутри одной скважины), р"
+    },
+    {
+      "unit_id": "train_latyshova_p104_vlmfig_04",
+      "unit_type": "figure",
+      "pdf_page": 104,
+      "printed_page": "204–205",
+      "ocr_status": "legend_missing",
+      "audit_resolution": "verified_by_pdf",
+      "linked_node_ids": [
+        "latyshova_ch5_node_04"
+      ],
+      "note": "Проверено по скану стр. 104 (Рис. 74, 2110–2140 м, ГИС и ГДК): все кривые (БМК, БК-3, ГМ, НГМ, АМ ΔT, ГДК k_пр.эф) подписаны в шапке; колонка пустая под Задачу 102.",
+      "excerpt": "━━━ FORMAT 2: WELL LOG / КАРОТАЖНАЯ ДИАГРАММА ━━━\nГлубина: интервал от 2110 до 2140 м (подписаны отметки 2110, 2120, 2130, 2140), глубина возрастает вниз. Слева"
+    },
+    {
+      "unit_id": "train_latyshova_p105_vlmfig_02",
+      "unit_type": "figure",
+      "pdf_page": 105,
+      "printed_page": "206–207",
+      "ocr_status": "legend_missing",
+      "audit_resolution": "verified_by_pdf",
+      "linked_node_ids": [
+        "latyshova_ch5_node_05"
+      ],
+      "note": "Проверено по скану стр. 105 (Рис. 75, 3590–3630 м): кривые ГМ, ИК(6Ф1), АМ ΔT, ГГМ δ_п подписаны в шапке; колонка пустая под Задачу 103.",
+      "excerpt": "━━━ FORMAT 2: WELL LOG / КАРОТАЖНАЯ ДИАГРАММА ━━━\nГлубина: ось глубин расположена вертикально слева, подписи от «2900» в верхней части до «3020» в нижней части,"
+    },
+    {
+      "unit_id": "train_latyshova_p105_vlmfig_06",
+      "unit_type": "figure",
+      "pdf_page": 105,
+      "printed_page": "206–207",
+      "ocr_status": "legend_missing",
+      "audit_resolution": "verified_with_caveat",
+      "linked_node_ids": [
+        "latyshova_ch5_node_05"
+      ],
+      "note": "Проверено по скану стр. 105 (Рис. 76, левая панель, карбонатный разрез 1080–1120 м): кривые КВ, СП, микрозонды A0,05M / A0,025M0,025N подписаны в шапке; подпись продолжается на стр. 106.",
+      "excerpt": "━━━ FORMAT 2: WELL LOG / КАРОТАЖНАЯ ДИАГРАММА ━━━\nОбщий вид: планшет с двумя треками каротажных кривых, разделённых глубинной колонкой (шкала \"Глубина, м\" слева"
+    },
+    {
+      "unit_id": "train_latyshova_p105_vlmfig_07",
+      "unit_type": "figure",
+      "pdf_page": 105,
+      "printed_page": "206–207",
+      "ocr_status": "legend_missing",
+      "audit_resolution": "verified_with_caveat",
+      "linked_node_ids": [
+        "latyshova_ch5_node_05"
+      ],
+      "note": "Проверено по скану стр. 105 (Рис. 76, правая панель): кривые экранированного зонда, НГМ, ГМ, ИМ, АМ подписаны в шапке; расшифровка режимов — на стр. 106.",
+      "excerpt": "━━━ FORMAT 2: WELL LOG / КАРОТАЖНАЯ ДИАГРАММА ━━━\nЗаголовки над треками (слева направо), частично неразборчивы из-за качества скана:\n1. Первый трек: подпись \"[н"
+    }
+  ],
+  "summary_by_type": {}
+}

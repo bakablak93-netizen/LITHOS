@@ -1,0 +1,10 @@
+{
+  "passed": true,
+  "evaluation_mode": "internal_calibration",
+  "book_file": "ctrl_baraboshkin_b.md",
+  "total_checked_objects": 105,
+  "findings": [],
+  "expert_review_queue": [],
+  "counts_by_type": {},
+  "counts_by_verdict": {}
+}

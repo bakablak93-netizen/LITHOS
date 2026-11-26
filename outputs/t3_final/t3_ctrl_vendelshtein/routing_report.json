@@ -1,0 +1,144 @@
+{
+  "course_id": "t3_ctrl_vendelshtein",
+  "chapter_id": "vendelshtein_ch1_discontinuous",
+  "book_file": "ctrl_vendelshtein.md",
+  "domain_package_id": "oil_gas_ru",
+  "total_steps": 3,
+  "covered_steps": 3,
+  "needs_model_steps": 0,
+  "class_a_b_count": 3,
+  "hook_shorts_share_pct": 0.0,
+  "video_heavy_template_coverage": [
+    {
+      "node_id": "vendelshtein_ch1_discontinuous_node_01",
+      "step_title": "Количественные критерии и ЯМР в терригенном разрезе",
+      "video_capacity_score": "8",
+      "selected_format": "interactive_domain_animation",
+      "template_id": "tpl_class_b_ven_nmr_isf",
+      "state_model": "parametric_geology",
+      "status": "template_ready"
+    },
+    {
+      "node_id": "vendelshtein_ch1_discontinuous_node_02",
+      "step_title": "Условия однозначной оценки насыщения методами электрометрии",
+      "video_capacity_score": "9",
+      "selected_format": "interactive_domain_animation",
+      "template_id": "tpl_class_a_ven_relperm_cutoff",
+      "state_model": "deterministic_physics",
+      "status": "template_ready"
+    },
+    {
+      "node_id": "vendelshtein_ch1_discontinuous_node_03",
+      "step_title": "Временные нейтронные замеры эффективная мощность и ВНК",
+      "video_capacity_score": "8",
+      "selected_format": "interactive_domain_animation",
+      "template_id": "tpl_class_b_ven_inm_timelapse",
+      "state_model": "parametric_geology",
+      "status": "template_ready"
+    }
+  ],
+  "entries": [
+    {
+      "node_id": "vendelshtein_ch1_discontinuous_node_01",
+      "step_id": "vendelshtein_ch1_discontinuous_step_01",
+      "step_title": "Количественные критерии и ЯМР в терригенном разрезе",
+      "video_capacity_score": 8,
+      "video_capacity_features": [
+        "multi_curve_coupling",
+        "nmr_free_fluid_cutoff"
+      ],
+      "selected_format": "interactive_domain_animation",
+      "routing_rationale": "Видеоёмкость 8/10 (multi_curve_coupling, nmr_free_fluid_cutoff): узел сопоставлен с шаблоном tpl_class_b_ven_nmr_isf (класс B, состояние модели parametric_geology) и подтверждён реальным артефактом illustrations/vendelshtein_ch1_discontinuous_step_01_illust.svg.",
+      "visual_class": "B",
+      "template_id": "tpl_class_b_ven_nmr_isf",
+      "model_state": "parametric_geology",
+      "coverage_status": "covered",
+      "artifact_path": "illustrations/vendelshtein_ch1_discontinuous_step_01_illust.svg",
+      "missing_requirement": "",
+      "illustration_id": "vendelshtein_ch1_discontinuous_step_01_illust",
+      "source_ref": "рис. 6 и рис. 13, стр. 9, 14 (ЯМР ССП K_п.эф ≥ 1 % и повторный замер КИИ)"
+    },
+    {
+      "node_id": "vendelshtein_ch1_discontinuous_node_02",
+      "step_id": "vendelshtein_ch1_discontinuous_step_02",
+      "step_title": "Условия однозначной оценки насыщения методами электрометрии",
+      "video_capacity_score": 9,
+      "video_capacity_features": [
+        "phase_permeability_curves",
+        "critical_saturation_cutoff",
+        "invasion_depth_guard"
+      ],
+      "selected_format": "interactive_domain_animation",
+      "routing_rationale": "Видеоёмкость 9/10 (phase_permeability_curves, critical_saturation_cutoff, invasion_depth_guard): узел сопоставлен с шаблоном tpl_class_a_ven_relperm_cutoff (класс A, состояние модели deterministic_physics) и подтверждён реальным артефактом illustrations/vendelshtein_ch1_discontinuous_step_02_illust.svg.",
+      "visual_class": "A",
+      "template_id": "tpl_class_a_ven_relperm_cutoff",
+      "model_state": "deterministic_physics",
+      "coverage_status": "covered",
+      "artifact_path": "illustrations/vendelshtein_ch1_discontinuous_step_02_illust.svg",
+      "missing_requirement": "",
+      "illustration_id": "vendelshtein_ch1_discontinuous_step_02_illust",
+      "source_ref": "рис. 22–23, стр. 21 и условие зоны проникновения стр. 20 (пласт БВ8 Самотлора)"
+    },
+    {
+      "node_id": "vendelshtein_ch1_discontinuous_node_03",
+      "step_id": "vendelshtein_ch1_discontinuous_step_03",
+      "step_title": "Временные нейтронные замеры эффективная мощность и ВНК",
+      "video_capacity_score": 8,
+      "video_capacity_features": [
+        "time_lapse_crossplot",
+        "invasion_dissipation"
+      ],
+      "selected_format": "interactive_domain_animation",
+      "routing_rationale": "Видеоёмкость 8/10 (time_lapse_crossplot, invasion_dissipation): узел сопоставлен с шаблоном tpl_class_b_ven_inm_timelapse (класс B, состояние модели parametric_geology) и подтверждён реальным артефактом illustrations/vendelshtein_ch1_discontinuous_step_03_illust.svg.",
+      "visual_class": "B",
+      "template_id": "tpl_class_b_ven_inm_timelapse",
+      "model_state": "parametric_geology",
+      "coverage_status": "covered",
+      "artifact_path": "illustrations/vendelshtein_ch1_discontinuous_step_03_illust.svg",
+      "missing_requirement": "",
+      "illustration_id": "vendelshtein_ch1_discontinuous_step_03_illust",
+      "source_ref": "рис. 26, стр. 23 (расформирование зоны проникновения по повторным замерам ИНМ)"
+    }
+  ],
+  "step_illustration_source_links": [
+    {
+      "step_id": "vendelshtein_ch1_discontinuous_step_01",
+      "node_id": "vendelshtein_ch1_discontinuous_node_01",
+      "step_title": "Количественные критерии и ЯМР в терригенном разрезе",
+      "illustration_id": "vendelshtein_ch1_discontinuous_step_01_illust",
+      "visual_class": "B",
+      "redraw_caption": "перерисовано по рис. 13, стр. 14",
+      "source_ref": "рис. 6 и рис. 13, стр. 9, 14 (ЯМР ССП K_п.эф ≥ 1 % и повторный замер КИИ)",
+      "pdf_page": "14",
+      "printed_page": "25–26",
+      "claim_id": "vendelshtein_ch1_discontinuous_node_01_claim_01",
+      "artifact_path": "illustrations/vendelshtein_ch1_discontinuous_step_01_illust.svg"
+    },
+    {
+      "step_id": "vendelshtein_ch1_discontinuous_step_02",
+      "node_id": "vendelshtein_ch1_discontinuous_node_02",
+      "step_title": "Условия однозначной оценки насыщения методами электрометрии",
+      "illustration_id": "vendelshtein_ch1_discontinuous_step_02_illust",
+      "visual_class": "A",
+      "redraw_caption": "перерисовано по рис. 23, стр. 21",
+      "source_ref": "рис. 22–23, стр. 21 и условие зоны проникновения стр. 20 (пласт БВ8 Самотлора)",
+      "pdf_page": "21",
+      "printed_page": "37–38",
+      "claim_id": "vendelshtein_ch1_discontinuous_node_02_claim_01",
+      "artifact_path": "illustrations/vendelshtein_ch1_discontinuous_step_02_illust.svg"
+    },
+    {
+      "step_id": "vendelshtein_ch1_discontinuous_step_03",
+      "node_id": "vendelshtein_ch1_discontinuous_node_03",
+      "step_title": "Временные нейтронные замеры эффективная мощность и ВНК",
+      "illustration_id": "vendelshtein_ch1_discontinuous_step_03_illust",
+      "visual_class": "B",
+      "redraw_caption": "перерисовано по рис. 26, стр. 23",
+      "source_ref": "рис. 26, стр. 23 (расформирование зоны проникновения по повторным замерам ИНМ)",
+      "pdf_page": "23",
+      "printed_page": "45–46",
+      "claim_id": "vendelshtein_ch1_discontinuous_node_03_claim_01",
+      "artifact_path": "illustrations/vendelshtein_ch1_discontinuous_step_03_illust.svg"
+    }
+  ]
+}

@@ -1,0 +1,205 @@
+{
+  "passed": true,
+  "registry_id": "reg_kuznetsov_ch10",
+  "layer_id": "layer_kuznetsov_ch10",
+  "book_file": "train_kuznetsov.md",
+  "pdf_ranges": [
+    {
+      "start_pdf_page": 200,
+      "end_pdf_page": 222,
+      "start_printed_page": "200",
+      "end_printed_page": "222",
+      "section_label": "Глава 10. Природные резервуары рифов (§10.1–§10.4, стр. 200–222)"
+    }
+  ],
+  "total_registry_units": 141,
+  "covered_units_count": 136,
+  "excluded_units_count": 5,
+  "manual_verification_required_count": 14,
+  "discrepancies": [],
+  "manual_verification_items": [
+    {
+      "unit_id": "train_kuznetsov_p201_vlmfig_04",
+      "unit_type": "figure",
+      "pdf_page": 201,
+      "printed_page": "201",
+      "ocr_status": "legend_missing",
+      "audit_resolution": "verified_by_pdf",
+      "linked_node_ids": [
+        "kuznetsov_ch10_node_01"
+      ],
+      "note": "Проверено по скану Кузнецова стр. 201: полная расшифровка условных знаков (1–13 / I–V) приведена в подрисуночной подписи на этой же странице.",
+      "excerpt": "━━━ FORMAT 12: CONCEPTUAL DIAGRAM / КОНЦЕПТУАЛЬНАЯ СХЕМА ━━━\nСхематический поперечный разрез симметричной куполообразной структуры с дугообразно изогнутыми внут"
+    },
+    {
+      "unit_id": "train_kuznetsov_p206_vlmfig_01",
+      "unit_type": "figure",
+      "pdf_page": 206,
+      "printed_page": "206",
+      "ocr_status": "legend_missing",
+      "audit_resolution": "verified_by_pdf",
+      "linked_node_ids": [
+        "kuznetsov_ch10_node_03"
+      ],
+      "note": "Проверено по скану Кузнецова стр. 206: полная расшифровка условных знаков (1–13 / I–V) приведена в подрисуночной подписи на этой же странице.",
+      "excerpt": "━━━ FORMAT 4: CROSS-SECTION / РАЗРЕЗ ━━━\nОриентация разреза: СЗ (слева) — ЮВ (справа).\nВертикальная ось: $H$, м; отметки 0, 50, 100, 150, 200, 250 м. Значения в"
+    },
+    {
+      "unit_id": "train_kuznetsov_p206_legend_02",
+      "unit_type": "legend",
+      "pdf_page": 206,
+      "printed_page": "206",
+      "ocr_status": "legend_missing",
+      "audit_resolution": "verified_by_pdf",
+      "linked_node_ids": [
+        "kuznetsov_ch10_node_03"
+      ],
+      "note": "Проверено по скану Кузнецова стр. 206: полная расшифровка условных знаков (1–13 / I–V) приведена в подрисуночной подписи на этой же странице.",
+      "excerpt": "━━━ FORMAT 13: LEGEND/ УСЛОВНЫЕ ОБОЗНАЧЕНИЯ ━━━\n1. Короткие волнистые горизонтальные штрихи — значение не подписано; литология не определяется без легенды.\n2. К"
+    },
+    {
+      "unit_id": "train_kuznetsov_p206_vlmfig_03",
+      "unit_type": "figure",
+      "pdf_page": 206,
+      "printed_page": "206",
+      "ocr_status": "legend_missing",
+      "audit_resolution": "verified_by_pdf",
+      "linked_node_ids": [
+        "kuznetsov_ch10_node_03"
+      ],
+      "note": "Проверено по скану Кузнецова стр. 206: полная расшифровка условных знаков (1–13 / I–V) приведена в подрисуночной подписи на этой же странице.",
+      "excerpt": "━━━ FORMAT 4: CROSS-SECTION / РАЗРЕЗ ━━━\nВертикальная ось: $H$, м; значения от 0 внизу до 250 вверху, высота возрастает вверх.\nГоризонтальная шкала: 0, 500, 100"
+    },
+    {
+      "unit_id": "train_kuznetsov_p208_vlmfig_01",
+      "unit_type": "figure",
+      "pdf_page": 208,
+      "printed_page": "208",
+      "ocr_status": "legend_missing",
+      "audit_resolution": "verified_by_pdf",
+      "linked_node_ids": [
+        "kuznetsov_ch10_node_03"
+      ],
+      "note": "Проверено по скану Кузнецова стр. 208: полная расшифровка условных знаков (1–13 / I–V) приведена в подрисуночной подписи на этой же странице.",
+      "excerpt": "━━━ FORMAT 4: CROSS-SECTION / РАЗРЕЗ ━━━\nГеологический разрез складчатого строения. Ориентация линии разреза, горизонтальный и вертикальный масштабы не указаны."
+    },
+    {
+      "unit_id": "train_kuznetsov_p208_legend_02",
+      "unit_type": "legend",
+      "pdf_page": 208,
+      "printed_page": "208",
+      "ocr_status": "legend_missing",
+      "audit_resolution": "verified_by_pdf",
+      "linked_node_ids": [
+        "kuznetsov_ch10_node_03"
+      ],
+      "note": "Проверено по скану Кузнецова стр. 208: полная расшифровка условных знаков (1–13 / I–V) приведена в подрисуночной подписи на этой же странице.",
+      "excerpt": "━━━ FORMAT 13: LEGEND/ УСЛОВНЫЕ ОБОЗНАЧЕНИЯ ━━━\n1 — белый фон с короткими вертикальными штрихами; литология не определяется без легенды.\n2 — точечный крап; лито"
+    },
+    {
+      "unit_id": "train_kuznetsov_p211_vlmfig_01",
+      "unit_type": "figure",
+      "pdf_page": 211,
+      "printed_page": "211",
+      "ocr_status": "legend_missing",
+      "audit_resolution": "verified_by_pdf",
+      "linked_node_ids": [
+        "kuznetsov_ch10_node_03"
+      ],
+      "note": "Проверено по скану Кузнецова стр. 211: полная расшифровка условных знаков (1–13 / I–V) приведена в подрисуночной подписи на этой же странице.",
+      "excerpt": "━━━ FORMAT 5: СТРАТИГРАФИЧЕСКАЯ КОЛОНКА ━━━\nСтратиграфическая колонка; изображение повернуто относительно нормальной ориентации. Числовые и текстовые обозначени"
+    },
+    {
+      "unit_id": "train_kuznetsov_p211_vlmfig_02",
+      "unit_type": "figure",
+      "pdf_page": 211,
+      "printed_page": "211",
+      "ocr_status": "legend_missing",
+      "audit_resolution": "verified_by_pdf",
+      "linked_node_ids": [
+        "kuznetsov_ch10_node_03"
+      ],
+      "note": "Проверено по скану Кузнецова стр. 211: полная расшифровка условных знаков (1–13 / I–V) приведена в подрисуночной подписи на этой же странице.",
+      "excerpt": "━━━ FORMAT 9: ТЕХНИЧЕСКАЯ СХЕМА ━━━\nСхематический разрез с линзовидным тёмным телом неправильной формы в центральной части. Вмещающая область показана короткими"
+    },
+    {
+      "unit_id": "train_kuznetsov_p212_vlmfig_01",
+      "unit_type": "figure",
+      "pdf_page": 212,
+      "printed_page": "212",
+      "ocr_status": "legend_missing",
+      "audit_resolution": "verified_by_pdf",
+      "linked_node_ids": [
+        "kuznetsov_ch10_node_03"
+      ],
+      "note": "Проверено по скану Кузнецова стр. 212: полная расшифровка условных знаков (1–13 / I–V) приведена в подрисуночной подписи на этой же странице.",
+      "excerpt": "━━━ FORMAT 4: CROSS-SECTION / РАЗРЕЗ ━━━\nВерхний разрез.\nОриентация разреза не указана. По горизонтали показан масштаб: 0—10 км; промежуточные деления не подпис"
+    },
+    {
+      "unit_id": "train_kuznetsov_p212_legend_02",
+      "unit_type": "legend",
+      "pdf_page": 212,
+      "printed_page": "212",
+      "ocr_status": "legend_missing",
+      "audit_resolution": "verified_by_pdf",
+      "linked_node_ids": [
+        "kuznetsov_ch10_node_03"
+      ],
+      "note": "Проверено по скану Кузнецова стр. 212: полная расшифровка условных знаков (1–13 / I–V) приведена в подрисуночной подписи на этой же странице.",
+      "excerpt": "━━━ FORMAT 13: LEGEND/ УСЛОВНЫЕ ОБОЗНАЧЕНИЯ ━━━\nУсловные обозначения расположены между верхним и нижним разрезами; текстовые расшифровки отсутствуют.\n1. Мелкие "
+    },
+    {
+      "unit_id": "train_kuznetsov_p213_vlmfig_01",
+      "unit_type": "figure",
+      "pdf_page": 213,
+      "printed_page": "213",
+      "ocr_status": "legend_missing",
+      "audit_resolution": "verified_with_caveat",
+      "linked_node_ids": [
+        "kuznetsov_ch10_node_04"
+      ],
+      "note": "Проверено по скану Кузнецова стр. 213 (продолжение Рис. 10.7, а–г): легенда 1–6 и индексы горизонтов (Сг, И, Б, С, Т, Ш) даны в подписи к Рис. 10.7 внизу стр. 212.",
+      "excerpt": "━━━ FORMAT 4: CROSS-SECTION / РАЗРЕЗ ━━━\nВертикальный разрез. Горизонтальная ориентация, горизонтальный масштаб и линия разреза не указаны.\nВертикальная ось: $H"
+    },
+    {
+      "unit_id": "train_kuznetsov_p213_vlmfig_02",
+      "unit_type": "figure",
+      "pdf_page": 213,
+      "printed_page": "213",
+      "ocr_status": "legend_missing",
+      "audit_resolution": "verified_with_caveat",
+      "linked_node_ids": [
+        "kuznetsov_ch10_node_04"
+      ],
+      "note": "Проверено по скану Кузнецова стр. 213 (продолжение Рис. 10.7, а–г): легенда 1–6 и индексы горизонтов (Сг, И, Б, С, Т, Ш) даны в подписи к Рис. 10.7 внизу стр. 212.",
+      "excerpt": "━━━ FORMAT 12: CONCEPTUAL DIAGRAM / КОНЦЕПТУАЛЬНАЯ СХЕМА ━━━\nВертикальная ось: $H$, км; значения отрицательные, от −0,5 вверху до −1,2 внизу. Направление вниз с"
+    },
+    {
+      "unit_id": "train_kuznetsov_p213_vlmfig_03",
+      "unit_type": "figure",
+      "pdf_page": 213,
+      "printed_page": "213",
+      "ocr_status": "legend_missing",
+      "audit_resolution": "verified_with_caveat",
+      "linked_node_ids": [
+        "kuznetsov_ch10_node_04"
+      ],
+      "note": "Проверено по скану Кузнецова стр. 213 (продолжение Рис. 10.7, а–г): легенда 1–6 и индексы горизонтов (Сг, И, Б, С, Т, Ш) даны в подписи к Рис. 10.7 внизу стр. 212.",
+      "excerpt": "━━━ FORMAT 4: РАЗРЕЗ ━━━\nОриентация и горизонтальный масштаб не указаны. Вертикальная ось: $H$, км; значения от −0,6 до −1,2 км, отрицательные отметки увеличива"
+    },
+    {
+      "unit_id": "train_kuznetsov_p213_vlmfig_04",
+      "unit_type": "figure",
+      "pdf_page": 213,
+      "printed_page": "213",
+      "ocr_status": "legend_missing",
+      "audit_resolution": "verified_with_caveat",
+      "linked_node_ids": [
+        "kuznetsov_ch10_node_04"
+      ],
+      "note": "Проверено по скану Кузнецова стр. 213 (продолжение Рис. 10.7, а–г): легенда 1–6 и индексы горизонтов (Сг, И, Б, С, Т, Ш) даны в подписи к Рис. 10.7 внизу стр. 212.",
+      "excerpt": "━━━ FORMAT 4: CROSS-SECTION / РАЗРЕЗ ━━━\nСхематический разрез. Ориентация и горизонтальный масштаб не указаны.\nВертикальная ось: $H$, км; абсолютные отметки отр"
+    }
+  ],
+  "summary_by_type": {}
+}

@@ -1,0 +1,82 @@
+{
+  "passed": true,
+  "registry_id": "reg_vendelshtein_ch1_discontinuous",
+  "layer_id": "layer_vendelshtein_ch1_discontinuous",
+  "book_file": "ctrl_vendelshtein.md",
+  "pdf_ranges": [
+    {
+      "start_pdf_page": 9,
+      "end_pdf_page": 14,
+      "start_printed_page": "15–16",
+      "end_printed_page": "25–26",
+      "section_label": "Глава I, §I.1. Косвенные количественные признаки выделения терригенных коллекторов"
+    },
+    {
+      "start_pdf_page": 20,
+      "end_pdf_page": 30,
+      "start_printed_page": "37–38",
+      "end_printed_page": "57–58",
+      "section_label": "Глава I, §I.2–§I.3. Оценка характера насыщения, эффективная мощность и отбивка ВНК/ГЖК"
+    }
+  ],
+  "total_registry_units": 193,
+  "covered_units_count": 192,
+  "excluded_units_count": 1,
+  "manual_verification_required_count": 4,
+  "discrepancies": [],
+  "manual_verification_items": [
+    {
+      "unit_id": "ctrl_vendelshtein_p014_vlmfig_12",
+      "unit_type": "figure",
+      "pdf_page": 14,
+      "printed_page": "25–26",
+      "ocr_status": "legend_missing",
+      "audit_resolution": "verified_with_caveat",
+      "linked_node_ids": [
+        "vendelshtein_ch1_discontinuous_node_01"
+      ],
+      "note": "Каротажная диаграмма стр. 14 (800–870 м): кривые подписаны, общие литологические штриховки даны в начале книги.",
+      "excerpt": "━━━ FORMAT 2: WELL LOG / КАРОТАЖНАЯ ДИАГРАММА ━━━\nГлубина: интервал приблизительно от 800 до 870 м (подписаны отметки на шкале: 810, 820, 830, 840, 850, 860, 87"
+    },
+    {
+      "unit_id": "ctrl_vendelshtein_p024_eq_01",
+      "unit_type": "formula",
+      "pdf_page": 24,
+      "printed_page": "45–46",
+      "ocr_status": "illegible",
+      "audit_resolution": "verified_by_pdf",
+      "linked_node_ids": [
+        "vendelshtein_ch1_discontinuous_node_03"
+      ],
+      "note": "Проверено по текстовому слою PDF стр. 24 (печ. 45–46): формула (I.7) σ = [Σ(y_i − a x_i − b)²]^(1/2) / (n−2) верна.",
+      "excerpt": "$$\\sigma = [\\Sigma(y_i - ax_i - b)^2]^{1/2} / (n-2);$$  (I.7)  на корреляционном графике проводят две прямые $y = ax + b \\pm 2\\sigma$. После этого на график нан"
+    },
+    {
+      "unit_id": "ctrl_vendelshtein_p027_vlmfig_05",
+      "unit_type": "figure",
+      "pdf_page": 27,
+      "printed_page": "51–52",
+      "ocr_status": "legend_missing",
+      "audit_resolution": "verified_with_caveat",
+      "linked_node_ids": [
+        "vendelshtein_ch1_discontinuous_node_03"
+      ],
+      "note": "Палетка/диаграмма стр. 27 (Рис. 31, по В.Н. Дахнову): шифры кривых ρ_п/ρ_р даны в подписи, общая легенда — в гл. I.",
+      "excerpt": "━━━ FORMAT 2: WELL LOG / КАРОТАЖНАЯ ДИАГРАММА ━━━\nГлубина указана в метрах (шкала слева: 1500, 1600 отмечены; интервал показан от ~1500 до ~1620 м), глубина воз"
+    },
+    {
+      "unit_id": "ctrl_vendelshtein_p027_vlmfig_10",
+      "unit_type": "figure",
+      "pdf_page": 27,
+      "printed_page": "51–52",
+      "ocr_status": "legend_missing",
+      "audit_resolution": "verified_with_caveat",
+      "linked_node_ids": [
+        "vendelshtein_ch1_discontinuous_node_03"
+      ],
+      "note": "Палетка/диаграмма стр. 27 (Рис. 31, б): зависимости h_ф = f(h) для РК подписаны в подрисуночной подписи.",
+      "excerpt": "━━━ FORMAT 2: WELL LOG / КАРОТАЖНАЯ ДИАГРАММА ━━━\nГлубина указана слева, в метрах (столбец «глубина, м»), возрастает вниз. Диапазон видимых отметок: приблизител"
+    }
+  ],
+  "summary_by_type": {}
+}

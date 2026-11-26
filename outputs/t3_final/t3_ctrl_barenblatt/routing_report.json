@@ -1,0 +1,143 @@
+{
+  "course_id": "t3_ctrl_barenblatt",
+  "chapter_id": "barenblatt_s4",
+  "book_file": "ctrl_barenblatt.md",
+  "domain_package_id": "oil_gas_ru",
+  "total_steps": 3,
+  "covered_steps": 3,
+  "needs_model_steps": 0,
+  "class_a_b_count": 1,
+  "hook_shorts_share_pct": 0.0,
+  "video_heavy_template_coverage": [
+    {
+      "node_id": "barenblatt_s4_node_01",
+      "step_title": "Линейное уравнение пьезопроводности и функция источника",
+      "video_capacity_score": "7",
+      "selected_format": "code_redraw_figure",
+      "template_id": "tpl_redraw_bar_rev_scales",
+      "state_model": "scan_code_redraw",
+      "status": "template_ready"
+    },
+    {
+      "node_id": "barenblatt_s4_node_02",
+      "step_title": "Приведённый радиус скважины и асимптотика притока",
+      "video_capacity_score": "8",
+      "selected_format": "interactive_domain_animation",
+      "template_id": "tpl_class_a_bar_darcy_regimes",
+      "state_model": "deterministic_physics",
+      "status": "template_ready"
+    },
+    {
+      "node_id": "barenblatt_s4_node_03",
+      "step_title": "Принцип суперпозиции и восстановление давления КВД",
+      "video_capacity_score": "8",
+      "selected_format": "code_redraw_figure",
+      "template_id": "tpl_redraw_bar_continuity_cube",
+      "state_model": "scan_code_redraw",
+      "status": "template_ready"
+    }
+  ],
+  "entries": [
+    {
+      "node_id": "barenblatt_s4_node_01",
+      "step_id": "barenblatt_s4_step_01",
+      "step_title": "Линейное уравнение пьезопроводности и функция источника",
+      "video_capacity_score": 7,
+      "video_capacity_features": [
+        "multiscale_homogenization",
+        "anticline_trap_contacts"
+      ],
+      "selected_format": "code_redraw_figure",
+      "routing_rationale": "Видеоёмкость 7/10 (multiscale_homogenization, anticline_trap_contacts): узел сопоставлен с шаблоном tpl_redraw_bar_rev_scales (класс C, состояние модели scan_code_redraw) и подтверждён реальным артефактом illustrations/barenblatt_s4_step_01_illust.svg.",
+      "visual_class": "C",
+      "template_id": "tpl_redraw_bar_rev_scales",
+      "model_state": "scan_code_redraw",
+      "coverage_status": "covered",
+      "artifact_path": "illustrations/barenblatt_s4_step_01_illust.svg",
+      "missing_requirement": "",
+      "illustration_id": "barenblatt_s4_step_01_illust",
+      "source_ref": "рис. 1–2, стр. 6–7 (микроструктура шлифа и макроразрез нефтяной залежи)"
+    },
+    {
+      "node_id": "barenblatt_s4_node_02",
+      "step_id": "barenblatt_s4_step_02",
+      "step_title": "Приведённый радиус скважины и асимптотика притока",
+      "video_capacity_score": 8,
+      "video_capacity_features": [
+        "nonlinear_rheology",
+        "reynolds_number_transition"
+      ],
+      "selected_format": "interactive_domain_animation",
+      "routing_rationale": "Видеоёмкость 8/10 (nonlinear_rheology, reynolds_number_transition): узел сопоставлен с шаблоном tpl_class_a_bar_darcy_regimes (класс A, состояние модели deterministic_physics) и подтверждён реальным артефактом illustrations/barenblatt_s4_step_02_illust.svg.",
+      "visual_class": "A",
+      "template_id": "tpl_class_a_bar_darcy_regimes",
+      "model_state": "deterministic_physics",
+      "coverage_status": "covered",
+      "artifact_path": "illustrations/barenblatt_s4_step_02_illust.svg",
+      "missing_requirement": "",
+      "illustration_id": "barenblatt_s4_step_02_illust",
+      "source_ref": "§3 гл. 1, стр. 9–13 (закон Дарси, начальный градиент G_0 и нелинейность при Re > Re_кр)"
+    },
+    {
+      "node_id": "barenblatt_s4_node_03",
+      "step_id": "barenblatt_s4_step_03",
+      "step_title": "Принцип суперпозиции и восстановление давления КВД",
+      "video_capacity_score": 8,
+      "video_capacity_features": [
+        "3d_control_volume",
+        "mass_conservation_flux"
+      ],
+      "selected_format": "code_redraw_figure",
+      "routing_rationale": "Видеоёмкость 8/10 (3d_control_volume, mass_conservation_flux): узел сопоставлен с шаблоном tpl_redraw_bar_continuity_cube (класс C, состояние модели scan_code_redraw) и подтверждён реальным артефактом illustrations/barenblatt_s4_step_03_illust.svg.",
+      "visual_class": "C",
+      "template_id": "tpl_redraw_bar_continuity_cube",
+      "model_state": "scan_code_redraw",
+      "coverage_status": "covered",
+      "artifact_path": "illustrations/barenblatt_s4_step_03_illust.svg",
+      "missing_requirement": "",
+      "illustration_id": "barenblatt_s4_step_03_illust",
+      "source_ref": "рис. 3, стр. 16 (элементарный параллелепипед баланса массы div(ρu))"
+    }
+  ],
+  "step_illustration_source_links": [
+    {
+      "step_id": "barenblatt_s4_step_01",
+      "node_id": "barenblatt_s4_node_01",
+      "step_title": "Линейное уравнение пьезопроводности и функция источника",
+      "illustration_id": "barenblatt_s4_step_01_illust",
+      "visual_class": "C",
+      "redraw_caption": "перерисовано по рис. 2, стр. 7",
+      "source_ref": "рис. 1–2, стр. 6–7 (микроструктура шлифа и макроразрез нефтяной залежи)",
+      "pdf_page": "7",
+      "printed_page": "39",
+      "claim_id": "barenblatt_s4_node_01_claim_01",
+      "artifact_path": "illustrations/barenblatt_s4_step_01_illust.svg"
+    },
+    {
+      "step_id": "barenblatt_s4_step_02",
+      "node_id": "barenblatt_s4_node_02",
+      "step_title": "Приведённый радиус скважины и асимптотика притока",
+      "illustration_id": "barenblatt_s4_step_02_illust",
+      "visual_class": "A",
+      "redraw_caption": "перерисовано по рис. §3, стр. 10",
+      "source_ref": "§3 гл. 1, стр. 9–13 (закон Дарси, начальный градиент G_0 и нелинейность при Re > Re_кр)",
+      "pdf_page": "10",
+      "printed_page": "44",
+      "claim_id": "barenblatt_s4_node_02_claim_01",
+      "artifact_path": "illustrations/barenblatt_s4_step_02_illust.svg"
+    },
+    {
+      "step_id": "barenblatt_s4_step_03",
+      "node_id": "barenblatt_s4_node_03",
+      "step_title": "Принцип суперпозиции и восстановление давления КВД",
+      "illustration_id": "barenblatt_s4_step_03_illust",
+      "visual_class": "C",
+      "redraw_caption": "перерисовано по рис. 3, стр. 16",
+      "source_ref": "рис. 3, стр. 16 (элементарный параллелепипед баланса массы div(ρu))",
+      "pdf_page": "16",
+      "printed_page": "47",
+      "claim_id": "barenblatt_s4_node_03_claim_01",
+      "artifact_path": "illustrations/barenblatt_s4_step_03_illust.svg"
+    }
+  ]
+}

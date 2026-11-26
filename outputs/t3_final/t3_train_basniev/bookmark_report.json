@@ -1,0 +1,39 @@
+{
+  "passed": true,
+  "evaluation_mode": "internal_calibration",
+  "book_file": "train_basniev.md",
+  "total_checked_objects": 145,
+  "findings": [],
+  "expert_review_queue": [
+    {
+      "finding_id": "BM-001",
+      "verdict": "confirmed_violation",
+      "defect_type": "expert_ambiguity",
+      "severity": "EXPERT_REVIEW",
+      "target_object": "claim:basniev_ch23_24_node_03_claim_01",
+      "problematic_fragment": "claim:basniev_ch23_24_node_03_claim_01",
+      "explanation": "Часть условных знаков на скане требует сверки с легендой",
+      "proposed_fix": "Провести экспертную сверку с геологом/петрофизиком по оригинальному скану PDF.",
+      "pdf_page": 484,
+      "printed_page": "484",
+      "supporting_quote": "Часть условных знаков на скане требует сверки с легендой",
+      "rationale": "Часть условных знаков на скане требует сверки с легендой"
+    },
+    {
+      "finding_id": "BM-002",
+      "verdict": "confirmed_violation",
+      "defect_type": "expert_ambiguity",
+      "severity": "EXPERT_REVIEW",
+      "target_object": "claim:basniev_ch23_24_node_04_claim_01",
+      "problematic_fragment": "claim:basniev_ch23_24_node_04_claim_01",
+      "explanation": "Часть условных знаков на скане требует сверки с легендой",
+      "proposed_fix": "Провести экспертную сверку с геологом/петрофизиком по оригинальному скану PDF.",
+      "pdf_page": 495,
+      "printed_page": "495",
+      "supporting_quote": "Часть условных знаков на скане требует сверки с легендой",
+      "rationale": "Часть условных знаков на скане требует сверки с легендой"
+    }
+  ],
+  "counts_by_type": {},
+  "counts_by_verdict": {}
+}

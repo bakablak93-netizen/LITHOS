@@ -1,0 +1,188 @@
+{
+  "course_id": "t3_train_basniev",
+  "chapter_id": "basniev_ch23_24",
+  "book_file": "train_basniev.md",
+  "domain_package_id": "oil_gas_ru",
+  "total_steps": 4,
+  "covered_steps": 4,
+  "needs_model_steps": 0,
+  "class_a_b_count": 3,
+  "hook_shorts_share_pct": 0.0,
+  "video_heavy_template_coverage": [
+    {
+      "node_id": "basniev_ch23_24_node_01",
+      "step_title": "Упругий режим и упругий запас пласта",
+      "video_capacity_score": "8",
+      "selected_format": "interactive_domain_animation",
+      "template_id": "tpl_class_a_bas_pore_velocity",
+      "state_model": "deterministic_physics",
+      "status": "template_ready"
+    },
+    {
+      "node_id": "basniev_ch23_24_node_02",
+      "step_title": "Математическая модель и уравнение пьезопроводности",
+      "video_capacity_score": "7",
+      "selected_format": "code_redraw_figure",
+      "template_id": "tpl_redraw_bas_darcy_column",
+      "state_model": "scan_code_redraw",
+      "status": "template_ready"
+    },
+    {
+      "node_id": "basniev_ch23_24_node_03",
+      "step_title": "Точные решения и формула упругого режима Ei",
+      "video_capacity_score": "10",
+      "selected_format": "video_16_9_and_interactive",
+      "template_id": "tpl_explainer_16_9_sync_views",
+      "state_model": "deterministic_physics",
+      "status": "template_ready"
+    },
+    {
+      "node_id": "basniev_ch23_24_node_04",
+      "step_title": "Метод последовательной смены стационарных состояний",
+      "video_capacity_score": "10",
+      "selected_format": "video_16_9_and_interactive",
+      "template_id": "tpl_explainer_16_9_sync_views",
+      "state_model": "deterministic_physics",
+      "status": "template_ready"
+    }
+  ],
+  "entries": [
+    {
+      "node_id": "basniev_ch23_24_node_01",
+      "step_id": "basniev_ch23_24_step_01",
+      "step_title": "Упругий режим и упругий запас пласта",
+      "video_capacity_score": 8,
+      "video_capacity_features": [
+        "spatial_dynamics",
+        "particle_acceleration",
+        "continuity_cross_section"
+      ],
+      "selected_format": "interactive_domain_animation",
+      "routing_rationale": "Видеоёмкость 8/10 (spatial_dynamics, particle_acceleration, continuity_cross_section): узел сопоставлен с шаблоном tpl_class_a_bas_pore_velocity (класс A, состояние модели deterministic_physics) и подтверждён реальным артефактом illustrations/basniev_ch23_24_step_01_illust.svg.",
+      "visual_class": "A",
+      "template_id": "tpl_class_a_bas_pore_velocity",
+      "model_state": "deterministic_physics",
+      "coverage_status": "covered",
+      "artifact_path": "illustrations/basniev_ch23_24_step_01_illust.svg",
+      "missing_requirement": "",
+      "illustration_id": "basniev_ch23_24_step_01_illust",
+      "source_ref": "рис. 18.4, стр. 358 (модель просветности и истинной скорости v = w / m)"
+    },
+    {
+      "node_id": "basniev_ch23_24_node_02",
+      "step_id": "basniev_ch23_24_step_02",
+      "step_title": "Математическая модель и уравнение пьезопроводности",
+      "video_capacity_score": 7,
+      "video_capacity_features": [
+        "instrument_schematic",
+        "linear_vs_inertial_regime"
+      ],
+      "selected_format": "code_redraw_figure",
+      "routing_rationale": "Видеоёмкость 7/10 (instrument_schematic, linear_vs_inertial_regime): узел сопоставлен с шаблоном tpl_redraw_bas_darcy_column (класс C, состояние модели scan_code_redraw) и подтверждён реальным артефактом illustrations/basniev_ch23_24_step_02_illust.svg.",
+      "visual_class": "C",
+      "template_id": "tpl_redraw_bas_darcy_column",
+      "model_state": "scan_code_redraw",
+      "coverage_status": "covered",
+      "artifact_path": "illustrations/basniev_ch23_24_step_02_illust.svg",
+      "missing_requirement": "",
+      "illustration_id": "basniev_ch23_24_step_02_illust",
+      "source_ref": "рис. 18.5, стр. 360 (установка Дарси и границы Re_кр)"
+    },
+    {
+      "node_id": "basniev_ch23_24_node_03",
+      "step_id": "basniev_ch23_24_step_03",
+      "step_title": "Точные решения и формула упругого режима Ei",
+      "video_capacity_score": 10,
+      "video_capacity_features": [
+        "spatial_dynamics",
+        "synchronized_plan_and_section",
+        "true_scale_vs_exaggerated"
+      ],
+      "selected_format": "video_16_9_and_interactive",
+      "routing_rationale": "Видеоёмкость 10/10 (spatial_dynamics, synchronized_plan_and_section, true_scale_vs_exaggerated): узел сопоставлен с шаблоном tpl_explainer_16_9_sync_views (класс A, состояние модели deterministic_physics) и подтверждён реальным артефактом illustrations/basniev_ch23_24_step_03_illust.svg.",
+      "visual_class": "A",
+      "template_id": "tpl_explainer_16_9_sync_views",
+      "model_state": "deterministic_physics",
+      "coverage_status": "covered",
+      "artifact_path": "illustrations/basniev_ch23_24_step_03_illust.svg",
+      "missing_requirement": "",
+      "illustration_id": "basniev_ch23_24_step_03_illust",
+      "source_ref": "рис. 20.3, стр. 416 (расчёт simulate_dupuit_flow: Q = 247,54 м³/сут)"
+    },
+    {
+      "node_id": "basniev_ch23_24_node_04",
+      "step_id": "basniev_ch23_24_step_04",
+      "step_title": "Метод последовательной смены стационарных состояний",
+      "video_capacity_score": 10,
+      "video_capacity_features": [
+        "temporal_wave_propagation",
+        "moving_boundary_R_t",
+        "exact_vs_approximate"
+      ],
+      "selected_format": "video_16_9_and_interactive",
+      "routing_rationale": "Видеоёмкость 10/10 (temporal_wave_propagation, moving_boundary_R_t, exact_vs_approximate): узел сопоставлен с шаблоном tpl_explainer_16_9_sync_views (класс A, состояние модели deterministic_physics) и подтверждён реальным артефактом illustrations/basniev_ch23_24_step_04_illust.svg.",
+      "visual_class": "A",
+      "template_id": "tpl_explainer_16_9_sync_views",
+      "model_state": "deterministic_physics",
+      "coverage_status": "covered",
+      "artifact_path": "illustrations/basniev_ch23_24_step_04_illust.svg",
+      "missing_requirement": "",
+      "illustration_id": "basniev_ch23_24_step_04_illust",
+      "source_ref": "рис. 24.1, стр. 495 (расчёт simulate_psss_transient: κ = 0,211 м²/с)"
+    }
+  ],
+  "step_illustration_source_links": [
+    {
+      "step_id": "basniev_ch23_24_step_01",
+      "node_id": "basniev_ch23_24_node_01",
+      "step_title": "Упругий режим и упругий запас пласта",
+      "illustration_id": "basniev_ch23_24_step_01_illust",
+      "visual_class": "A",
+      "redraw_caption": "перерисовано по рис. 18.4, стр. 358",
+      "source_ref": "рис. 18.4, стр. 358 (модель просветности и истинной скорости v = w / m)",
+      "pdf_page": "358",
+      "printed_page": "476",
+      "claim_id": "basniev_ch23_24_node_01_claim_01",
+      "artifact_path": "illustrations/basniev_ch23_24_step_01_illust.svg"
+    },
+    {
+      "step_id": "basniev_ch23_24_step_02",
+      "node_id": "basniev_ch23_24_node_02",
+      "step_title": "Математическая модель и уравнение пьезопроводности",
+      "illustration_id": "basniev_ch23_24_step_02_illust",
+      "visual_class": "C",
+      "redraw_caption": "перерисовано по рис. 18.5, стр. 360",
+      "source_ref": "рис. 18.5, стр. 360 (установка Дарси и границы Re_кр)",
+      "pdf_page": "360",
+      "printed_page": "477",
+      "claim_id": "basniev_ch23_24_node_02_claim_01",
+      "artifact_path": "illustrations/basniev_ch23_24_step_02_illust.svg"
+    },
+    {
+      "step_id": "basniev_ch23_24_step_03",
+      "node_id": "basniev_ch23_24_node_03",
+      "step_title": "Точные решения и формула упругого режима Ei",
+      "illustration_id": "basniev_ch23_24_step_03_illust",
+      "visual_class": "A",
+      "redraw_caption": "перерисовано по рис. 20.3, стр. 416",
+      "source_ref": "рис. 20.3, стр. 416 (расчёт simulate_dupuit_flow: Q = 247,54 м³/сут)",
+      "pdf_page": "416",
+      "printed_page": "484",
+      "claim_id": "basniev_ch23_24_node_03_claim_01",
+      "artifact_path": "illustrations/basniev_ch23_24_step_03_illust.svg"
+    },
+    {
+      "step_id": "basniev_ch23_24_step_04",
+      "node_id": "basniev_ch23_24_node_04",
+      "step_title": "Метод последовательной смены стационарных состояний",
+      "illustration_id": "basniev_ch23_24_step_04_illust",
+      "visual_class": "A",
+      "redraw_caption": "перерисовано по рис. 24.1, стр. 495",
+      "source_ref": "рис. 24.1, стр. 495 (расчёт simulate_psss_transient: κ = 0,211 м²/с)",
+      "pdf_page": "495",
+      "printed_page": "495",
+      "claim_id": "basniev_ch23_24_node_04_claim_01",
+      "artifact_path": "illustrations/basniev_ch23_24_step_04_illust.svg"
+    }
+  ]
+}

@@ -1,0 +1,49 @@
+{
+  "passed": true,
+  "registry_id": "reg_basniev_ch23_24",
+  "layer_id": "layer_basniev_ch23_24",
+  "book_file": "train_basniev.md",
+  "pdf_ranges": [
+    {
+      "start_pdf_page": 474,
+      "end_pdf_page": 500,
+      "start_printed_page": "474",
+      "end_printed_page": "500",
+      "section_label": "Глава XXIII (§1–§5) и Глава XXIV (§1). Упругий режим, точные решения Ei и метод ПССС Чарного"
+    }
+  ],
+  "total_registry_units": 231,
+  "covered_units_count": 228,
+  "excluded_units_count": 3,
+  "manual_verification_required_count": 2,
+  "discrepancies": [],
+  "manual_verification_items": [
+    {
+      "unit_id": "train_basniev_p484_vlmfig_05",
+      "unit_type": "figure",
+      "pdf_page": 484,
+      "printed_page": "484",
+      "ocr_status": "legend_missing",
+      "audit_resolution": "schematic_no_units",
+      "linked_node_ids": [
+        "basniev_ch23_24_node_03"
+      ],
+      "note": "Проверено по скану стр. 484 (Рис. 23.1): принципиальная теоретическая схема p(x, t) при p_г = const без числовых размерностей осей в оригинале.",
+      "excerpt": "━━━ FORMAT 6: XY PLOT / CHART WITH DATA ━━━\n**График изменения давления p в зависимости от координаты x для разных моментов времени**\nОси:\n- Вертикальная ось — "
+    },
+    {
+      "unit_id": "train_basniev_p495_vlmfig_11",
+      "unit_type": "figure",
+      "pdf_page": 495,
+      "printed_page": "495",
+      "ocr_status": "legend_missing",
+      "audit_resolution": "schematic_no_units",
+      "linked_node_ids": [
+        "basniev_ch23_24_node_04"
+      ],
+      "note": "Проверено по скану стр. 495 (Рис. 24.1): принципиальная теоретическая схема ПССС p(x, t) и фронта l(t) без числовых размерностей осей в оригинале.",
+      "excerpt": "━━━ FORMAT 6: XY PLOT / CHART WITH DATA ━━━\nОси: вертикальная ось — p (давление), без указанных единиц; горизонтальная ось — x (координата, направление вдоль пл"
+    }
+  ],
+  "summary_by_type": {}
+}

@@ -1,0 +1,67 @@
+{
+  "passed": true,
+  "evaluation_mode": "internal_calibration",
+  "book_file": "ctrl_vendelshtein.md",
+  "total_checked_objects": 105,
+  "findings": [],
+  "expert_review_queue": [
+    {
+      "finding_id": "BM-001",
+      "verdict": "confirmed_violation",
+      "defect_type": "expert_ambiguity",
+      "severity": "EXPERT_REVIEW",
+      "target_object": "claim:vendelshtein_ch1_discontinuous_node_01_claim_01",
+      "problematic_fragment": "claim:vendelshtein_ch1_discontinuous_node_01_claim_01",
+      "explanation": "Часть условных знаков на скане требует сверки с легендой",
+      "proposed_fix": "Провести экспертную сверку с геологом/петрофизиком по оригинальному скану PDF.",
+      "pdf_page": 14,
+      "printed_page": "25–26",
+      "supporting_quote": "Часть условных знаков на скане требует сверки с легендой",
+      "rationale": "Часть условных знаков на скане требует сверки с легендой"
+    },
+    {
+      "finding_id": "BM-002",
+      "verdict": "confirmed_violation",
+      "defect_type": "expert_ambiguity",
+      "severity": "EXPERT_REVIEW",
+      "target_object": "claim:vendelshtein_ch1_discontinuous_node_03_claim_01",
+      "problematic_fragment": "claim:vendelshtein_ch1_discontinuous_node_03_claim_01",
+      "explanation": "Неоднозначное чтение скана/легенды на стр. 24.",
+      "proposed_fix": "Провести экспертную сверку с геологом/петрофизиком по оригинальному скану PDF.",
+      "pdf_page": 24,
+      "printed_page": "45–46",
+      "supporting_quote": "Неоднозначное чтение скана/легенды на стр. 24.",
+      "rationale": "Неоднозначное чтение скана/легенды на стр. 24."
+    },
+    {
+      "finding_id": "BM-003",
+      "verdict": "confirmed_violation",
+      "defect_type": "expert_ambiguity",
+      "severity": "EXPERT_REVIEW",
+      "target_object": "claim:vendelshtein_ch1_discontinuous_node_03_claim_02",
+      "problematic_fragment": "claim:vendelshtein_ch1_discontinuous_node_03_claim_02",
+      "explanation": "Часть условных знаков на скане требует сверки с легендой",
+      "proposed_fix": "Провести экспертную сверку с геологом/петрофизиком по оригинальному скану PDF.",
+      "pdf_page": 27,
+      "printed_page": "51–52",
+      "supporting_quote": "Часть условных знаков на скане требует сверки с легендой",
+      "rationale": "Часть условных знаков на скане требует сверки с легендой"
+    },
+    {
+      "finding_id": "BM-004",
+      "verdict": "confirmed_violation",
+      "defect_type": "expert_ambiguity",
+      "severity": "EXPERT_REVIEW",
+      "target_object": "claim:vendelshtein_ch1_discontinuous_node_03_claim_03",
+      "problematic_fragment": "claim:vendelshtein_ch1_discontinuous_node_03_claim_03",
+      "explanation": "Часть условных знаков на скане требует сверки с легендой",
+      "proposed_fix": "Провести экспертную сверку с геологом/петрофизиком по оригинальному скану PDF.",
+      "pdf_page": 27,
+      "printed_page": "51–52",
+      "supporting_quote": "Часть условных знаков на скане требует сверки с легендой",
+      "rationale": "Часть условных знаков на скане требует сверки с легендой"
+    }
+  ],
+  "counts_by_type": {},
+  "counts_by_verdict": {}
+}

@@ -1,0 +1,232 @@
+{
+  "course_id": "t3_train_latyshova",
+  "chapter_id": "latyshova_ch5",
+  "book_file": "train_latyshova.md",
+  "domain_package_id": "oil_gas_ru",
+  "total_steps": 5,
+  "covered_steps": 5,
+  "needs_model_steps": 0,
+  "class_a_b_count": 4,
+  "hook_shorts_share_pct": 20.0,
+  "video_heavy_template_coverage": [
+    {
+      "node_id": "latyshova_ch5_node_01",
+      "step_title": "Условия вскрытия скважин и типы коллекторов",
+      "video_capacity_score": "6",
+      "selected_format": "code_redraw_figure",
+      "template_id": "tpl_redraw_lat_nomogram_rw",
+      "state_model": "scan_code_redraw",
+      "status": "template_ready"
+    },
+    {
+      "node_id": "latyshova_ch5_node_02",
+      "step_title": "Литологический разрез по комплексу ГИС",
+      "video_capacity_score": "8",
+      "selected_format": "interactive_domain_animation",
+      "template_id": "tpl_class_a_lat_archie_pp",
+      "state_model": "deterministic_physics",
+      "status": "template_ready"
+    },
+    {
+      "node_id": "latyshova_ch5_node_03",
+      "step_title": "Выделение терригенных коллекторов и пористость",
+      "video_capacity_score": "8",
+      "selected_format": "interactive_domain_animation",
+      "template_id": "tpl_class_a_lat_archie_pn",
+      "state_model": "deterministic_physics",
+      "status": "template_ready"
+    },
+    {
+      "node_id": "latyshova_ch5_node_04",
+      "step_title": "Оценка насыщения терригенных пластов и ВНК",
+      "video_capacity_score": "9",
+      "selected_format": "shorts_9_16_and_interactive",
+      "template_id": "tpl_shorts_9_16_well_log",
+      "state_model": "deterministic_physics",
+      "status": "template_ready"
+    },
+    {
+      "node_id": "latyshova_ch5_node_05",
+      "step_title": "Газоносные и карбонатные коллекторы разреза",
+      "video_capacity_score": "10",
+      "selected_format": "interactive_domain_animation",
+      "template_id": "tpl_class_a_lat_vnk_contact",
+      "state_model": "deterministic_physics",
+      "status": "template_ready"
+    }
+  ],
+  "entries": [
+    {
+      "node_id": "latyshova_ch5_node_01",
+      "step_id": "latyshova_ch5_step_01",
+      "step_title": "Условия вскрытия скважин и типы коллекторов",
+      "video_capacity_score": 6,
+      "video_capacity_features": [
+        "logarithmic_axes",
+        "multi_temperature_family",
+        "unit_conversion"
+      ],
+      "selected_format": "code_redraw_figure",
+      "routing_rationale": "Видеоёмкость 6/10 (logarithmic_axes, multi_temperature_family, unit_conversion): узел сопоставлен с шаблоном tpl_redraw_lat_nomogram_rw (класс C, состояние модели scan_code_redraw) и подтверждён реальным артефактом illustrations/latyshova_ch5_step_01_illust.svg.",
+      "visual_class": "C",
+      "template_id": "tpl_redraw_lat_nomogram_rw",
+      "model_state": "scan_code_redraw",
+      "coverage_status": "covered",
+      "artifact_path": "illustrations/latyshova_ch5_step_01_illust.svg",
+      "missing_requirement": "",
+      "illustration_id": "latyshova_ch5_step_01_illust",
+      "source_ref": "рис. 1, стр. 7"
+    },
+    {
+      "node_id": "latyshova_ch5_node_02",
+      "step_id": "latyshova_ch5_step_02",
+      "step_title": "Литологический разрез по комплексу ГИС",
+      "video_capacity_score": 8,
+      "video_capacity_features": [
+        "formula_derivation",
+        "parametric_curve_family",
+        "fracture_vs_matrix"
+      ],
+      "selected_format": "interactive_domain_animation",
+      "routing_rationale": "Видеоёмкость 8/10 (formula_derivation, parametric_curve_family, fracture_vs_matrix): узел сопоставлен с шаблоном tpl_class_a_lat_archie_pp (класс A, состояние модели deterministic_physics) и подтверждён реальным артефактом illustrations/latyshova_ch5_step_02_illust.svg.",
+      "visual_class": "A",
+      "template_id": "tpl_class_a_lat_archie_pp",
+      "model_state": "deterministic_physics",
+      "coverage_status": "covered",
+      "artifact_path": "illustrations/latyshova_ch5_step_02_illust.svg",
+      "missing_requirement": "",
+      "illustration_id": "latyshova_ch5_step_02_illust",
+      "source_ref": "рис. 4, стр. 9 (расчёт по модели Арчи–Дахнова)"
+    },
+    {
+      "node_id": "latyshova_ch5_node_03",
+      "step_id": "latyshova_ch5_step_03",
+      "step_title": "Выделение терригенных коллекторов и пористость",
+      "video_capacity_score": 8,
+      "video_capacity_features": [
+        "nonlinear_exponent",
+        "threshold_cutoff",
+        "saturation_transition"
+      ],
+      "selected_format": "interactive_domain_animation",
+      "routing_rationale": "Видеоёмкость 8/10 (nonlinear_exponent, threshold_cutoff, saturation_transition): узел сопоставлен с шаблоном tpl_class_a_lat_archie_pn (класс A, состояние модели deterministic_physics) и подтверждён реальным артефактом illustrations/latyshova_ch5_step_03_illust.svg.",
+      "visual_class": "A",
+      "template_id": "tpl_class_a_lat_archie_pn",
+      "model_state": "deterministic_physics",
+      "coverage_status": "covered",
+      "artifact_path": "illustrations/latyshova_ch5_step_03_illust.svg",
+      "missing_requirement": "",
+      "illustration_id": "latyshova_ch5_step_03_illust",
+      "source_ref": "рис. 6, стр. 13 (расчёт параметра насыщения P_н)"
+    },
+    {
+      "node_id": "latyshova_ch5_node_04",
+      "step_id": "latyshova_ch5_step_04",
+      "step_title": "Оценка насыщения терригенных пластов и ВНК",
+      "video_capacity_score": 9,
+      "video_capacity_features": [
+        "multi_curve_coupling",
+        "depth_correlation",
+        "mudcake_invasion"
+      ],
+      "selected_format": "shorts_9_16_and_interactive",
+      "routing_rationale": "Видеоёмкость 9/10 (multi_curve_coupling, depth_correlation, mudcake_invasion): узел сопоставлен с шаблоном tpl_shorts_9_16_well_log (класс B, состояние модели deterministic_physics) и подтверждён реальным артефактом illustrations/latyshova_ch5_step_04_illust.svg.",
+      "visual_class": "B",
+      "template_id": "tpl_shorts_9_16_well_log",
+      "model_state": "deterministic_physics",
+      "coverage_status": "covered",
+      "artifact_path": "illustrations/latyshova_ch5_step_04_illust.svg",
+      "missing_requirement": "",
+      "illustration_id": "latyshova_ch5_step_04_illust",
+      "source_ref": "рис. 66, стр. 97 (комплекс ГИС в терригенном разрезе)"
+    },
+    {
+      "node_id": "latyshova_ch5_node_05",
+      "step_id": "latyshova_ch5_step_05",
+      "step_title": "Газоносные и карбонатные коллекторы разреза",
+      "video_capacity_score": 10,
+      "video_capacity_features": [
+        "spatial_dynamics",
+        "multi_curve_coupling",
+        "radial_invasion_gradient"
+      ],
+      "selected_format": "interactive_domain_animation",
+      "routing_rationale": "Видеоёмкость 10/10 (spatial_dynamics, multi_curve_coupling, radial_invasion_gradient): узел сопоставлен с шаблоном tpl_class_a_lat_vnk_contact (класс A, состояние модели deterministic_physics) и подтверждён реальным артефактом illustrations/latyshova_ch5_step_05_illust.svg.",
+      "visual_class": "A",
+      "template_id": "tpl_class_a_lat_vnk_contact",
+      "model_state": "deterministic_physics",
+      "coverage_status": "covered",
+      "artifact_path": "illustrations/latyshova_ch5_step_05_illust.svg",
+      "missing_requirement": "",
+      "illustration_id": "latyshova_ch5_step_05_illust",
+      "source_ref": "рис. 68–69, стр. 103 (расчёт ВНК = 2425,0 м, simulate_well_log)"
+    }
+  ],
+  "step_illustration_source_links": [
+    {
+      "step_id": "latyshova_ch5_step_01",
+      "node_id": "latyshova_ch5_node_01",
+      "step_title": "Условия вскрытия скважин и типы коллекторов",
+      "illustration_id": "latyshova_ch5_step_01_illust",
+      "visual_class": "C",
+      "redraw_caption": "перерисовано по рис. 1, стр. 7",
+      "source_ref": "рис. 1, стр. 7",
+      "pdf_page": "7",
+      "printed_page": "178–179",
+      "claim_id": "latyshova_ch5_node_01_claim_01",
+      "artifact_path": "illustrations/latyshova_ch5_step_01_illust.svg"
+    },
+    {
+      "step_id": "latyshova_ch5_step_02",
+      "node_id": "latyshova_ch5_node_02",
+      "step_title": "Литологический разрез по комплексу ГИС",
+      "illustration_id": "latyshova_ch5_step_02_illust",
+      "visual_class": "A",
+      "redraw_caption": "перерисовано по рис. 4, стр. 9",
+      "source_ref": "рис. 4, стр. 9 (расчёт по модели Арчи–Дахнова)",
+      "pdf_page": "9",
+      "printed_page": "186–187",
+      "claim_id": "latyshova_ch5_node_02_claim_01",
+      "artifact_path": "illustrations/latyshova_ch5_step_02_illust.svg"
+    },
+    {
+      "step_id": "latyshova_ch5_step_03",
+      "node_id": "latyshova_ch5_node_03",
+      "step_title": "Выделение терригенных коллекторов и пористость",
+      "illustration_id": "latyshova_ch5_step_03_illust",
+      "visual_class": "A",
+      "redraw_caption": "перерисовано по рис. 6, стр. 13",
+      "source_ref": "рис. 6, стр. 13 (расчёт параметра насыщения P_н)",
+      "pdf_page": "13",
+      "printed_page": "194–195",
+      "claim_id": "latyshova_ch5_node_03_claim_01",
+      "artifact_path": "illustrations/latyshova_ch5_step_03_illust.svg"
+    },
+    {
+      "step_id": "latyshova_ch5_step_04",
+      "node_id": "latyshova_ch5_node_04",
+      "step_title": "Оценка насыщения терригенных пластов и ВНК",
+      "illustration_id": "latyshova_ch5_step_04_illust",
+      "visual_class": "B",
+      "redraw_caption": "перерисовано по рис. 66, стр. 97",
+      "source_ref": "рис. 66, стр. 97 (комплекс ГИС в терригенном разрезе)",
+      "pdf_page": "97",
+      "printed_page": "198–199",
+      "claim_id": "latyshova_ch5_node_04_claim_01",
+      "artifact_path": "illustrations/latyshova_ch5_step_04_illust.svg"
+    },
+    {
+      "step_id": "latyshova_ch5_step_05",
+      "node_id": "latyshova_ch5_node_05",
+      "step_title": "Газоносные и карбонатные коллекторы разреза",
+      "illustration_id": "latyshova_ch5_step_05_illust",
+      "visual_class": "A",
+      "redraw_caption": "перерисовано по рис. 68, стр. 103",
+      "source_ref": "рис. 68–69, стр. 103 (расчёт ВНК = 2425,0 м, simulate_well_log)",
+      "pdf_page": "103",
+      "printed_page": "206–207",
+      "claim_id": "latyshova_ch5_node_05_claim_01",
+      "artifact_path": "illustrations/latyshova_ch5_step_05_illust.svg"
+    }
+  ]
+}
