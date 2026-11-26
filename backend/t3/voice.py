@@ -32,7 +32,7 @@ import numpy as np
 SAMPLE_RATE = 24000
 PAUSE_MARK = "⏸"  # маркер паузы предсказания в тексте закадра: «⏸1.3»
 DEFAULT_EDGE_VOICE = "ru-RU-DmitryNeural"
-DEFAULT_EDGE_RATE = "-6%"
+DEFAULT_EDGE_RATE = "+0%"
 SILENCE_RMS_DBFS = -45.0  # ниже этого уровня фрагмент считается тишиной (синтез не удался)
 
 
@@ -83,12 +83,18 @@ def _rms_dbfs(x: np.ndarray) -> float:
     return 20.0 * np.log10(max(rms, 1e-6))
 
 
-def _trim_silence(x: np.ndarray, thr: float = 0.01) -> np.ndarray:
+def _trim_silence(x: np.ndarray, thr: float = 0.0018) -> np.ndarray:
     idx = np.where(np.abs(x) > thr)[0]
     if idx.size == 0:
         return x[:0]
-    pad = int(0.03 * SAMPLE_RATE)
-    return x[max(0, idx[0] - pad) : min(x.size, idx[-1] + pad)]
+    pad = int(0.08 * SAMPLE_RATE)
+    out = x[max(0, idx[0] - pad) : min(x.size, idx[-1] + pad)].copy()
+    fade = min(int(0.015 * SAMPLE_RATE), out.size // 4)
+    if fade > 1:
+        ramp = np.linspace(0.0, 1.0, fade, dtype=np.float32)
+        out[:fade] *= ramp
+        out[-fade:] *= ramp[::-1]
+    return out
 
 
 def _edge_synth(text: str, out_mp3: Path, voice: str, rate: str) -> None:
@@ -100,14 +106,16 @@ def _edge_synth(text: str, out_mp3: Path, voice: str, rate: str) -> None:
         await comm.save(str(out_mp3))
 
     last_exc: Exception | None = None
-    for attempt in range(3):
+    for attempt in range(6):
         try:
+            out_mp3.unlink(missing_ok=True)
             asyncio.run(asyncio.wait_for(_run(), timeout=45))
             if out_mp3.exists() and out_mp3.stat().st_size >= 1000:
                 return
         except Exception as exc:
             last_exc = exc
-            time.sleep(0.5 * (attempt + 1))
+            out_mp3.unlink(missing_ok=True)
+            time.sleep(1.2 * (attempt + 1))
     if last_exc is not None:
         raise last_exc
 

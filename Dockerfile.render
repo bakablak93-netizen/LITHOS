@@ -33,9 +33,9 @@ COPY data/domain_packages ./data/domain_packages
 COPY videos ./videos
 COPY --from=web-builder /build/web_ui/dist ./web_ui/dist
 
-RUN mkdir -p /app/outputs && python3 -c "from pathlib import Path; from backend.t3.pipeline import BOOK_CATALOG, build_t3_course_package; [build_t3_course_package(Path('data'), Path('outputs'), bf, render_mp4=True) for bf in BOOK_CATALOG]" \
-    && cp -f /app/videos/shorts_9_16_latyshova.mp4 /app/videos/shorts_9_16_latyshova.mp3 /app/outputs/t3_train_latyshova/media/ \
-    && cp -f /app/videos/explainer_16_9_basniev.mp4 /app/videos/explainer_16_9_basniev.mp3 /app/outputs/t3_train_basniev/media/
+RUN mkdir -p /app/outputs && LITHOS_TTS_ENGINE=none python3 -c "from pathlib import Path; from backend.t3.pipeline import BOOK_CATALOG, build_t3_course_package; [build_t3_course_package(Path('data'), Path('outputs'), bf, render_mp4=False) for bf in BOOK_CATALOG]" \
+    && cp -f /app/videos/shorts_9_16_latyshova.* /app/outputs/t3_train_latyshova/media/ \
+    && cp -f /app/videos/explainer_16_9_basniev.* /app/outputs/t3_train_basniev/media/
 
 EXPOSE 8000
 
