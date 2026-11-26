@@ -1,7 +1,7 @@
 {
   "chapter": "Slatt (2013), §9.4.1",
   "mode": "manual_output",
-  "source_pages": "PDF 411–416. Разметка временного MD следует порядку страниц PDF, официальный test_slatt.md недоступен.",
+  "source_pages": "Метки MD 411–416 в официальном test_slatt.md. Нумерация первоначальной разметки сверена.",
   "scenes": [
     {
       "title": "Речная дельта",
@@ -68,5 +68,6 @@
     "format": {
       "duration": "124.877333"
     }
-  }
+  },
+  "source_sha256": "2175e7d572eca46b5f2967389bb7310c4a16432aac3ea8ba3978db33be6fa320"
 }

@@ -1,0 +1,43 @@
+{
+  "passed": true,
+  "registry_id": "reg_test_dake_ch1",
+  "layer_id": "layer_test_dake_ch1",
+  "book_file": "test_dake.md",
+  "pdf_ranges": [
+    {
+      "start_pdf_page": 75,
+      "end_pdf_page": 79,
+      "start_printed_page": "75",
+      "end_printed_page": "79",
+      "section_label": "PDF 75-79"
+    },
+    {
+      "start_pdf_page": 87,
+      "end_pdf_page": 89,
+      "start_printed_page": "87",
+      "end_printed_page": "89",
+      "section_label": "PDF 87-89"
+    }
+  ],
+  "total_registry_units": 122,
+  "covered_units_count": 112,
+  "excluded_units_count": 10,
+  "manual_verification_required_count": 1,
+  "discrepancies": [],
+  "manual_verification_items": [
+    {
+      "unit_id": "test_dake_p089_eq_09",
+      "unit_type": "formula",
+      "pdf_page": 89,
+      "printed_page": "89",
+      "ocr_status": "illegible",
+      "audit_resolution": "open_manual_check",
+      "linked_node_ids": [
+        "test_dake_ch1_node_04"
+      ],
+      "note": "Требует ручной сверки со сканом PDF",
+      "excerpt": "$$p_{wf} = p_i - \\frac{q\\mu}{4\\pi kh} \\left( \\ln \\frac{4kt}{\\gamma \\phi \\mu c r_w^2} + 2S \\right) \\tag{7.10}$$  As expected for this transient solution there is"
+    }
+  ],
+  "summary_by_type": {}
+}

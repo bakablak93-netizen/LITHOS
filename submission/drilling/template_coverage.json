@@ -1,0 +1,37 @@
+{
+  "book": "test_basarygin.md",
+  "domain_package_id": "drilling_well_control_ru",
+  "domain_package_sha256": "836100807ddbd4a1921e66c474e3815d461b6d6085f5926c63544fa07c2fa5a7",
+  "nodes": 4,
+  "generic_illustration_templates": 4,
+  "drilling_specific_illustration_templates": 0,
+  "automatic_video_outputs": 0,
+  "routing_entries": [
+    {
+      "step_id": "test_basarygin_ch1_step_01",
+      "node_id": "test_basarygin_ch1_node_01",
+      "template_id": "tpl_class_b_generic_domain",
+      "coverage_status": "covered"
+    },
+    {
+      "step_id": "test_basarygin_ch1_step_02",
+      "node_id": "test_basarygin_ch1_node_02",
+      "template_id": "tpl_redraw_generic_domain",
+      "coverage_status": "covered"
+    },
+    {
+      "step_id": "test_basarygin_ch1_step_03",
+      "node_id": "test_basarygin_ch1_node_03",
+      "template_id": "tpl_redraw_generic_domain",
+      "coverage_status": "covered"
+    },
+    {
+      "step_id": "test_basarygin_ch1_step_04",
+      "node_id": "test_basarygin_ch1_node_04",
+      "template_id": "tpl_redraw_generic_domain",
+      "coverage_status": "covered"
+    }
+  ],
+  "manual_video": "../videos/basarygin_kick_9x16.mp4",
+  "note": "Штатный загрузчик применил отдельный доменный JSON по переданному в процессе пути. Автоматически найдены общие шаблоны. Отраслевые схемы для шортса подготовлены вручную."
+}

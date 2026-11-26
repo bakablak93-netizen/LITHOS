@@ -1,0 +1,185 @@
+{
+  "course_id": "t3_test_dake",
+  "chapter_id": "test_dake_ch1",
+  "book_file": "test_dake.md",
+  "domain_package_id": "oil_gas_ru",
+  "total_steps": 4,
+  "covered_steps": 4,
+  "needs_model_steps": 0,
+  "class_a_b_count": 1,
+  "hook_shorts_share_pct": 0.0,
+  "video_heavy_template_coverage": [
+    {
+      "node_id": "test_dake_ch1_node_01",
+      "step_title": "Физическая модель и расчёт раздела 1",
+      "video_capacity_score": "7",
+      "selected_format": "interactive_domain_animation",
+      "template_id": "tpl_class_b_generic_domain",
+      "state_model": "parametric_geology",
+      "status": "template_ready"
+    },
+    {
+      "node_id": "test_dake_ch1_node_02",
+      "step_title": "Физическая модель и расчёт раздела 2",
+      "video_capacity_score": "7",
+      "selected_format": "code_redraw_figure",
+      "template_id": "tpl_redraw_generic_domain",
+      "state_model": "scan_code_redraw",
+      "status": "template_ready"
+    },
+    {
+      "node_id": "test_dake_ch1_node_03",
+      "step_title": "Физическая модель и расчёт раздела 3",
+      "video_capacity_score": "7",
+      "selected_format": "code_redraw_figure",
+      "template_id": "tpl_redraw_generic_domain",
+      "state_model": "scan_code_redraw",
+      "status": "template_ready"
+    },
+    {
+      "node_id": "test_dake_ch1_node_04",
+      "step_title": "Физическая модель и расчёт раздела 4",
+      "video_capacity_score": "7",
+      "selected_format": "code_redraw_figure",
+      "template_id": "tpl_redraw_generic_domain",
+      "state_model": "scan_code_redraw",
+      "status": "template_ready"
+    }
+  ],
+  "entries": [
+    {
+      "node_id": "test_dake_ch1_node_01",
+      "step_id": "test_dake_ch1_step_01",
+      "step_title": "Физическая модель и расчёт раздела 1",
+      "video_capacity_score": 7,
+      "video_capacity_features": [
+        "domain_diagram",
+        "source_grounded"
+      ],
+      "selected_format": "interactive_domain_animation",
+      "routing_rationale": "Видеоёмкость 7/10 (domain_diagram, source_grounded): узел сопоставлен с шаблоном tpl_class_b_generic_domain (класс B, состояние модели parametric_geology) и подтверждён реальным артефактом illustrations/test_dake_ch1_step_01_illust.svg.",
+      "visual_class": "B",
+      "template_id": "tpl_class_b_generic_domain",
+      "model_state": "parametric_geology",
+      "coverage_status": "covered",
+      "artifact_path": "illustrations/test_dake_ch1_step_01_illust.svg",
+      "missing_requirement": "",
+      "illustration_id": "test_dake_ch1_step_01_illust",
+      "source_ref": "Условная схема · источник шага, стр. 75"
+    },
+    {
+      "node_id": "test_dake_ch1_node_02",
+      "step_id": "test_dake_ch1_step_02",
+      "step_title": "Физическая модель и расчёт раздела 2",
+      "video_capacity_score": 7,
+      "video_capacity_features": [
+        "domain_diagram",
+        "source_grounded"
+      ],
+      "selected_format": "code_redraw_figure",
+      "routing_rationale": "Видеоёмкость 7/10 (domain_diagram, source_grounded): узел сопоставлен с шаблоном tpl_redraw_generic_domain (класс C, состояние модели scan_code_redraw) и подтверждён реальным артефактом illustrations/test_dake_ch1_step_02_illust.svg.",
+      "visual_class": "C",
+      "template_id": "tpl_redraw_generic_domain",
+      "model_state": "scan_code_redraw",
+      "coverage_status": "covered",
+      "artifact_path": "illustrations/test_dake_ch1_step_02_illust.svg",
+      "missing_requirement": "",
+      "illustration_id": "test_dake_ch1_step_02_illust",
+      "source_ref": "Условная схема · источник шага, стр. 77"
+    },
+    {
+      "node_id": "test_dake_ch1_node_03",
+      "step_id": "test_dake_ch1_step_03",
+      "step_title": "Физическая модель и расчёт раздела 3",
+      "video_capacity_score": 7,
+      "video_capacity_features": [
+        "domain_diagram",
+        "source_grounded"
+      ],
+      "selected_format": "code_redraw_figure",
+      "routing_rationale": "Видеоёмкость 7/10 (domain_diagram, source_grounded): узел сопоставлен с шаблоном tpl_redraw_generic_domain (класс C, состояние модели scan_code_redraw) и подтверждён реальным артефактом illustrations/test_dake_ch1_step_03_illust.svg.",
+      "visual_class": "C",
+      "template_id": "tpl_redraw_generic_domain",
+      "model_state": "scan_code_redraw",
+      "coverage_status": "covered",
+      "artifact_path": "illustrations/test_dake_ch1_step_03_illust.svg",
+      "missing_requirement": "",
+      "illustration_id": "test_dake_ch1_step_03_illust",
+      "source_ref": "Условная схема · источник шага, стр. 79"
+    },
+    {
+      "node_id": "test_dake_ch1_node_04",
+      "step_id": "test_dake_ch1_step_04",
+      "step_title": "Физическая модель и расчёт раздела 4",
+      "video_capacity_score": 7,
+      "video_capacity_features": [
+        "domain_diagram",
+        "source_grounded"
+      ],
+      "selected_format": "code_redraw_figure",
+      "routing_rationale": "Видеоёмкость 7/10 (domain_diagram, source_grounded): узел сопоставлен с шаблоном tpl_redraw_generic_domain (класс C, состояние модели scan_code_redraw) и подтверждён реальным артефактом illustrations/test_dake_ch1_step_04_illust.svg.",
+      "visual_class": "C",
+      "template_id": "tpl_redraw_generic_domain",
+      "model_state": "scan_code_redraw",
+      "coverage_status": "covered",
+      "artifact_path": "illustrations/test_dake_ch1_step_04_illust.svg",
+      "missing_requirement": "",
+      "illustration_id": "test_dake_ch1_step_04_illust",
+      "source_ref": "Условная схема · источник шага, стр. 89"
+    }
+  ],
+  "step_illustration_source_links": [
+    {
+      "step_id": "test_dake_ch1_step_01",
+      "node_id": "test_dake_ch1_node_01",
+      "step_title": "Физическая модель и расчёт раздела 1",
+      "illustration_id": "test_dake_ch1_step_01_illust",
+      "visual_class": "B",
+      "redraw_caption": "Условная схема · источник шага, стр. 75",
+      "source_ref": "Условная схема · источник шага, стр. 75",
+      "pdf_page": "75",
+      "printed_page": "75",
+      "claim_id": "test_dake_ch1_node_01_claim_01",
+      "artifact_path": "illustrations/test_dake_ch1_step_01_illust.svg"
+    },
+    {
+      "step_id": "test_dake_ch1_step_02",
+      "node_id": "test_dake_ch1_node_02",
+      "step_title": "Физическая модель и расчёт раздела 2",
+      "illustration_id": "test_dake_ch1_step_02_illust",
+      "visual_class": "C",
+      "redraw_caption": "Условная схема · источник шага, стр. 77",
+      "source_ref": "Условная схема · источник шага, стр. 77",
+      "pdf_page": "77",
+      "printed_page": "77",
+      "claim_id": "test_dake_ch1_node_02_claim_01",
+      "artifact_path": "illustrations/test_dake_ch1_step_02_illust.svg"
+    },
+    {
+      "step_id": "test_dake_ch1_step_03",
+      "node_id": "test_dake_ch1_node_03",
+      "step_title": "Физическая модель и расчёт раздела 3",
+      "illustration_id": "test_dake_ch1_step_03_illust",
+      "visual_class": "C",
+      "redraw_caption": "Условная схема · источник шага, стр. 79",
+      "source_ref": "Условная схема · источник шага, стр. 79",
+      "pdf_page": "79",
+      "printed_page": "79",
+      "claim_id": "test_dake_ch1_node_03_claim_01",
+      "artifact_path": "illustrations/test_dake_ch1_step_03_illust.svg"
+    },
+    {
+      "step_id": "test_dake_ch1_step_04",
+      "node_id": "test_dake_ch1_node_04",
+      "step_title": "Физическая модель и расчёт раздела 4",
+      "illustration_id": "test_dake_ch1_step_04_illust",
+      "visual_class": "C",
+      "redraw_caption": "Условная схема · источник шага, стр. 89",
+      "source_ref": "Условная схема · источник шага, стр. 89",
+      "pdf_page": "89",
+      "printed_page": "89",
+      "claim_id": "test_dake_ch1_node_04_claim_01",
+      "artifact_path": "illustrations/test_dake_ch1_step_04_illust.svg"
+    }
+  ]
+}

@@ -105,7 +105,7 @@
       "artifact_path": "illustrations/test_slatt_ch1_step_03_illust.svg",
       "missing_requirement": "",
       "illustration_id": "test_slatt_ch1_step_03_illust",
-      "source_ref": "Условная схема · источник шага, стр. 418"
+      "source_ref": "Условная схема · источник шага, стр. 421"
     },
     {
       "node_id": "test_slatt_ch1_node_04",
@@ -161,10 +161,10 @@
       "step_title": "Физическая модель и расчёт раздела 3",
       "illustration_id": "test_slatt_ch1_step_03_illust",
       "visual_class": "C",
-      "redraw_caption": "Условная схема · источник шага, стр. 418",
-      "source_ref": "Условная схема · источник шага, стр. 418",
-      "pdf_page": "418",
-      "printed_page": "418",
+      "redraw_caption": "Условная схема · источник шага, стр. 421",
+      "source_ref": "Условная схема · источник шага, стр. 421",
+      "pdf_page": "421",
+      "printed_page": "421",
       "claim_id": "test_slatt_ch1_node_03_claim_01",
       "artifact_path": "illustrations/test_slatt_ch1_step_03_illust.svg"
     },

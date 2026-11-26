@@ -12,11 +12,25 @@
       "section_label": "PDF 410-423"
     }
   ],
-  "total_registry_units": 56,
-  "covered_units_count": 50,
-  "excluded_units_count": 6,
-  "manual_verification_required_count": 0,
+  "total_registry_units": 68,
+  "covered_units_count": 68,
+  "excluded_units_count": 0,
+  "manual_verification_required_count": 1,
   "discrepancies": [],
-  "manual_verification_items": [],
+  "manual_verification_items": [
+    {
+      "unit_id": "test_slatt_p421_vlmfig_03",
+      "unit_type": "figure",
+      "pdf_page": 421,
+      "printed_page": "421",
+      "ocr_status": "legend_missing",
+      "audit_resolution": "open_manual_check",
+      "linked_node_ids": [
+        "test_slatt_ch1_node_03"
+      ],
+      "note": "Часть условных знаков на скане требует сверки с легендой",
+      "excerpt": "━━━ FORMAT 6: XY PLOT / CHART WITH DATA ━━━\n(a) **09-35 Production / 09-35A Production**\n- Ось Y: B/D, линейная шкала, 0–2000.\n- Ось X: даты; подписи частично н"
+    }
+  ],
   "summary_by_type": {}
 }

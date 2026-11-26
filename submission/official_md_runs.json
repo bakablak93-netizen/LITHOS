@@ -1,0 +1,116 @@
+{
+  "dake": {
+    "source": "test_dake.md",
+    "source_sha256": "9a177966869d294035b02bc76c2dcff053e9782df4aad69fe827fc2eb8f7919c",
+    "ranges": "75–79, 87–89",
+    "domain_package_id": "oil_gas_ru",
+    "node_count": 4,
+    "exercise_count": 20,
+    "verified_registry": true,
+    "covered_registry_units": 112,
+    "registry_units": 122,
+    "routing": [
+      {
+        "step_id": "test_dake_ch1_step_01",
+        "node_id": "test_dake_ch1_node_01",
+        "template_id": "tpl_class_b_generic_domain",
+        "coverage_status": "covered"
+      },
+      {
+        "step_id": "test_dake_ch1_step_02",
+        "node_id": "test_dake_ch1_node_02",
+        "template_id": "tpl_redraw_generic_domain",
+        "coverage_status": "covered"
+      },
+      {
+        "step_id": "test_dake_ch1_step_03",
+        "node_id": "test_dake_ch1_node_03",
+        "template_id": "tpl_redraw_generic_domain",
+        "coverage_status": "covered"
+      },
+      {
+        "step_id": "test_dake_ch1_step_04",
+        "node_id": "test_dake_ch1_node_04",
+        "template_id": "tpl_redraw_generic_domain",
+        "coverage_status": "covered"
+      }
+    ],
+    "automatic_media_passports": 0
+  },
+  "basarygin": {
+    "source": "test_basarygin.md",
+    "source_sha256": "8b85bdfc257b938ca542f96dc4a51c51c9531546d4709e4a24dd50bab08a3dbb",
+    "ranges": "231–239, 312–318",
+    "domain_package_id": "drilling_well_control_ru",
+    "node_count": 4,
+    "exercise_count": 20,
+    "verified_registry": true,
+    "covered_registry_units": 102,
+    "registry_units": 102,
+    "routing": [
+      {
+        "step_id": "test_basarygin_ch1_step_01",
+        "node_id": "test_basarygin_ch1_node_01",
+        "template_id": "tpl_class_b_generic_domain",
+        "coverage_status": "covered"
+      },
+      {
+        "step_id": "test_basarygin_ch1_step_02",
+        "node_id": "test_basarygin_ch1_node_02",
+        "template_id": "tpl_redraw_generic_domain",
+        "coverage_status": "covered"
+      },
+      {
+        "step_id": "test_basarygin_ch1_step_03",
+        "node_id": "test_basarygin_ch1_node_03",
+        "template_id": "tpl_redraw_generic_domain",
+        "coverage_status": "covered"
+      },
+      {
+        "step_id": "test_basarygin_ch1_step_04",
+        "node_id": "test_basarygin_ch1_node_04",
+        "template_id": "tpl_redraw_generic_domain",
+        "coverage_status": "covered"
+      }
+    ],
+    "automatic_media_passports": 0
+  },
+  "slatt": {
+    "source": "test_slatt.md",
+    "source_sha256": "2175e7d572eca46b5f2967389bb7310c4a16432aac3ea8ba3978db33be6fa320",
+    "ranges": "410–423",
+    "domain_package_id": "oil_gas_ru",
+    "node_count": 4,
+    "exercise_count": 20,
+    "verified_registry": true,
+    "covered_registry_units": 68,
+    "registry_units": 68,
+    "routing": [
+      {
+        "step_id": "test_slatt_ch1_step_01",
+        "node_id": "test_slatt_ch1_node_01",
+        "template_id": "tpl_class_b_generic_domain",
+        "coverage_status": "covered"
+      },
+      {
+        "step_id": "test_slatt_ch1_step_02",
+        "node_id": "test_slatt_ch1_node_02",
+        "template_id": "tpl_redraw_generic_domain",
+        "coverage_status": "covered"
+      },
+      {
+        "step_id": "test_slatt_ch1_step_03",
+        "node_id": "test_slatt_ch1_node_03",
+        "template_id": "tpl_redraw_generic_domain",
+        "coverage_status": "covered"
+      },
+      {
+        "step_id": "test_slatt_ch1_step_04",
+        "node_id": "test_slatt_ch1_node_04",
+        "template_id": "tpl_redraw_generic_domain",
+        "coverage_status": "covered"
+      }
+    ],
+    "automatic_media_passports": 0
+  }
+}
