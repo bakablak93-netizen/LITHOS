@@ -17,6 +17,7 @@ ENV DEBIAN_FRONTEND=noninteractive \
 RUN apt-get update && apt-get install -y --no-install-recommends \
     curl \
     ffmpeg \
+    espeak-ng \
     fonts-dejavu-core \
     && rm -rf /var/lib/apt/lists/*
 
@@ -31,7 +32,7 @@ COPY data/passports ./data/passports
 COPY data/domain_packages ./data/domain_packages
 COPY --from=web-builder /build/web_ui/dist ./web_ui/dist
 
-RUN mkdir -p /app/outputs && python3 -c "from pathlib import Path; from backend.t3.pipeline import BOOK_CATALOG, build_t3_course_package; [build_t3_course_package(Path('data'), Path('outputs'), bf, render_mp4=False) for bf in BOOK_CATALOG]"
+RUN mkdir -p /app/outputs && python3 -c "from pathlib import Path; from backend.t3.pipeline import BOOK_CATALOG, build_t3_course_package; [build_t3_course_package(Path('data'), Path('outputs'), bf, render_mp4=True) for bf in BOOK_CATALOG]"
 
 EXPOSE 8000
 
