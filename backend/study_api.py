@@ -6,6 +6,7 @@ FastAPI роутер Т3 «Глава → курс» (backend/study_api.py).
 from __future__ import annotations
 
 import json
+import shutil
 import threading
 import uuid
 from datetime import datetime, timezone
@@ -50,7 +51,7 @@ class FactRebuildRequest(BaseModel):
     claim_id: str = ""
     old_fact: str
     new_fact: str
-    render_mp4: bool = False
+    render_mp4: bool = True
 
 
 def _get_dirs() -> tuple[Path, Path]:
@@ -59,11 +60,22 @@ def _get_dirs() -> tuple[Path, Path]:
     return DATA_DIR, OUTPUT_DIR
 
 
+def _has_ffmpeg() -> bool:
+    return shutil.which("ffmpeg") is not None
+
+
 def _load_or_build_t3_package(course_id: str) -> StudyCoursePackage:
     data_dir, output_dir = _get_dirs()
     pkg_file = output_dir / course_id / "t3_course_package.json"
     if pkg_file.exists():
-        return StudyCoursePackage.model_validate_json(pkg_file.read_text(encoding="utf-8"))
+        pkg = StudyCoursePackage.model_validate_json(pkg_file.read_text(encoding="utf-8"))
+        missing_mp4 = any(
+            mp.video_rel_path
+            and not (output_dir / course_id / "media" / Path(mp.video_rel_path).name).exists()
+            for mp in pkg.media_passports
+        )
+        if not (missing_mp4 and _has_ffmpeg()):
+            return pkg
 
     # Определяем книгу по course_id (например, t3_train_kuznetsov -> train_kuznetsov.md)
     stem = course_id.removeprefix("t3_")
@@ -77,7 +89,7 @@ def _load_or_build_t3_package(course_id: str) -> StudyCoursePackage:
         output_dir=output_dir,
         book_file=book_file,
         course_id_override=course_id,
-        render_mp4=False,
+        render_mp4=_has_ffmpeg(),
     )
 
 
@@ -216,7 +228,7 @@ def get_t3_freeze_report() -> dict[str, Any]:
     data_dir, output_dir = _get_dirs()
     report_path = output_dir / "t3_freeze_report.json"
     if not report_path.exists():
-        res = build_all_six_t3_courses(data_dir=data_dir, output_dir=output_dir, render_mp4=False)
+        res = build_all_six_t3_courses(data_dir=data_dir, output_dir=output_dir, render_mp4=_has_ffmpeg())
         return res["freeze_report"]
     return json.loads(report_path.read_text(encoding="utf-8"))
 
@@ -378,17 +390,8 @@ def start_custom_course_build(req: CustomBuildRequest) -> dict[str, Any]:
             if req.library_book and req.library_book in BOOK_CATALOG:
                 _upd(25, "Сверка независимого реестра и построение учебного слоя Т3")
                 cid = f"t3_{BOOK_CATALOG[req.library_book]['book_id']}"
-                existing = output_dir / cid / "t3_course_package.json"
-                if existing.exists():
-                    _upd(75, "Загрузка готового верифицированного пакета Т3")
-                    pkg = StudyCoursePackage.model_validate_json(existing.read_text(encoding="utf-8"))
-                else:
-                    pkg = build_t3_course_package(
-                        data_dir=data_dir,
-                        output_dir=output_dir,
-                        book_file=req.library_book,
-                        render_mp4=False,
-                    )
+                _upd(65, "Загрузка и проверка медиапакета Т3")
+                pkg = _load_or_build_t3_package(cid)
             else:
                 meta_path = upload_dir / f"{req.book_id}.json"
                 if not meta_path.exists():
