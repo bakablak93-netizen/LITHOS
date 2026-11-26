@@ -1,0 +1,22 @@
+{
+  "passed": true,
+  "registry_id": "reg_test_slatt_ch1",
+  "layer_id": "layer_test_slatt_ch1",
+  "book_file": "test_slatt.md",
+  "pdf_ranges": [
+    {
+      "start_pdf_page": 410,
+      "end_pdf_page": 423,
+      "start_printed_page": "410",
+      "end_printed_page": "423",
+      "section_label": "PDF 410-423"
+    }
+  ],
+  "total_registry_units": 56,
+  "covered_units_count": 50,
+  "excluded_units_count": 6,
+  "manual_verification_required_count": 0,
+  "discrepancies": [],
+  "manual_verification_items": [],
+  "summary_by_type": {}
+}

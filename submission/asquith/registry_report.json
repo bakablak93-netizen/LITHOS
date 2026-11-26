@@ -1,0 +1,29 @@
+{
+  "passed": true,
+  "registry_id": "reg_test_asquith_ch1",
+  "layer_id": "layer_test_asquith_ch1",
+  "book_file": "test_asquith.md",
+  "pdf_ranges": [
+    {
+      "start_pdf_page": 126,
+      "end_pdf_page": 136,
+      "start_printed_page": "126",
+      "end_printed_page": "136",
+      "section_label": "PDF 126-136"
+    },
+    {
+      "start_pdf_page": 140,
+      "end_pdf_page": 146,
+      "start_printed_page": "140",
+      "end_printed_page": "146",
+      "section_label": "PDF 140-146"
+    }
+  ],
+  "total_registry_units": 256,
+  "covered_units_count": 239,
+  "excluded_units_count": 17,
+  "manual_verification_required_count": 0,
+  "discrepancies": [],
+  "manual_verification_items": [],
+  "summary_by_type": {}
+}

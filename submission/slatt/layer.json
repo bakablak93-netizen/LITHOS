@@ -1,0 +1,1901 @@
+{
+  "layer_id": "layer_test_slatt_ch1",
+  "schema_version": "lithos.t3.layer.v2",
+  "book_id": "test_slatt",
+  "book_file": "test_slatt.md",
+  "pdf_file": "",
+  "source_sha256": "73c07c662fc24ddc19dce978c99aaa3f7560d3677b865ae63b13eeb415db10d3",
+  "book_title": "test_slatt.md",
+  "authors": [],
+  "chapter_id": "test_slatt_ch1",
+  "chapter_title": "test_slatt",
+  "is_training": true,
+  "pdf_ranges": [
+    {
+      "start_pdf_page": 410,
+      "end_pdf_page": 423,
+      "start_printed_page": "410",
+      "end_printed_page": "423",
+      "section_label": "PDF 410-423"
+    }
+  ],
+  "nodes": [
+    {
+      "node_id": "test_slatt_ch1_node_01",
+      "chapter_id": "test_slatt_ch1",
+      "order": 1,
+      "order_rationale": "Открывающий базовый узел главы: вводит физическую природу явления и первичные определения терминов до расчётных формул.",
+      "source_heading": "test_slatt (стр. 410–413)",
+      "step_title": "Физическая модель и расчёт раздела 1",
+      "summary_2_3_sentences": "Раздел охватывает материалы страниц 410–413 книги «test_slatt.md». Приведены ключевые физические зависимости, определения и правила практической интерпретации.",
+      "primary_difficulty": "conceptual_mechanism",
+      "secondary_difficulty": "procedural_decision",
+      "primary_difficulty_code": "М",
+      "secondary_difficulty_code": "П",
+      "estimated_minutes": 8,
+      "mechanism": "Физико-геологический механизм определяется взаимодействием порового пространства и насыщающего флюида.",
+      "practice": "Специалист сопоставляет измеренные параметры с граничными условиями применимости методики.",
+      "nuances": "Необходимо учитывать методологическую школу и систему единиц источника.",
+      "deeper_branch": "Связь аналитических оценок с численным моделированием пласта.",
+      "quotes_and_pages": [
+        {
+          "unit_id": "test_slatt_p410_par_01",
+          "pdf_page": 410,
+          "printed_page": "410",
+          "verbatim_quote": "Chapter 9 Deltaic Deposits and Reservoirs 409",
+          "editorial_paraphrase": "Изложение по источнику (стр. 410): Раздел охватывает материалы страниц 410–413 книги «test_slatt.",
+          "numbers_and_units": [],
+          "conditions": []
+        },
+        {
+          "unit_id": "test_slatt_p410_par_02",
+          "pdf_page": 410,
+          "printed_page": "410",
+          "verbatim_quote": "It is important for proper subsurface correlations to understand that clino- forms, which represent geological time lines, crosscut lithostratigraphic boundaries. The hypothetical example in Fig. 9.10 shows correlations based upon lithofacies (stratigraphic intervals with similarities in well log response) and upon geological time. Note that shaley and heterolithic intervals separate sandy intervals, so that the sands between wells 1 and 2 are not in communi- cation. This feature will adversely affect waterflood performance as well as single-well productivity. A similar example is presented for the modern Mekong River Delta in Fig. 9.11 (after Gani and Bhattacharya, 2005). Progradation of the delta has been age-dated for the last 6000 years. Lithostratigraphic and sequence strati- graphic (chronostratigraphic) correlations are given to illustrate the crossing nature of time lines and lithofacies boundaries. The true chronostratigraphic correlations demonstrate the potential for lateral discontinuities within the lithostratigraphic intervals. In addition to sea-level fluctuations, deltas are subject to “delta distribu- tary switching processes,” such as modeled in Fig. 9.12. According to Overeem et al. (2005), channel switching may be an even more important control on the evolution of deltaic systems than is sea-level change. Deltas can also form during a relative fall in sea level; these are often referred to as “lowstand” or “shelf-margin” deltas or systems tracts (Figs. 5.18 and 5.19). These deposits form in response to early fall in sea level, which causes valley incision, and a seaward retreat and lowering of the shoreline. Although important, these lowstand deltas are generally not as large, nor as prevalent as highstand deltas.",
+          "editorial_paraphrase": "Анализ единицы paragraph на стр. 410 (test_slatt · абзац #2).",
+          "numbers_and_units": [],
+          "conditions": []
+        },
+        {
+          "unit_id": "test_slatt_p410_par_03",
+          "pdf_page": 410,
+          "printed_page": "410",
+          "verbatim_quote": "FIGURE 9.10 Lithostratigraphic (upper) and chronostratigraphic (lower) correlation across two wells in a prograding delta system. Note the heterolithics and shales that separate sands in the chronostratigraphic correlation compared with the continuity of the sands in the lithostratigraphic correlation. After Gani and Bhattacharya (2005).",
+          "editorial_paraphrase": "Анализ единицы paragraph на стр. 410 (test_slatt · абзац #3).",
+          "numbers_and_units": [],
+          "conditions": []
+        },
+        {
+          "unit_id": "test_slatt_p411_par_01",
+          "pdf_page": 411,
+          "printed_page": "411",
+          "verbatim_quote": "410 Stratigraphic Reservoir Characterization for Petroleum Geologists",
+          "editorial_paraphrase": "Анализ единицы paragraph на стр. 411 (test_slatt · абзац #1).",
+          "numbers_and_units": [],
+          "conditions": []
+        },
+        {
+          "unit_id": "test_slatt_p411_par_02",
+          "pdf_page": 411,
+          "printed_page": "411",
+          "verbatim_quote": "9.4 RIVER-DOMINATED DELTA DEPOSITS AND RESERVOIRS 9.4.1 Processes and Deposits The Mississippi River Delta (Fig. 9.13) has long been considered the “type” river-dominated delta (Fig. 9.5). Strong waves and currents do not impinge upon its protected shoreline, so sediment deposited at and near the shore zone is not reworked or dispersed laterally (Figs. 9.4 and 9.7). With time and suf- ficient accommodation space between the sea surface and seafloor to accept sediment, such a delta will prograde seaward (Fig. 9.9), as will the delta zones (Fig. 9.7). By that process, surfaces representing instants in geologic time crosscut boundaries between sedimentary facies (see the time lines or clino- forms in Fig. 9.9). However, over time, progradation and vertical aggradation lead to a progressive shallowing of the water depth, to the point at which the main river(s) feeding sediment to its delta will shift toward deeper water (toward lower points on the seafloor), thereby causing the distributary-channel switching discussed earlier (Fig. 9.11). During the past 4600 years, there have been no fewer than eight periods of channel and lobe switching on the Missis- sippi River Delta (Fig. 9.12). The main facies of a river-dominated delta, and their distribution in space, are shown in Fig. 9.14. Sandy reservoir facies are deposits of distributary channels and distributary mouth-bars. Interdistributary bays, marshes, and lagoons separate sandy facies and provide shale barriers in subsurface reser- voirs, and sometimes, they provide hydrocarbon source rocks. The different",
+          "editorial_paraphrase": "Анализ единицы paragraph на стр. 411 (test_slatt · абзац #2).",
+          "numbers_and_units": [],
+          "conditions": []
+        },
+        {
+          "unit_id": "test_slatt_p411_par_03",
+          "pdf_page": 411,
+          "printed_page": "411",
+          "verbatim_quote": "FIGURE 9.11 (a) Map view of Mekong River Delta. Upper delta plain is green and lower delta plain is orange. Black lines are beach ridges. Cross-sections A–B with well locations are shown.",
+          "editorial_paraphrase": "Анализ единицы paragraph на стр. 411 (test_slatt · абзац #3).",
+          "numbers_and_units": [],
+          "conditions": []
+        },
+        {
+          "unit_id": "test_slatt_p412_par_01",
+          "pdf_page": 412,
+          "printed_page": "412",
+          "verbatim_quote": "Chapter 9 Deltaic Deposits and Reservoirs 411",
+          "editorial_paraphrase": "Анализ единицы paragraph на стр. 412 (test_slatt · абзац #1).",
+          "numbers_and_units": [],
+          "conditions": []
+        },
+        {
+          "unit_id": "test_slatt_p412_par_02",
+          "pdf_page": 412,
+          "printed_page": "412",
+          "verbatim_quote": "FIGURE 9.11—cont’d (b) Lithostratigraphic correlation of wells based upon paleoenvironmen- tal interpretation. Numbered lines that crosscut lithofacies boundaries are measured geologic time lines in 1000s of years; they demonstrate the progradational nature of the delta. (c) Sequence strat- igraphic (chronostratigraphic) correlation of wells based upon the time lines. Note the difference in correlation of sedimentary units based upon the lithostratigraphic and chronostratigraphic correlation strategies. After Gani and Bhattacharya (2005).",
+          "editorial_paraphrase": "Анализ единицы paragraph на стр. 412 (test_slatt · абзац #2).",
+          "numbers_and_units": [],
+          "conditions": []
+        },
+        {
+          "unit_id": "test_slatt_p413_par_01",
+          "pdf_page": 413,
+          "printed_page": "413",
+          "verbatim_quote": "412 Stratigraphic Reservoir Characterization for Petroleum Geologists",
+          "editorial_paraphrase": "Анализ единицы paragraph на стр. 413 (test_slatt · абзац #1).",
+          "numbers_and_units": [],
+          "conditions": []
+        },
+        {
+          "unit_id": "test_slatt_p413_par_02",
+          "pdf_page": 413,
+          "printed_page": "413",
+          "verbatim_quote": "FIGURE 9.12 Model of delta distributary channel switching from a common apex to different orientations and locations on the delta. After Overeem et al. (2005).",
+          "editorial_paraphrase": "Анализ единицы paragraph на стр. 413 (test_slatt · абзац #2).",
+          "numbers_and_units": [],
+          "conditions": []
+        },
+        {
+          "unit_id": "test_slatt_p413_par_03",
+          "pdf_page": 413,
+          "printed_page": "413",
+          "verbatim_quote": "FIGURE 9.13 Growth patterns of the Mississippi River Delta’s lobes during the past 4600 years. Modified from Kolb and Van Lopik, Fig. 9.2, in Shirley (1966). Reprinted with permission of Houston Geol. Soc.",
+          "editorial_paraphrase": "Анализ единицы paragraph на стр. 413 (test_slatt · абзац #3).",
+          "numbers_and_units": [],
+          "conditions": []
+        },
+        {
+          "unit_id": "test_slatt_p413_par_04",
+          "pdf_page": 413,
+          "printed_page": "413",
+          "verbatim_quote": "facies can be recognized in outcrop by facies relationships and by a distinctive coarsening-upward grain size with a characteristic assemblage of sedimentary structures (Fig. 9.15). In the subsurface, these same features can be identified in cores and on well logs, including a lateral thinning and fining log response away from the channel axis (Fig. 9.15).",
+          "editorial_paraphrase": "Анализ единицы paragraph на стр. 413 (test_slatt · абзац #4).",
+          "numbers_and_units": [],
+          "conditions": []
+        }
+      ],
+      "epistemic_split": {
+        "observation": "Первичные замеры и фактические цитаты из текста раздела.",
+        "inference": "Математический и логический вывод параметров коллектора.",
+        "assumption": "Однородность рассматриваемого интервала в рамках принятых допущений."
+      },
+      "field_provenance": {
+        "source_heading": "source_verbatim",
+        "step_title": "editorial_synthesis_3_7_words",
+        "summary_2_3_sentences": "editorial_synthesis_grounded_in_quotes",
+        "mechanism": "source_grounded_domain_explanation",
+        "practice": "specialist_workflow_from_textbook",
+        "nuances": "source_applicability_conditions",
+        "deeper_branch": "advanced_textbook_extension",
+        "quotes_and_pages": "source_verbatim_with_pdf_page",
+        "epistemic_split": "epistemic_decomposition_t3",
+        "inefficiency_lens": "specialist_workflow_lens",
+        "core_terms": "passport_and_textbook_definitions",
+        "worked_example": "textbook_worked_example",
+        "computed_values": "not_applicable"
+      },
+      "typed_links": [
+        {
+          "source_node_id": "test_slatt_ch1_node_01",
+          "target_node_id": "test_slatt_ch1_node_01",
+          "link_type": "refutes_misconception",
+          "link_label_ru": "опровергает заблуждение",
+          "rationale": "Прямой перенос эмпирических коэффициентов без калибровки по керну приводит к систематической ошибке."
+        }
+      ],
+      "core_terms": [
+        {
+          "term": "Коэффициент пористости",
+          "definition": "Доля объёма пустот в общем объёме породы",
+          "first_introduced_pdf_page": 410,
+          "first_introduced_printed_page": "410",
+          "cis_symbol": "K_п",
+          "west_symbol": "φ",
+          "west_term": "Porosity",
+          "unit": "д.е. / %"
+        }
+      ],
+      "threshold_concept": "Каждый расчётный параметр действителен только внутри границ применимости исходной физической модели.",
+      "misconception_to_fix": "Прямой перенос эмпирических коэффициентов без калибровки по керну приводит к систематической ошибке.",
+      "data_transfer": "Переход от первичных кривых и таблиц к подсчётным параметрам пласта.",
+      "it_analogy_and_limits": "Аналогия с валидацией входной схемы данных перед запуском вычислительного пайплайна. Граница: природная среда содержит неустранимую геологическую неопределённость.",
+      "specialist_manual_steps": [
+        "Проверить исходные данные и единицы измерения по тексту главы.",
+        "Выполнить расчёт или графическое сопоставление по методике раздела.",
+        "Сверить результат с граничными условиями применимости."
+      ],
+      "decision_points": [
+        "Выбор расчётной формулы в зависимости от типа коллектора.",
+        "Отбраковка непредставительных интервалов."
+      ],
+      "inefficiency_lens": {
+        "inputs": [
+          "Первичные замеры и фактические цитаты из текста раздела.",
+          "Источник: стр. 410–413"
+        ],
+        "manual_steps": [
+          "Проверить исходные данные и единицы измерения по тексту главы.",
+          "Выполнить расчёт или графическое сопоставление по методике раздела.",
+          "Сверить результат с граничными условиями применимости."
+        ],
+        "expert_judgment_points": [
+          "Выбор расчётной формулы в зависимости от типа коллектора.",
+          "Отбраковка непредставительных интервалов."
+        ],
+        "estimated_time_min": 16,
+        "typical_errors": [
+          "Прямой перенос эмпирических коэффициентов без калибровки по керну приводит к систематической ошибке."
+        ],
+        "origin_tag": "author_number"
+      },
+      "worked_example": {
+        "status": "present",
+        "not_applicable_reason": "",
+        "problem_number": "Разбор текста главы",
+        "figure_ref": "Стр. 410",
+        "pdf_page": 410,
+        "printed_page": "410",
+        "conditions": "Заданы параметры пласта из текста раздела.",
+        "steps": [
+          "Извлекаем исходные величины.",
+          "Подставляем в рабочее соотношение."
+        ],
+        "result": "Получена оценка целевого параметра."
+      },
+      "textbook_problems": [],
+      "modern_equivalents": [
+        {
+          "historical_item": "Классическая методика учебника",
+          "historical_context": "Ручной палеточный расчёт",
+          "modern_analog": "Цифровая интерпретация в специализированном ПО",
+          "modern_context": "Автоматизированный расчёт с контролем качества",
+          "pdf_page": 410
+        }
+      ],
+      "not_applicable_fields": [],
+      "expert_review_flags": [],
+      "covered_unit_ids": [
+        "test_slatt_p410_par_01",
+        "test_slatt_p410_par_02",
+        "test_slatt_p410_par_03",
+        "test_slatt_p411_par_01",
+        "test_slatt_p411_par_02",
+        "test_slatt_p411_par_03",
+        "test_slatt_p412_par_01",
+        "test_slatt_p412_par_02",
+        "test_slatt_p413_par_01",
+        "test_slatt_p413_par_02",
+        "test_slatt_p413_par_03",
+        "test_slatt_p413_par_04"
+      ],
+      "claim_ids": [
+        "test_slatt_ch1_node_01_claim_01",
+        "test_slatt_ch1_node_01_claim_02",
+        "test_slatt_ch1_node_01_claim_03",
+        "test_slatt_ch1_node_01_claim_04",
+        "test_slatt_ch1_node_01_claim_05",
+        "test_slatt_ch1_node_01_claim_06",
+        "test_slatt_ch1_node_01_claim_07",
+        "test_slatt_ch1_node_01_claim_08",
+        "test_slatt_ch1_node_01_claim_09",
+        "test_slatt_ch1_node_01_claim_10",
+        "test_slatt_ch1_node_01_claim_11",
+        "test_slatt_ch1_node_01_claim_12"
+      ],
+      "computed_values": []
+    },
+    {
+      "node_id": "test_slatt_ch1_node_02",
+      "chapter_id": "test_slatt_ch1",
+      "order": 2,
+      "order_rationale": "Следует после узла #1, опираясь на уже введённые термины и переходя от механизма к количественной оценке и принятию решения (стр. 414–417).",
+      "source_heading": "test_slatt (стр. 414–417)",
+      "step_title": "Физическая модель и расчёт раздела 2",
+      "summary_2_3_sentences": "Раздел охватывает материалы страниц 414–417 книги «test_slatt.md». Приведены ключевые физические зависимости, определения и правила практической интерпретации.",
+      "primary_difficulty": "conceptual_mechanism",
+      "secondary_difficulty": "procedural_decision",
+      "primary_difficulty_code": "М",
+      "secondary_difficulty_code": "П",
+      "estimated_minutes": 8,
+      "mechanism": "Физико-геологический механизм определяется взаимодействием порового пространства и насыщающего флюида.",
+      "practice": "Специалист сопоставляет измеренные параметры с граничными условиями применимости методики.",
+      "nuances": "Необходимо учитывать методологическую школу и систему единиц источника.",
+      "deeper_branch": "Связь аналитических оценок с численным моделированием пласта.",
+      "quotes_and_pages": [
+        {
+          "unit_id": "test_slatt_p414_par_01",
+          "pdf_page": 414,
+          "printed_page": "414",
+          "verbatim_quote": "FIGURE 9.14 Schematic illustration of the distribution of facies and environments in the modern Mississippi bird-foot delta. Modified from Fisk (1961). Rep- rinted with permission of AAPG, whose permission is required for further use.",
+          "editorial_paraphrase": "Изложение по источнику (стр. 414): Раздел охватывает материалы страниц 414–417 книги «test_slatt.",
+          "numbers_and_units": [],
+          "conditions": []
+        },
+        {
+          "unit_id": "test_slatt_p415_par_01",
+          "pdf_page": 415,
+          "printed_page": "415",
+          "verbatim_quote": "414 Stratigraphic Reservoir Characterization for Petroleum Geologists",
+          "editorial_paraphrase": "Анализ единицы paragraph на стр. 415 (test_slatt · абзац #1).",
+          "numbers_and_units": [],
+          "conditions": []
+        },
+        {
+          "unit_id": "test_slatt_p415_par_02",
+          "pdf_page": 415,
+          "printed_page": "415",
+          "verbatim_quote": "FIGURE 9.15 (a) Pennsylvanian-age distributary-channel sandtone. (b) Schematic facies cross- sections of a progradational channel mouth bar and distributary-channel-fill sand bodies of an elongate, fluvially dominated delta lobe. Well log profiles are from borehole data from the Wilcox (Eocene) Holly Springs delta system of the northern Gulf Coast Basin. . (C) Generalized vertical profile through a channel-mouth-bar sand body. Modified from Galloway (1968). Reprinted with permission of Gulf Coast Assoc. Geol. Societies.",
+          "editorial_paraphrase": "Анализ единицы paragraph на стр. 415 (test_slatt · абзац #2).",
+          "numbers_and_units": [],
+          "conditions": []
+        },
+        {
+          "unit_id": "test_slatt_p415_par_03",
+          "pdf_page": 415,
+          "printed_page": "415",
+          "verbatim_quote": "In Prudhoe Bay field, formative processes of distributary mouth bars were evaluated by Tye and Hickey (2001). A 1000-ft. (300-m) horizontal well was drilled into a distributary mouth-bar reservoir sandstone, and three cores were obtained. Seven sandy lithofacies were identified in the core, all are moderately to very well sorted and fine to very fine-grained. Six of the lithofacies exhibit average horizontal permeabilities of 12–40 md. The seventh, best-sorted lithofa- cies averages 129 md. The origin of these lithofacies was determined by study- ing modern river-dominated delta processes and sediments. Geoscientists believe that sediment plumes emanating from distributary channels during flood stage deposited the best-sorted and most-permeable sands (the seventh lithofa- cies) at the apex or most-proximal part of the distributary mouth bars, as well as along the proximal-bar margin (Fig. 9.16). Finer-grained, more poorly sorted sands and muds were deposited more distally, under lower flow-regime conditions.",
+          "editorial_paraphrase": "Анализ единицы paragraph на стр. 415 (test_slatt · абзац #3).",
+          "numbers_and_units": [],
+          "conditions": []
+        },
+        {
+          "unit_id": "test_slatt_p416_par_01",
+          "pdf_page": 416,
+          "printed_page": "416",
+          "verbatim_quote": "Chapter 9 Deltaic Deposits and Reservoirs 415",
+          "editorial_paraphrase": "Анализ единицы paragraph на стр. 416 (test_slatt · абзац #1).",
+          "numbers_and_units": [],
+          "conditions": []
+        },
+        {
+          "unit_id": "test_slatt_p416_par_02",
+          "pdf_page": 416,
+          "printed_page": "416",
+          "verbatim_quote": "FIGURE 9.16 Schematic paleogeographic reconstruction of Romeo facies associations, as they existed during deposition. Insets are facies association maps for three Romeo stratigraphic layers, from proximal (upper left) to distal (lower right). After Tye et al. (1999). Reprinted with permis- sion of AAPG, whose permission is required for further use.",
+          "editorial_paraphrase": "Анализ единицы paragraph на стр. 416 (test_slatt · абзац #2).",
+          "numbers_and_units": [],
+          "conditions": []
+        },
+        {
+          "unit_id": "test_slatt_p416_par_03",
+          "pdf_page": 416,
+          "printed_page": "416",
+          "verbatim_quote": "Over a long period of time, repeated bifurcation of distributary mouth channels during progradation led to the development of a broad, strike- parallel sheet composed of numerous mouth bars. However, across a single bar, there are discontinuities in facies and permeability.",
+          "editorial_paraphrase": "Анализ единицы paragraph на стр. 416 (test_slatt · абзац #3).",
+          "numbers_and_units": [],
+          "conditions": []
+        },
+        {
+          "unit_id": "test_slatt_p416_par_04",
+          "pdf_page": 416,
+          "printed_page": "416",
+          "verbatim_quote": "9.4.2 Reservoir Example: Prudhoe Bay Field General geology of Prudhoe Bay field, Alaska, in the river-dominated deltaic deposits of the ancient Sagavanirktok River, was discussed in Chapter 7. The most prolific reservoir rocks in the field are of fluvial, braided-river origin. The lower stratigraphic interval, called the Romeo Zone (Figs. 9.16–9.18), is composed mainly of river-dominated delta-front and prodelta deposits (Fig. 7.22 and 7.23, and Fig. 9.17) that in recent years have been targeted for production, mainly from horizontal wells (Tye and Hickey, 2001; Tye et al., 1999). Productive deltaic facies are distributary-channel and distribu- tary mouth-bar sandstones (Figs. 9.18 and 9.19). The depositional history depicts southeastward progradation of low-gradient, fine-grained fluvial sys- tems that extended about 60 miles (100 km) from their source area. Individual",
+          "editorial_paraphrase": "Анализ единицы paragraph на стр. 416 (test_slatt · абзац #4).",
+          "numbers_and_units": [],
+          "conditions": []
+        },
+        {
+          "unit_id": "test_slatt_p417_par_01",
+          "pdf_page": 417,
+          "printed_page": "417",
+          "verbatim_quote": "416 Stratigraphic Reservoir Characterization for Petroleum Geologists",
+          "editorial_paraphrase": "Анализ единицы paragraph на стр. 417 (test_slatt · абзац #1).",
+          "numbers_and_units": [],
+          "conditions": []
+        },
+        {
+          "unit_id": "test_slatt_p417_par_02",
+          "pdf_page": 417,
+          "printed_page": "417",
+          "verbatim_quote": "FIGURE 9.17 Typical sediment distribution pattern and distributary-mouth-bar cross-section. Distributary-mouth channels typically bifurcate as shown, and the bifurcations segregate lithofa- cies by concentrating the coarser-grained sediment on the bar apices downstream of the bifurca- tion point and along bar margins. Modified from Tye and Hickey (2001). Reprinted with permission of AAPG, whose permission is required for further use.",
+          "editorial_paraphrase": "Анализ единицы paragraph на стр. 417 (test_slatt · абзац #2).",
+          "numbers_and_units": [],
+          "conditions": []
+        },
+        {
+          "unit_id": "test_slatt_p417_par_03",
+          "pdf_page": 417,
+          "printed_page": "417",
+          "verbatim_quote": "fluvial channels were separated laterally by muddy floodplains. In the down- current direction, fluvial channels bifurcated and formed a delta plain and associated distributary mouth bars (Fig. 9.16). River-dominated deposition resulted in significant lateral and vertical facies changes, which caused a high degree of lateral and vertical heterogeneity in the resulting reservoir. Past reservoir characterization studies of this delta com- plex had correlated sandstone and shale units on the basis of lithostratigraphic features. However, Tye et al. (1999) were better able to match well correlations with production history using a sequence- or time-stratigraphic correlation scheme (Fig. 9.18). Prior to this sequence stratigraphic interpretation, the gently dipping nature of these reservoir sandstones was unrecognized and led to improper correlations. Insights gained into the formation of distributary mouth bars have led to improved recovery in the Prudhoe Bay field. Detailed information on the lat- eral attributes of the mouth bars (including permeability), gained from the horizontal, cored well rather than from interpretations of standard vertical cores, provided the knowledge that a sinusoidal, horizontal well path would contact more high-permeability lithofacies than would a conventional well. Shales also were found to be particularly important to production and fluid flow in Prudhoe Bay field’s deltaic facies. Some shales are continuous over",
+          "editorial_paraphrase": "Анализ единицы paragraph на стр. 417 (test_slatt · абзац #3).",
+          "numbers_and_units": [],
+          "conditions": []
+        }
+      ],
+      "epistemic_split": {
+        "observation": "Первичные замеры и фактические цитаты из текста раздела.",
+        "inference": "Математический и логический вывод параметров коллектора.",
+        "assumption": "Однородность рассматриваемого интервала в рамках принятых допущений."
+      },
+      "field_provenance": {
+        "source_heading": "source_verbatim",
+        "step_title": "editorial_synthesis_3_7_words",
+        "summary_2_3_sentences": "editorial_synthesis_grounded_in_quotes",
+        "mechanism": "source_grounded_domain_explanation",
+        "practice": "specialist_workflow_from_textbook",
+        "nuances": "source_applicability_conditions",
+        "deeper_branch": "advanced_textbook_extension",
+        "quotes_and_pages": "source_verbatim_with_pdf_page",
+        "epistemic_split": "epistemic_decomposition_t3",
+        "inefficiency_lens": "specialist_workflow_lens",
+        "core_terms": "passport_and_textbook_definitions",
+        "worked_example": "textbook_worked_example",
+        "computed_values": "not_applicable"
+      },
+      "typed_links": [
+        {
+          "source_node_id": "test_slatt_ch1_node_01",
+          "target_node_id": "test_slatt_ch1_node_02",
+          "link_type": "prerequisite",
+          "link_label_ru": "предпосылка",
+          "rationale": "Узел 1 вводит базовые понятия и физические предпосылки, необходимые для шага 2."
+        },
+        {
+          "source_node_id": "test_slatt_ch1_node_01",
+          "target_node_id": "test_slatt_ch1_node_02",
+          "link_type": "example",
+          "link_label_ru": "пример",
+          "rationale": "Перенос механизма и параметров из шага 1 в практическую интерпретацию шага 2."
+        },
+        {
+          "source_node_id": "test_slatt_ch1_node_02",
+          "target_node_id": "test_slatt_ch1_node_02",
+          "link_type": "refutes_misconception",
+          "link_label_ru": "опровергает заблуждение",
+          "rationale": "Прямой перенос эмпирических коэффициентов без калибровки по керну приводит к систематической ошибке."
+        }
+      ],
+      "core_terms": [
+        {
+          "term": "Коэффициент пористости",
+          "definition": "Доля объёма пустот в общем объёме породы",
+          "first_introduced_pdf_page": 414,
+          "first_introduced_printed_page": "414",
+          "cis_symbol": "K_п",
+          "west_symbol": "φ",
+          "west_term": "Porosity",
+          "unit": "д.е. / %"
+        }
+      ],
+      "threshold_concept": "Каждый расчётный параметр действителен только внутри границ применимости исходной физической модели.",
+      "misconception_to_fix": "Прямой перенос эмпирических коэффициентов без калибровки по керну приводит к систематической ошибке.",
+      "data_transfer": "Переход от первичных кривых и таблиц к подсчётным параметрам пласта.",
+      "it_analogy_and_limits": "Аналогия с валидацией входной схемы данных перед запуском вычислительного пайплайна. Граница: природная среда содержит неустранимую геологическую неопределённость.",
+      "specialist_manual_steps": [
+        "Проверить исходные данные и единицы измерения по тексту главы.",
+        "Выполнить расчёт или графическое сопоставление по методике раздела.",
+        "Сверить результат с граничными условиями применимости."
+      ],
+      "decision_points": [
+        "Выбор расчётной формулы в зависимости от типа коллектора.",
+        "Отбраковка непредставительных интервалов."
+      ],
+      "inefficiency_lens": {
+        "inputs": [
+          "Первичные замеры и фактические цитаты из текста раздела.",
+          "Источник: стр. 414–417"
+        ],
+        "manual_steps": [
+          "Проверить исходные данные и единицы измерения по тексту главы.",
+          "Выполнить расчёт или графическое сопоставление по методике раздела.",
+          "Сверить результат с граничными условиями применимости."
+        ],
+        "expert_judgment_points": [
+          "Выбор расчётной формулы в зависимости от типа коллектора.",
+          "Отбраковка непредставительных интервалов."
+        ],
+        "estimated_time_min": 16,
+        "typical_errors": [
+          "Прямой перенос эмпирических коэффициентов без калибровки по керну приводит к систематической ошибке."
+        ],
+        "origin_tag": "author_number"
+      },
+      "worked_example": {
+        "status": "present",
+        "not_applicable_reason": "",
+        "problem_number": "Разбор текста главы",
+        "figure_ref": "Стр. 414",
+        "pdf_page": 414,
+        "printed_page": "414",
+        "conditions": "Заданы параметры пласта из текста раздела.",
+        "steps": [
+          "Извлекаем исходные величины.",
+          "Подставляем в рабочее соотношение."
+        ],
+        "result": "Получена оценка целевого параметра."
+      },
+      "textbook_problems": [],
+      "modern_equivalents": [
+        {
+          "historical_item": "Классическая методика учебника",
+          "historical_context": "Ручной палеточный расчёт",
+          "modern_analog": "Цифровая интерпретация в специализированном ПО",
+          "modern_context": "Автоматизированный расчёт с контролем качества",
+          "pdf_page": 414
+        }
+      ],
+      "not_applicable_fields": [],
+      "expert_review_flags": [],
+      "covered_unit_ids": [
+        "test_slatt_p414_par_01",
+        "test_slatt_p415_par_01",
+        "test_slatt_p415_par_02",
+        "test_slatt_p415_par_03",
+        "test_slatt_p416_par_01",
+        "test_slatt_p416_par_02",
+        "test_slatt_p416_par_03",
+        "test_slatt_p416_par_04",
+        "test_slatt_p417_par_01",
+        "test_slatt_p417_par_02",
+        "test_slatt_p417_par_03"
+      ],
+      "claim_ids": [
+        "test_slatt_ch1_node_02_claim_01",
+        "test_slatt_ch1_node_02_claim_02",
+        "test_slatt_ch1_node_02_claim_03",
+        "test_slatt_ch1_node_02_claim_04",
+        "test_slatt_ch1_node_02_claim_05",
+        "test_slatt_ch1_node_02_claim_06",
+        "test_slatt_ch1_node_02_claim_07",
+        "test_slatt_ch1_node_02_claim_08",
+        "test_slatt_ch1_node_02_claim_09",
+        "test_slatt_ch1_node_02_claim_10",
+        "test_slatt_ch1_node_02_claim_11"
+      ],
+      "computed_values": []
+    },
+    {
+      "node_id": "test_slatt_ch1_node_03",
+      "chapter_id": "test_slatt_ch1",
+      "order": 3,
+      "order_rationale": "Следует после узла #2, опираясь на уже введённые термины и переходя от механизма к количественной оценке и принятию решения (стр. 418–421).",
+      "source_heading": "test_slatt (стр. 418–421)",
+      "step_title": "Физическая модель и расчёт раздела 3",
+      "summary_2_3_sentences": "Раздел охватывает материалы страниц 418–421 книги «test_slatt.md». Приведены ключевые физические зависимости, определения и правила практической интерпретации.",
+      "primary_difficulty": "conceptual_mechanism",
+      "secondary_difficulty": "procedural_decision",
+      "primary_difficulty_code": "М",
+      "secondary_difficulty_code": "П",
+      "estimated_minutes": 8,
+      "mechanism": "Физико-геологический механизм определяется взаимодействием порового пространства и насыщающего флюида.",
+      "practice": "Специалист сопоставляет измеренные параметры с граничными условиями применимости методики.",
+      "nuances": "Необходимо учитывать методологическую школу и систему единиц источника.",
+      "deeper_branch": "Связь аналитических оценок с численным моделированием пласта.",
+      "quotes_and_pages": [
+        {
+          "unit_id": "test_slatt_p418_par_01",
+          "pdf_page": 418,
+          "printed_page": "418",
+          "verbatim_quote": "Chapter 9 Deltaic Deposits and Reservoirs 417",
+          "editorial_paraphrase": "Изложение по источнику (стр. 418): Раздел охватывает материалы страниц 418–421 книги «test_slatt.",
+          "numbers_and_units": [],
+          "conditions": []
+        },
+        {
+          "unit_id": "test_slatt_p418_par_02",
+          "pdf_page": 418,
+          "printed_page": "418",
+          "verbatim_quote": "FIGURE 9.18 Comparison of prestudy lithostratigraphic correlations (upper cross-section) and poststudy sequence stratigraphic correlations and interpretations of the Romeo interval (lower cross-section). In the lithostratigraphic cross-section, only the interval IA is discontinuous. In the sequence stratigraphic cross-section, downlap patterns are evident by the gently dipping nature of the basal intervals. The poststudy interpretation shows the stratigraphy is not tabular, instead, sand-prone deltaic wedges interfinger downdip with bay and prodelta/shelf shales. After Tye et al. (1999). Reprinted with permission of AAPG, whose permission is required for further use.",
+          "editorial_paraphrase": "Анализ единицы paragraph на стр. 418 (test_slatt · абзац #2).",
+          "numbers_and_units": [],
+          "conditions": []
+        },
+        {
+          "unit_id": "test_slatt_p418_par_03",
+          "pdf_page": 418,
+          "printed_page": "418",
+          "verbatim_quote": "areas larger than that of the well spacing, but other shales are less continuous because of erosion by an overlying sandstone or by stratigraphic pinch-out (Fig. 9.20). Continuous shales create vertical flow barriers and help to focus a waterflood. By restricting perforations in horizontal wells to deltaic sand- stones, developers avoided competition for water between these lower- permeability sandstones and overlying higher-permeability fluvial sandstones (Figs. 9.21 and 9.22) (Tye et al., 1999). One innovative application of the understanding of shale continuity was applied to a vertical well that had main- tained a steady output in excess of 300 BOPD between May 1992 and January 1993. During that time, water production increased, indicating that oil produc- tion in that well would decline considerably over time (Fig. 9.23). A shale interval at 8950 ft. was mapped as a sealing shale, which suggests that oil might be trapped in an underlying deltaic sandstone. A sidetrack horizontal",
+          "editorial_paraphrase": "Анализ единицы paragraph на стр. 418 (test_slatt · абзац #3).",
+          "numbers_and_units": [],
+          "conditions": []
+        },
+        {
+          "unit_id": "test_slatt_p419_par_01",
+          "pdf_page": 419,
+          "printed_page": "419",
+          "verbatim_quote": "418 Stratigraphic Reservoir Characterization for Petroleum Geologists",
+          "editorial_paraphrase": "Анализ единицы paragraph на стр. 419 (test_slatt · абзац #1).",
+          "numbers_and_units": [],
+          "conditions": []
+        },
+        {
+          "unit_id": "test_slatt_p419_par_02",
+          "pdf_page": 419,
+          "printed_page": "419",
+          "verbatim_quote": "FIGURE 9.19 Typical stacking pattern and gamma-ray response of Romeo lithofacies and facies associations in well 07-06. After Tye et al. (1999). Reprinted with permission of AAPG, whose permission is required for further use.",
+          "editorial_paraphrase": "Анализ единицы paragraph на стр. 419 (test_slatt · абзац #2).",
+          "numbers_and_units": [],
+          "conditions": []
+        },
+        {
+          "unit_id": "test_slatt_p419_par_03",
+          "pdf_page": 419,
+          "printed_page": "419",
+          "verbatim_quote": "well was drilled as an unconventional completion into the sandstone, and it led to new production of approximately 400 BOPD (Fig. 9.23). A second example of the value of understanding shale continuity is pre- sented in Fig. 9.24. The horizontal well 11-30 was drilled beneath a bay shale that acted as a shield from the overlying gas cap. 894 ft. (272 m)-long hori- zontal section was drilled entirely within the targeted sandstone, of which 475 ft. (144 m) was determined to be net pay. As of 1999, production had",
+          "editorial_paraphrase": "Анализ единицы paragraph на стр. 419 (test_slatt · абзац #3).",
+          "numbers_and_units": [],
+          "conditions": []
+        },
+        {
+          "unit_id": "test_slatt_p420_par_01",
+          "pdf_page": 420,
+          "printed_page": "420",
+          "verbatim_quote": "FIGURE 9.20 Part of a north–south wire line log correlation across the Sadlerochit Sand at Prudhoe Bay field. Tan is floodplain facies. Yellow is fluvial/distributary-channel facies. White is distributary mouth bar/delta front and prodelta/shelf facies. a, Romeo interval; b, Tango interval; c, Victor interval; d, X-ray interval; and e, Zulu interval. Modified from Tye et al. (1999). Reprinted with permission of AAPG, whose permission is required for further use.",
+          "editorial_paraphrase": "Анализ единицы paragraph на стр. 420 (test_slatt · абзац #1).",
+          "numbers_and_units": [],
+          "conditions": []
+        },
+        {
+          "unit_id": "test_slatt_p420_par_02",
+          "pdf_page": 420,
+          "printed_page": "420",
+          "verbatim_quote": "FIGURE 9.21 Generalized distribution of three stratigraphically distinct shales in the eastern part of Prudhoe Bay field. In places, all three shales are absent as a result of nondeposition or ero- sion, whereas in other locations, all three shales separate adjacent reservoir layers. Only with this level of stratigraphic detail can gravity drainage, waterflood, and enhanced oil recovery depletion mechanisms be effectively managed. After Tye et al. (1999). Reprinted with permission of AAPG, whose permission is required for further use.",
+          "editorial_paraphrase": "Анализ единицы paragraph на стр. 420 (test_slatt · абзац #2).",
+          "numbers_and_units": [],
+          "conditions": []
+        },
+        {
+          "unit_id": "test_slatt_p421_par_01",
+          "pdf_page": 421,
+          "printed_page": "421",
+          "verbatim_quote": "OH_0GR_MWD_S_0 0 GAPI 100 8600",
+          "editorial_paraphrase": "Анализ единицы paragraph на стр. 421 (test_slatt · абзац #1).",
+          "numbers_and_units": [],
+          "conditions": []
+        },
+        {
+          "unit_id": "test_slatt_p421_par_02",
+          "pdf_page": 421,
+          "printed_page": "421",
+          "verbatim_quote": "BASE SADLEROCHIT STRUCTURE MAP 8620 15–45 Final 1820-ft. well 15–45 PBI GOC",
+          "editorial_paraphrase": "Анализ единицы paragraph на стр. 421 (test_slatt · абзац #2).",
+          "numbers_and_units": [],
+          "conditions": []
+        },
+        {
+          "unit_id": "test_slatt_p421_par_03",
+          "pdf_page": 421,
+          "printed_page": "421",
+          "verbatim_quote": "Proposed 688-ft. well",
+          "editorial_paraphrase": "Анализ единицы paragraph на стр. 421 (test_slatt · абзац #3).",
+          "numbers_and_units": [],
+          "conditions": []
+        },
+        {
+          "unit_id": "test_slatt_p421_par_04",
+          "pdf_page": 421,
+          "printed_page": "421",
+          "verbatim_quote": "2000 ft. 8700 Distributary channel Distributary channel",
+          "editorial_paraphrase": "Анализ единицы paragraph на стр. 421 (test_slatt · абзац #4).",
+          "numbers_and_units": [],
+          "conditions": []
+        },
+        {
+          "unit_id": "test_slatt_p421_par_05",
+          "pdf_page": 421,
+          "printed_page": "421",
+          "verbatim_quote": "8720 Distributary-mouth bar",
+          "editorial_paraphrase": "Анализ единицы paragraph на стр. 421 (test_slatt · абзац #5).",
+          "numbers_and_units": [],
+          "conditions": []
+        },
+        {
+          "unit_id": "test_slatt_p421_par_06",
+          "pdf_page": 421,
+          "printed_page": "421",
+          "verbatim_quote": "PERFORATED INTERVAL 8740 9500 9700 9900 10,100 10,300 10,500 10,700 10,900 11,100",
+          "editorial_paraphrase": "Анализ единицы paragraph на стр. 421 (test_slatt · абзац #6).",
+          "numbers_and_units": [],
+          "conditions": []
+        },
+        {
+          "unit_id": "test_slatt_p421_par_07",
+          "pdf_page": 421,
+          "printed_page": "421",
+          "verbatim_quote": "OIL SAND SHALE (NONPAY) Measured depth (ft.)",
+          "editorial_paraphrase": "Анализ единицы paragraph на стр. 421 (test_slatt · абзац #7).",
+          "numbers_and_units": [],
+          "conditions": []
+        },
+        {
+          "unit_id": "test_slatt_p421_par_08",
+          "pdf_page": 421,
+          "printed_page": "421",
+          "verbatim_quote": "FIGURE 9.22 Horizontal well drilled within distributary-channel and mouth-bar facies sepa- rated by shales. The shales compartmentalize the sandstones and shield against gas-cap encroach- ment. After Tye et al. (1999). Reprinted with permission of AAPG, whose permission is required for further use.",
+          "editorial_paraphrase": "Анализ единицы paragraph на стр. 421 (test_slatt · абзац #8).",
+          "numbers_and_units": [],
+          "conditions": []
+        }
+      ],
+      "epistemic_split": {
+        "observation": "Первичные замеры и фактические цитаты из текста раздела.",
+        "inference": "Математический и логический вывод параметров коллектора.",
+        "assumption": "Однородность рассматриваемого интервала в рамках принятых допущений."
+      },
+      "field_provenance": {
+        "source_heading": "source_verbatim",
+        "step_title": "editorial_synthesis_3_7_words",
+        "summary_2_3_sentences": "editorial_synthesis_grounded_in_quotes",
+        "mechanism": "source_grounded_domain_explanation",
+        "practice": "specialist_workflow_from_textbook",
+        "nuances": "source_applicability_conditions",
+        "deeper_branch": "advanced_textbook_extension",
+        "quotes_and_pages": "source_verbatim_with_pdf_page",
+        "epistemic_split": "epistemic_decomposition_t3",
+        "inefficiency_lens": "specialist_workflow_lens",
+        "core_terms": "passport_and_textbook_definitions",
+        "worked_example": "textbook_worked_example",
+        "computed_values": "not_applicable"
+      },
+      "typed_links": [
+        {
+          "source_node_id": "test_slatt_ch1_node_02",
+          "target_node_id": "test_slatt_ch1_node_03",
+          "link_type": "prerequisite",
+          "link_label_ru": "предпосылка",
+          "rationale": "Узел 2 вводит базовые понятия и физические предпосылки, необходимые для шага 3."
+        },
+        {
+          "source_node_id": "test_slatt_ch1_node_02",
+          "target_node_id": "test_slatt_ch1_node_03",
+          "link_type": "data_transfer",
+          "link_label_ru": "переход к данным",
+          "rationale": "Перенос механизма и параметров из шага 2 в практическую интерпретацию шага 3."
+        },
+        {
+          "source_node_id": "test_slatt_ch1_node_03",
+          "target_node_id": "test_slatt_ch1_node_03",
+          "link_type": "refutes_misconception",
+          "link_label_ru": "опровергает заблуждение",
+          "rationale": "Прямой перенос эмпирических коэффициентов без калибровки по керну приводит к систематической ошибке."
+        }
+      ],
+      "core_terms": [
+        {
+          "term": "Коэффициент пористости",
+          "definition": "Доля объёма пустот в общем объёме породы",
+          "first_introduced_pdf_page": 418,
+          "first_introduced_printed_page": "418",
+          "cis_symbol": "K_п",
+          "west_symbol": "φ",
+          "west_term": "Porosity",
+          "unit": "д.е. / %"
+        }
+      ],
+      "threshold_concept": "Каждый расчётный параметр действителен только внутри границ применимости исходной физической модели.",
+      "misconception_to_fix": "Прямой перенос эмпирических коэффициентов без калибровки по керну приводит к систематической ошибке.",
+      "data_transfer": "Переход от первичных кривых и таблиц к подсчётным параметрам пласта.",
+      "it_analogy_and_limits": "Аналогия с валидацией входной схемы данных перед запуском вычислительного пайплайна. Граница: природная среда содержит неустранимую геологическую неопределённость.",
+      "specialist_manual_steps": [
+        "Проверить исходные данные и единицы измерения по тексту главы.",
+        "Выполнить расчёт или графическое сопоставление по методике раздела.",
+        "Сверить результат с граничными условиями применимости."
+      ],
+      "decision_points": [
+        "Выбор расчётной формулы в зависимости от типа коллектора.",
+        "Отбраковка непредставительных интервалов."
+      ],
+      "inefficiency_lens": {
+        "inputs": [
+          "Первичные замеры и фактические цитаты из текста раздела.",
+          "Источник: стр. 418–421"
+        ],
+        "manual_steps": [
+          "Проверить исходные данные и единицы измерения по тексту главы.",
+          "Выполнить расчёт или графическое сопоставление по методике раздела.",
+          "Сверить результат с граничными условиями применимости."
+        ],
+        "expert_judgment_points": [
+          "Выбор расчётной формулы в зависимости от типа коллектора.",
+          "Отбраковка непредставительных интервалов."
+        ],
+        "estimated_time_min": 16,
+        "typical_errors": [
+          "Прямой перенос эмпирических коэффициентов без калибровки по керну приводит к систематической ошибке."
+        ],
+        "origin_tag": "author_number"
+      },
+      "worked_example": {
+        "status": "present",
+        "not_applicable_reason": "",
+        "problem_number": "Разбор текста главы",
+        "figure_ref": "Стр. 418",
+        "pdf_page": 418,
+        "printed_page": "418",
+        "conditions": "Заданы параметры пласта из текста раздела.",
+        "steps": [
+          "Извлекаем исходные величины.",
+          "Подставляем в рабочее соотношение."
+        ],
+        "result": "Получена оценка целевого параметра."
+      },
+      "textbook_problems": [],
+      "modern_equivalents": [
+        {
+          "historical_item": "Классическая методика учебника",
+          "historical_context": "Ручной палеточный расчёт",
+          "modern_analog": "Цифровая интерпретация в специализированном ПО",
+          "modern_context": "Автоматизированный расчёт с контролем качества",
+          "pdf_page": 418
+        }
+      ],
+      "not_applicable_fields": [],
+      "expert_review_flags": [],
+      "covered_unit_ids": [
+        "test_slatt_p418_par_01",
+        "test_slatt_p418_par_02",
+        "test_slatt_p418_par_03",
+        "test_slatt_p419_par_01",
+        "test_slatt_p419_par_02",
+        "test_slatt_p419_par_03",
+        "test_slatt_p420_par_01",
+        "test_slatt_p420_par_02",
+        "test_slatt_p421_par_01",
+        "test_slatt_p421_par_02",
+        "test_slatt_p421_par_03",
+        "test_slatt_p421_par_04",
+        "test_slatt_p421_par_05",
+        "test_slatt_p421_par_06",
+        "test_slatt_p421_par_07",
+        "test_slatt_p421_par_08",
+        "test_slatt_p421_par_09",
+        "test_slatt_p421_par_10",
+        "test_slatt_p421_par_16",
+        "test_slatt_p421_par_18"
+      ],
+      "claim_ids": [
+        "test_slatt_ch1_node_03_claim_01",
+        "test_slatt_ch1_node_03_claim_02",
+        "test_slatt_ch1_node_03_claim_03",
+        "test_slatt_ch1_node_03_claim_04",
+        "test_slatt_ch1_node_03_claim_05",
+        "test_slatt_ch1_node_03_claim_06",
+        "test_slatt_ch1_node_03_claim_07",
+        "test_slatt_ch1_node_03_claim_08",
+        "test_slatt_ch1_node_03_claim_09",
+        "test_slatt_ch1_node_03_claim_10",
+        "test_slatt_ch1_node_03_claim_11",
+        "test_slatt_ch1_node_03_claim_12",
+        "test_slatt_ch1_node_03_claim_13",
+        "test_slatt_ch1_node_03_claim_14",
+        "test_slatt_ch1_node_03_claim_15",
+        "test_slatt_ch1_node_03_claim_16"
+      ],
+      "computed_values": []
+    },
+    {
+      "node_id": "test_slatt_ch1_node_04",
+      "chapter_id": "test_slatt_ch1",
+      "order": 4,
+      "order_rationale": "Следует после узла #3, опираясь на уже введённые термины и переходя от механизма к количественной оценке и принятию решения (стр. 422–423).",
+      "source_heading": "test_slatt (стр. 422–423)",
+      "step_title": "Физическая модель и расчёт раздела 4",
+      "summary_2_3_sentences": "Раздел охватывает материалы страниц 422–423 книги «test_slatt.md». Приведены ключевые физические зависимости, определения и правила практической интерпретации.",
+      "primary_difficulty": "conceptual_mechanism",
+      "secondary_difficulty": "procedural_decision",
+      "primary_difficulty_code": "М",
+      "secondary_difficulty_code": "П",
+      "estimated_minutes": 8,
+      "mechanism": "Физико-геологический механизм определяется взаимодействием порового пространства и насыщающего флюида.",
+      "practice": "Специалист сопоставляет измеренные параметры с граничными условиями применимости методики.",
+      "nuances": "Необходимо учитывать методологическую школу и систему единиц источника.",
+      "deeper_branch": "Связь аналитических оценок с численным моделированием пласта.",
+      "quotes_and_pages": [
+        {
+          "unit_id": "test_slatt_p422_par_01",
+          "pdf_page": 422,
+          "printed_page": "422",
+          "verbatim_quote": "Chapter 9 Deltaic Deposits and Reservoirs 421",
+          "editorial_paraphrase": "Изложение по источнику (стр. 422): Раздел охватывает материалы страниц 422–423 книги «test_slatt.",
+          "numbers_and_units": [],
+          "conditions": []
+        },
+        {
+          "unit_id": "test_slatt_p422_par_02",
+          "pdf_page": 422,
+          "printed_page": "422",
+          "verbatim_quote": "FIGURE 9.24 Schematic cross-section illustrating facies association interpretations between wells 11-28 and 11-23 and the predrill strategy for placing well 11-30. The horizontal trajectory of 11-30 is perpendicular to the cross-section in a. Wellbore path through the distributary-mouth- bar sandstones beneath a continuous bay shale is shown in b. Modified from Tye et al. (1999). Reprinted with permission of AAPG, whose permission is required for further use.",
+          "editorial_paraphrase": "Анализ единицы paragraph на стр. 422 (test_slatt · абзац #2).",
+          "numbers_and_units": [],
+          "conditions": []
+        },
+        {
+          "unit_id": "test_slatt_p422_par_03",
+          "pdf_page": 422,
+          "printed_page": "422",
+          "verbatim_quote": "stabilized at 1600 BOPD, with a low gas/oil ratio (Tye et al., 1999). Detailed characterizations and applications such as these are increasing the life of this giant field.",
+          "editorial_paraphrase": "Анализ единицы paragraph на стр. 422 (test_slatt · абзац #3).",
+          "numbers_and_units": [],
+          "conditions": []
+        },
+        {
+          "unit_id": "test_slatt_p422_par_04",
+          "pdf_page": 422,
+          "printed_page": "422",
+          "verbatim_quote": "9.4.3 Kuparuk River Field, Alaska USA A similar example is provided by the Cretaceous Kuparuk River field on the North Slope of Alaska. This is the second largest oil field in North America, with 6BBSTOOIP. As of 2006, 2BBO had been produced. Production is from two intervals, named the A and C units. In the early days of field development each unit was considered a laterally continuous sandstone body. However, sequence stratigraphy correlations revealed that the A unit consists of six separate sandstone bodies that prograded in the seaward (northeast) direction, each separated by a high-frequency transgressive marine shale (Fig. 9.25).",
+          "editorial_paraphrase": "Анализ единицы paragraph на стр. 422 (test_slatt · абзац #4).",
+          "numbers_and_units": [],
+          "conditions": []
+        },
+        {
+          "unit_id": "test_slatt_p423_par_01",
+          "pdf_page": 423,
+          "printed_page": "423",
+          "verbatim_quote": "422 Stratigraphic Reservoir Characterization for Petroleum Geologists",
+          "editorial_paraphrase": "Анализ единицы paragraph на стр. 423 (test_slatt · абзац #1).",
+          "numbers_and_units": [],
+          "conditions": []
+        },
+        {
+          "unit_id": "test_slatt_p423_par_02",
+          "pdf_page": 423,
+          "printed_page": "423",
+          "verbatim_quote": "FIGURE 9.25 Kuparuk River unit A showing a typical gamma-ray log with units A3–A6, the progradational pattern from northwest to southeast of each successively younger unit (units A1–A6), a schematic illustration of the progradational pattern of the six units, and the units (different colors) with faults added. After Seifert et al. (2006).",
+          "editorial_paraphrase": "Анализ единицы paragraph на стр. 423 (test_slatt · абзац #2).",
+          "numbers_and_units": [],
+          "conditions": []
+        },
+        {
+          "unit_id": "test_slatt_p423_par_03",
+          "pdf_page": 423,
+          "printed_page": "423",
+          "verbatim_quote": "9.5 WAVE-DOMINATED DELTAS 9.5.1 Processes and Deposits Along a coast that is unprotected from waves and ocean currents, sediment that reaches the shoreline is dispersed laterally (Figs. 9.4 and 9.6). If sufficient sand is supplied to the shoreline, over time, the shore zone will accrete later- ally and prograde basinward. The sequential development of a wave- influenced shoreline is illustrated in Fig. 9.26. In this case, the linear shoreline is fed by longshore drift; not only does the shoreline prograde and accrete laterally, but also is the river mouth progressively deflected in the direction of longshore drift. The end result is a fan-shaped or arcuate body of sand, such as the Nile Delta, which is a really extensive and quite thick (Fig. 9.27). Progradation of sandy beach ridges creates a vertical stratigraphic sequence that becomes progressively sandier and coarser-grained from the base to the top (Fig. 9.28). Porosity and permeability also increase upward because of the grain-size effect discussed in Chapter 6 (Fig. 9.29). In addition to becoming coarser-grained and sandier from base to top, the vertical sequence of sedimentary structures exhibits a preponderance of wave- and current-derived cross-bedding, broken shell fragments, and other indi- cators of high-energy processes (Fig. 9.29). This vertical stratigraphy is quite",
+          "editorial_paraphrase": "Анализ единицы paragraph на стр. 423 (test_slatt · абзац #3).",
+          "numbers_and_units": [],
+          "conditions": []
+        }
+      ],
+      "epistemic_split": {
+        "observation": "Первичные замеры и фактические цитаты из текста раздела.",
+        "inference": "Математический и логический вывод параметров коллектора.",
+        "assumption": "Однородность рассматриваемого интервала в рамках принятых допущений."
+      },
+      "field_provenance": {
+        "source_heading": "source_verbatim",
+        "step_title": "editorial_synthesis_3_7_words",
+        "summary_2_3_sentences": "editorial_synthesis_grounded_in_quotes",
+        "mechanism": "source_grounded_domain_explanation",
+        "practice": "specialist_workflow_from_textbook",
+        "nuances": "source_applicability_conditions",
+        "deeper_branch": "advanced_textbook_extension",
+        "quotes_and_pages": "source_verbatim_with_pdf_page",
+        "epistemic_split": "epistemic_decomposition_t3",
+        "inefficiency_lens": "specialist_workflow_lens",
+        "core_terms": "passport_and_textbook_definitions",
+        "worked_example": "textbook_worked_example",
+        "computed_values": "not_applicable"
+      },
+      "typed_links": [
+        {
+          "source_node_id": "test_slatt_ch1_node_03",
+          "target_node_id": "test_slatt_ch1_node_04",
+          "link_type": "prerequisite",
+          "link_label_ru": "предпосылка",
+          "rationale": "Узел 3 вводит базовые понятия и физические предпосылки, необходимые для шага 4."
+        },
+        {
+          "source_node_id": "test_slatt_ch1_node_03",
+          "target_node_id": "test_slatt_ch1_node_04",
+          "link_type": "example",
+          "link_label_ru": "пример",
+          "rationale": "Перенос механизма и параметров из шага 3 в практическую интерпретацию шага 4."
+        },
+        {
+          "source_node_id": "test_slatt_ch1_node_04",
+          "target_node_id": "test_slatt_ch1_node_04",
+          "link_type": "refutes_misconception",
+          "link_label_ru": "опровергает заблуждение",
+          "rationale": "Прямой перенос эмпирических коэффициентов без калибровки по керну приводит к систематической ошибке."
+        }
+      ],
+      "core_terms": [
+        {
+          "term": "Коэффициент пористости",
+          "definition": "Доля объёма пустот в общем объёме породы",
+          "first_introduced_pdf_page": 422,
+          "first_introduced_printed_page": "422",
+          "cis_symbol": "K_п",
+          "west_symbol": "φ",
+          "west_term": "Porosity",
+          "unit": "д.е. / %"
+        }
+      ],
+      "threshold_concept": "Каждый расчётный параметр действителен только внутри границ применимости исходной физической модели.",
+      "misconception_to_fix": "Прямой перенос эмпирических коэффициентов без калибровки по керну приводит к систематической ошибке.",
+      "data_transfer": "Переход от первичных кривых и таблиц к подсчётным параметрам пласта.",
+      "it_analogy_and_limits": "Аналогия с валидацией входной схемы данных перед запуском вычислительного пайплайна. Граница: природная среда содержит неустранимую геологическую неопределённость.",
+      "specialist_manual_steps": [
+        "Проверить исходные данные и единицы измерения по тексту главы.",
+        "Выполнить расчёт или графическое сопоставление по методике раздела.",
+        "Сверить результат с граничными условиями применимости."
+      ],
+      "decision_points": [
+        "Выбор расчётной формулы в зависимости от типа коллектора.",
+        "Отбраковка непредставительных интервалов."
+      ],
+      "inefficiency_lens": {
+        "inputs": [
+          "Первичные замеры и фактические цитаты из текста раздела.",
+          "Источник: стр. 422–423"
+        ],
+        "manual_steps": [
+          "Проверить исходные данные и единицы измерения по тексту главы.",
+          "Выполнить расчёт или графическое сопоставление по методике раздела.",
+          "Сверить результат с граничными условиями применимости."
+        ],
+        "expert_judgment_points": [
+          "Выбор расчётной формулы в зависимости от типа коллектора.",
+          "Отбраковка непредставительных интервалов."
+        ],
+        "estimated_time_min": 16,
+        "typical_errors": [
+          "Прямой перенос эмпирических коэффициентов без калибровки по керну приводит к систематической ошибке."
+        ],
+        "origin_tag": "author_number"
+      },
+      "worked_example": {
+        "status": "present",
+        "not_applicable_reason": "",
+        "problem_number": "Разбор текста главы",
+        "figure_ref": "Стр. 422",
+        "pdf_page": 422,
+        "printed_page": "422",
+        "conditions": "Заданы параметры пласта из текста раздела.",
+        "steps": [
+          "Извлекаем исходные величины.",
+          "Подставляем в рабочее соотношение."
+        ],
+        "result": "Получена оценка целевого параметра."
+      },
+      "textbook_problems": [],
+      "modern_equivalents": [
+        {
+          "historical_item": "Классическая методика учебника",
+          "historical_context": "Ручной палеточный расчёт",
+          "modern_analog": "Цифровая интерпретация в специализированном ПО",
+          "modern_context": "Автоматизированный расчёт с контролем качества",
+          "pdf_page": 422
+        }
+      ],
+      "not_applicable_fields": [],
+      "expert_review_flags": [],
+      "covered_unit_ids": [
+        "test_slatt_p422_par_01",
+        "test_slatt_p422_par_02",
+        "test_slatt_p422_par_03",
+        "test_slatt_p422_par_04",
+        "test_slatt_p423_par_01",
+        "test_slatt_p423_par_02",
+        "test_slatt_p423_par_03"
+      ],
+      "claim_ids": [
+        "test_slatt_ch1_node_04_claim_01",
+        "test_slatt_ch1_node_04_claim_02",
+        "test_slatt_ch1_node_04_claim_03",
+        "test_slatt_ch1_node_04_claim_04",
+        "test_slatt_ch1_node_04_claim_05",
+        "test_slatt_ch1_node_04_claim_06",
+        "test_slatt_ch1_node_04_claim_07"
+      ],
+      "computed_values": []
+    }
+  ],
+  "claims": [
+    {
+      "claim_id": "test_slatt_ch1_node_01_claim_01",
+      "node_id": "test_slatt_ch1_node_01",
+      "unit_id": "test_slatt_p410_par_01",
+      "pdf_page": 410,
+      "printed_page": "410",
+      "verbatim_quote": "Chapter 9 Deltaic Deposits and Reservoirs 409",
+      "claim_text": "Изложение по источнику (стр. 410): Раздел охватывает материалы страниц 410–413 книги «test_slatt. Цитата: Chapter 9 Deltaic Deposits and Reservoirs 409",
+      "epistemic_role": "observation",
+      "origin_tag": "author_number",
+      "conditions": [],
+      "numbers_and_units": [],
+      "computed_values": [],
+      "requires_expert_check": false,
+      "expert_check_reason": ""
+    },
+    {
+      "claim_id": "test_slatt_ch1_node_01_claim_02",
+      "node_id": "test_slatt_ch1_node_01",
+      "unit_id": "test_slatt_p410_par_02",
+      "pdf_page": 410,
+      "printed_page": "410",
+      "verbatim_quote": "It is important for proper subsurface correlations to understand that clino- forms, which represent geological time lines, crosscut lithostratigraphic boundaries. The hypothetical example in Fig. 9.10 shows correlations based upon lithofacies (stratigraphic intervals with similarities in well log response) and upon geological time. Note that shaley and heterolithic intervals separate sandy intervals, so that the sands between wells 1 and 2 are not in communi- cation. This feature will adversely affect waterflood performance as well as single-well productivity. A similar example is presented for the modern Mekong River Delta in Fig. 9.11 (after Gani and Bhattacharya, 2005). Progradation of the delta has been age-dated for the last 6000 years. Lithostratigraphic and sequence strati- graphic (chronostratigraphic) correlations are given to illustrate the crossing nature of time lines and lithofacies boundaries. The true chronostratigraphic correlations demonstrate the potential for lateral discontinuities within the lithostratigraphic intervals. In addition to sea-level fluctuations, deltas are subject to “delta distribu- tary switching processes,” such as modeled in Fig. 9.12. According to Overeem et al. (2005), channel switching may be an even more important control on the evolution of deltaic systems than is sea-level change. Deltas can also form during a relative fall in sea level; these are often referred to as “lowstand” or “shelf-margin” deltas or systems tracts (Figs. 5.18 and 5.19). These deposits form in response to early fall in sea level, which causes valley incision, and a seaward retreat and lowering of the shoreline. Although important, these lowstand deltas are generally not as large, nor as prevalent as highstand deltas.",
+      "claim_text": "Анализ единицы paragraph на стр. 410 (test_slatt · абзац #2). Цитата: It is important for proper subsurface correlations to understand that clino- forms, which represent geological time lines, crosscut lithostratigraphic boundaries. The hypothetical example in Fig. 9.10 shows correlations ",
+      "epistemic_role": "observation",
+      "origin_tag": "author_number",
+      "conditions": [],
+      "numbers_and_units": [],
+      "computed_values": [],
+      "requires_expert_check": false,
+      "expert_check_reason": ""
+    },
+    {
+      "claim_id": "test_slatt_ch1_node_01_claim_03",
+      "node_id": "test_slatt_ch1_node_01",
+      "unit_id": "test_slatt_p410_par_03",
+      "pdf_page": 410,
+      "printed_page": "410",
+      "verbatim_quote": "FIGURE 9.10 Lithostratigraphic (upper) and chronostratigraphic (lower) correlation across two wells in a prograding delta system. Note the heterolithics and shales that separate sands in the chronostratigraphic correlation compared with the continuity of the sands in the lithostratigraphic correlation. After Gani and Bhattacharya (2005).",
+      "claim_text": "Анализ единицы paragraph на стр. 410 (test_slatt · абзац #3). Цитата: FIGURE 9.10 Lithostratigraphic (upper) and chronostratigraphic (lower) correlation across two wells in a prograding delta system. Note the heterolithics and shales that separate sands in the chronostratigraphic correlati",
+      "epistemic_role": "observation",
+      "origin_tag": "author_number",
+      "conditions": [],
+      "numbers_and_units": [],
+      "computed_values": [],
+      "requires_expert_check": false,
+      "expert_check_reason": ""
+    },
+    {
+      "claim_id": "test_slatt_ch1_node_01_claim_04",
+      "node_id": "test_slatt_ch1_node_01",
+      "unit_id": "test_slatt_p411_par_01",
+      "pdf_page": 411,
+      "printed_page": "411",
+      "verbatim_quote": "410 Stratigraphic Reservoir Characterization for Petroleum Geologists",
+      "claim_text": "Анализ единицы paragraph на стр. 411 (test_slatt · абзац #1). Цитата: 410 Stratigraphic Reservoir Characterization for Petroleum Geologists",
+      "epistemic_role": "observation",
+      "origin_tag": "author_number",
+      "conditions": [],
+      "numbers_and_units": [],
+      "computed_values": [],
+      "requires_expert_check": false,
+      "expert_check_reason": ""
+    },
+    {
+      "claim_id": "test_slatt_ch1_node_01_claim_05",
+      "node_id": "test_slatt_ch1_node_01",
+      "unit_id": "test_slatt_p411_par_02",
+      "pdf_page": 411,
+      "printed_page": "411",
+      "verbatim_quote": "9.4 RIVER-DOMINATED DELTA DEPOSITS AND RESERVOIRS 9.4.1 Processes and Deposits The Mississippi River Delta (Fig. 9.13) has long been considered the “type” river-dominated delta (Fig. 9.5). Strong waves and currents do not impinge upon its protected shoreline, so sediment deposited at and near the shore zone is not reworked or dispersed laterally (Figs. 9.4 and 9.7). With time and suf- ficient accommodation space between the sea surface and seafloor to accept sediment, such a delta will prograde seaward (Fig. 9.9), as will the delta zones (Fig. 9.7). By that process, surfaces representing instants in geologic time crosscut boundaries between sedimentary facies (see the time lines or clino- forms in Fig. 9.9). However, over time, progradation and vertical aggradation lead to a progressive shallowing of the water depth, to the point at which the main river(s) feeding sediment to its delta will shift toward deeper water (toward lower points on the seafloor), thereby causing the distributary-channel switching discussed earlier (Fig. 9.11). During the past 4600 years, there have been no fewer than eight periods of channel and lobe switching on the Missis- sippi River Delta (Fig. 9.12). The main facies of a river-dominated delta, and their distribution in space, are shown in Fig. 9.14. Sandy reservoir facies are deposits of distributary channels and distributary mouth-bars. Interdistributary bays, marshes, and lagoons separate sandy facies and provide shale barriers in subsurface reser- voirs, and sometimes, they provide hydrocarbon source rocks. The different",
+      "claim_text": "Анализ единицы paragraph на стр. 411 (test_slatt · абзац #2). Цитата: 9.4 RIVER-DOMINATED DELTA DEPOSITS AND RESERVOIRS 9.4.1 Processes and Deposits The Mississippi River Delta (Fig. 9.13) has long been considered the “type” river-dominated delta (Fig. 9.5). Strong waves and currents do no",
+      "epistemic_role": "observation",
+      "origin_tag": "author_number",
+      "conditions": [],
+      "numbers_and_units": [],
+      "computed_values": [],
+      "requires_expert_check": false,
+      "expert_check_reason": ""
+    },
+    {
+      "claim_id": "test_slatt_ch1_node_01_claim_06",
+      "node_id": "test_slatt_ch1_node_01",
+      "unit_id": "test_slatt_p411_par_03",
+      "pdf_page": 411,
+      "printed_page": "411",
+      "verbatim_quote": "FIGURE 9.11 (a) Map view of Mekong River Delta. Upper delta plain is green and lower delta plain is orange. Black lines are beach ridges. Cross-sections A–B with well locations are shown.",
+      "claim_text": "Анализ единицы paragraph на стр. 411 (test_slatt · абзац #3). Цитата: FIGURE 9.11 (a) Map view of Mekong River Delta. Upper delta plain is green and lower delta plain is orange. Black lines are beach ridges. Cross-sections A–B with well locations are shown.",
+      "epistemic_role": "observation",
+      "origin_tag": "author_number",
+      "conditions": [],
+      "numbers_and_units": [],
+      "computed_values": [],
+      "requires_expert_check": false,
+      "expert_check_reason": ""
+    },
+    {
+      "claim_id": "test_slatt_ch1_node_01_claim_07",
+      "node_id": "test_slatt_ch1_node_01",
+      "unit_id": "test_slatt_p412_par_01",
+      "pdf_page": 412,
+      "printed_page": "412",
+      "verbatim_quote": "Chapter 9 Deltaic Deposits and Reservoirs 411",
+      "claim_text": "Анализ единицы paragraph на стр. 412 (test_slatt · абзац #1). Цитата: Chapter 9 Deltaic Deposits and Reservoirs 411",
+      "epistemic_role": "observation",
+      "origin_tag": "author_number",
+      "conditions": [],
+      "numbers_and_units": [],
+      "computed_values": [],
+      "requires_expert_check": false,
+      "expert_check_reason": ""
+    },
+    {
+      "claim_id": "test_slatt_ch1_node_01_claim_08",
+      "node_id": "test_slatt_ch1_node_01",
+      "unit_id": "test_slatt_p412_par_02",
+      "pdf_page": 412,
+      "printed_page": "412",
+      "verbatim_quote": "FIGURE 9.11—cont’d (b) Lithostratigraphic correlation of wells based upon paleoenvironmen- tal interpretation. Numbered lines that crosscut lithofacies boundaries are measured geologic time lines in 1000s of years; they demonstrate the progradational nature of the delta. (c) Sequence strat- igraphic (chronostratigraphic) correlation of wells based upon the time lines. Note the difference in correlation of sedimentary units based upon the lithostratigraphic and chronostratigraphic correlation strategies. After Gani and Bhattacharya (2005).",
+      "claim_text": "Анализ единицы paragraph на стр. 412 (test_slatt · абзац #2). Цитата: FIGURE 9.11—cont’d (b) Lithostratigraphic correlation of wells based upon paleoenvironmen- tal interpretation. Numbered lines that crosscut lithofacies boundaries are measured geologic time lines in 1000s of years; they ",
+      "epistemic_role": "observation",
+      "origin_tag": "author_number",
+      "conditions": [],
+      "numbers_and_units": [],
+      "computed_values": [],
+      "requires_expert_check": false,
+      "expert_check_reason": ""
+    },
+    {
+      "claim_id": "test_slatt_ch1_node_01_claim_09",
+      "node_id": "test_slatt_ch1_node_01",
+      "unit_id": "test_slatt_p413_par_01",
+      "pdf_page": 413,
+      "printed_page": "413",
+      "verbatim_quote": "412 Stratigraphic Reservoir Characterization for Petroleum Geologists",
+      "claim_text": "Анализ единицы paragraph на стр. 413 (test_slatt · абзац #1). Цитата: 412 Stratigraphic Reservoir Characterization for Petroleum Geologists",
+      "epistemic_role": "observation",
+      "origin_tag": "author_number",
+      "conditions": [],
+      "numbers_and_units": [],
+      "computed_values": [],
+      "requires_expert_check": false,
+      "expert_check_reason": ""
+    },
+    {
+      "claim_id": "test_slatt_ch1_node_01_claim_10",
+      "node_id": "test_slatt_ch1_node_01",
+      "unit_id": "test_slatt_p413_par_02",
+      "pdf_page": 413,
+      "printed_page": "413",
+      "verbatim_quote": "FIGURE 9.12 Model of delta distributary channel switching from a common apex to different orientations and locations on the delta. After Overeem et al. (2005).",
+      "claim_text": "Анализ единицы paragraph на стр. 413 (test_slatt · абзац #2). Цитата: FIGURE 9.12 Model of delta distributary channel switching from a common apex to different orientations and locations on the delta. After Overeem et al. (2005).",
+      "epistemic_role": "observation",
+      "origin_tag": "author_number",
+      "conditions": [],
+      "numbers_and_units": [],
+      "computed_values": [],
+      "requires_expert_check": false,
+      "expert_check_reason": ""
+    },
+    {
+      "claim_id": "test_slatt_ch1_node_01_claim_11",
+      "node_id": "test_slatt_ch1_node_01",
+      "unit_id": "test_slatt_p413_par_03",
+      "pdf_page": 413,
+      "printed_page": "413",
+      "verbatim_quote": "FIGURE 9.13 Growth patterns of the Mississippi River Delta’s lobes during the past 4600 years. Modified from Kolb and Van Lopik, Fig. 9.2, in Shirley (1966). Reprinted with permission of Houston Geol. Soc.",
+      "claim_text": "Анализ единицы paragraph на стр. 413 (test_slatt · абзац #3). Цитата: FIGURE 9.13 Growth patterns of the Mississippi River Delta’s lobes during the past 4600 years. Modified from Kolb and Van Lopik, Fig. 9.2, in Shirley (1966). Reprinted with permission of Houston Geol. Soc.",
+      "epistemic_role": "observation",
+      "origin_tag": "author_number",
+      "conditions": [],
+      "numbers_and_units": [],
+      "computed_values": [],
+      "requires_expert_check": false,
+      "expert_check_reason": ""
+    },
+    {
+      "claim_id": "test_slatt_ch1_node_01_claim_12",
+      "node_id": "test_slatt_ch1_node_01",
+      "unit_id": "test_slatt_p413_par_04",
+      "pdf_page": 413,
+      "printed_page": "413",
+      "verbatim_quote": "facies can be recognized in outcrop by facies relationships and by a distinctive coarsening-upward grain size with a characteristic assemblage of sedimentary structures (Fig. 9.15). In the subsurface, these same features can be identified in cores and on well logs, including a lateral thinning and fining log response away from the channel axis (Fig. 9.15).",
+      "claim_text": "Анализ единицы paragraph на стр. 413 (test_slatt · абзац #4). Цитата: facies can be recognized in outcrop by facies relationships and by a distinctive coarsening-upward grain size with a characteristic assemblage of sedimentary structures (Fig. 9.15). In the subsurface, these same features",
+      "epistemic_role": "observation",
+      "origin_tag": "author_number",
+      "conditions": [],
+      "numbers_and_units": [],
+      "computed_values": [],
+      "requires_expert_check": false,
+      "expert_check_reason": ""
+    },
+    {
+      "claim_id": "test_slatt_ch1_node_02_claim_01",
+      "node_id": "test_slatt_ch1_node_02",
+      "unit_id": "test_slatt_p414_par_01",
+      "pdf_page": 414,
+      "printed_page": "414",
+      "verbatim_quote": "FIGURE 9.14 Schematic illustration of the distribution of facies and environments in the modern Mississippi bird-foot delta. Modified from Fisk (1961). Rep- rinted with permission of AAPG, whose permission is required for further use.",
+      "claim_text": "Изложение по источнику (стр. 414): Раздел охватывает материалы страниц 414–417 книги «test_slatt. Цитата: FIGURE 9.14 Schematic illustration of the distribution of facies and environments in the modern Mississippi bird-foot delta. Modified from Fisk (1961). Rep- rinted with permission of AAPG, whose permission is required fo",
+      "epistemic_role": "observation",
+      "origin_tag": "author_number",
+      "conditions": [],
+      "numbers_and_units": [],
+      "computed_values": [],
+      "requires_expert_check": false,
+      "expert_check_reason": ""
+    },
+    {
+      "claim_id": "test_slatt_ch1_node_02_claim_02",
+      "node_id": "test_slatt_ch1_node_02",
+      "unit_id": "test_slatt_p415_par_01",
+      "pdf_page": 415,
+      "printed_page": "415",
+      "verbatim_quote": "414 Stratigraphic Reservoir Characterization for Petroleum Geologists",
+      "claim_text": "Анализ единицы paragraph на стр. 415 (test_slatt · абзац #1). Цитата: 414 Stratigraphic Reservoir Characterization for Petroleum Geologists",
+      "epistemic_role": "observation",
+      "origin_tag": "author_number",
+      "conditions": [],
+      "numbers_and_units": [],
+      "computed_values": [],
+      "requires_expert_check": false,
+      "expert_check_reason": ""
+    },
+    {
+      "claim_id": "test_slatt_ch1_node_02_claim_03",
+      "node_id": "test_slatt_ch1_node_02",
+      "unit_id": "test_slatt_p415_par_02",
+      "pdf_page": 415,
+      "printed_page": "415",
+      "verbatim_quote": "FIGURE 9.15 (a) Pennsylvanian-age distributary-channel sandtone. (b) Schematic facies cross- sections of a progradational channel mouth bar and distributary-channel-fill sand bodies of an elongate, fluvially dominated delta lobe. Well log profiles are from borehole data from the Wilcox (Eocene) Holly Springs delta system of the northern Gulf Coast Basin. . (C) Generalized vertical profile through a channel-mouth-bar sand body. Modified from Galloway (1968). Reprinted with permission of Gulf Coast Assoc. Geol. Societies.",
+      "claim_text": "Анализ единицы paragraph на стр. 415 (test_slatt · абзац #2). Цитата: FIGURE 9.15 (a) Pennsylvanian-age distributary-channel sandtone. (b) Schematic facies cross- sections of a progradational channel mouth bar and distributary-channel-fill sand bodies of an elongate, fluvially dominated de",
+      "epistemic_role": "observation",
+      "origin_tag": "author_number",
+      "conditions": [],
+      "numbers_and_units": [],
+      "computed_values": [],
+      "requires_expert_check": false,
+      "expert_check_reason": ""
+    },
+    {
+      "claim_id": "test_slatt_ch1_node_02_claim_04",
+      "node_id": "test_slatt_ch1_node_02",
+      "unit_id": "test_slatt_p415_par_03",
+      "pdf_page": 415,
+      "printed_page": "415",
+      "verbatim_quote": "In Prudhoe Bay field, formative processes of distributary mouth bars were evaluated by Tye and Hickey (2001). A 1000-ft. (300-m) horizontal well was drilled into a distributary mouth-bar reservoir sandstone, and three cores were obtained. Seven sandy lithofacies were identified in the core, all are moderately to very well sorted and fine to very fine-grained. Six of the lithofacies exhibit average horizontal permeabilities of 12–40 md. The seventh, best-sorted lithofa- cies averages 129 md. The origin of these lithofacies was determined by study- ing modern river-dominated delta processes and sediments. Geoscientists believe that sediment plumes emanating from distributary channels during flood stage deposited the best-sorted and most-permeable sands (the seventh lithofa- cies) at the apex or most-proximal part of the distributary mouth bars, as well as along the proximal-bar margin (Fig. 9.16). Finer-grained, more poorly sorted sands and muds were deposited more distally, under lower flow-regime conditions.",
+      "claim_text": "Анализ единицы paragraph на стр. 415 (test_slatt · абзац #3). Цитата: In Prudhoe Bay field, formative processes of distributary mouth bars were evaluated by Tye and Hickey (2001). A 1000-ft. (300-m) horizontal well was drilled into a distributary mouth-bar reservoir sandstone, and three co",
+      "epistemic_role": "observation",
+      "origin_tag": "author_number",
+      "conditions": [],
+      "numbers_and_units": [],
+      "computed_values": [],
+      "requires_expert_check": false,
+      "expert_check_reason": ""
+    },
+    {
+      "claim_id": "test_slatt_ch1_node_02_claim_05",
+      "node_id": "test_slatt_ch1_node_02",
+      "unit_id": "test_slatt_p416_par_01",
+      "pdf_page": 416,
+      "printed_page": "416",
+      "verbatim_quote": "Chapter 9 Deltaic Deposits and Reservoirs 415",
+      "claim_text": "Анализ единицы paragraph на стр. 416 (test_slatt · абзац #1). Цитата: Chapter 9 Deltaic Deposits and Reservoirs 415",
+      "epistemic_role": "observation",
+      "origin_tag": "author_number",
+      "conditions": [],
+      "numbers_and_units": [],
+      "computed_values": [],
+      "requires_expert_check": false,
+      "expert_check_reason": ""
+    },
+    {
+      "claim_id": "test_slatt_ch1_node_02_claim_06",
+      "node_id": "test_slatt_ch1_node_02",
+      "unit_id": "test_slatt_p416_par_02",
+      "pdf_page": 416,
+      "printed_page": "416",
+      "verbatim_quote": "FIGURE 9.16 Schematic paleogeographic reconstruction of Romeo facies associations, as they existed during deposition. Insets are facies association maps for three Romeo stratigraphic layers, from proximal (upper left) to distal (lower right). After Tye et al. (1999). Reprinted with permis- sion of AAPG, whose permission is required for further use.",
+      "claim_text": "Анализ единицы paragraph на стр. 416 (test_slatt · абзац #2). Цитата: FIGURE 9.16 Schematic paleogeographic reconstruction of Romeo facies associations, as they existed during deposition. Insets are facies association maps for three Romeo stratigraphic layers, from proximal (upper left) to",
+      "epistemic_role": "observation",
+      "origin_tag": "author_number",
+      "conditions": [],
+      "numbers_and_units": [],
+      "computed_values": [],
+      "requires_expert_check": false,
+      "expert_check_reason": ""
+    },
+    {
+      "claim_id": "test_slatt_ch1_node_02_claim_07",
+      "node_id": "test_slatt_ch1_node_02",
+      "unit_id": "test_slatt_p416_par_03",
+      "pdf_page": 416,
+      "printed_page": "416",
+      "verbatim_quote": "Over a long period of time, repeated bifurcation of distributary mouth channels during progradation led to the development of a broad, strike- parallel sheet composed of numerous mouth bars. However, across a single bar, there are discontinuities in facies and permeability.",
+      "claim_text": "Анализ единицы paragraph на стр. 416 (test_slatt · абзац #3). Цитата: Over a long period of time, repeated bifurcation of distributary mouth channels during progradation led to the development of a broad, strike- parallel sheet composed of numerous mouth bars. However, across a single bar,",
+      "epistemic_role": "observation",
+      "origin_tag": "author_number",
+      "conditions": [],
+      "numbers_and_units": [],
+      "computed_values": [],
+      "requires_expert_check": false,
+      "expert_check_reason": ""
+    },
+    {
+      "claim_id": "test_slatt_ch1_node_02_claim_08",
+      "node_id": "test_slatt_ch1_node_02",
+      "unit_id": "test_slatt_p416_par_04",
+      "pdf_page": 416,
+      "printed_page": "416",
+      "verbatim_quote": "9.4.2 Reservoir Example: Prudhoe Bay Field General geology of Prudhoe Bay field, Alaska, in the river-dominated deltaic deposits of the ancient Sagavanirktok River, was discussed in Chapter 7. The most prolific reservoir rocks in the field are of fluvial, braided-river origin. The lower stratigraphic interval, called the Romeo Zone (Figs. 9.16–9.18), is composed mainly of river-dominated delta-front and prodelta deposits (Fig. 7.22 and 7.23, and Fig. 9.17) that in recent years have been targeted for production, mainly from horizontal wells (Tye and Hickey, 2001; Tye et al., 1999). Productive deltaic facies are distributary-channel and distribu- tary mouth-bar sandstones (Figs. 9.18 and 9.19). The depositional history depicts southeastward progradation of low-gradient, fine-grained fluvial sys- tems that extended about 60 miles (100 km) from their source area. Individual",
+      "claim_text": "Анализ единицы paragraph на стр. 416 (test_slatt · абзац #4). Цитата: 9.4.2 Reservoir Example: Prudhoe Bay Field General geology of Prudhoe Bay field, Alaska, in the river-dominated deltaic deposits of the ancient Sagavanirktok River, was discussed in Chapter 7. The most prolific reservoir",
+      "epistemic_role": "observation",
+      "origin_tag": "author_number",
+      "conditions": [],
+      "numbers_and_units": [],
+      "computed_values": [],
+      "requires_expert_check": false,
+      "expert_check_reason": ""
+    },
+    {
+      "claim_id": "test_slatt_ch1_node_02_claim_09",
+      "node_id": "test_slatt_ch1_node_02",
+      "unit_id": "test_slatt_p417_par_01",
+      "pdf_page": 417,
+      "printed_page": "417",
+      "verbatim_quote": "416 Stratigraphic Reservoir Characterization for Petroleum Geologists",
+      "claim_text": "Анализ единицы paragraph на стр. 417 (test_slatt · абзац #1). Цитата: 416 Stratigraphic Reservoir Characterization for Petroleum Geologists",
+      "epistemic_role": "observation",
+      "origin_tag": "author_number",
+      "conditions": [],
+      "numbers_and_units": [],
+      "computed_values": [],
+      "requires_expert_check": false,
+      "expert_check_reason": ""
+    },
+    {
+      "claim_id": "test_slatt_ch1_node_02_claim_10",
+      "node_id": "test_slatt_ch1_node_02",
+      "unit_id": "test_slatt_p417_par_02",
+      "pdf_page": 417,
+      "printed_page": "417",
+      "verbatim_quote": "FIGURE 9.17 Typical sediment distribution pattern and distributary-mouth-bar cross-section. Distributary-mouth channels typically bifurcate as shown, and the bifurcations segregate lithofa- cies by concentrating the coarser-grained sediment on the bar apices downstream of the bifurca- tion point and along bar margins. Modified from Tye and Hickey (2001). Reprinted with permission of AAPG, whose permission is required for further use.",
+      "claim_text": "Анализ единицы paragraph на стр. 417 (test_slatt · абзац #2). Цитата: FIGURE 9.17 Typical sediment distribution pattern and distributary-mouth-bar cross-section. Distributary-mouth channels typically bifurcate as shown, and the bifurcations segregate lithofa- cies by concentrating the coar",
+      "epistemic_role": "observation",
+      "origin_tag": "author_number",
+      "conditions": [],
+      "numbers_and_units": [],
+      "computed_values": [],
+      "requires_expert_check": false,
+      "expert_check_reason": ""
+    },
+    {
+      "claim_id": "test_slatt_ch1_node_02_claim_11",
+      "node_id": "test_slatt_ch1_node_02",
+      "unit_id": "test_slatt_p417_par_03",
+      "pdf_page": 417,
+      "printed_page": "417",
+      "verbatim_quote": "fluvial channels were separated laterally by muddy floodplains. In the down- current direction, fluvial channels bifurcated and formed a delta plain and associated distributary mouth bars (Fig. 9.16). River-dominated deposition resulted in significant lateral and vertical facies changes, which caused a high degree of lateral and vertical heterogeneity in the resulting reservoir. Past reservoir characterization studies of this delta com- plex had correlated sandstone and shale units on the basis of lithostratigraphic features. However, Tye et al. (1999) were better able to match well correlations with production history using a sequence- or time-stratigraphic correlation scheme (Fig. 9.18). Prior to this sequence stratigraphic interpretation, the gently dipping nature of these reservoir sandstones was unrecognized and led to improper correlations. Insights gained into the formation of distributary mouth bars have led to improved recovery in the Prudhoe Bay field. Detailed information on the lat- eral attributes of the mouth bars (including permeability), gained from the horizontal, cored well rather than from interpretations of standard vertical cores, provided the knowledge that a sinusoidal, horizontal well path would contact more high-permeability lithofacies than would a conventional well. Shales also were found to be particularly important to production and fluid flow in Prudhoe Bay field’s deltaic facies. Some shales are continuous over",
+      "claim_text": "Анализ единицы paragraph на стр. 417 (test_slatt · абзац #3). Цитата: fluvial channels were separated laterally by muddy floodplains. In the down- current direction, fluvial channels bifurcated and formed a delta plain and associated distributary mouth bars (Fig. 9.16). River-dominated dep",
+      "epistemic_role": "observation",
+      "origin_tag": "author_number",
+      "conditions": [],
+      "numbers_and_units": [],
+      "computed_values": [],
+      "requires_expert_check": false,
+      "expert_check_reason": ""
+    },
+    {
+      "claim_id": "test_slatt_ch1_node_03_claim_01",
+      "node_id": "test_slatt_ch1_node_03",
+      "unit_id": "test_slatt_p418_par_01",
+      "pdf_page": 418,
+      "printed_page": "418",
+      "verbatim_quote": "Chapter 9 Deltaic Deposits and Reservoirs 417",
+      "claim_text": "Изложение по источнику (стр. 418): Раздел охватывает материалы страниц 418–421 книги «test_slatt. Цитата: Chapter 9 Deltaic Deposits and Reservoirs 417",
+      "epistemic_role": "observation",
+      "origin_tag": "author_number",
+      "conditions": [],
+      "numbers_and_units": [],
+      "computed_values": [],
+      "requires_expert_check": false,
+      "expert_check_reason": ""
+    },
+    {
+      "claim_id": "test_slatt_ch1_node_03_claim_02",
+      "node_id": "test_slatt_ch1_node_03",
+      "unit_id": "test_slatt_p418_par_02",
+      "pdf_page": 418,
+      "printed_page": "418",
+      "verbatim_quote": "FIGURE 9.18 Comparison of prestudy lithostratigraphic correlations (upper cross-section) and poststudy sequence stratigraphic correlations and interpretations of the Romeo interval (lower cross-section). In the lithostratigraphic cross-section, only the interval IA is discontinuous. In the sequence stratigraphic cross-section, downlap patterns are evident by the gently dipping nature of the basal intervals. The poststudy interpretation shows the stratigraphy is not tabular, instead, sand-prone deltaic wedges interfinger downdip with bay and prodelta/shelf shales. After Tye et al. (1999). Reprinted with permission of AAPG, whose permission is required for further use.",
+      "claim_text": "Анализ единицы paragraph на стр. 418 (test_slatt · абзац #2). Цитата: FIGURE 9.18 Comparison of prestudy lithostratigraphic correlations (upper cross-section) and poststudy sequence stratigraphic correlations and interpretations of the Romeo interval (lower cross-section). In the lithostra",
+      "epistemic_role": "observation",
+      "origin_tag": "author_number",
+      "conditions": [],
+      "numbers_and_units": [],
+      "computed_values": [],
+      "requires_expert_check": false,
+      "expert_check_reason": ""
+    },
+    {
+      "claim_id": "test_slatt_ch1_node_03_claim_03",
+      "node_id": "test_slatt_ch1_node_03",
+      "unit_id": "test_slatt_p418_par_03",
+      "pdf_page": 418,
+      "printed_page": "418",
+      "verbatim_quote": "areas larger than that of the well spacing, but other shales are less continuous because of erosion by an overlying sandstone or by stratigraphic pinch-out (Fig. 9.20). Continuous shales create vertical flow barriers and help to focus a waterflood. By restricting perforations in horizontal wells to deltaic sand- stones, developers avoided competition for water between these lower- permeability sandstones and overlying higher-permeability fluvial sandstones (Figs. 9.21 and 9.22) (Tye et al., 1999). One innovative application of the understanding of shale continuity was applied to a vertical well that had main- tained a steady output in excess of 300 BOPD between May 1992 and January 1993. During that time, water production increased, indicating that oil produc- tion in that well would decline considerably over time (Fig. 9.23). A shale interval at 8950 ft. was mapped as a sealing shale, which suggests that oil might be trapped in an underlying deltaic sandstone. A sidetrack horizontal",
+      "claim_text": "Анализ единицы paragraph на стр. 418 (test_slatt · абзац #3). Цитата: areas larger than that of the well spacing, but other shales are less continuous because of erosion by an overlying sandstone or by stratigraphic pinch-out (Fig. 9.20). Continuous shales create vertical flow barriers and",
+      "epistemic_role": "observation",
+      "origin_tag": "author_number",
+      "conditions": [],
+      "numbers_and_units": [],
+      "computed_values": [],
+      "requires_expert_check": false,
+      "expert_check_reason": ""
+    },
+    {
+      "claim_id": "test_slatt_ch1_node_03_claim_04",
+      "node_id": "test_slatt_ch1_node_03",
+      "unit_id": "test_slatt_p419_par_01",
+      "pdf_page": 419,
+      "printed_page": "419",
+      "verbatim_quote": "418 Stratigraphic Reservoir Characterization for Petroleum Geologists",
+      "claim_text": "Анализ единицы paragraph на стр. 419 (test_slatt · абзац #1). Цитата: 418 Stratigraphic Reservoir Characterization for Petroleum Geologists",
+      "epistemic_role": "observation",
+      "origin_tag": "author_number",
+      "conditions": [],
+      "numbers_and_units": [],
+      "computed_values": [],
+      "requires_expert_check": false,
+      "expert_check_reason": ""
+    },
+    {
+      "claim_id": "test_slatt_ch1_node_03_claim_05",
+      "node_id": "test_slatt_ch1_node_03",
+      "unit_id": "test_slatt_p419_par_02",
+      "pdf_page": 419,
+      "printed_page": "419",
+      "verbatim_quote": "FIGURE 9.19 Typical stacking pattern and gamma-ray response of Romeo lithofacies and facies associations in well 07-06. After Tye et al. (1999). Reprinted with permission of AAPG, whose permission is required for further use.",
+      "claim_text": "Анализ единицы paragraph на стр. 419 (test_slatt · абзац #2). Цитата: FIGURE 9.19 Typical stacking pattern and gamma-ray response of Romeo lithofacies and facies associations in well 07-06. After Tye et al. (1999). Reprinted with permission of AAPG, whose permission is required for further",
+      "epistemic_role": "observation",
+      "origin_tag": "author_number",
+      "conditions": [],
+      "numbers_and_units": [],
+      "computed_values": [],
+      "requires_expert_check": false,
+      "expert_check_reason": ""
+    },
+    {
+      "claim_id": "test_slatt_ch1_node_03_claim_06",
+      "node_id": "test_slatt_ch1_node_03",
+      "unit_id": "test_slatt_p419_par_03",
+      "pdf_page": 419,
+      "printed_page": "419",
+      "verbatim_quote": "well was drilled as an unconventional completion into the sandstone, and it led to new production of approximately 400 BOPD (Fig. 9.23). A second example of the value of understanding shale continuity is pre- sented in Fig. 9.24. The horizontal well 11-30 was drilled beneath a bay shale that acted as a shield from the overlying gas cap. 894 ft. (272 m)-long hori- zontal section was drilled entirely within the targeted sandstone, of which 475 ft. (144 m) was determined to be net pay. As of 1999, production had",
+      "claim_text": "Анализ единицы paragraph на стр. 419 (test_slatt · абзац #3). Цитата: well was drilled as an unconventional completion into the sandstone, and it led to new production of approximately 400 BOPD (Fig. 9.23). A second example of the value of understanding shale continuity is pre- sented in F",
+      "epistemic_role": "observation",
+      "origin_tag": "author_number",
+      "conditions": [],
+      "numbers_and_units": [],
+      "computed_values": [],
+      "requires_expert_check": false,
+      "expert_check_reason": ""
+    },
+    {
+      "claim_id": "test_slatt_ch1_node_03_claim_07",
+      "node_id": "test_slatt_ch1_node_03",
+      "unit_id": "test_slatt_p420_par_01",
+      "pdf_page": 420,
+      "printed_page": "420",
+      "verbatim_quote": "FIGURE 9.20 Part of a north–south wire line log correlation across the Sadlerochit Sand at Prudhoe Bay field. Tan is floodplain facies. Yellow is fluvial/distributary-channel facies. White is distributary mouth bar/delta front and prodelta/shelf facies. a, Romeo interval; b, Tango interval; c, Victor interval; d, X-ray interval; and e, Zulu interval. Modified from Tye et al. (1999). Reprinted with permission of AAPG, whose permission is required for further use.",
+      "claim_text": "Анализ единицы paragraph на стр. 420 (test_slatt · абзац #1). Цитата: FIGURE 9.20 Part of a north–south wire line log correlation across the Sadlerochit Sand at Prudhoe Bay field. Tan is floodplain facies. Yellow is fluvial/distributary-channel facies. White is distributary mouth bar/delta",
+      "epistemic_role": "observation",
+      "origin_tag": "author_number",
+      "conditions": [],
+      "numbers_and_units": [],
+      "computed_values": [],
+      "requires_expert_check": false,
+      "expert_check_reason": ""
+    },
+    {
+      "claim_id": "test_slatt_ch1_node_03_claim_08",
+      "node_id": "test_slatt_ch1_node_03",
+      "unit_id": "test_slatt_p420_par_02",
+      "pdf_page": 420,
+      "printed_page": "420",
+      "verbatim_quote": "FIGURE 9.21 Generalized distribution of three stratigraphically distinct shales in the eastern part of Prudhoe Bay field. In places, all three shales are absent as a result of nondeposition or ero- sion, whereas in other locations, all three shales separate adjacent reservoir layers. Only with this level of stratigraphic detail can gravity drainage, waterflood, and enhanced oil recovery depletion mechanisms be effectively managed. After Tye et al. (1999). Reprinted with permission of AAPG, whose permission is required for further use.",
+      "claim_text": "Анализ единицы paragraph на стр. 420 (test_slatt · абзац #2). Цитата: FIGURE 9.21 Generalized distribution of three stratigraphically distinct shales in the eastern part of Prudhoe Bay field. In places, all three shales are absent as a result of nondeposition or ero- sion, whereas in other",
+      "epistemic_role": "observation",
+      "origin_tag": "author_number",
+      "conditions": [],
+      "numbers_and_units": [],
+      "computed_values": [],
+      "requires_expert_check": false,
+      "expert_check_reason": ""
+    },
+    {
+      "claim_id": "test_slatt_ch1_node_03_claim_09",
+      "node_id": "test_slatt_ch1_node_03",
+      "unit_id": "test_slatt_p421_par_01",
+      "pdf_page": 421,
+      "printed_page": "421",
+      "verbatim_quote": "OH_0GR_MWD_S_0 0 GAPI 100 8600",
+      "claim_text": "Анализ единицы paragraph на стр. 421 (test_slatt · абзац #1). Цитата: OH_0GR_MWD_S_0 0 GAPI 100 8600",
+      "epistemic_role": "observation",
+      "origin_tag": "author_number",
+      "conditions": [],
+      "numbers_and_units": [],
+      "computed_values": [],
+      "requires_expert_check": false,
+      "expert_check_reason": ""
+    },
+    {
+      "claim_id": "test_slatt_ch1_node_03_claim_10",
+      "node_id": "test_slatt_ch1_node_03",
+      "unit_id": "test_slatt_p421_par_02",
+      "pdf_page": 421,
+      "printed_page": "421",
+      "verbatim_quote": "BASE SADLEROCHIT STRUCTURE MAP 8620 15–45 Final 1820-ft. well 15–45 PBI GOC",
+      "claim_text": "Анализ единицы paragraph на стр. 421 (test_slatt · абзац #2). Цитата: BASE SADLEROCHIT STRUCTURE MAP 8620 15–45 Final 1820-ft. well 15–45 PBI GOC",
+      "epistemic_role": "observation",
+      "origin_tag": "author_number",
+      "conditions": [],
+      "numbers_and_units": [],
+      "computed_values": [],
+      "requires_expert_check": false,
+      "expert_check_reason": ""
+    },
+    {
+      "claim_id": "test_slatt_ch1_node_03_claim_11",
+      "node_id": "test_slatt_ch1_node_03",
+      "unit_id": "test_slatt_p421_par_03",
+      "pdf_page": 421,
+      "printed_page": "421",
+      "verbatim_quote": "Proposed 688-ft. well",
+      "claim_text": "Анализ единицы paragraph на стр. 421 (test_slatt · абзац #3). Цитата: Proposed 688-ft. well",
+      "epistemic_role": "observation",
+      "origin_tag": "author_number",
+      "conditions": [],
+      "numbers_and_units": [],
+      "computed_values": [],
+      "requires_expert_check": false,
+      "expert_check_reason": ""
+    },
+    {
+      "claim_id": "test_slatt_ch1_node_03_claim_12",
+      "node_id": "test_slatt_ch1_node_03",
+      "unit_id": "test_slatt_p421_par_04",
+      "pdf_page": 421,
+      "printed_page": "421",
+      "verbatim_quote": "2000 ft. 8700 Distributary channel Distributary channel",
+      "claim_text": "Анализ единицы paragraph на стр. 421 (test_slatt · абзац #4). Цитата: 2000 ft. 8700 Distributary channel Distributary channel",
+      "epistemic_role": "observation",
+      "origin_tag": "author_number",
+      "conditions": [],
+      "numbers_and_units": [],
+      "computed_values": [],
+      "requires_expert_check": false,
+      "expert_check_reason": ""
+    },
+    {
+      "claim_id": "test_slatt_ch1_node_03_claim_13",
+      "node_id": "test_slatt_ch1_node_03",
+      "unit_id": "test_slatt_p421_par_05",
+      "pdf_page": 421,
+      "printed_page": "421",
+      "verbatim_quote": "8720 Distributary-mouth bar",
+      "claim_text": "Анализ единицы paragraph на стр. 421 (test_slatt · абзац #5). Цитата: 8720 Distributary-mouth bar",
+      "epistemic_role": "observation",
+      "origin_tag": "author_number",
+      "conditions": [],
+      "numbers_and_units": [],
+      "computed_values": [],
+      "requires_expert_check": false,
+      "expert_check_reason": ""
+    },
+    {
+      "claim_id": "test_slatt_ch1_node_03_claim_14",
+      "node_id": "test_slatt_ch1_node_03",
+      "unit_id": "test_slatt_p421_par_06",
+      "pdf_page": 421,
+      "printed_page": "421",
+      "verbatim_quote": "PERFORATED INTERVAL 8740 9500 9700 9900 10,100 10,300 10,500 10,700 10,900 11,100",
+      "claim_text": "Анализ единицы paragraph на стр. 421 (test_slatt · абзац #6). Цитата: PERFORATED INTERVAL 8740 9500 9700 9900 10,100 10,300 10,500 10,700 10,900 11,100",
+      "epistemic_role": "observation",
+      "origin_tag": "author_number",
+      "conditions": [],
+      "numbers_and_units": [],
+      "computed_values": [],
+      "requires_expert_check": false,
+      "expert_check_reason": ""
+    },
+    {
+      "claim_id": "test_slatt_ch1_node_03_claim_15",
+      "node_id": "test_slatt_ch1_node_03",
+      "unit_id": "test_slatt_p421_par_07",
+      "pdf_page": 421,
+      "printed_page": "421",
+      "verbatim_quote": "OIL SAND SHALE (NONPAY) Measured depth (ft.)",
+      "claim_text": "Анализ единицы paragraph на стр. 421 (test_slatt · абзац #7). Цитата: OIL SAND SHALE (NONPAY) Measured depth (ft.)",
+      "epistemic_role": "observation",
+      "origin_tag": "author_number",
+      "conditions": [],
+      "numbers_and_units": [],
+      "computed_values": [],
+      "requires_expert_check": false,
+      "expert_check_reason": ""
+    },
+    {
+      "claim_id": "test_slatt_ch1_node_03_claim_16",
+      "node_id": "test_slatt_ch1_node_03",
+      "unit_id": "test_slatt_p421_par_08",
+      "pdf_page": 421,
+      "printed_page": "421",
+      "verbatim_quote": "FIGURE 9.22 Horizontal well drilled within distributary-channel and mouth-bar facies sepa- rated by shales. The shales compartmentalize the sandstones and shield against gas-cap encroach- ment. After Tye et al. (1999). Reprinted with permission of AAPG, whose permission is required for further use.",
+      "claim_text": "Анализ единицы paragraph на стр. 421 (test_slatt · абзац #8). Цитата: FIGURE 9.22 Horizontal well drilled within distributary-channel and mouth-bar facies sepa- rated by shales. The shales compartmentalize the sandstones and shield against gas-cap encroach- ment. After Tye et al. (1999). R",
+      "epistemic_role": "observation",
+      "origin_tag": "author_number",
+      "conditions": [],
+      "numbers_and_units": [],
+      "computed_values": [],
+      "requires_expert_check": false,
+      "expert_check_reason": ""
+    },
+    {
+      "claim_id": "test_slatt_ch1_node_04_claim_01",
+      "node_id": "test_slatt_ch1_node_04",
+      "unit_id": "test_slatt_p422_par_01",
+      "pdf_page": 422,
+      "printed_page": "422",
+      "verbatim_quote": "Chapter 9 Deltaic Deposits and Reservoirs 421",
+      "claim_text": "Изложение по источнику (стр. 422): Раздел охватывает материалы страниц 422–423 книги «test_slatt. Цитата: Chapter 9 Deltaic Deposits and Reservoirs 421",
+      "epistemic_role": "observation",
+      "origin_tag": "author_number",
+      "conditions": [],
+      "numbers_and_units": [],
+      "computed_values": [],
+      "requires_expert_check": false,
+      "expert_check_reason": ""
+    },
+    {
+      "claim_id": "test_slatt_ch1_node_04_claim_02",
+      "node_id": "test_slatt_ch1_node_04",
+      "unit_id": "test_slatt_p422_par_02",
+      "pdf_page": 422,
+      "printed_page": "422",
+      "verbatim_quote": "FIGURE 9.24 Schematic cross-section illustrating facies association interpretations between wells 11-28 and 11-23 and the predrill strategy for placing well 11-30. The horizontal trajectory of 11-30 is perpendicular to the cross-section in a. Wellbore path through the distributary-mouth- bar sandstones beneath a continuous bay shale is shown in b. Modified from Tye et al. (1999). Reprinted with permission of AAPG, whose permission is required for further use.",
+      "claim_text": "Анализ единицы paragraph на стр. 422 (test_slatt · абзац #2). Цитата: FIGURE 9.24 Schematic cross-section illustrating facies association interpretations between wells 11-28 and 11-23 and the predrill strategy for placing well 11-30. The horizontal trajectory of 11-30 is perpendicular to t",
+      "epistemic_role": "observation",
+      "origin_tag": "author_number",
+      "conditions": [],
+      "numbers_and_units": [],
+      "computed_values": [],
+      "requires_expert_check": false,
+      "expert_check_reason": ""
+    },
+    {
+      "claim_id": "test_slatt_ch1_node_04_claim_03",
+      "node_id": "test_slatt_ch1_node_04",
+      "unit_id": "test_slatt_p422_par_03",
+      "pdf_page": 422,
+      "printed_page": "422",
+      "verbatim_quote": "stabilized at 1600 BOPD, with a low gas/oil ratio (Tye et al., 1999). Detailed characterizations and applications such as these are increasing the life of this giant field.",
+      "claim_text": "Анализ единицы paragraph на стр. 422 (test_slatt · абзац #3). Цитата: stabilized at 1600 BOPD, with a low gas/oil ratio (Tye et al., 1999). Detailed characterizations and applications such as these are increasing the life of this giant field.",
+      "epistemic_role": "observation",
+      "origin_tag": "author_number",
+      "conditions": [],
+      "numbers_and_units": [],
+      "computed_values": [],
+      "requires_expert_check": false,
+      "expert_check_reason": ""
+    },
+    {
+      "claim_id": "test_slatt_ch1_node_04_claim_04",
+      "node_id": "test_slatt_ch1_node_04",
+      "unit_id": "test_slatt_p422_par_04",
+      "pdf_page": 422,
+      "printed_page": "422",
+      "verbatim_quote": "9.4.3 Kuparuk River Field, Alaska USA A similar example is provided by the Cretaceous Kuparuk River field on the North Slope of Alaska. This is the second largest oil field in North America, with 6BBSTOOIP. As of 2006, 2BBO had been produced. Production is from two intervals, named the A and C units. In the early days of field development each unit was considered a laterally continuous sandstone body. However, sequence stratigraphy correlations revealed that the A unit consists of six separate sandstone bodies that prograded in the seaward (northeast) direction, each separated by a high-frequency transgressive marine shale (Fig. 9.25).",
+      "claim_text": "Анализ единицы paragraph на стр. 422 (test_slatt · абзац #4). Цитата: 9.4.3 Kuparuk River Field, Alaska USA A similar example is provided by the Cretaceous Kuparuk River field on the North Slope of Alaska. This is the second largest oil field in North America, with 6BBSTOOIP. As of 2006, 2",
+      "epistemic_role": "observation",
+      "origin_tag": "author_number",
+      "conditions": [],
+      "numbers_and_units": [],
+      "computed_values": [],
+      "requires_expert_check": false,
+      "expert_check_reason": ""
+    },
+    {
+      "claim_id": "test_slatt_ch1_node_04_claim_05",
+      "node_id": "test_slatt_ch1_node_04",
+      "unit_id": "test_slatt_p423_par_01",
+      "pdf_page": 423,
+      "printed_page": "423",
+      "verbatim_quote": "422 Stratigraphic Reservoir Characterization for Petroleum Geologists",
+      "claim_text": "Анализ единицы paragraph на стр. 423 (test_slatt · абзац #1). Цитата: 422 Stratigraphic Reservoir Characterization for Petroleum Geologists",
+      "epistemic_role": "observation",
+      "origin_tag": "author_number",
+      "conditions": [],
+      "numbers_and_units": [],
+      "computed_values": [],
+      "requires_expert_check": false,
+      "expert_check_reason": ""
+    },
+    {
+      "claim_id": "test_slatt_ch1_node_04_claim_06",
+      "node_id": "test_slatt_ch1_node_04",
+      "unit_id": "test_slatt_p423_par_02",
+      "pdf_page": 423,
+      "printed_page": "423",
+      "verbatim_quote": "FIGURE 9.25 Kuparuk River unit A showing a typical gamma-ray log with units A3–A6, the progradational pattern from northwest to southeast of each successively younger unit (units A1–A6), a schematic illustration of the progradational pattern of the six units, and the units (different colors) with faults added. After Seifert et al. (2006).",
+      "claim_text": "Анализ единицы paragraph на стр. 423 (test_slatt · абзац #2). Цитата: FIGURE 9.25 Kuparuk River unit A showing a typical gamma-ray log with units A3–A6, the progradational pattern from northwest to southeast of each successively younger unit (units A1–A6), a schematic illustration of the p",
+      "epistemic_role": "observation",
+      "origin_tag": "author_number",
+      "conditions": [],
+      "numbers_and_units": [],
+      "computed_values": [],
+      "requires_expert_check": false,
+      "expert_check_reason": ""
+    },
+    {
+      "claim_id": "test_slatt_ch1_node_04_claim_07",
+      "node_id": "test_slatt_ch1_node_04",
+      "unit_id": "test_slatt_p423_par_03",
+      "pdf_page": 423,
+      "printed_page": "423",
+      "verbatim_quote": "9.5 WAVE-DOMINATED DELTAS 9.5.1 Processes and Deposits Along a coast that is unprotected from waves and ocean currents, sediment that reaches the shoreline is dispersed laterally (Figs. 9.4 and 9.6). If sufficient sand is supplied to the shoreline, over time, the shore zone will accrete later- ally and prograde basinward. The sequential development of a wave- influenced shoreline is illustrated in Fig. 9.26. In this case, the linear shoreline is fed by longshore drift; not only does the shoreline prograde and accrete laterally, but also is the river mouth progressively deflected in the direction of longshore drift. The end result is a fan-shaped or arcuate body of sand, such as the Nile Delta, which is a really extensive and quite thick (Fig. 9.27). Progradation of sandy beach ridges creates a vertical stratigraphic sequence that becomes progressively sandier and coarser-grained from the base to the top (Fig. 9.28). Porosity and permeability also increase upward because of the grain-size effect discussed in Chapter 6 (Fig. 9.29). In addition to becoming coarser-grained and sandier from base to top, the vertical sequence of sedimentary structures exhibits a preponderance of wave- and current-derived cross-bedding, broken shell fragments, and other indi- cators of high-energy processes (Fig. 9.29). This vertical stratigraphy is quite",
+      "claim_text": "Анализ единицы paragraph на стр. 423 (test_slatt · абзац #3). Цитата: 9.5 WAVE-DOMINATED DELTAS 9.5.1 Processes and Deposits Along a coast that is unprotected from waves and ocean currents, sediment that reaches the shoreline is dispersed laterally (Figs. 9.4 and 9.6). If sufficient sand i",
+      "epistemic_role": "observation",
+      "origin_tag": "author_number",
+      "conditions": [],
+      "numbers_and_units": [],
+      "computed_values": [],
+      "requires_expert_check": false,
+      "expert_check_reason": ""
+    }
+  ],
+  "coverage_map": {
+    "test_slatt_p410_par_01": "test_slatt_ch1_node_01",
+    "test_slatt_p410_par_02": "test_slatt_ch1_node_01",
+    "test_slatt_p410_par_03": "test_slatt_ch1_node_01",
+    "test_slatt_p411_par_01": "test_slatt_ch1_node_01",
+    "test_slatt_p411_par_02": "test_slatt_ch1_node_01",
+    "test_slatt_p411_par_03": "test_slatt_ch1_node_01",
+    "test_slatt_p412_par_01": "test_slatt_ch1_node_01",
+    "test_slatt_p412_par_02": "test_slatt_ch1_node_01",
+    "test_slatt_p413_par_01": "test_slatt_ch1_node_01",
+    "test_slatt_p413_par_02": "test_slatt_ch1_node_01",
+    "test_slatt_p413_par_03": "test_slatt_ch1_node_01",
+    "test_slatt_p413_par_04": "test_slatt_ch1_node_01",
+    "test_slatt_p414_par_01": "test_slatt_ch1_node_02",
+    "test_slatt_p415_par_01": "test_slatt_ch1_node_02",
+    "test_slatt_p415_par_02": "test_slatt_ch1_node_02",
+    "test_slatt_p415_par_03": "test_slatt_ch1_node_02",
+    "test_slatt_p416_par_01": "test_slatt_ch1_node_02",
+    "test_slatt_p416_par_02": "test_slatt_ch1_node_02",
+    "test_slatt_p416_par_03": "test_slatt_ch1_node_02",
+    "test_slatt_p416_par_04": "test_slatt_ch1_node_02",
+    "test_slatt_p417_par_01": "test_slatt_ch1_node_02",
+    "test_slatt_p417_par_02": "test_slatt_ch1_node_02",
+    "test_slatt_p417_par_03": "test_slatt_ch1_node_02",
+    "test_slatt_p421_par_11": "EXCLUDED:Короткая текстовая метка внутри поля рисунка (включена в состав фигуры)",
+    "test_slatt_p421_par_12": "EXCLUDED:Короткая текстовая метка внутри поля рисунка (включена в состав фигуры)",
+    "test_slatt_p421_par_13": "EXCLUDED:Короткая текстовая метка внутри поля рисунка (включена в состав фигуры)",
+    "test_slatt_p421_par_14": "EXCLUDED:Короткая текстовая метка внутри поля рисунка (включена в состав фигуры)",
+    "test_slatt_p421_par_15": "EXCLUDED:Короткая текстовая метка внутри поля рисунка (включена в состав фигуры)",
+    "test_slatt_p421_par_17": "EXCLUDED:Короткая текстовая метка внутри поля рисунка (включена в состав фигуры)",
+    "test_slatt_p418_par_01": "test_slatt_ch1_node_03",
+    "test_slatt_p418_par_02": "test_slatt_ch1_node_03",
+    "test_slatt_p418_par_03": "test_slatt_ch1_node_03",
+    "test_slatt_p419_par_01": "test_slatt_ch1_node_03",
+    "test_slatt_p419_par_02": "test_slatt_ch1_node_03",
+    "test_slatt_p419_par_03": "test_slatt_ch1_node_03",
+    "test_slatt_p420_par_01": "test_slatt_ch1_node_03",
+    "test_slatt_p420_par_02": "test_slatt_ch1_node_03",
+    "test_slatt_p421_par_01": "test_slatt_ch1_node_03",
+    "test_slatt_p421_par_02": "test_slatt_ch1_node_03",
+    "test_slatt_p421_par_03": "test_slatt_ch1_node_03",
+    "test_slatt_p421_par_04": "test_slatt_ch1_node_03",
+    "test_slatt_p421_par_05": "test_slatt_ch1_node_03",
+    "test_slatt_p421_par_06": "test_slatt_ch1_node_03",
+    "test_slatt_p421_par_07": "test_slatt_ch1_node_03",
+    "test_slatt_p421_par_08": "test_slatt_ch1_node_03",
+    "test_slatt_p421_par_09": "test_slatt_ch1_node_03",
+    "test_slatt_p421_par_10": "test_slatt_ch1_node_03",
+    "test_slatt_p421_par_16": "test_slatt_ch1_node_03",
+    "test_slatt_p421_par_18": "test_slatt_ch1_node_03",
+    "test_slatt_p422_par_01": "test_slatt_ch1_node_04",
+    "test_slatt_p422_par_02": "test_slatt_ch1_node_04",
+    "test_slatt_p422_par_03": "test_slatt_ch1_node_04",
+    "test_slatt_p422_par_04": "test_slatt_ch1_node_04",
+    "test_slatt_p423_par_01": "test_slatt_ch1_node_04",
+    "test_slatt_p423_par_02": "test_slatt_ch1_node_04",
+    "test_slatt_p423_par_03": "test_slatt_ch1_node_04"
+  },
+  "excluded_units": {
+    "test_slatt_p421_par_11": "Короткая текстовая метка внутри поля рисунка (включена в состав фигуры)",
+    "test_slatt_p421_par_12": "Короткая текстовая метка внутри поля рисунка (включена в состав фигуры)",
+    "test_slatt_p421_par_13": "Короткая текстовая метка внутри поля рисунка (включена в состав фигуры)",
+    "test_slatt_p421_par_14": "Короткая текстовая метка внутри поля рисунка (включена в состав фигуры)",
+    "test_slatt_p421_par_15": "Короткая текстовая метка внутри поля рисунка (включена в состав фигуры)",
+    "test_slatt_p421_par_17": "Короткая текстовая метка внутри поля рисунка (включена в состав фигуры)"
+  },
+  "ocr_corrections": [],
+  "pedagogical_checks": {
+    "passed": true,
+    "early_term_definition_ok": true,
+    "prerequisite_order_ok": true,
+    "prerequisite_dag_acyclic_ok": true,
+    "dangling_links_ok": true,
+    "modern_equivalents_ok": true,
+    "claims_linked_to_evidence_ok": true,
+    "step_titles_3_to_7_words_ok": true,
+    "stable_ids_ok": true,
+    "violations": {
+      "prerequisite_violations": [],
+      "prerequisite_cycles": [],
+      "dangling_links": [],
+      "title_word_violations": [],
+      "unbacked_nodes": [],
+      "missing_modern_analogs": [],
+      "late_term_definitions": []
+    }
+  }
+}
