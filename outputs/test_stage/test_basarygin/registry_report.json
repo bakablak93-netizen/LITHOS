@@ -1,0 +1,22 @@
+{
+  "passed": true,
+  "registry_id": "reg_test_basarygin",
+  "layer_id": "layer_test_basarygin",
+  "book_file": "test_basarygin.md",
+  "pdf_ranges": [
+    {
+      "start_pdf_page": 231,
+      "end_pdf_page": 318,
+      "start_printed_page": "231",
+      "end_printed_page": "318",
+      "section_label": "§4.1.1 и §4.2.14: Признаки ГНВП и ликвидация проявлений (стр. 231–239, 312–318)"
+    }
+  ],
+  "total_registry_units": 24,
+  "covered_units_count": 24,
+  "excluded_units_count": 0,
+  "manual_verification_required_count": 0,
+  "discrepancies": [],
+  "manual_verification_items": [],
+  "summary_by_type": {}
+}

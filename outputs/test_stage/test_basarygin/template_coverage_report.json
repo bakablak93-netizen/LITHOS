@@ -1,0 +1,13 @@
+{
+  "domain_package_id": "drilling_ru",
+  "authoring_time_minutes": 6,
+  "frozen_core_modified": false,
+  "chapter": "test_basarygin",
+  "total_steps": 4,
+  "covered_steps": 4,
+  "needs_model_steps": 0,
+  "template_coverage_pct": 100.0,
+  "templates_used": [
+    "gnvp_well_control_9x16"
+  ]
+}

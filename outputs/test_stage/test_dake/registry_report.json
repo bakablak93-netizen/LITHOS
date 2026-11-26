@@ -1,0 +1,22 @@
+{
+  "passed": true,
+  "registry_id": "reg_test_dake",
+  "layer_id": "layer_test_dake",
+  "book_file": "test_dake.md",
+  "pdf_ranges": [
+    {
+      "start_pdf_page": 75,
+      "end_pdf_page": 89,
+      "start_printed_page": "75",
+      "end_printed_page": "89",
+      "section_label": "Chapter 5 & §7.3: Radial Flow Equation (стр. 75–79, 87–89)"
+    }
+  ],
+  "total_registry_units": 16,
+  "covered_units_count": 16,
+  "excluded_units_count": 0,
+  "manual_verification_required_count": 0,
+  "discrepancies": [],
+  "manual_verification_items": [],
+  "summary_by_type": {}
+}

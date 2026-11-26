@@ -1,0 +1,2509 @@
+{
+  "course_id": "test_asquith",
+  "schema_version": "lithos.t3.package.v2",
+  "domain_package_id": "oil_gas_ru",
+  "book_id": "test_asquith",
+  "book_file": "test_asquith.md",
+  "pdf_file": "test_asquith.md",
+  "book_title": "Asquith, Krygowski — Basic Well Log Analysis",
+  "authors": [
+    "G. Asquith",
+    "D. Krygowski"
+  ],
+  "chapter_id": "asquith_ch7",
+  "chapter_title": "Chapter 7: Log Interpretation (стр. 126–136, рис. 140–146)",
+  "is_training": false,
+  "pdf_ranges": [
+    {
+      "start_pdf_page": 126,
+      "end_pdf_page": 146,
+      "start_printed_page": "126",
+      "end_printed_page": "146",
+      "section_label": "Chapter 7: Log Interpretation (стр. 126–136, рис. 140–146)"
+    }
+  ],
+  "layer": {
+    "layer_id": "layer_test_asquith",
+    "schema_version": "lithos.t3.layer.v2",
+    "book_id": "test_asquith",
+    "book_file": "test_asquith.md",
+    "pdf_file": "test_asquith.md",
+    "source_sha256": "6552bae02b5a81bc07857ca64ff32d643644b96246489955a249d1ac0b8cd99e",
+    "book_title": "Asquith, Krygowski — Basic Well Log Analysis",
+    "authors": [
+      "G. Asquith",
+      "D. Krygowski"
+    ],
+    "chapter_id": "asquith_ch7",
+    "chapter_title": "Chapter 7: Log Interpretation (стр. 126–136, рис. 140–146)",
+    "is_training": true,
+    "pdf_ranges": [
+      {
+        "start_pdf_page": 126,
+        "end_pdf_page": 146,
+        "start_printed_page": "126",
+        "end_printed_page": "146",
+        "section_label": "Chapter 7: Log Interpretation (стр. 126–136, рис. 140–146)"
+      }
+    ],
+    "nodes": [
+      {
+        "node_id": "asquith_ch7_node_01",
+        "chapter_id": "asquith_ch7",
+        "order": 1,
+        "order_rationale": "Последовательный разбор страниц 126–129 (по меткам <!-- page N -->).",
+        "source_heading": "Chapter 7: Log Interpretation (стр. 126–136, рис. 140–146) (стр. 126–129)",
+        "step_title": "Разбор раздела стр. 126",
+        "summary_2_3_sentences": "Krygowski, 2004, Log Interpretation, in G. Krygowski, Basic Well Log Analysis: AAPG Methods in Exploration 16, p.",
+        "primary_difficulty": "conceptual_mechanism",
+        "secondary_difficulty": "terminology_bridge",
+        "primary_difficulty_code": "М",
+        "secondary_difficulty_code": "П",
+        "estimated_minutes": 8,
+        "mechanism": "Krygowski, 2004, Log Interpretation, in G.",
+        "practice": "Krygowski, Basic Well Log Analysis: AAPG Methods in Exploration 16, p.",
+        "nuances": "Log Interpretation GENERAL As shown in the previous chapters, determining the porosity and true resistivity of a zone is the first step in converting the raw log data into estimated quantities of oil, gas, and water in a formation.",
+        "deeper_branch": "Сопоставьте с соседними разделами главы (Chapter 7: Log Interpretation (стр. 126–136, рис. 140–146)).",
+        "quotes_and_pages": [
+          {
+            "unit_id": "test_asquith_p126_u01_01",
+            "pdf_page": 126,
+            "printed_page": "126",
+            "verbatim_quote": "Krygowski, 2004, Log Interpretation, in G.",
+            "editorial_paraphrase": "Положение со стр. 126 (<!-- page 126 -->): Krygowski, 2004, Log Interpretation, in G.",
+            "numbers_and_units": [],
+            "conditions": []
+          },
+          {
+            "unit_id": "test_asquith_p126_u01_02",
+            "pdf_page": 126,
+            "printed_page": "126",
+            "verbatim_quote": "Krygowski, Basic Well Log Analysis: AAPG Methods in Exploration 16, p.",
+            "editorial_paraphrase": "Положение со стр. 126 (<!-- page 126 -->): Krygowski, Basic Well Log Analysis: AAPG Methods in Exploration 16, p.",
+            "numbers_and_units": [],
+            "conditions": []
+          },
+          {
+            "unit_id": "test_asquith_p127_u01_03",
+            "pdf_page": 127,
+            "printed_page": "127",
+            "verbatim_quote": "116 ASQUITH AND KRYGOWSKI $m =$ cementation exponent (Table 1.1; Chapter 1) $n =$ saturation exponent The uninvaded zone's water saturation ($Sw$), determined by the Archie equation, is the most fundamental quantity used in log evaluation.",
+            "editorial_paraphrase": "Положение со стр. 127 (<!-- page 127 -->): 116 ASQUITH AND KRYGOWSKI $m =$ cementation exponent (Table 1.1; Chapter 1) $n =$ saturation exponent The uninvaded zone's water saturation ($Sw$), determined by the Archie equation, is the most fundamental quantity used in log evaluation.",
+            "numbers_and_units": [],
+            "conditions": []
+          },
+          {
+            "unit_id": "test_asquith_p127_u01_04",
+            "pdf_page": 127,
+            "printed_page": "127",
+            "verbatim_quote": "But merely knowing a zone's water saturation ($Sw$) does not provide enough information to completely evaluate a zone's potential productivity.",
+            "editorial_paraphrase": "Положение со стр. 127 (<!-- page 127 -->): But merely knowing a zone's water saturation ($Sw$) does not provide enough information to completely evaluate a zone's potential productivity.",
+            "numbers_and_units": [],
+            "conditions": []
+          },
+          {
+            "unit_id": "test_asquith_p128_u01_05",
+            "pdf_page": 128,
+            "printed_page": "128",
+            "verbatim_quote": "Log Interpretation 117 $(S{wr})$, you must know the flushed zone's water saturation.",
+            "editorial_paraphrase": "Положение со стр. 128 (<!-- page 128 -->): Log Interpretation 117 $(S{wr})$, you must know the flushed zone's water saturation.",
+            "numbers_and_units": [],
+            "conditions": []
+          },
+          {
+            "unit_id": "test_asquith_p128_u01_06",
+            "pdf_page": 128,
+            "printed_page": "128",
+            "verbatim_quote": "The following observations can be made: 1.",
+            "editorial_paraphrase": "Положение со стр. 128 (<!-- page 128 -->): The following observations can be made: 1.",
+            "numbers_and_units": [],
+            "conditions": []
+          }
+        ],
+        "epistemic_split": {
+          "observation": "Krygowski, 2004, Log Interpretation, in G.",
+          "inference": "Krygowski, Basic Well Log Analysis: AAPG Methods in Exploration 16, p.",
+          "assumption": "Выводы справедливы в границах допущений источника (стр. 126–129)."
+        },
+        "field_provenance": {},
+        "typed_links": [],
+        "core_terms": [],
+        "threshold_concept": "Разбор раздела стр. 126",
+        "misconception_to_fix": "Не отрывайте расчётные оценки и эмпирические правила от условий их применимости.",
+        "data_transfer": "Применение принципов со стр. 126–129 на практических данных.",
+        "it_analogy_and_limits": "Учебный узел привязан к меткам <!-- page N --> исходного md-файла.",
+        "specialist_manual_steps": [],
+        "decision_points": [],
+        "inefficiency_lens": null,
+        "worked_example": {
+          "status": "present",
+          "not_applicable_reason": "",
+          "problem_number": "",
+          "figure_ref": "",
+          "pdf_page": 126,
+          "printed_page": "126",
+          "conditions": "These estimated quantities are used to evaluate a zone and to determine whether a well completion attempt is warranted.",
+          "steps": [
+            "Krygowski, 2004, Log Interpretation, in G."
+          ],
+          "result": "Krygowski, Basic Well Log Analysis: AAPG Methods in Exploration 16, p."
+        },
+        "textbook_problems": [],
+        "modern_equivalents": [
+          {
+            "historical_item": "Chapter 7: Log Interpretation (стр. 126–136, рис. 140–146)",
+            "historical_context": "Источник (стр. 126–129)",
+            "modern_analog": "Цифровая интерпретация и моделирование",
+            "modern_context": "Современная инженерная практика",
+            "pdf_page": 126
+          }
+        ],
+        "not_applicable_fields": [],
+        "expert_review_flags": [],
+        "covered_unit_ids": [
+          "test_asquith_p126_u01_01",
+          "test_asquith_p126_u01_02",
+          "test_asquith_p127_u01_03",
+          "test_asquith_p127_u01_04",
+          "test_asquith_p128_u01_05",
+          "test_asquith_p128_u01_06"
+        ],
+        "claim_ids": [
+          "asquith_ch7_node_01_claim_01",
+          "asquith_ch7_node_01_claim_02",
+          "asquith_ch7_node_01_claim_03",
+          "asquith_ch7_node_01_claim_04",
+          "asquith_ch7_node_01_claim_05",
+          "asquith_ch7_node_01_claim_06"
+        ],
+        "computed_values": []
+      },
+      {
+        "node_id": "asquith_ch7_node_02",
+        "chapter_id": "asquith_ch7",
+        "order": 2,
+        "order_rationale": "Последовательный разбор страниц 130–133 (по меткам <!-- page N -->).",
+        "source_heading": "Chapter 7: Log Interpretation (стр. 126–136, рис. 140–146) (стр. 130–133)",
+        "step_title": "Разбор раздела стр. 130",
+        "summary_2_3_sentences": "Log Interpretation 119 some hydrocarbons, then the other zones contain even more hydrocarbons than anticipated. In practice, especially when calculated and displayed as a curve during a logging job, the following values are used for simplicity: $a = 1.0$, $m = 2.0$.",
+        "primary_difficulty": "conceptual_mechanism",
+        "secondary_difficulty": "terminology_bridge",
+        "primary_difficulty_code": "М",
+        "secondary_difficulty_code": "П",
+        "estimated_minutes": 8,
+        "mechanism": "Log Interpretation 119 some hydrocarbons, then the other zones contain even more hydrocarbons than anticipated.",
+        "practice": "In practice, especially when calculated and displayed as a curve during a logging job, the following values are used for simplicity: $a = 1.0$, $m = 2.0$.",
+        "nuances": "The deep induction log or deep laterolog is used as $Rt$, usually without any environmental corrections.",
+        "deeper_branch": "Сопоставьте с соседними разделами главы (Chapter 7: Log Interpretation (стр. 126–136, рис. 140–146)).",
+        "quotes_and_pages": [
+          {
+            "unit_id": "test_asquith_p130_u02_01",
+            "pdf_page": 130,
+            "printed_page": "130",
+            "verbatim_quote": "Log Interpretation 119 some hydrocarbons, then the other zones contain even more hydrocarbons than anticipated.",
+            "editorial_paraphrase": "Положение со стр. 130 (<!-- page 130 -->): Log Interpretation 119 some hydrocarbons, then the other zones contain even more hydrocarbons than anticipated.",
+            "numbers_and_units": [],
+            "conditions": []
+          },
+          {
+            "unit_id": "test_asquith_p130_u02_02",
+            "pdf_page": 130,
+            "printed_page": "130",
+            "verbatim_quote": "In practice, especially when calculated and displayed as a curve during a logging job, the following values are used for simplicity: $a = 1.0$, $m = 2.0$.",
+            "editorial_paraphrase": "Положение со стр. 130 (<!-- page 130 -->): In practice, especially when calculated and displayed as a curve during a logging job, the following values are used for simplicity: $a = 1.0$, $m = 2.0$.",
+            "numbers_and_units": [],
+            "conditions": []
+          },
+          {
+            "unit_id": "test_asquith_p131_u02_03",
+            "pdf_page": 131,
+            "printed_page": "131",
+            "verbatim_quote": "120 ASQUITH AND KRYGOWSKI Wet resistivity ($Ro$) The wet-resistivity curve ($Ro$) is one of the oldest quick-look techniques.",
+            "editorial_paraphrase": "Положение со стр. 131 (<!-- page 131 -->): 120 ASQUITH AND KRYGOWSKI Wet resistivity ($Ro$) The wet-resistivity curve ($Ro$) is one of the oldest quick-look techniques.",
+            "numbers_and_units": [],
+            "conditions": []
+          },
+          {
+            "unit_id": "test_asquith_p131_u02_04",
+            "pdf_page": 131,
+            "printed_page": "131",
+            "verbatim_quote": "Unlike the other curves, which tend to be compared to the SP curve, it is plotted as an overlay on the resistivity curve.",
+            "editorial_paraphrase": "Положение со стр. 131 (<!-- page 131 -->): Unlike the other curves, which tend to be compared to the SP curve, it is plotted as an overlay on the resistivity curve.",
+            "numbers_and_units": [],
+            "conditions": []
+          },
+          {
+            "unit_id": "test_asquith_p132_u02_05",
+            "pdf_page": 132,
+            "printed_page": "132",
+            "verbatim_quote": "Log Interpretation 121 SATURATION CROSSPLOTS Saturation crossplots, also called resistivity-porosity crossplots (or specifically, Pickett plots and Hingle plots) are similar to the porosity crossplots discussed in Chapter 4.",
+            "editorial_paraphrase": "Положение со стр. 132 (<!-- page 132 -->): Log Interpretation 121 SATURATION CROSSPLOTS Saturation crossplots, also called resistivity-porosity crossplots (or specifically, Pickett plots and Hingle plots) are similar to the porosity crossplots discussed in Chapter 4.",
+            "numbers_and_units": [],
+            "conditions": []
+          },
+          {
+            "unit_id": "test_asquith_p132_u02_06",
+            "pdf_page": 132,
+            "printed_page": "132",
+            "verbatim_quote": "They are x-y plots of log data from which quantities of interest are derived; in this case, that quantity is water saturation ($Sw$).",
+            "editorial_paraphrase": "Положение со стр. 132 (<!-- page 132 -->): They are x-y plots of log data from which quantities of interest are derived; in this case, that quantity is water saturation ($Sw$).",
+            "numbers_and_units": [],
+            "conditions": []
+          }
+        ],
+        "epistemic_split": {
+          "observation": "Log Interpretation 119 some hydrocarbons, then the other zones contain even more hydrocarbons than anticipated.",
+          "inference": "In practice, especially when calculated and displayed as a curve during a logging job, the following values are used for simplicity: $a = 1.0$, $m = 2.0$.",
+          "assumption": "Выводы справедливы в границах допущений источника (стр. 130–133)."
+        },
+        "field_provenance": {},
+        "typed_links": [
+          {
+            "source_node_id": "asquith_ch7_node_01",
+            "target_node_id": "asquith_ch7_node_02",
+            "link_type": "prerequisite",
+            "link_label_ru": "предпосылка",
+            "rationale": "Материал стр. 130–133 опирается на понятия предыдущего шага."
+          }
+        ],
+        "core_terms": [
+          {
+            "term": "Delta t",
+            "definition": "\\Delta t_{ma})$$ instead of the sonic porosity where:",
+            "first_introduced_pdf_page": 130,
+            "first_introduced_printed_page": "130",
+            "cis_symbol": "—",
+            "west_symbol": "—",
+            "west_term": "Термин источника",
+            "unit": "б/р"
+          }
+        ],
+        "threshold_concept": "Delta t",
+        "misconception_to_fix": "Не отрывайте расчётные оценки и эмпирические правила от условий их применимости.",
+        "data_transfer": "Применение принципов со стр. 130–133 на практических данных.",
+        "it_analogy_and_limits": "Учебный узел привязан к меткам <!-- page N --> исходного md-файла.",
+        "specialist_manual_steps": [],
+        "decision_points": [],
+        "inefficiency_lens": null,
+        "worked_example": {
+          "status": "present",
+          "not_applicable_reason": "",
+          "problem_number": "",
+          "figure_ref": "",
+          "pdf_page": 130,
+          "printed_page": "130",
+          "conditions": "Porosity is usually derived from the sonic or density log using the proper matrix and fluid parameters for the formations to be encountered.",
+          "steps": [
+            "Log Interpretation 119 some hydrocarbons, then the other zones contain even more hydrocarbons than anticipated."
+          ],
+          "result": "In practice, especially when calculated and displayed as a curve during a logging job, the following values are used for simplicity: $a = 1.0$, $m = 2.0$."
+        },
+        "textbook_problems": [],
+        "modern_equivalents": [
+          {
+            "historical_item": "Chapter 7: Log Interpretation (стр. 126–136, рис. 140–146)",
+            "historical_context": "Источник (стр. 130–133)",
+            "modern_analog": "Цифровая интерпретация и моделирование",
+            "modern_context": "Современная инженерная практика",
+            "pdf_page": 130
+          }
+        ],
+        "not_applicable_fields": [],
+        "expert_review_flags": [],
+        "covered_unit_ids": [
+          "test_asquith_p130_u02_01",
+          "test_asquith_p130_u02_02",
+          "test_asquith_p131_u02_03",
+          "test_asquith_p131_u02_04",
+          "test_asquith_p132_u02_05",
+          "test_asquith_p132_u02_06"
+        ],
+        "claim_ids": [
+          "asquith_ch7_node_02_claim_01",
+          "asquith_ch7_node_02_claim_02",
+          "asquith_ch7_node_02_claim_03",
+          "asquith_ch7_node_02_claim_04",
+          "asquith_ch7_node_02_claim_05",
+          "asquith_ch7_node_02_claim_06"
+        ],
+        "computed_values": []
+      },
+      {
+        "node_id": "asquith_ch7_node_03",
+        "chapter_id": "asquith_ch7",
+        "order": 3,
+        "order_rationale": "Последовательный разбор страниц 134–140 (по меткам <!-- page N -->).",
+        "source_heading": "Chapter 7: Log Interpretation (стр. 126–136, рис. 140–146) (стр. 134–140)",
+        "step_title": "Разбор раздела стр. 134",
+        "summary_2_3_sentences": "Log Interpretation 123 zero. If the bulk density or acoustic travel time of the formation, instead of the porosity, is plotted along the x-axis, the x-intercept predicts the matrix value (matrix density or matrix travel time) of the formation.",
+        "primary_difficulty": "conceptual_mechanism",
+        "secondary_difficulty": "terminology_bridge",
+        "primary_difficulty_code": "М",
+        "secondary_difficulty_code": "П",
+        "estimated_minutes": 8,
+        "mechanism": "Log Interpretation 123 zero.",
+        "practice": "If the bulk density or acoustic travel time of the formation, instead of the porosity, is plotted along the x-axis, the x-intercept predicts the matrix value (matrix density or matrix travel time) of the formation.",
+        "nuances": "The line extends to the northeast quadrant (i.e., upper right) from its x-intercept. - Hydrocarbon-bearing points lie below the line of 100% water saturation, moved downward from the water-bearing line by their increased resistivity.",
+        "deeper_branch": "Сопоставьте с соседними разделами главы (Chapter 7: Log Interpretation (стр. 126–136, рис. 140–146)).",
+        "quotes_and_pages": [
+          {
+            "unit_id": "test_asquith_p134_u03_01",
+            "pdf_page": 134,
+            "printed_page": "134",
+            "verbatim_quote": "Log Interpretation 123 zero.",
+            "editorial_paraphrase": "Положение со стр. 134 (<!-- page 134 -->): Log Interpretation 123 zero.",
+            "numbers_and_units": [],
+            "conditions": []
+          },
+          {
+            "unit_id": "test_asquith_p134_u03_02",
+            "pdf_page": 134,
+            "printed_page": "134",
+            "verbatim_quote": "If the bulk density or acoustic travel time of the formation, instead of the porosity, is plotted along the x-axis, the x-intercept predicts the matrix value (matrix density or matrix travel time) of the formation.",
+            "editorial_paraphrase": "Положение со стр. 134 (<!-- page 134 -->): If the bulk density or acoustic travel time of the formation, instead of the porosity, is plotted along the x-axis, the x-intercept predicts the matrix value (matrix density or matrix travel time) of the formation.",
+            "numbers_and_units": [],
+            "conditions": []
+          },
+          {
+            "unit_id": "test_asquith_p135_u03_03",
+            "pdf_page": 135,
+            "printed_page": "135",
+            "verbatim_quote": "124 ASQUITH AND KRYGOWSKI Table 7.3.",
+            "editorial_paraphrase": "Положение со стр. 135 (<!-- page 135 -->): 124 ASQUITH AND KRYGOWSKI Table 7.3.",
+            "numbers_and_units": [],
+            "conditions": []
+          },
+          {
+            "unit_id": "test_asquith_p135_u03_04",
+            "pdf_page": 135,
+            "printed_page": "135",
+            "verbatim_quote": "Cementation exponent ($m$) is directly predicted from the slope of the water-bearing line.",
+            "editorial_paraphrase": "Положение со стр. 135 (<!-- page 135 -->): Cementation exponent ($m$) is directly predicted from the slope of the water-bearing line.",
+            "numbers_and_units": [],
+            "conditions": []
+          },
+          {
+            "unit_id": "test_asquith_p136_u03_05",
+            "pdf_page": 136,
+            "printed_page": "136",
+            "verbatim_quote": "The early literature tended to refer to the formations as containing shale, and a number of modifications were made to Archie’s equation using shale volume (among other parameters) to account for those effects.",
+            "editorial_paraphrase": "Положение со стр. 136 (<!-- page 136 -->): The early literature tended to refer to the formations as containing shale, and a number of modifications were made to Archie’s equation using shale volume (among other parameters) to account for those effects.",
+            "numbers_and_units": [],
+            "conditions": []
+          },
+          {
+            "unit_id": "test_asquith_p136_u03_06",
+            "pdf_page": 136,
+            "printed_page": "136",
+            "verbatim_quote": "As our understanding of geological processes matured, it became understood that shale and clay are different and that shaly sands are usually not just sands with shales mixed in but sands that contain clays.",
+            "editorial_paraphrase": "Положение со стр. 136 (<!-- page 136 -->): As our understanding of geological processes matured, it became understood that shale and clay are different and that shaly sands are usually not just sands with shales mixed in but sands that contain clays.",
+            "numbers_and_units": [],
+            "conditions": []
+          }
+        ],
+        "epistemic_split": {
+          "observation": "Log Interpretation 123 zero.",
+          "inference": "If the bulk density or acoustic travel time of the formation, instead of the porosity, is plotted along the x-axis, the x-intercept predicts the matrix value (matrix density or matrix travel time) of the formation.",
+          "assumption": "Выводы справедливы в границах допущений источника (стр. 134–140)."
+        },
+        "field_provenance": {},
+        "typed_links": [
+          {
+            "source_node_id": "asquith_ch7_node_02",
+            "target_node_id": "asquith_ch7_node_03",
+            "link_type": "prerequisite",
+            "link_label_ru": "предпосылка",
+            "rationale": "Материал стр. 134–140 опирается на понятия предыдущего шага."
+          }
+        ],
+        "core_terms": [],
+        "threshold_concept": "Разбор раздела стр. 134",
+        "misconception_to_fix": "Не отрывайте расчётные оценки и эмпирические правила от условий их применимости.",
+        "data_transfer": "Применение принципов со стр. 134–140 на практических данных.",
+        "it_analogy_and_limits": "Учебный узел привязан к меткам <!-- page N --> исходного md-файла.",
+        "specialist_manual_steps": [],
+        "decision_points": [],
+        "inefficiency_lens": null,
+        "worked_example": {
+          "status": "present",
+          "not_applicable_reason": "",
+          "problem_number": "",
+          "figure_ref": "",
+          "pdf_page": 134,
+          "printed_page": "134",
+          "conditions": "The vertical distance from a point to the water-bearing line depends on the water saturation ($Sw$) of that point.",
+          "steps": [
+            "Log Interpretation 123 zero."
+          ],
+          "result": "If the bulk density or acoustic travel time of the formation, instead of the porosity, is plotted along the x-axis, the x-intercept predicts the matrix value (matrix density or mat"
+        },
+        "textbook_problems": [],
+        "modern_equivalents": [
+          {
+            "historical_item": "Chapter 7: Log Interpretation (стр. 126–136, рис. 140–146)",
+            "historical_context": "Источник (стр. 134–140)",
+            "modern_analog": "Цифровая интерпретация и моделирование",
+            "modern_context": "Современная инженерная практика",
+            "pdf_page": 134
+          }
+        ],
+        "not_applicable_fields": [],
+        "expert_review_flags": [],
+        "covered_unit_ids": [
+          "test_asquith_p134_u03_01",
+          "test_asquith_p134_u03_02",
+          "test_asquith_p135_u03_03",
+          "test_asquith_p135_u03_04",
+          "test_asquith_p136_u03_05",
+          "test_asquith_p136_u03_06"
+        ],
+        "claim_ids": [
+          "asquith_ch7_node_03_claim_01",
+          "asquith_ch7_node_03_claim_02",
+          "asquith_ch7_node_03_claim_03",
+          "asquith_ch7_node_03_claim_04",
+          "asquith_ch7_node_03_claim_05",
+          "asquith_ch7_node_03_claim_06"
+        ],
+        "computed_values": []
+      },
+      {
+        "node_id": "asquith_ch7_node_04",
+        "chapter_id": "asquith_ch7",
+        "order": 4,
+        "order_rationale": "Последовательный разбор страниц 141–144 (по меткам <!-- page N -->).",
+        "source_heading": "Chapter 7: Log Interpretation (стр. 126–136, рис. 140–146) (стр. 141–144)",
+        "step_title": "ASQUITH AND KRYGOWSKI",
+        "summary_2_3_sentences": "130 ASQUITH AND KRYGOWSKI Figure 7.3. Buckles plots (porosity vs. water saturation).",
+        "primary_difficulty": "conceptual_mechanism",
+        "secondary_difficulty": "terminology_bridge",
+        "primary_difficulty_code": "М",
+        "secondary_difficulty_code": "П",
+        "estimated_minutes": 8,
+        "mechanism": "130 ASQUITH AND KRYGOWSKI Figure 7.3.",
+        "practice": "Buckles plots (porosity vs. water saturation).",
+        "nuances": "Because production of water in a well can affect a prospect's economics, it is important to know the bulk volume water and whether the formation is at irreducible water saturation ($S{W\\text{irr}}$).",
+        "deeper_branch": "Сопоставьте с соседними разделами главы (Chapter 7: Log Interpretation (стр. 126–136, рис. 140–146)).",
+        "quotes_and_pages": [
+          {
+            "unit_id": "test_asquith_p141_u04_01",
+            "pdf_page": 141,
+            "printed_page": "141",
+            "verbatim_quote": "130 ASQUITH AND KRYGOWSKI Figure 7.3.",
+            "editorial_paraphrase": "Положение со стр. 141 (<!-- page 141 -->): 130 ASQUITH AND KRYGOWSKI Figure 7.3.",
+            "numbers_and_units": [],
+            "conditions": []
+          },
+          {
+            "unit_id": "test_asquith_p141_u04_02",
+            "pdf_page": 141,
+            "printed_page": "141",
+            "verbatim_quote": "Buckles plots (porosity vs. water saturation).",
+            "editorial_paraphrase": "Положение со стр. 141 (<!-- page 141 -->): Buckles plots (porosity vs. water saturation).",
+            "numbers_and_units": [],
+            "conditions": []
+          },
+          {
+            "unit_id": "test_asquith_p142_u04_03",
+            "pdf_page": 142,
+            "printed_page": "142",
+            "verbatim_quote": "KEYWORDS: DPHI, Rt, кривые постоянной солености, кроссплот, плотностная пористость, истинное сопротивление, логарифмическая шкала, интерпретация ГИС ---- Figure 7.4.",
+            "editorial_paraphrase": "Положение со стр. 142 (<!-- page 142 -->): KEYWORDS: DPHI, Rt, кривые постоянной солености, кроссплот, плотностная пористость, истинное сопротивление, логарифмическая шкала, интерпретация ГИС ---- Figure 7.4.",
+            "numbers_and_units": [],
+            "conditions": []
+          },
+          {
+            "unit_id": "test_asquith_p142_u04_04",
+            "pdf_page": 142,
+            "printed_page": "142",
+            "verbatim_quote": "Pickett plot (saturation crossplot or resistivity-porosity crossplot) illustrating water-bearing and hydrocarbon-bearing zones in a well.",
+            "editorial_paraphrase": "Положение со стр. 142 (<!-- page 142 -->): Pickett plot (saturation crossplot or resistivity-porosity crossplot) illustrating water-bearing and hydrocarbon-bearing zones in a well.",
+            "numbers_and_units": [],
+            "conditions": []
+          },
+          {
+            "unit_id": "test_asquith_p143_u04_05",
+            "pdf_page": 143,
+            "printed_page": "143",
+            "verbatim_quote": "132 ASQUITH AND KRYGOWSKI ---- ━━━ FORMAT 7: NOMOGRAM / ПАЛЕТКА ━━━ Палетка для определения пористости по удельной проводимости и удельному сопротивлению.",
+            "editorial_paraphrase": "Положение со стр. 143 (<!-- page 143 -->): 132 ASQUITH AND KRYGOWSKI ---- ━━━ FORMAT 7: NOMOGRAM / ПАЛЕТКА ━━━ Палетка для определения пористости по удельной проводимости и удельному сопротивлению.",
+            "numbers_and_units": [],
+            "conditions": []
+          },
+          {
+            "unit_id": "test_asquith_p143_u04_06",
+            "pdf_page": 143,
+            "printed_page": "143",
+            "verbatim_quote": "Ось абсцисс (горизонтальная): Пористость, φ — линейная шкала, диапазон от 0 до 1 (не указано, но по структуре палетки — доля, безразмерная).",
+            "editorial_paraphrase": "Положение со стр. 143 (<!-- page 143 -->): Ось абсцисс (горизонтальная): Пористость, φ — линейная шкала, диапазон от 0 до 1 (не указано, но по структуре палетки — доля, безразмерная).",
+            "numbers_and_units": [],
+            "conditions": []
+          }
+        ],
+        "epistemic_split": {
+          "observation": "130 ASQUITH AND KRYGOWSKI Figure 7.3.",
+          "inference": "Buckles plots (porosity vs. water saturation).",
+          "assumption": "Выводы справедливы в границах допущений источника (стр. 141–144)."
+        },
+        "field_provenance": {},
+        "typed_links": [
+          {
+            "source_node_id": "asquith_ch7_node_03",
+            "target_node_id": "asquith_ch7_node_04",
+            "link_type": "prerequisite",
+            "link_label_ru": "предпосылка",
+            "rationale": "Материал стр. 141–144 опирается на понятия предыдущего шага."
+          }
+        ],
+        "core_terms": [
+          {
+            "term": "Палетка",
+            "definition": "Ключевой термин, встречающийся в тексте главы на стр. 141.",
+            "first_introduced_pdf_page": 141,
+            "first_introduced_printed_page": "141",
+            "cis_symbol": "—",
+            "west_symbol": "—",
+            "west_term": "Ключевое понятие главы",
+            "unit": "б/р"
+          },
+          {
+            "term": "Кривых",
+            "definition": "Ключевой термин, встречающийся в тексте главы на стр. 141.",
+            "first_introduced_pdf_page": 141,
+            "first_introduced_printed_page": "141",
+            "cis_symbol": "—",
+            "west_symbol": "—",
+            "west_term": "Ключевое понятие главы",
+            "unit": "б/р"
+          }
+        ],
+        "threshold_concept": "Палетка",
+        "misconception_to_fix": "Не отрывайте расчётные оценки и эмпирические правила от условий их применимости.",
+        "data_transfer": "Применение принципов со стр. 141–144 на практических данных.",
+        "it_analogy_and_limits": "Учебный узел привязан к меткам <!-- page N --> исходного md-файла.",
+        "specialist_manual_steps": [],
+        "decision_points": [],
+        "inefficiency_lens": null,
+        "worked_example": {
+          "status": "present",
+          "not_applicable_reason": "",
+          "problem_number": "",
+          "figure_ref": "",
+          "pdf_page": 141,
+          "printed_page": "141",
+          "conditions": "These Buckles plots are taken from the Ordovician Red River B-zone, Beaver Creek Field, Golden Valley County, North Dakota (after Jaafar, 1980).",
+          "steps": [
+            "130 ASQUITH AND KRYGOWSKI Figure 7.3."
+          ],
+          "result": "Buckles plots (porosity vs. water saturation)."
+        },
+        "textbook_problems": [],
+        "modern_equivalents": [
+          {
+            "historical_item": "Chapter 7: Log Interpretation (стр. 126–136, рис. 140–146)",
+            "historical_context": "Источник (стр. 141–144)",
+            "modern_analog": "Цифровая интерпретация и моделирование",
+            "modern_context": "Современная инженерная практика",
+            "pdf_page": 141
+          }
+        ],
+        "not_applicable_fields": [],
+        "expert_review_flags": [],
+        "covered_unit_ids": [
+          "test_asquith_p141_u04_01",
+          "test_asquith_p141_u04_02",
+          "test_asquith_p142_u04_03",
+          "test_asquith_p142_u04_04",
+          "test_asquith_p143_u04_05",
+          "test_asquith_p143_u04_06"
+        ],
+        "claim_ids": [
+          "asquith_ch7_node_04_claim_01",
+          "asquith_ch7_node_04_claim_02",
+          "asquith_ch7_node_04_claim_03",
+          "asquith_ch7_node_04_claim_04",
+          "asquith_ch7_node_04_claim_05",
+          "asquith_ch7_node_04_claim_06"
+        ],
+        "computed_values": []
+      },
+      {
+        "node_id": "asquith_ch7_node_05",
+        "chapter_id": "asquith_ch7",
+        "order": 5,
+        "order_rationale": "Последовательный разбор страниц 145–146 (по меткам <!-- page N -->).",
+        "source_heading": "Chapter 7: Log Interpretation (стр. 126–136, рис. 140–146) (стр. 145–146)",
+        "step_title": "ASQUITH AND KRYGOWSKI",
+        "summary_2_3_sentences": "134 ASQUITH AND KRYGOWSKI Figure 7.7. Hingle plot (saturation crossplot or resistivity-porosity crossplot) illustrating water-bearing and hydrocarbon-bearing zones in a well.",
+        "primary_difficulty": "conceptual_mechanism",
+        "secondary_difficulty": "terminology_bridge",
+        "primary_difficulty_code": "М",
+        "secondary_difficulty_code": "П",
+        "estimated_minutes": 8,
+        "mechanism": "134 ASQUITH AND KRYGOWSKI Figure 7.7.",
+        "practice": "Hingle plot (saturation crossplot or resistivity-porosity crossplot) illustrating water-bearing and hydrocarbon-bearing zones in a well.",
+        "nuances": "Data are from the Morrow Sandstone, Cimarron County, Oklahoma (Table 7.4).",
+        "deeper_branch": "Сопоставьте с соседними разделами главы (Chapter 7: Log Interpretation (стр. 126–136, рис. 140–146)).",
+        "quotes_and_pages": [
+          {
+            "unit_id": "test_asquith_p145_u05_01",
+            "pdf_page": 145,
+            "printed_page": "145",
+            "verbatim_quote": "134 ASQUITH AND KRYGOWSKI Figure 7.7.",
+            "editorial_paraphrase": "Положение со стр. 145 (<!-- page 145 -->): 134 ASQUITH AND KRYGOWSKI Figure 7.7.",
+            "numbers_and_units": [],
+            "conditions": []
+          },
+          {
+            "unit_id": "test_asquith_p145_u05_02",
+            "pdf_page": 145,
+            "printed_page": "145",
+            "verbatim_quote": "Hingle plot (saturation crossplot or resistivity-porosity crossplot) illustrating water-bearing and hydrocarbon-bearing zones in a well.",
+            "editorial_paraphrase": "Положение со стр. 145 (<!-- page 145 -->): Hingle plot (saturation crossplot or resistivity-porosity crossplot) illustrating water-bearing and hydrocarbon-bearing zones in a well.",
+            "numbers_and_units": [],
+            "conditions": []
+          },
+          {
+            "unit_id": "test_asquith_p146_u05_03",
+            "pdf_page": 146,
+            "printed_page": "146",
+            "verbatim_quote": "Log Interpretation 135 ---- ━━━ FORMAT 7: NOMOGRAM / ПАЛЕТКА ━━━ Палетка для определения насыщенности воды в зоне перехода выше водоносного горизонта (Sw, water saturation above transition zone) в зависимости от пористости (φ, porosity) и проницаемости (k, permeability).",
+            "editorial_paraphrase": "Положение со стр. 146 (<!-- page 146 -->): Log Interpretation 135 ---- ━━━ FORMAT 7: NOMOGRAM / ПАЛЕТКА ━━━ Палетка для определения насыщенности воды в зоне перехода выше водоносного горизонта (Sw, water saturation above transition zone) в зависимости от пористости (φ, porosity) и проницаемости (k, permeability).",
+            "numbers_and_units": [],
+            "conditions": []
+          },
+          {
+            "unit_id": "test_asquith_p146_u05_04",
+            "pdf_page": 146,
+            "printed_page": "146",
+            "verbatim_quote": "Ось абсцисс (горизонтальная): φ, porosity (p.u.), линейная шкала, диапазон 0–40.",
+            "editorial_paraphrase": "Положение со стр. 146 (<!-- page 146 -->): Ось абсцисс (горизонтальная): φ, porosity (p.u.), линейная шкала, диапазон 0–40.",
+            "numbers_and_units": [],
+            "conditions": []
+          }
+        ],
+        "epistemic_split": {
+          "observation": "134 ASQUITH AND KRYGOWSKI Figure 7.7.",
+          "inference": "Hingle plot (saturation crossplot or resistivity-porosity crossplot) illustrating water-bearing and hydrocarbon-bearing zones in a well.",
+          "assumption": "Выводы справедливы в границах допущений источника (стр. 145–146)."
+        },
+        "field_provenance": {},
+        "typed_links": [
+          {
+            "source_node_id": "asquith_ch7_node_04",
+            "target_node_id": "asquith_ch7_node_05",
+            "link_type": "prerequisite",
+            "link_label_ru": "предпосылка",
+            "rationale": "Материал стр. 145–146 опирается на понятия предыдущего шага."
+          }
+        ],
+        "core_terms": [
+          {
+            "term": "Проницаемости",
+            "definition": "Ключевой термин, встречающийся в тексте главы на стр. 145.",
+            "first_introduced_pdf_page": 145,
+            "first_introduced_printed_page": "145",
+            "cis_symbol": "—",
+            "west_symbol": "—",
+            "west_term": "Ключевое понятие главы",
+            "unit": "б/р"
+          },
+          {
+            "term": "Палетка",
+            "definition": "Ключевой термин, встречающийся в тексте главы на стр. 145.",
+            "first_introduced_pdf_page": 145,
+            "first_introduced_printed_page": "145",
+            "cis_symbol": "—",
+            "west_symbol": "—",
+            "west_term": "Ключевое понятие главы",
+            "unit": "б/р"
+          }
+        ],
+        "threshold_concept": "Проницаемости",
+        "misconception_to_fix": "Не отрывайте расчётные оценки и эмпирические правила от условий их применимости.",
+        "data_transfer": "Применение принципов со стр. 145–146 на практических данных.",
+        "it_analogy_and_limits": "Учебный узел привязан к меткам <!-- page N --> исходного md-файла.",
+        "specialist_manual_steps": [],
+        "decision_points": [],
+        "inefficiency_lens": null,
+        "worked_example": {
+          "status": "present",
+          "not_applicable_reason": "",
+          "problem_number": "",
+          "figure_ref": "",
+          "pdf_page": 145,
+          "printed_page": "145",
+          "conditions": "The Hingle grid using a = 1.0 and m = 2.0 was chosen as the common parameters for sandstones.",
+          "steps": [
+            "134 ASQUITH AND KRYGOWSKI Figure 7.7."
+          ],
+          "result": "Hingle plot (saturation crossplot or resistivity-porosity crossplot) illustrating water-bearing and hydrocarbon-bearing zones in a well."
+        },
+        "textbook_problems": [],
+        "modern_equivalents": [
+          {
+            "historical_item": "Chapter 7: Log Interpretation (стр. 126–136, рис. 140–146)",
+            "historical_context": "Источник (стр. 145–146)",
+            "modern_analog": "Цифровая интерпретация и моделирование",
+            "modern_context": "Современная инженерная практика",
+            "pdf_page": 145
+          }
+        ],
+        "not_applicable_fields": [],
+        "expert_review_flags": [],
+        "covered_unit_ids": [
+          "test_asquith_p145_u05_01",
+          "test_asquith_p145_u05_02",
+          "test_asquith_p146_u05_03",
+          "test_asquith_p146_u05_04"
+        ],
+        "claim_ids": [
+          "asquith_ch7_node_05_claim_01",
+          "asquith_ch7_node_05_claim_02",
+          "asquith_ch7_node_05_claim_03",
+          "asquith_ch7_node_05_claim_04"
+        ],
+        "computed_values": []
+      }
+    ],
+    "claims": [
+      {
+        "claim_id": "asquith_ch7_node_01_claim_01",
+        "node_id": "asquith_ch7_node_01",
+        "unit_id": "test_asquith_p126_u01_01",
+        "pdf_page": 126,
+        "printed_page": "126",
+        "verbatim_quote": "Krygowski, 2004, Log Interpretation, in G.",
+        "claim_text": "Krygowski, 2004, Log Interpretation, in G.",
+        "epistemic_role": "observation",
+        "origin_tag": "author_number",
+        "conditions": [],
+        "numbers_and_units": [],
+        "computed_values": [],
+        "requires_expert_check": false,
+        "expert_check_reason": ""
+      },
+      {
+        "claim_id": "asquith_ch7_node_01_claim_02",
+        "node_id": "asquith_ch7_node_01",
+        "unit_id": "test_asquith_p126_u01_02",
+        "pdf_page": 126,
+        "printed_page": "126",
+        "verbatim_quote": "Krygowski, Basic Well Log Analysis: AAPG Methods in Exploration 16, p.",
+        "claim_text": "Krygowski, Basic Well Log Analysis: AAPG Methods in Exploration 16, p.",
+        "epistemic_role": "interpretation",
+        "origin_tag": "author_number",
+        "conditions": [],
+        "numbers_and_units": [],
+        "computed_values": [],
+        "requires_expert_check": false,
+        "expert_check_reason": ""
+      },
+      {
+        "claim_id": "asquith_ch7_node_01_claim_03",
+        "node_id": "asquith_ch7_node_01",
+        "unit_id": "test_asquith_p127_u01_03",
+        "pdf_page": 127,
+        "printed_page": "127",
+        "verbatim_quote": "116 ASQUITH AND KRYGOWSKI $m =$ cementation exponent (Table 1.1; Chapter 1) $n =$ saturation exponent The uninvaded zone's water saturation ($Sw$), determined by the Archie equation, is the most fundamental quantity used in log evaluation.",
+        "claim_text": "116 ASQUITH AND KRYGOWSKI $m =$ cementation exponent (Table 1.1; Chapter 1) $n =$ saturation exponent The uninvaded zone's water saturation ($Sw$), determined by the Archie equation, is the most fundamental quantity used in log evaluation.",
+        "epistemic_role": "observation",
+        "origin_tag": "author_number",
+        "conditions": [],
+        "numbers_and_units": [],
+        "computed_values": [],
+        "requires_expert_check": false,
+        "expert_check_reason": ""
+      },
+      {
+        "claim_id": "asquith_ch7_node_01_claim_04",
+        "node_id": "asquith_ch7_node_01",
+        "unit_id": "test_asquith_p127_u01_04",
+        "pdf_page": 127,
+        "printed_page": "127",
+        "verbatim_quote": "But merely knowing a zone's water saturation ($Sw$) does not provide enough information to completely evaluate a zone's potential productivity.",
+        "claim_text": "But merely knowing a zone's water saturation ($Sw$) does not provide enough information to completely evaluate a zone's potential productivity.",
+        "epistemic_role": "interpretation",
+        "origin_tag": "author_number",
+        "conditions": [],
+        "numbers_and_units": [],
+        "computed_values": [],
+        "requires_expert_check": false,
+        "expert_check_reason": ""
+      },
+      {
+        "claim_id": "asquith_ch7_node_01_claim_05",
+        "node_id": "asquith_ch7_node_01",
+        "unit_id": "test_asquith_p128_u01_05",
+        "pdf_page": 128,
+        "printed_page": "128",
+        "verbatim_quote": "Log Interpretation 117 $(S{wr})$, you must know the flushed zone's water saturation.",
+        "claim_text": "Log Interpretation 117 $(S{wr})$, you must know the flushed zone's water saturation.",
+        "epistemic_role": "observation",
+        "origin_tag": "author_number",
+        "conditions": [],
+        "numbers_and_units": [],
+        "computed_values": [],
+        "requires_expert_check": false,
+        "expert_check_reason": ""
+      },
+      {
+        "claim_id": "asquith_ch7_node_01_claim_06",
+        "node_id": "asquith_ch7_node_01",
+        "unit_id": "test_asquith_p128_u01_06",
+        "pdf_page": 128,
+        "printed_page": "128",
+        "verbatim_quote": "The following observations can be made: 1.",
+        "claim_text": "The following observations can be made: 1.",
+        "epistemic_role": "interpretation",
+        "origin_tag": "author_number",
+        "conditions": [],
+        "numbers_and_units": [],
+        "computed_values": [],
+        "requires_expert_check": false,
+        "expert_check_reason": ""
+      },
+      {
+        "claim_id": "asquith_ch7_node_02_claim_01",
+        "node_id": "asquith_ch7_node_02",
+        "unit_id": "test_asquith_p130_u02_01",
+        "pdf_page": 130,
+        "printed_page": "130",
+        "verbatim_quote": "Log Interpretation 119 some hydrocarbons, then the other zones contain even more hydrocarbons than anticipated.",
+        "claim_text": "Log Interpretation 119 some hydrocarbons, then the other zones contain even more hydrocarbons than anticipated.",
+        "epistemic_role": "observation",
+        "origin_tag": "author_number",
+        "conditions": [],
+        "numbers_and_units": [],
+        "computed_values": [],
+        "requires_expert_check": false,
+        "expert_check_reason": ""
+      },
+      {
+        "claim_id": "asquith_ch7_node_02_claim_02",
+        "node_id": "asquith_ch7_node_02",
+        "unit_id": "test_asquith_p130_u02_02",
+        "pdf_page": 130,
+        "printed_page": "130",
+        "verbatim_quote": "In practice, especially when calculated and displayed as a curve during a logging job, the following values are used for simplicity: $a = 1.0$, $m = 2.0$.",
+        "claim_text": "In practice, especially when calculated and displayed as a curve during a logging job, the following values are used for simplicity: $a = 1.0$, $m = 2.0$.",
+        "epistemic_role": "interpretation",
+        "origin_tag": "author_number",
+        "conditions": [],
+        "numbers_and_units": [],
+        "computed_values": [],
+        "requires_expert_check": false,
+        "expert_check_reason": ""
+      },
+      {
+        "claim_id": "asquith_ch7_node_02_claim_03",
+        "node_id": "asquith_ch7_node_02",
+        "unit_id": "test_asquith_p131_u02_03",
+        "pdf_page": 131,
+        "printed_page": "131",
+        "verbatim_quote": "120 ASQUITH AND KRYGOWSKI Wet resistivity ($Ro$) The wet-resistivity curve ($Ro$) is one of the oldest quick-look techniques.",
+        "claim_text": "120 ASQUITH AND KRYGOWSKI Wet resistivity ($Ro$) The wet-resistivity curve ($Ro$) is one of the oldest quick-look techniques.",
+        "epistemic_role": "observation",
+        "origin_tag": "author_number",
+        "conditions": [],
+        "numbers_and_units": [],
+        "computed_values": [],
+        "requires_expert_check": false,
+        "expert_check_reason": ""
+      },
+      {
+        "claim_id": "asquith_ch7_node_02_claim_04",
+        "node_id": "asquith_ch7_node_02",
+        "unit_id": "test_asquith_p131_u02_04",
+        "pdf_page": 131,
+        "printed_page": "131",
+        "verbatim_quote": "Unlike the other curves, which tend to be compared to the SP curve, it is plotted as an overlay on the resistivity curve.",
+        "claim_text": "Unlike the other curves, which tend to be compared to the SP curve, it is plotted as an overlay on the resistivity curve.",
+        "epistemic_role": "interpretation",
+        "origin_tag": "author_number",
+        "conditions": [],
+        "numbers_and_units": [],
+        "computed_values": [],
+        "requires_expert_check": false,
+        "expert_check_reason": ""
+      },
+      {
+        "claim_id": "asquith_ch7_node_02_claim_05",
+        "node_id": "asquith_ch7_node_02",
+        "unit_id": "test_asquith_p132_u02_05",
+        "pdf_page": 132,
+        "printed_page": "132",
+        "verbatim_quote": "Log Interpretation 121 SATURATION CROSSPLOTS Saturation crossplots, also called resistivity-porosity crossplots (or specifically, Pickett plots and Hingle plots) are similar to the porosity crossplots discussed in Chapter 4.",
+        "claim_text": "Log Interpretation 121 SATURATION CROSSPLOTS Saturation crossplots, also called resistivity-porosity crossplots (or specifically, Pickett plots and Hingle plots) are similar to the porosity crossplots discussed in Chapter 4.",
+        "epistemic_role": "observation",
+        "origin_tag": "author_number",
+        "conditions": [],
+        "numbers_and_units": [],
+        "computed_values": [],
+        "requires_expert_check": false,
+        "expert_check_reason": ""
+      },
+      {
+        "claim_id": "asquith_ch7_node_02_claim_06",
+        "node_id": "asquith_ch7_node_02",
+        "unit_id": "test_asquith_p132_u02_06",
+        "pdf_page": 132,
+        "printed_page": "132",
+        "verbatim_quote": "They are x-y plots of log data from which quantities of interest are derived; in this case, that quantity is water saturation ($Sw$).",
+        "claim_text": "They are x-y plots of log data from which quantities of interest are derived; in this case, that quantity is water saturation ($Sw$).",
+        "epistemic_role": "interpretation",
+        "origin_tag": "author_number",
+        "conditions": [],
+        "numbers_and_units": [],
+        "computed_values": [],
+        "requires_expert_check": false,
+        "expert_check_reason": ""
+      },
+      {
+        "claim_id": "asquith_ch7_node_03_claim_01",
+        "node_id": "asquith_ch7_node_03",
+        "unit_id": "test_asquith_p134_u03_01",
+        "pdf_page": 134,
+        "printed_page": "134",
+        "verbatim_quote": "Log Interpretation 123 zero.",
+        "claim_text": "Log Interpretation 123 zero.",
+        "epistemic_role": "observation",
+        "origin_tag": "author_number",
+        "conditions": [],
+        "numbers_and_units": [],
+        "computed_values": [],
+        "requires_expert_check": false,
+        "expert_check_reason": ""
+      },
+      {
+        "claim_id": "asquith_ch7_node_03_claim_02",
+        "node_id": "asquith_ch7_node_03",
+        "unit_id": "test_asquith_p134_u03_02",
+        "pdf_page": 134,
+        "printed_page": "134",
+        "verbatim_quote": "If the bulk density or acoustic travel time of the formation, instead of the porosity, is plotted along the x-axis, the x-intercept predicts the matrix value (matrix density or matrix travel time) of the formation.",
+        "claim_text": "If the bulk density or acoustic travel time of the formation, instead of the porosity, is plotted along the x-axis, the x-intercept predicts the matrix value (matrix density or matrix travel time) of the formation.",
+        "epistemic_role": "interpretation",
+        "origin_tag": "author_number",
+        "conditions": [],
+        "numbers_and_units": [],
+        "computed_values": [],
+        "requires_expert_check": false,
+        "expert_check_reason": ""
+      },
+      {
+        "claim_id": "asquith_ch7_node_03_claim_03",
+        "node_id": "asquith_ch7_node_03",
+        "unit_id": "test_asquith_p135_u03_03",
+        "pdf_page": 135,
+        "printed_page": "135",
+        "verbatim_quote": "124 ASQUITH AND KRYGOWSKI Table 7.3.",
+        "claim_text": "124 ASQUITH AND KRYGOWSKI Table 7.3.",
+        "epistemic_role": "observation",
+        "origin_tag": "author_number",
+        "conditions": [],
+        "numbers_and_units": [],
+        "computed_values": [],
+        "requires_expert_check": false,
+        "expert_check_reason": ""
+      },
+      {
+        "claim_id": "asquith_ch7_node_03_claim_04",
+        "node_id": "asquith_ch7_node_03",
+        "unit_id": "test_asquith_p135_u03_04",
+        "pdf_page": 135,
+        "printed_page": "135",
+        "verbatim_quote": "Cementation exponent ($m$) is directly predicted from the slope of the water-bearing line.",
+        "claim_text": "Cementation exponent ($m$) is directly predicted from the slope of the water-bearing line.",
+        "epistemic_role": "interpretation",
+        "origin_tag": "author_number",
+        "conditions": [],
+        "numbers_and_units": [],
+        "computed_values": [],
+        "requires_expert_check": false,
+        "expert_check_reason": ""
+      },
+      {
+        "claim_id": "asquith_ch7_node_03_claim_05",
+        "node_id": "asquith_ch7_node_03",
+        "unit_id": "test_asquith_p136_u03_05",
+        "pdf_page": 136,
+        "printed_page": "136",
+        "verbatim_quote": "The early literature tended to refer to the formations as containing shale, and a number of modifications were made to Archie’s equation using shale volume (among other parameters) to account for those effects.",
+        "claim_text": "The early literature tended to refer to the formations as containing shale, and a number of modifications were made to Archie’s equation using shale volume (among other parameters) to account for those effects.",
+        "epistemic_role": "observation",
+        "origin_tag": "author_number",
+        "conditions": [],
+        "numbers_and_units": [],
+        "computed_values": [],
+        "requires_expert_check": false,
+        "expert_check_reason": ""
+      },
+      {
+        "claim_id": "asquith_ch7_node_03_claim_06",
+        "node_id": "asquith_ch7_node_03",
+        "unit_id": "test_asquith_p136_u03_06",
+        "pdf_page": 136,
+        "printed_page": "136",
+        "verbatim_quote": "As our understanding of geological processes matured, it became understood that shale and clay are different and that shaly sands are usually not just sands with shales mixed in but sands that contain clays.",
+        "claim_text": "As our understanding of geological processes matured, it became understood that shale and clay are different and that shaly sands are usually not just sands with shales mixed in but sands that contain clays.",
+        "epistemic_role": "interpretation",
+        "origin_tag": "author_number",
+        "conditions": [],
+        "numbers_and_units": [],
+        "computed_values": [],
+        "requires_expert_check": false,
+        "expert_check_reason": ""
+      },
+      {
+        "claim_id": "asquith_ch7_node_04_claim_01",
+        "node_id": "asquith_ch7_node_04",
+        "unit_id": "test_asquith_p141_u04_01",
+        "pdf_page": 141,
+        "printed_page": "141",
+        "verbatim_quote": "130 ASQUITH AND KRYGOWSKI Figure 7.3.",
+        "claim_text": "130 ASQUITH AND KRYGOWSKI Figure 7.3.",
+        "epistemic_role": "observation",
+        "origin_tag": "author_number",
+        "conditions": [],
+        "numbers_and_units": [],
+        "computed_values": [],
+        "requires_expert_check": false,
+        "expert_check_reason": ""
+      },
+      {
+        "claim_id": "asquith_ch7_node_04_claim_02",
+        "node_id": "asquith_ch7_node_04",
+        "unit_id": "test_asquith_p141_u04_02",
+        "pdf_page": 141,
+        "printed_page": "141",
+        "verbatim_quote": "Buckles plots (porosity vs. water saturation).",
+        "claim_text": "Buckles plots (porosity vs. water saturation).",
+        "epistemic_role": "interpretation",
+        "origin_tag": "author_number",
+        "conditions": [],
+        "numbers_and_units": [],
+        "computed_values": [],
+        "requires_expert_check": false,
+        "expert_check_reason": ""
+      },
+      {
+        "claim_id": "asquith_ch7_node_04_claim_03",
+        "node_id": "asquith_ch7_node_04",
+        "unit_id": "test_asquith_p142_u04_03",
+        "pdf_page": 142,
+        "printed_page": "142",
+        "verbatim_quote": "KEYWORDS: DPHI, Rt, кривые постоянной солености, кроссплот, плотностная пористость, истинное сопротивление, логарифмическая шкала, интерпретация ГИС ---- Figure 7.4.",
+        "claim_text": "KEYWORDS: DPHI, Rt, кривые постоянной солености, кроссплот, плотностная пористость, истинное сопротивление, логарифмическая шкала, интерпретация ГИС ---- Figure 7.4.",
+        "epistemic_role": "observation",
+        "origin_tag": "author_number",
+        "conditions": [],
+        "numbers_and_units": [],
+        "computed_values": [],
+        "requires_expert_check": false,
+        "expert_check_reason": ""
+      },
+      {
+        "claim_id": "asquith_ch7_node_04_claim_04",
+        "node_id": "asquith_ch7_node_04",
+        "unit_id": "test_asquith_p142_u04_04",
+        "pdf_page": 142,
+        "printed_page": "142",
+        "verbatim_quote": "Pickett plot (saturation crossplot or resistivity-porosity crossplot) illustrating water-bearing and hydrocarbon-bearing zones in a well.",
+        "claim_text": "Pickett plot (saturation crossplot or resistivity-porosity crossplot) illustrating water-bearing and hydrocarbon-bearing zones in a well.",
+        "epistemic_role": "interpretation",
+        "origin_tag": "author_number",
+        "conditions": [],
+        "numbers_and_units": [],
+        "computed_values": [],
+        "requires_expert_check": false,
+        "expert_check_reason": ""
+      },
+      {
+        "claim_id": "asquith_ch7_node_04_claim_05",
+        "node_id": "asquith_ch7_node_04",
+        "unit_id": "test_asquith_p143_u04_05",
+        "pdf_page": 143,
+        "printed_page": "143",
+        "verbatim_quote": "132 ASQUITH AND KRYGOWSKI ---- ━━━ FORMAT 7: NOMOGRAM / ПАЛЕТКА ━━━ Палетка для определения пористости по удельной проводимости и удельному сопротивлению.",
+        "claim_text": "132 ASQUITH AND KRYGOWSKI ---- ━━━ FORMAT 7: NOMOGRAM / ПАЛЕТКА ━━━ Палетка для определения пористости по удельной проводимости и удельному сопротивлению.",
+        "epistemic_role": "observation",
+        "origin_tag": "author_number",
+        "conditions": [],
+        "numbers_and_units": [],
+        "computed_values": [],
+        "requires_expert_check": false,
+        "expert_check_reason": ""
+      },
+      {
+        "claim_id": "asquith_ch7_node_04_claim_06",
+        "node_id": "asquith_ch7_node_04",
+        "unit_id": "test_asquith_p143_u04_06",
+        "pdf_page": 143,
+        "printed_page": "143",
+        "verbatim_quote": "Ось абсцисс (горизонтальная): Пористость, φ — линейная шкала, диапазон от 0 до 1 (не указано, но по структуре палетки — доля, безразмерная).",
+        "claim_text": "Ось абсцисс (горизонтальная): Пористость, φ — линейная шкала, диапазон от 0 до 1 (не указано, но по структуре палетки — доля, безразмерная).",
+        "epistemic_role": "interpretation",
+        "origin_tag": "author_number",
+        "conditions": [],
+        "numbers_and_units": [],
+        "computed_values": [],
+        "requires_expert_check": false,
+        "expert_check_reason": ""
+      },
+      {
+        "claim_id": "asquith_ch7_node_05_claim_01",
+        "node_id": "asquith_ch7_node_05",
+        "unit_id": "test_asquith_p145_u05_01",
+        "pdf_page": 145,
+        "printed_page": "145",
+        "verbatim_quote": "134 ASQUITH AND KRYGOWSKI Figure 7.7.",
+        "claim_text": "134 ASQUITH AND KRYGOWSKI Figure 7.7.",
+        "epistemic_role": "observation",
+        "origin_tag": "author_number",
+        "conditions": [],
+        "numbers_and_units": [],
+        "computed_values": [],
+        "requires_expert_check": false,
+        "expert_check_reason": ""
+      },
+      {
+        "claim_id": "asquith_ch7_node_05_claim_02",
+        "node_id": "asquith_ch7_node_05",
+        "unit_id": "test_asquith_p145_u05_02",
+        "pdf_page": 145,
+        "printed_page": "145",
+        "verbatim_quote": "Hingle plot (saturation crossplot or resistivity-porosity crossplot) illustrating water-bearing and hydrocarbon-bearing zones in a well.",
+        "claim_text": "Hingle plot (saturation crossplot or resistivity-porosity crossplot) illustrating water-bearing and hydrocarbon-bearing zones in a well.",
+        "epistemic_role": "interpretation",
+        "origin_tag": "author_number",
+        "conditions": [],
+        "numbers_and_units": [],
+        "computed_values": [],
+        "requires_expert_check": false,
+        "expert_check_reason": ""
+      },
+      {
+        "claim_id": "asquith_ch7_node_05_claim_03",
+        "node_id": "asquith_ch7_node_05",
+        "unit_id": "test_asquith_p146_u05_03",
+        "pdf_page": 146,
+        "printed_page": "146",
+        "verbatim_quote": "Log Interpretation 135 ---- ━━━ FORMAT 7: NOMOGRAM / ПАЛЕТКА ━━━ Палетка для определения насыщенности воды в зоне перехода выше водоносного горизонта (Sw, water saturation above transition zone) в зависимости от пористости (φ, porosity) и проницаемости (k, permeability).",
+        "claim_text": "Log Interpretation 135 ---- ━━━ FORMAT 7: NOMOGRAM / ПАЛЕТКА ━━━ Палетка для определения насыщенности воды в зоне перехода выше водоносного горизонта (Sw, water saturation above transition zone) в зависимости от пористости (φ, porosity) и проницаемости (k, permeability).",
+        "epistemic_role": "observation",
+        "origin_tag": "author_number",
+        "conditions": [],
+        "numbers_and_units": [],
+        "computed_values": [],
+        "requires_expert_check": false,
+        "expert_check_reason": ""
+      },
+      {
+        "claim_id": "asquith_ch7_node_05_claim_04",
+        "node_id": "asquith_ch7_node_05",
+        "unit_id": "test_asquith_p146_u05_04",
+        "pdf_page": 146,
+        "printed_page": "146",
+        "verbatim_quote": "Ось абсцисс (горизонтальная): φ, porosity (p.u.), линейная шкала, диапазон 0–40.",
+        "claim_text": "Ось абсцисс (горизонтальная): φ, porosity (p.u.), линейная шкала, диапазон 0–40.",
+        "epistemic_role": "interpretation",
+        "origin_tag": "author_number",
+        "conditions": [],
+        "numbers_and_units": [],
+        "computed_values": [],
+        "requires_expert_check": false,
+        "expert_check_reason": ""
+      }
+    ],
+    "coverage_map": {
+      "test_asquith_p126_u01_01": "asquith_ch7_node_01",
+      "test_asquith_p126_u01_02": "asquith_ch7_node_01",
+      "test_asquith_p127_u01_03": "asquith_ch7_node_01",
+      "test_asquith_p127_u01_04": "asquith_ch7_node_01",
+      "test_asquith_p128_u01_05": "asquith_ch7_node_01",
+      "test_asquith_p128_u01_06": "asquith_ch7_node_01",
+      "test_asquith_p130_u02_01": "asquith_ch7_node_02",
+      "test_asquith_p130_u02_02": "asquith_ch7_node_02",
+      "test_asquith_p131_u02_03": "asquith_ch7_node_02",
+      "test_asquith_p131_u02_04": "asquith_ch7_node_02",
+      "test_asquith_p132_u02_05": "asquith_ch7_node_02",
+      "test_asquith_p132_u02_06": "asquith_ch7_node_02",
+      "test_asquith_p134_u03_01": "asquith_ch7_node_03",
+      "test_asquith_p134_u03_02": "asquith_ch7_node_03",
+      "test_asquith_p135_u03_03": "asquith_ch7_node_03",
+      "test_asquith_p135_u03_04": "asquith_ch7_node_03",
+      "test_asquith_p136_u03_05": "asquith_ch7_node_03",
+      "test_asquith_p136_u03_06": "asquith_ch7_node_03",
+      "test_asquith_p141_u04_01": "asquith_ch7_node_04",
+      "test_asquith_p141_u04_02": "asquith_ch7_node_04",
+      "test_asquith_p142_u04_03": "asquith_ch7_node_04",
+      "test_asquith_p142_u04_04": "asquith_ch7_node_04",
+      "test_asquith_p143_u04_05": "asquith_ch7_node_04",
+      "test_asquith_p143_u04_06": "asquith_ch7_node_04",
+      "test_asquith_p145_u05_01": "asquith_ch7_node_05",
+      "test_asquith_p145_u05_02": "asquith_ch7_node_05",
+      "test_asquith_p146_u05_03": "asquith_ch7_node_05",
+      "test_asquith_p146_u05_04": "asquith_ch7_node_05"
+    },
+    "excluded_units": {},
+    "ocr_corrections": [],
+    "pedagogical_checks": {}
+  },
+  "registry_report": {
+    "passed": true,
+    "registry_id": "reg_test_asquith",
+    "layer_id": "layer_test_asquith",
+    "book_file": "test_asquith.md",
+    "pdf_ranges": [
+      {
+        "start_pdf_page": 126,
+        "end_pdf_page": 146,
+        "start_printed_page": "126",
+        "end_printed_page": "146",
+        "section_label": "Chapter 7: Log Interpretation (стр. 126–136, рис. 140–146)"
+      }
+    ],
+    "total_registry_units": 28,
+    "covered_units_count": 28,
+    "excluded_units_count": 0,
+    "manual_verification_required_count": 0,
+    "discrepancies": [],
+    "manual_verification_items": [],
+    "summary_by_type": {}
+  },
+  "routing_report": {
+    "course_id": "test_asquith",
+    "chapter_id": "asquith_ch7",
+    "book_file": "test_asquith.md",
+    "domain_package_id": "oil_gas_ru",
+    "total_steps": 5,
+    "covered_steps": 5,
+    "needs_model_steps": 0,
+    "class_a_b_count": 0,
+    "hook_shorts_share_pct": 0.0,
+    "video_heavy_template_coverage": [],
+    "entries": [
+      {
+        "node_id": "asquith_ch7_node_01",
+        "step_id": "test_asquith_step_01",
+        "step_title": "Разбор раздела стр. 126",
+        "video_capacity_score": 3,
+        "video_capacity_features": [],
+        "selected_format": "structured_diagram_table",
+        "routing_rationale": "Маршрутизация с доменом oil_gas_ru (Двойник 1).",
+        "visual_class": "C",
+        "template_id": "atlas_diagram_c",
+        "model_state": "parametric_geology",
+        "coverage_status": "covered",
+        "artifact_path": "",
+        "missing_requirement": "",
+        "illustration_id": "test_asquith_step_01_illust",
+        "source_ref": "test_asquith.md, стр. 126–129"
+      },
+      {
+        "node_id": "asquith_ch7_node_02",
+        "step_id": "test_asquith_step_02",
+        "step_title": "Разбор раздела стр. 130",
+        "video_capacity_score": 3,
+        "video_capacity_features": [],
+        "selected_format": "structured_diagram_table",
+        "routing_rationale": "Маршрутизация с доменом oil_gas_ru (Двойник 1).",
+        "visual_class": "C",
+        "template_id": "atlas_diagram_c",
+        "model_state": "parametric_geology",
+        "coverage_status": "covered",
+        "artifact_path": "",
+        "missing_requirement": "",
+        "illustration_id": "test_asquith_step_02_illust",
+        "source_ref": "test_asquith.md, стр. 130–133"
+      },
+      {
+        "node_id": "asquith_ch7_node_03",
+        "step_id": "test_asquith_step_03",
+        "step_title": "Разбор раздела стр. 134",
+        "video_capacity_score": 3,
+        "video_capacity_features": [],
+        "selected_format": "structured_diagram_table",
+        "routing_rationale": "Маршрутизация с доменом oil_gas_ru (Двойник 1).",
+        "visual_class": "C",
+        "template_id": "atlas_diagram_c",
+        "model_state": "parametric_geology",
+        "coverage_status": "covered",
+        "artifact_path": "",
+        "missing_requirement": "",
+        "illustration_id": "test_asquith_step_03_illust",
+        "source_ref": "test_asquith.md, стр. 134–140"
+      },
+      {
+        "node_id": "asquith_ch7_node_04",
+        "step_id": "test_asquith_step_04",
+        "step_title": "ASQUITH AND KRYGOWSKI",
+        "video_capacity_score": 3,
+        "video_capacity_features": [],
+        "selected_format": "structured_diagram_table",
+        "routing_rationale": "Маршрутизация с доменом oil_gas_ru (Двойник 1).",
+        "visual_class": "C",
+        "template_id": "atlas_diagram_c",
+        "model_state": "parametric_geology",
+        "coverage_status": "covered",
+        "artifact_path": "",
+        "missing_requirement": "",
+        "illustration_id": "test_asquith_step_04_illust",
+        "source_ref": "test_asquith.md, стр. 141–144"
+      },
+      {
+        "node_id": "asquith_ch7_node_05",
+        "step_id": "test_asquith_step_05",
+        "step_title": "ASQUITH AND KRYGOWSKI",
+        "video_capacity_score": 3,
+        "video_capacity_features": [],
+        "selected_format": "structured_diagram_table",
+        "routing_rationale": "Маршрутизация с доменом oil_gas_ru (Двойник 1).",
+        "visual_class": "C",
+        "template_id": "atlas_diagram_c",
+        "model_state": "parametric_geology",
+        "coverage_status": "covered",
+        "artifact_path": "",
+        "missing_requirement": "",
+        "illustration_id": "test_asquith_step_05_illust",
+        "source_ref": "test_asquith.md, стр. 145–146"
+      }
+    ],
+    "step_illustration_source_links": []
+  },
+  "scene_specs": [],
+  "steps": [
+    {
+      "step_id": "asquith_ch7_step_01",
+      "node_id": "asquith_ch7_node_01",
+      "order": 1,
+      "estimated_minutes": 8,
+      "difficulty_codes": [
+        "М",
+        "П"
+      ],
+      "source_heading": "Chapter 7: Log Interpretation (стр. 126–136, рис. 140–146) (стр. 126–129)",
+      "step_title": "Разбор раздела стр. 126",
+      "summary_2_3_sentences": "Krygowski, 2004, Log Interpretation, in G. Krygowski, Basic Well Log Analysis: AAPG Methods in Exploration 16, p.",
+      "explanation_paragraphs": [
+        {
+          "role": "Физико-геологический механизм",
+          "text": "Krygowski, 2004, Log Interpretation, in G.",
+          "unit_id": "test_asquith_p126_u01_01",
+          "pdf_page": 126,
+          "printed_page": "126",
+          "source_citation": "Источник: PDF стр. 126 (печ. стр. 126), ед. test_asquith_p126_u01_01",
+          "verbatim_quote": "Krygowski, 2004, Log Interpretation, in G."
+        },
+        {
+          "role": "Практика работы специалиста",
+          "text": "Krygowski, Basic Well Log Analysis: AAPG Methods in Exploration 16, p.",
+          "unit_id": "test_asquith_p126_u01_02",
+          "pdf_page": 126,
+          "printed_page": "126",
+          "source_citation": "Источник: PDF стр. 126",
+          "verbatim_quote": "Krygowski, Basic Well Log Analysis: AAPG Methods in Exploration 16, p."
+        },
+        {
+          "role": "Пороговая идея и перенос в данные",
+          "text": "Разбор раздела стр. 126 Перенос в данные: Применение принципов со стр. 126–129 на практических данных.",
+          "unit_id": "test_asquith_p126_u01_01",
+          "pdf_page": 126,
+          "printed_page": "126",
+          "source_citation": "Источник: PDF стр. 126 (печ. стр. 126)",
+          "verbatim_quote": "Krygowski, 2004, Log Interpretation, in G."
+        }
+      ],
+      "first_use_terms": [],
+      "formulas_decoded": [],
+      "applicability_conditions": [
+        "Log Interpretation GENERAL As shown in the previous chapters, determining the porosity and true resistivity of a zone is the first step in converting the raw log data into estimated quantities of oil, gas, and water in a formation."
+      ],
+      "worked_example": {
+        "status": "present",
+        "not_applicable_reason": "",
+        "problem_number": "",
+        "figure_ref": "",
+        "pdf_page": 126,
+        "printed_page": "126",
+        "conditions": "These estimated quantities are used to evaluate a zone and to determine whether a well completion attempt is warranted.",
+        "steps": [
+          "Krygowski, 2004, Log Interpretation, in G."
+        ],
+        "result": "Krygowski, Basic Well Log Analysis: AAPG Methods in Exploration 16, p."
+      },
+      "textbook_problems": [],
+      "tables": [
+        {
+          "title": "Сводная таблица параметров и терминологического моста (Шаг 1)",
+          "headers": [
+            "Параметр / Термин",
+            "Обозначение СНГ",
+            "Международный аналог (West)",
+            "Единицы",
+            "Определение и страница источника"
+          ],
+          "rows": [
+            [
+              "Разбор раздела стр. 126",
+              "СНГ",
+              "SPE / API",
+              "СИ / практ.",
+              "Krygowski, 2004, Log Interpretation, in G. Krygowski, Basic Well Log Analysis: AAPG Methods in Exploration 16, p. [стр. 126]"
+            ]
+          ]
+        }
+      ],
+      "modern_context": [
+        {
+          "historical_item": "Chapter 7: Log Interpretation (стр. 126–136, рис. 140–146)",
+          "historical_context": "Источник (стр. 126–129)",
+          "modern_analog": "Цифровая интерпретация и моделирование",
+          "modern_context": "Современная инженерная практика",
+          "pdf_page": 126
+        }
+      ],
+      "it_analogy_and_limits": "Учебный узел привязан к меткам <!-- page N --> исходного md-файла.",
+      "typical_error": "Не отрывайте расчётные оценки и эмпирические правила от условий их применимости.",
+      "epistemic_split": {
+        "observation": "Krygowski, 2004, Log Interpretation, in G.",
+        "inference": "Krygowski, Basic Well Log Analysis: AAPG Methods in Exploration 16, p.",
+        "assumption": "Выводы справедливы в границах допущений источника (стр. 126–129)."
+      },
+      "specialist_manual_steps": [],
+      "decision_points": [],
+      "inefficiency_lens": null,
+      "deeper_branch": "Сопоставьте с соседними разделами главы (Chapter 7: Log Interpretation (стр. 126–136, рис. 140–146)).",
+      "illustration": {
+        "illustration_id": "test_asquith_step_01_illust",
+        "node_id": "asquith_ch7_node_01",
+        "step_id": "test_asquith_step_01",
+        "title": "Разбор раздела стр. 126",
+        "visual_class": "B",
+        "format_kind": "redraw_svg",
+        "source_ref": "test_asquith.md, стр. 126–129 (<!-- page 126 -->)",
+        "redraw_caption": "Схема по меткам <!-- page 126..129 -->",
+        "pdf_page": 126,
+        "printed_page": "126",
+        "claim_id": "asquith_ch7_node_01_claim_01",
+        "asset_rel_path": "illustrations/test_asquith_step_01_illust.svg",
+        "svg_markup": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 760 290\" role=\"img\" aria-label=\"Схема шага: Разбор раздела стр. 126\"><rect width=\"760\" height=\"290\" rx=\"14\" fill=\"#11141B\" /><path d=\"M0 245 Q190 225 380 245 T760 240 L760 290 L0 290 Z\" fill=\"#1A202B\" /><path d=\"M0 264 Q220 250 440 266 T760 258 L760 290 L0 290 Z\" fill=\"#232A38\" /><text x=\"44\" y=\"42\" fill=\"#D97736\" font-size=\"13\" font-weight=\"600\" font-family=\"system-ui, sans-serif\">Схема по источнику · стр. 126–129</text><text x=\"44\" y=\"68\" fill=\"#F4F1EA\" font-size=\"18\" font-weight=\"700\" font-family=\"system-ui, sans-serif\">Разбор раздела стр. 126</text><rect x=\"44\" y=\"84\" width=\"672\" height=\"42\" rx=\"8\" fill=\"#181C24\" stroke=\"#2A3140\" /><circle cx=\"66\" cy=\"105\" r=\"5\" fill=\"#38BDF8\" /><text x=\"84\" y=\"110\" fill=\"#F4F1EA\" font-size=\"14\" font-family=\"system-ui, sans-serif\">Krygowski, 2004, Log Interpretation, in G.</text><rect x=\"44\" y=\"138\" width=\"672\" height=\"42\" rx=\"8\" fill=\"#181C24\" stroke=\"#2A3140\" /><circle cx=\"66\" cy=\"159\" r=\"5\" fill=\"#10B981\" /><text x=\"84\" y=\"164\" fill=\"#F4F1EA\" font-size=\"14\" font-family=\"system-ui, sans-serif\">Krygowski, Basic Well Log Analysis: AAPG Methods in Exploration 16, p.</text><rect x=\"44\" y=\"192\" width=\"672\" height=\"42\" rx=\"8\" fill=\"#181C24\" stroke=\"#2A3140\" /><circle cx=\"66\" cy=\"213\" r=\"5\" fill=\"#E5954A\" /><text x=\"84\" y=\"218\" fill=\"#F4F1EA\" font-size=\"14\" font-family=\"system-ui, sans-serif\">Log Interpretation GENERAL As shown in the previous chapters, determinin</text></svg>",
+        "legend_items": [],
+        "scale_and_units": "",
+        "provenance_note": ""
+      },
+      "video_url": null,
+      "video_vtt_url": null,
+      "video_aspect": null,
+      "media_passport_id": null,
+      "ocr_corrections_applied": [],
+      "practicum": null,
+      "data_decision_card": null
+    },
+    {
+      "step_id": "asquith_ch7_step_02",
+      "node_id": "asquith_ch7_node_02",
+      "order": 2,
+      "estimated_minutes": 8,
+      "difficulty_codes": [
+        "М",
+        "П"
+      ],
+      "source_heading": "Chapter 7: Log Interpretation (стр. 126–136, рис. 140–146) (стр. 130–133)",
+      "step_title": "Разбор раздела стр. 130",
+      "summary_2_3_sentences": "Log Interpretation 119 some hydrocarbons, then the other zones contain even more hydrocarbons than anticipated. In practice, especially when calculated and displayed as a curve during a logging job, the following values are used for simplicity: $a = 1.0$, $m = 2.0$.",
+      "explanation_paragraphs": [
+        {
+          "role": "Физико-геологический механизм",
+          "text": "Log Interpretation 119 some hydrocarbons, then the other zones contain even more hydrocarbons than anticipated.",
+          "unit_id": "test_asquith_p130_u02_01",
+          "pdf_page": 130,
+          "printed_page": "130",
+          "source_citation": "Источник: PDF стр. 130 (печ. стр. 130), ед. test_asquith_p130_u02_01",
+          "verbatim_quote": "Log Interpretation 119 some hydrocarbons, then the other zones contain even more hydrocarbons than anticipated."
+        },
+        {
+          "role": "Практика работы специалиста",
+          "text": "In practice, especially when calculated and displayed as a curve during a logging job, the following values are used for simplicity: $a = 1.0$, $m = 2.0$.",
+          "unit_id": "test_asquith_p130_u02_02",
+          "pdf_page": 130,
+          "printed_page": "130",
+          "source_citation": "Источник: PDF стр. 130",
+          "verbatim_quote": "In practice, especially when calculated and displayed as a curve during a logging job, the following values are used for simplicity: $a = 1.0$, $m = 2.0$."
+        },
+        {
+          "role": "Пороговая идея и перенос в данные",
+          "text": "Delta t Перенос в данные: Применение принципов со стр. 130–133 на практических данных.",
+          "unit_id": "test_asquith_p130_u02_01",
+          "pdf_page": 130,
+          "printed_page": "130",
+          "source_citation": "Источник: PDF стр. 130 (печ. стр. 130)",
+          "verbatim_quote": "Log Interpretation 119 some hydrocarbons, then the other zones contain even more hydrocarbons than anticipated."
+        }
+      ],
+      "first_use_terms": [
+        {
+          "term": "Delta t",
+          "definition": "\\Delta t_{ma})$$ instead of the sonic porosity where:",
+          "first_introduced_pdf_page": 130,
+          "first_introduced_printed_page": "130",
+          "cis_symbol": "—",
+          "west_symbol": "—",
+          "west_term": "Термин источника",
+          "unit": "б/р"
+        }
+      ],
+      "formulas_decoded": [],
+      "applicability_conditions": [
+        "The deep induction log or deep laterolog is used as $Rt$, usually without any environmental corrections."
+      ],
+      "worked_example": {
+        "status": "present",
+        "not_applicable_reason": "",
+        "problem_number": "",
+        "figure_ref": "",
+        "pdf_page": 130,
+        "printed_page": "130",
+        "conditions": "Porosity is usually derived from the sonic or density log using the proper matrix and fluid parameters for the formations to be encountered.",
+        "steps": [
+          "Log Interpretation 119 some hydrocarbons, then the other zones contain even more hydrocarbons than anticipated."
+        ],
+        "result": "In practice, especially when calculated and displayed as a curve during a logging job, the following values are used for simplicity: $a = 1.0$, $m = 2.0$."
+      },
+      "textbook_problems": [],
+      "tables": [
+        {
+          "title": "Сводная таблица параметров и терминологического моста (Шаг 2)",
+          "headers": [
+            "Параметр / Термин",
+            "Обозначение СНГ",
+            "Международный аналог (West)",
+            "Единицы",
+            "Определение и страница источника"
+          ],
+          "rows": [
+            [
+              "Delta t",
+              "—",
+              "— (Термин источника)",
+              "б/р",
+              "\\Delta t_{ma})$$ instead of the sonic porosity where: [стр. 130]"
+            ]
+          ]
+        }
+      ],
+      "modern_context": [
+        {
+          "historical_item": "Chapter 7: Log Interpretation (стр. 126–136, рис. 140–146)",
+          "historical_context": "Источник (стр. 130–133)",
+          "modern_analog": "Цифровая интерпретация и моделирование",
+          "modern_context": "Современная инженерная практика",
+          "pdf_page": 130
+        }
+      ],
+      "it_analogy_and_limits": "Учебный узел привязан к меткам <!-- page N --> исходного md-файла.",
+      "typical_error": "Не отрывайте расчётные оценки и эмпирические правила от условий их применимости.",
+      "epistemic_split": {
+        "observation": "Log Interpretation 119 some hydrocarbons, then the other zones contain even more hydrocarbons than anticipated.",
+        "inference": "In practice, especially when calculated and displayed as a curve during a logging job, the following values are used for simplicity: $a = 1.0$, $m = 2.0$.",
+        "assumption": "Выводы справедливы в границах допущений источника (стр. 130–133)."
+      },
+      "specialist_manual_steps": [],
+      "decision_points": [],
+      "inefficiency_lens": null,
+      "deeper_branch": "Сопоставьте с соседними разделами главы (Chapter 7: Log Interpretation (стр. 126–136, рис. 140–146)).",
+      "illustration": {
+        "illustration_id": "test_asquith_step_02_illust",
+        "node_id": "asquith_ch7_node_02",
+        "step_id": "test_asquith_step_02",
+        "title": "Разбор раздела стр. 130",
+        "visual_class": "C",
+        "format_kind": "redraw_svg",
+        "source_ref": "test_asquith.md, стр. 130–133 (<!-- page 130 -->)",
+        "redraw_caption": "Схема по меткам <!-- page 130..133 -->",
+        "pdf_page": 130,
+        "printed_page": "130",
+        "claim_id": "asquith_ch7_node_02_claim_01",
+        "asset_rel_path": "illustrations/test_asquith_step_02_illust.svg",
+        "svg_markup": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 760 290\" role=\"img\" aria-label=\"Схема шага: Разбор раздела стр. 130\"><rect width=\"760\" height=\"290\" rx=\"14\" fill=\"#11141B\" /><path d=\"M0 245 Q190 225 380 245 T760 240 L760 290 L0 290 Z\" fill=\"#1A202B\" /><path d=\"M0 264 Q220 250 440 266 T760 258 L760 290 L0 290 Z\" fill=\"#232A38\" /><text x=\"44\" y=\"42\" fill=\"#D97736\" font-size=\"13\" font-weight=\"600\" font-family=\"system-ui, sans-serif\">Схема по источнику · стр. 130–133</text><text x=\"44\" y=\"68\" fill=\"#F4F1EA\" font-size=\"18\" font-weight=\"700\" font-family=\"system-ui, sans-serif\">Разбор раздела стр. 130</text><rect x=\"44\" y=\"84\" width=\"672\" height=\"42\" rx=\"8\" fill=\"#181C24\" stroke=\"#2A3140\" /><circle cx=\"66\" cy=\"105\" r=\"5\" fill=\"#10B981\" /><text x=\"84\" y=\"110\" fill=\"#F4F1EA\" font-size=\"14\" font-family=\"system-ui, sans-serif\">Log Interpretation 119 some hydrocarbons, then the other zones contain e</text><rect x=\"44\" y=\"138\" width=\"672\" height=\"42\" rx=\"8\" fill=\"#181C24\" stroke=\"#2A3140\" /><circle cx=\"66\" cy=\"159\" r=\"5\" fill=\"#E5954A\" /><text x=\"84\" y=\"164\" fill=\"#F4F1EA\" font-size=\"14\" font-family=\"system-ui, sans-serif\">In practice, especially when calculated and displayed as a curve during </text><rect x=\"44\" y=\"192\" width=\"672\" height=\"42\" rx=\"8\" fill=\"#181C24\" stroke=\"#2A3140\" /><circle cx=\"66\" cy=\"213\" r=\"5\" fill=\"#D97736\" /><text x=\"84\" y=\"218\" fill=\"#F4F1EA\" font-size=\"14\" font-family=\"system-ui, sans-serif\">The deep induction log or deep laterolog is used as $Rt$, usually withou</text></svg>",
+        "legend_items": [],
+        "scale_and_units": "",
+        "provenance_note": ""
+      },
+      "video_url": null,
+      "video_vtt_url": null,
+      "video_aspect": null,
+      "media_passport_id": null,
+      "ocr_corrections_applied": [],
+      "practicum": null,
+      "data_decision_card": null
+    },
+    {
+      "step_id": "asquith_ch7_step_03",
+      "node_id": "asquith_ch7_node_03",
+      "order": 3,
+      "estimated_minutes": 8,
+      "difficulty_codes": [
+        "М",
+        "П"
+      ],
+      "source_heading": "Chapter 7: Log Interpretation (стр. 126–136, рис. 140–146) (стр. 134–140)",
+      "step_title": "Разбор раздела стр. 134",
+      "summary_2_3_sentences": "Log Interpretation 123 zero. If the bulk density or acoustic travel time of the formation, instead of the porosity, is plotted along the x-axis, the x-intercept predicts the matrix value (matrix density or matrix travel time) of the formation.",
+      "explanation_paragraphs": [
+        {
+          "role": "Физико-геологический механизм",
+          "text": "Log Interpretation 123 zero.",
+          "unit_id": "test_asquith_p134_u03_01",
+          "pdf_page": 134,
+          "printed_page": "134",
+          "source_citation": "Источник: PDF стр. 134 (печ. стр. 134), ед. test_asquith_p134_u03_01",
+          "verbatim_quote": "Log Interpretation 123 zero."
+        },
+        {
+          "role": "Практика работы специалиста",
+          "text": "If the bulk density or acoustic travel time of the formation, instead of the porosity, is plotted along the x-axis, the x-intercept predicts the matrix value (matrix density or matrix travel time) of the formation.",
+          "unit_id": "test_asquith_p134_u03_02",
+          "pdf_page": 134,
+          "printed_page": "134",
+          "source_citation": "Источник: PDF стр. 134",
+          "verbatim_quote": "If the bulk density or acoustic travel time of the formation, instead of the porosity, is plotted along the x-axis, the x-intercept predicts the matrix value (matrix density or matrix travel time) of the formation."
+        },
+        {
+          "role": "Пороговая идея и перенос в данные",
+          "text": "Разбор раздела стр. 134 Перенос в данные: Применение принципов со стр. 134–140 на практических данных.",
+          "unit_id": "test_asquith_p134_u03_01",
+          "pdf_page": 134,
+          "printed_page": "134",
+          "source_citation": "Источник: PDF стр. 134 (печ. стр. 134)",
+          "verbatim_quote": "Log Interpretation 123 zero."
+        }
+      ],
+      "first_use_terms": [],
+      "formulas_decoded": [],
+      "applicability_conditions": [
+        "The line extends to the northeast quadrant (i.e., upper right) from its x-intercept. - Hydrocarbon-bearing points lie below the line of 100% water saturation, moved downward from the water-bearing line by their increased resistivity."
+      ],
+      "worked_example": {
+        "status": "present",
+        "not_applicable_reason": "",
+        "problem_number": "",
+        "figure_ref": "",
+        "pdf_page": 134,
+        "printed_page": "134",
+        "conditions": "The vertical distance from a point to the water-bearing line depends on the water saturation ($Sw$) of that point.",
+        "steps": [
+          "Log Interpretation 123 zero."
+        ],
+        "result": "If the bulk density or acoustic travel time of the formation, instead of the porosity, is plotted along the x-axis, the x-intercept predicts the matrix value (matrix density or mat"
+      },
+      "textbook_problems": [],
+      "tables": [
+        {
+          "title": "Сводная таблица параметров и терминологического моста (Шаг 3)",
+          "headers": [
+            "Параметр / Термин",
+            "Обозначение СНГ",
+            "Международный аналог (West)",
+            "Единицы",
+            "Определение и страница источника"
+          ],
+          "rows": [
+            [
+              "Разбор раздела стр. 134",
+              "СНГ",
+              "SPE / API",
+              "СИ / практ.",
+              "Log Interpretation 123 zero. If the bulk density or acoustic travel time of the formation, instead of the porosity, is plotted along the x-axis, the x-intercept predicts the matrix value (matrix density or matrix travel time) of the formation. [стр. 134]"
+            ]
+          ]
+        }
+      ],
+      "modern_context": [
+        {
+          "historical_item": "Chapter 7: Log Interpretation (стр. 126–136, рис. 140–146)",
+          "historical_context": "Источник (стр. 134–140)",
+          "modern_analog": "Цифровая интерпретация и моделирование",
+          "modern_context": "Современная инженерная практика",
+          "pdf_page": 134
+        }
+      ],
+      "it_analogy_and_limits": "Учебный узел привязан к меткам <!-- page N --> исходного md-файла.",
+      "typical_error": "Не отрывайте расчётные оценки и эмпирические правила от условий их применимости.",
+      "epistemic_split": {
+        "observation": "Log Interpretation 123 zero.",
+        "inference": "If the bulk density or acoustic travel time of the formation, instead of the porosity, is plotted along the x-axis, the x-intercept predicts the matrix value (matrix density or matrix travel time) of the formation.",
+        "assumption": "Выводы справедливы в границах допущений источника (стр. 134–140)."
+      },
+      "specialist_manual_steps": [],
+      "decision_points": [],
+      "inefficiency_lens": null,
+      "deeper_branch": "Сопоставьте с соседними разделами главы (Chapter 7: Log Interpretation (стр. 126–136, рис. 140–146)).",
+      "illustration": {
+        "illustration_id": "test_asquith_step_03_illust",
+        "node_id": "asquith_ch7_node_03",
+        "step_id": "test_asquith_step_03",
+        "title": "Разбор раздела стр. 134",
+        "visual_class": "C",
+        "format_kind": "redraw_svg",
+        "source_ref": "test_asquith.md, стр. 134–140 (<!-- page 134 -->)",
+        "redraw_caption": "Схема по меткам <!-- page 134..140 -->",
+        "pdf_page": 134,
+        "printed_page": "134",
+        "claim_id": "asquith_ch7_node_03_claim_01",
+        "asset_rel_path": "illustrations/test_asquith_step_03_illust.svg",
+        "svg_markup": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 760 290\" role=\"img\" aria-label=\"Схема шага: Разбор раздела стр. 134\"><rect width=\"760\" height=\"290\" rx=\"14\" fill=\"#11141B\" /><path d=\"M0 245 Q190 225 380 245 T760 240 L760 290 L0 290 Z\" fill=\"#1A202B\" /><path d=\"M0 264 Q220 250 440 266 T760 258 L760 290 L0 290 Z\" fill=\"#232A38\" /><text x=\"44\" y=\"42\" fill=\"#D97736\" font-size=\"13\" font-weight=\"600\" font-family=\"system-ui, sans-serif\">Схема по источнику · стр. 134–140</text><text x=\"44\" y=\"68\" fill=\"#F4F1EA\" font-size=\"18\" font-weight=\"700\" font-family=\"system-ui, sans-serif\">Разбор раздела стр. 134</text><rect x=\"44\" y=\"84\" width=\"672\" height=\"42\" rx=\"8\" fill=\"#181C24\" stroke=\"#2A3140\" /><circle cx=\"66\" cy=\"105\" r=\"5\" fill=\"#E5954A\" /><text x=\"84\" y=\"110\" fill=\"#F4F1EA\" font-size=\"14\" font-family=\"system-ui, sans-serif\">Log Interpretation 123 zero.</text><rect x=\"44\" y=\"138\" width=\"672\" height=\"42\" rx=\"8\" fill=\"#181C24\" stroke=\"#2A3140\" /><circle cx=\"66\" cy=\"159\" r=\"5\" fill=\"#D97736\" /><text x=\"84\" y=\"164\" fill=\"#F4F1EA\" font-size=\"14\" font-family=\"system-ui, sans-serif\">If the bulk density or acoustic travel time of the formation, instead of</text><rect x=\"44\" y=\"192\" width=\"672\" height=\"42\" rx=\"8\" fill=\"#181C24\" stroke=\"#2A3140\" /><circle cx=\"66\" cy=\"213\" r=\"5\" fill=\"#38BDF8\" /><text x=\"84\" y=\"218\" fill=\"#F4F1EA\" font-size=\"14\" font-family=\"system-ui, sans-serif\">The line extends to the northeast quadrant (i.e., upper right) from its </text></svg>",
+        "legend_items": [],
+        "scale_and_units": "",
+        "provenance_note": ""
+      },
+      "video_url": null,
+      "video_vtt_url": null,
+      "video_aspect": null,
+      "media_passport_id": null,
+      "ocr_corrections_applied": [],
+      "practicum": null,
+      "data_decision_card": null
+    },
+    {
+      "step_id": "asquith_ch7_step_04",
+      "node_id": "asquith_ch7_node_04",
+      "order": 4,
+      "estimated_minutes": 8,
+      "difficulty_codes": [
+        "М",
+        "П"
+      ],
+      "source_heading": "Chapter 7: Log Interpretation (стр. 126–136, рис. 140–146) (стр. 141–144)",
+      "step_title": "ASQUITH AND KRYGOWSKI",
+      "summary_2_3_sentences": "130 ASQUITH AND KRYGOWSKI Figure 7.3. Buckles plots (porosity vs. water saturation).",
+      "explanation_paragraphs": [
+        {
+          "role": "Физико-геологический механизм",
+          "text": "130 ASQUITH AND KRYGOWSKI Figure 7.3.",
+          "unit_id": "test_asquith_p141_u04_01",
+          "pdf_page": 141,
+          "printed_page": "141",
+          "source_citation": "Источник: PDF стр. 141 (печ. стр. 141), ед. test_asquith_p141_u04_01",
+          "verbatim_quote": "130 ASQUITH AND KRYGOWSKI Figure 7.3."
+        },
+        {
+          "role": "Практика работы специалиста",
+          "text": "Buckles plots (porosity vs. water saturation).",
+          "unit_id": "test_asquith_p141_u04_02",
+          "pdf_page": 141,
+          "printed_page": "141",
+          "source_citation": "Источник: PDF стр. 141",
+          "verbatim_quote": "Buckles plots (porosity vs. water saturation)."
+        },
+        {
+          "role": "Пороговая идея и перенос в данные",
+          "text": "Палетка Перенос в данные: Применение принципов со стр. 141–144 на практических данных.",
+          "unit_id": "test_asquith_p141_u04_01",
+          "pdf_page": 141,
+          "printed_page": "141",
+          "source_citation": "Источник: PDF стр. 141 (печ. стр. 141)",
+          "verbatim_quote": "130 ASQUITH AND KRYGOWSKI Figure 7.3."
+        }
+      ],
+      "first_use_terms": [
+        {
+          "term": "Палетка",
+          "definition": "Ключевой термин, встречающийся в тексте главы на стр. 141.",
+          "first_introduced_pdf_page": 141,
+          "first_introduced_printed_page": "141",
+          "cis_symbol": "—",
+          "west_symbol": "—",
+          "west_term": "Ключевое понятие главы",
+          "unit": "б/р"
+        },
+        {
+          "term": "Кривых",
+          "definition": "Ключевой термин, встречающийся в тексте главы на стр. 141.",
+          "first_introduced_pdf_page": 141,
+          "first_introduced_printed_page": "141",
+          "cis_symbol": "—",
+          "west_symbol": "—",
+          "west_term": "Ключевое понятие главы",
+          "unit": "б/р"
+        }
+      ],
+      "formulas_decoded": [],
+      "applicability_conditions": [
+        "Because production of water in a well can affect a prospect's economics, it is important to know the bulk volume water and whether the formation is at irreducible water saturation ($S{W\\text{irr}}$)."
+      ],
+      "worked_example": {
+        "status": "present",
+        "not_applicable_reason": "",
+        "problem_number": "",
+        "figure_ref": "",
+        "pdf_page": 141,
+        "printed_page": "141",
+        "conditions": "These Buckles plots are taken from the Ordovician Red River B-zone, Beaver Creek Field, Golden Valley County, North Dakota (after Jaafar, 1980).",
+        "steps": [
+          "130 ASQUITH AND KRYGOWSKI Figure 7.3."
+        ],
+        "result": "Buckles plots (porosity vs. water saturation)."
+      },
+      "textbook_problems": [],
+      "tables": [
+        {
+          "title": "Сводная таблица параметров и терминологического моста (Шаг 4)",
+          "headers": [
+            "Параметр / Термин",
+            "Обозначение СНГ",
+            "Международный аналог (West)",
+            "Единицы",
+            "Определение и страница источника"
+          ],
+          "rows": [
+            [
+              "Палетка",
+              "—",
+              "— (Ключевое понятие главы)",
+              "б/р",
+              "Ключевой термин, встречающийся в тексте главы на стр. 141. [стр. 141]"
+            ],
+            [
+              "Кривых",
+              "—",
+              "— (Ключевое понятие главы)",
+              "б/р",
+              "Ключевой термин, встречающийся в тексте главы на стр. 141. [стр. 141]"
+            ]
+          ]
+        }
+      ],
+      "modern_context": [
+        {
+          "historical_item": "Chapter 7: Log Interpretation (стр. 126–136, рис. 140–146)",
+          "historical_context": "Источник (стр. 141–144)",
+          "modern_analog": "Цифровая интерпретация и моделирование",
+          "modern_context": "Современная инженерная практика",
+          "pdf_page": 141
+        }
+      ],
+      "it_analogy_and_limits": "Учебный узел привязан к меткам <!-- page N --> исходного md-файла.",
+      "typical_error": "Не отрывайте расчётные оценки и эмпирические правила от условий их применимости.",
+      "epistemic_split": {
+        "observation": "130 ASQUITH AND KRYGOWSKI Figure 7.3.",
+        "inference": "Buckles plots (porosity vs. water saturation).",
+        "assumption": "Выводы справедливы в границах допущений источника (стр. 141–144)."
+      },
+      "specialist_manual_steps": [],
+      "decision_points": [],
+      "inefficiency_lens": null,
+      "deeper_branch": "Сопоставьте с соседними разделами главы (Chapter 7: Log Interpretation (стр. 126–136, рис. 140–146)).",
+      "illustration": {
+        "illustration_id": "test_asquith_step_04_illust",
+        "node_id": "asquith_ch7_node_04",
+        "step_id": "test_asquith_step_04",
+        "title": "ASQUITH AND KRYGOWSKI",
+        "visual_class": "C",
+        "format_kind": "redraw_svg",
+        "source_ref": "test_asquith.md, стр. 141–144 (<!-- page 141 -->)",
+        "redraw_caption": "Схема по меткам <!-- page 141..144 -->",
+        "pdf_page": 141,
+        "printed_page": "141",
+        "claim_id": "asquith_ch7_node_04_claim_01",
+        "asset_rel_path": "illustrations/test_asquith_step_04_illust.svg",
+        "svg_markup": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 760 290\" role=\"img\" aria-label=\"Схема шага: ASQUITH AND KRYGOWSKI\"><rect width=\"760\" height=\"290\" rx=\"14\" fill=\"#11141B\" /><path d=\"M0 245 Q190 225 380 245 T760 240 L760 290 L0 290 Z\" fill=\"#1A202B\" /><path d=\"M0 264 Q220 250 440 266 T760 258 L760 290 L0 290 Z\" fill=\"#232A38\" /><text x=\"44\" y=\"42\" fill=\"#D97736\" font-size=\"13\" font-weight=\"600\" font-family=\"system-ui, sans-serif\">Схема по источнику · стр. 141–144</text><text x=\"44\" y=\"68\" fill=\"#F4F1EA\" font-size=\"18\" font-weight=\"700\" font-family=\"system-ui, sans-serif\">ASQUITH AND KRYGOWSKI</text><rect x=\"44\" y=\"84\" width=\"672\" height=\"42\" rx=\"8\" fill=\"#181C24\" stroke=\"#2A3140\" /><circle cx=\"66\" cy=\"105\" r=\"5\" fill=\"#D97736\" /><text x=\"84\" y=\"110\" fill=\"#F4F1EA\" font-size=\"14\" font-family=\"system-ui, sans-serif\">130 ASQUITH AND KRYGOWSKI Figure 7.3.</text><rect x=\"44\" y=\"138\" width=\"672\" height=\"42\" rx=\"8\" fill=\"#181C24\" stroke=\"#2A3140\" /><circle cx=\"66\" cy=\"159\" r=\"5\" fill=\"#38BDF8\" /><text x=\"84\" y=\"164\" fill=\"#F4F1EA\" font-size=\"14\" font-family=\"system-ui, sans-serif\">Buckles plots (porosity vs. water saturation).</text><rect x=\"44\" y=\"192\" width=\"672\" height=\"42\" rx=\"8\" fill=\"#181C24\" stroke=\"#2A3140\" /><circle cx=\"66\" cy=\"213\" r=\"5\" fill=\"#10B981\" /><text x=\"84\" y=\"218\" fill=\"#F4F1EA\" font-size=\"14\" font-family=\"system-ui, sans-serif\">Because production of water in a well can affect a prospect's economics,</text></svg>",
+        "legend_items": [],
+        "scale_and_units": "",
+        "provenance_note": ""
+      },
+      "video_url": null,
+      "video_vtt_url": null,
+      "video_aspect": null,
+      "media_passport_id": null,
+      "ocr_corrections_applied": [],
+      "practicum": null,
+      "data_decision_card": null
+    },
+    {
+      "step_id": "asquith_ch7_step_05",
+      "node_id": "asquith_ch7_node_05",
+      "order": 5,
+      "estimated_minutes": 8,
+      "difficulty_codes": [
+        "М",
+        "П"
+      ],
+      "source_heading": "Chapter 7: Log Interpretation (стр. 126–136, рис. 140–146) (стр. 145–146)",
+      "step_title": "ASQUITH AND KRYGOWSKI",
+      "summary_2_3_sentences": "134 ASQUITH AND KRYGOWSKI Figure 7.7. Hingle plot (saturation crossplot or resistivity-porosity crossplot) illustrating water-bearing and hydrocarbon-bearing zones in a well.",
+      "explanation_paragraphs": [
+        {
+          "role": "Физико-геологический механизм",
+          "text": "134 ASQUITH AND KRYGOWSKI Figure 7.7.",
+          "unit_id": "test_asquith_p145_u05_01",
+          "pdf_page": 145,
+          "printed_page": "145",
+          "source_citation": "Источник: PDF стр. 145 (печ. стр. 145), ед. test_asquith_p145_u05_01",
+          "verbatim_quote": "134 ASQUITH AND KRYGOWSKI Figure 7.7."
+        },
+        {
+          "role": "Практика работы специалиста",
+          "text": "Hingle plot (saturation crossplot or resistivity-porosity crossplot) illustrating water-bearing and hydrocarbon-bearing zones in a well.",
+          "unit_id": "test_asquith_p145_u05_02",
+          "pdf_page": 145,
+          "printed_page": "145",
+          "source_citation": "Источник: PDF стр. 145",
+          "verbatim_quote": "Hingle plot (saturation crossplot or resistivity-porosity crossplot) illustrating water-bearing and hydrocarbon-bearing zones in a well."
+        },
+        {
+          "role": "Пороговая идея и перенос в данные",
+          "text": "Проницаемости Перенос в данные: Применение принципов со стр. 145–146 на практических данных.",
+          "unit_id": "test_asquith_p145_u05_01",
+          "pdf_page": 145,
+          "printed_page": "145",
+          "source_citation": "Источник: PDF стр. 145 (печ. стр. 145)",
+          "verbatim_quote": "134 ASQUITH AND KRYGOWSKI Figure 7.7."
+        }
+      ],
+      "first_use_terms": [
+        {
+          "term": "Проницаемости",
+          "definition": "Ключевой термин, встречающийся в тексте главы на стр. 145.",
+          "first_introduced_pdf_page": 145,
+          "first_introduced_printed_page": "145",
+          "cis_symbol": "—",
+          "west_symbol": "—",
+          "west_term": "Ключевое понятие главы",
+          "unit": "б/р"
+        },
+        {
+          "term": "Палетка",
+          "definition": "Ключевой термин, встречающийся в тексте главы на стр. 145.",
+          "first_introduced_pdf_page": 145,
+          "first_introduced_printed_page": "145",
+          "cis_symbol": "—",
+          "west_symbol": "—",
+          "west_term": "Ключевое понятие главы",
+          "unit": "б/р"
+        }
+      ],
+      "formulas_decoded": [],
+      "applicability_conditions": [
+        "Data are from the Morrow Sandstone, Cimarron County, Oklahoma (Table 7.4)."
+      ],
+      "worked_example": {
+        "status": "present",
+        "not_applicable_reason": "",
+        "problem_number": "",
+        "figure_ref": "",
+        "pdf_page": 145,
+        "printed_page": "145",
+        "conditions": "The Hingle grid using a = 1.0 and m = 2.0 was chosen as the common parameters for sandstones.",
+        "steps": [
+          "134 ASQUITH AND KRYGOWSKI Figure 7.7."
+        ],
+        "result": "Hingle plot (saturation crossplot or resistivity-porosity crossplot) illustrating water-bearing and hydrocarbon-bearing zones in a well."
+      },
+      "textbook_problems": [],
+      "tables": [
+        {
+          "title": "Сводная таблица параметров и терминологического моста (Шаг 5)",
+          "headers": [
+            "Параметр / Термин",
+            "Обозначение СНГ",
+            "Международный аналог (West)",
+            "Единицы",
+            "Определение и страница источника"
+          ],
+          "rows": [
+            [
+              "Проницаемости",
+              "—",
+              "— (Ключевое понятие главы)",
+              "б/р",
+              "Ключевой термин, встречающийся в тексте главы на стр. 145. [стр. 145]"
+            ],
+            [
+              "Палетка",
+              "—",
+              "— (Ключевое понятие главы)",
+              "б/р",
+              "Ключевой термин, встречающийся в тексте главы на стр. 145. [стр. 145]"
+            ]
+          ]
+        }
+      ],
+      "modern_context": [
+        {
+          "historical_item": "Chapter 7: Log Interpretation (стр. 126–136, рис. 140–146)",
+          "historical_context": "Источник (стр. 145–146)",
+          "modern_analog": "Цифровая интерпретация и моделирование",
+          "modern_context": "Современная инженерная практика",
+          "pdf_page": 145
+        }
+      ],
+      "it_analogy_and_limits": "Учебный узел привязан к меткам <!-- page N --> исходного md-файла.",
+      "typical_error": "Не отрывайте расчётные оценки и эмпирические правила от условий их применимости.",
+      "epistemic_split": {
+        "observation": "134 ASQUITH AND KRYGOWSKI Figure 7.7.",
+        "inference": "Hingle plot (saturation crossplot or resistivity-porosity crossplot) illustrating water-bearing and hydrocarbon-bearing zones in a well.",
+        "assumption": "Выводы справедливы в границах допущений источника (стр. 145–146)."
+      },
+      "specialist_manual_steps": [],
+      "decision_points": [],
+      "inefficiency_lens": null,
+      "deeper_branch": "Сопоставьте с соседними разделами главы (Chapter 7: Log Interpretation (стр. 126–136, рис. 140–146)).",
+      "illustration": {
+        "illustration_id": "test_asquith_step_05_illust",
+        "node_id": "asquith_ch7_node_05",
+        "step_id": "test_asquith_step_05",
+        "title": "ASQUITH AND KRYGOWSKI",
+        "visual_class": "C",
+        "format_kind": "redraw_svg",
+        "source_ref": "test_asquith.md, стр. 145–146 (<!-- page 145 -->)",
+        "redraw_caption": "Схема по меткам <!-- page 145..146 -->",
+        "pdf_page": 145,
+        "printed_page": "145",
+        "claim_id": "asquith_ch7_node_05_claim_01",
+        "asset_rel_path": "illustrations/test_asquith_step_05_illust.svg",
+        "svg_markup": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 760 290\" role=\"img\" aria-label=\"Схема шага: ASQUITH AND KRYGOWSKI\"><rect width=\"760\" height=\"290\" rx=\"14\" fill=\"#11141B\" /><path d=\"M0 245 Q190 225 380 245 T760 240 L760 290 L0 290 Z\" fill=\"#1A202B\" /><path d=\"M0 264 Q220 250 440 266 T760 258 L760 290 L0 290 Z\" fill=\"#232A38\" /><text x=\"44\" y=\"42\" fill=\"#D97736\" font-size=\"13\" font-weight=\"600\" font-family=\"system-ui, sans-serif\">Схема по источнику · стр. 145–146</text><text x=\"44\" y=\"68\" fill=\"#F4F1EA\" font-size=\"18\" font-weight=\"700\" font-family=\"system-ui, sans-serif\">ASQUITH AND KRYGOWSKI</text><rect x=\"44\" y=\"84\" width=\"672\" height=\"42\" rx=\"8\" fill=\"#181C24\" stroke=\"#2A3140\" /><circle cx=\"66\" cy=\"105\" r=\"5\" fill=\"#38BDF8\" /><text x=\"84\" y=\"110\" fill=\"#F4F1EA\" font-size=\"14\" font-family=\"system-ui, sans-serif\">134 ASQUITH AND KRYGOWSKI Figure 7.7.</text><rect x=\"44\" y=\"138\" width=\"672\" height=\"42\" rx=\"8\" fill=\"#181C24\" stroke=\"#2A3140\" /><circle cx=\"66\" cy=\"159\" r=\"5\" fill=\"#10B981\" /><text x=\"84\" y=\"164\" fill=\"#F4F1EA\" font-size=\"14\" font-family=\"system-ui, sans-serif\">Hingle plot (saturation crossplot or resistivity-porosity crossplot) ill</text><rect x=\"44\" y=\"192\" width=\"672\" height=\"42\" rx=\"8\" fill=\"#181C24\" stroke=\"#2A3140\" /><circle cx=\"66\" cy=\"213\" r=\"5\" fill=\"#E5954A\" /><text x=\"84\" y=\"218\" fill=\"#F4F1EA\" font-size=\"14\" font-family=\"system-ui, sans-serif\">Data are from the Morrow Sandstone, Cimarron County, Oklahoma (Table 7.4</text></svg>",
+        "legend_items": [],
+        "scale_and_units": "",
+        "provenance_note": ""
+      },
+      "video_url": null,
+      "video_vtt_url": null,
+      "video_aspect": null,
+      "media_passport_id": null,
+      "ocr_corrections_applied": [],
+      "practicum": null,
+      "data_decision_card": null
+    }
+  ],
+  "tasks": [
+    {
+      "task_id": "test_asquith_task_01",
+      "course_id": "test_asquith",
+      "node_id": "asquith_ch7_node_01",
+      "step_id": "test_asquith_step_01",
+      "claim_id": "asquith_ch7_node_01_claim_01",
+      "pdf_page": 126,
+      "printed_page": "126",
+      "task_type": "single_choice",
+      "difficulty_level": "базовый",
+      "prompt": "Какое утверждение точно соответствует тексту главы на стр. 126?",
+      "case_observation": "",
+      "case_rule": "",
+      "case_conclusion": "",
+      "options": [
+        "Верно по источнику (стр. 126): Krygowski, 2004, Log Interpretation, in G.",
+        "Противоречит тексту: Krygowski, Basic Well Log Analysis: AAPG Methods in Exploration 16, p.",
+        "Не подтверждается на стр. 126: 116 ASQUITH AND KRYGOWSKI $m =$ cementation exponent (Table 1.1; Chapter 1) $n =$ saturation exponent The uninvaded zone"
+      ],
+      "ordering_items": [],
+      "matching_pairs": [],
+      "blank_acceptable_answers": [],
+      "calculation_unit": "",
+      "calculation_tolerance": 0.05,
+      "correct_answer": 0,
+      "answer_key_display": "Верно по источнику (стр. 126): Krygowski, 2004, Log Interpretation, in G.",
+      "explanation": "Подтверждено цитатой со стр. 126: «Krygowski, 2004, Log Interpretation, in G.».",
+      "error_analysis": {},
+      "hint_steps": [],
+      "source_ref": "test_asquith.md, стр. 126",
+      "verbatim_quote": "Krygowski, 2004, Log Interpretation, in G."
+    },
+    {
+      "task_id": "test_asquith_task_02",
+      "course_id": "test_asquith",
+      "node_id": "asquith_ch7_node_01",
+      "step_id": "test_asquith_step_01",
+      "claim_id": "asquith_ch7_node_01_claim_02",
+      "pdf_page": 126,
+      "printed_page": "126",
+      "task_type": "single_choice",
+      "difficulty_level": "базовый",
+      "prompt": "Какое утверждение точно соответствует тексту главы на стр. 126?",
+      "case_observation": "",
+      "case_rule": "",
+      "case_conclusion": "",
+      "options": [
+        "Верно по источнику (стр. 126): Krygowski, Basic Well Log Analysis: AAPG Methods in Exploration 16, p.",
+        "Противоречит тексту: Krygowski, 2004, Log Interpretation, in G.",
+        "Не подтверждается на стр. 126: 116 ASQUITH AND KRYGOWSKI $m =$ cementation exponent (Table 1.1; Chapter 1) $n =$ saturation exponent The uninvaded zone"
+      ],
+      "ordering_items": [],
+      "matching_pairs": [],
+      "blank_acceptable_answers": [],
+      "calculation_unit": "",
+      "calculation_tolerance": 0.05,
+      "correct_answer": 0,
+      "answer_key_display": "Верно по источнику (стр. 126): Krygowski, Basic Well Log Analysis: AAPG Methods in Exploration 16, p.",
+      "explanation": "Подтверждено цитатой со стр. 126: «Krygowski, Basic Well Log Analysis: AAPG Methods in Exploration 16, p.».",
+      "error_analysis": {},
+      "hint_steps": [],
+      "source_ref": "test_asquith.md, стр. 126",
+      "verbatim_quote": "Krygowski, Basic Well Log Analysis: AAPG Methods in Exploration 16, p."
+    },
+    {
+      "task_id": "test_asquith_task_03",
+      "course_id": "test_asquith",
+      "node_id": "asquith_ch7_node_01",
+      "step_id": "test_asquith_step_01",
+      "claim_id": "asquith_ch7_node_01_claim_03",
+      "pdf_page": 127,
+      "printed_page": "127",
+      "task_type": "single_choice",
+      "difficulty_level": "базовый",
+      "prompt": "Какое утверждение точно соответствует тексту главы на стр. 127?",
+      "case_observation": "",
+      "case_rule": "",
+      "case_conclusion": "",
+      "options": [
+        "Верно по источнику (стр. 127): 116 ASQUITH AND KRYGOWSKI $m =$ cementation exponent (Table 1.1; Chapter 1) $n =$ saturation exponent The uninvaded zone's water satura",
+        "Противоречит тексту: Krygowski, 2004, Log Interpretation, in G.",
+        "Не подтверждается на стр. 127: Krygowski, Basic Well Log Analysis: AAPG Methods in Exploration 16, p."
+      ],
+      "ordering_items": [],
+      "matching_pairs": [],
+      "blank_acceptable_answers": [],
+      "calculation_unit": "",
+      "calculation_tolerance": 0.05,
+      "correct_answer": 0,
+      "answer_key_display": "Верно по источнику (стр. 127): 116 ASQUITH AND KRYGOWSKI $m =$ cementation exponent (Table 1.1; Chapter 1) $n =$ saturation exponent The uninvaded zone's water satura",
+      "explanation": "Подтверждено цитатой со стр. 127: «116 ASQUITH AND KRYGOWSKI $m =$ cementation exponent (Table 1.1; Chapter 1) $n =$ saturation exponent The uninvaded zone's water saturation ($Sw$), determined b».",
+      "error_analysis": {},
+      "hint_steps": [],
+      "source_ref": "test_asquith.md, стр. 127",
+      "verbatim_quote": "116 ASQUITH AND KRYGOWSKI $m =$ cementation exponent (Table 1.1; Chapter 1) $n =$ saturation exponent The uninvaded zone's water saturation ($Sw$), determined by the Archie equation, is the most fundamental quantity used in log evaluation."
+    },
+    {
+      "task_id": "test_asquith_task_04",
+      "course_id": "test_asquith",
+      "node_id": "asquith_ch7_node_01",
+      "step_id": "test_asquith_step_01",
+      "claim_id": "asquith_ch7_node_01_claim_04",
+      "pdf_page": 127,
+      "printed_page": "127",
+      "task_type": "single_choice",
+      "difficulty_level": "базовый",
+      "prompt": "Какое утверждение точно соответствует тексту главы на стр. 127?",
+      "case_observation": "",
+      "case_rule": "",
+      "case_conclusion": "",
+      "options": [
+        "Верно по источнику (стр. 127): But merely knowing a zone's water saturation ($Sw$) does not provide enough information to completely evaluate a zone's potential produ",
+        "Противоречит тексту: Krygowski, 2004, Log Interpretation, in G.",
+        "Не подтверждается на стр. 127: Krygowski, Basic Well Log Analysis: AAPG Methods in Exploration 16, p."
+      ],
+      "ordering_items": [],
+      "matching_pairs": [],
+      "blank_acceptable_answers": [],
+      "calculation_unit": "",
+      "calculation_tolerance": 0.05,
+      "correct_answer": 0,
+      "answer_key_display": "Верно по источнику (стр. 127): But merely knowing a zone's water saturation ($Sw$) does not provide enough information to completely evaluate a zone's potential produ",
+      "explanation": "Подтверждено цитатой со стр. 127: «But merely knowing a zone's water saturation ($Sw$) does not provide enough information to completely evaluate a zone's potential productivity.».",
+      "error_analysis": {},
+      "hint_steps": [],
+      "source_ref": "test_asquith.md, стр. 127",
+      "verbatim_quote": "But merely knowing a zone's water saturation ($Sw$) does not provide enough information to completely evaluate a zone's potential productivity."
+    },
+    {
+      "task_id": "test_asquith_task_05",
+      "course_id": "test_asquith",
+      "node_id": "asquith_ch7_node_01",
+      "step_id": "test_asquith_step_01",
+      "claim_id": "asquith_ch7_node_01_claim_05",
+      "pdf_page": 128,
+      "printed_page": "128",
+      "task_type": "single_choice",
+      "difficulty_level": "базовый",
+      "prompt": "Какое утверждение точно соответствует тексту главы на стр. 128?",
+      "case_observation": "",
+      "case_rule": "",
+      "case_conclusion": "",
+      "options": [
+        "Верно по источнику (стр. 128): Log Interpretation 117 $(S{wr})$, you must know the flushed zone's water saturation.",
+        "Противоречит тексту: Krygowski, 2004, Log Interpretation, in G.",
+        "Не подтверждается на стр. 128: Krygowski, Basic Well Log Analysis: AAPG Methods in Exploration 16, p."
+      ],
+      "ordering_items": [],
+      "matching_pairs": [],
+      "blank_acceptable_answers": [],
+      "calculation_unit": "",
+      "calculation_tolerance": 0.05,
+      "correct_answer": 0,
+      "answer_key_display": "Верно по источнику (стр. 128): Log Interpretation 117 $(S{wr})$, you must know the flushed zone's water saturation.",
+      "explanation": "Подтверждено цитатой со стр. 128: «Log Interpretation 117 $(S{wr})$, you must know the flushed zone's water saturation.».",
+      "error_analysis": {},
+      "hint_steps": [],
+      "source_ref": "test_asquith.md, стр. 128",
+      "verbatim_quote": "Log Interpretation 117 $(S{wr})$, you must know the flushed zone's water saturation."
+    },
+    {
+      "task_id": "test_asquith_task_06",
+      "course_id": "test_asquith",
+      "node_id": "asquith_ch7_node_01",
+      "step_id": "test_asquith_step_01",
+      "claim_id": "asquith_ch7_node_01_claim_01",
+      "pdf_page": 126,
+      "printed_page": "126",
+      "task_type": "multi_select",
+      "difficulty_level": "инженерный",
+      "prompt": "Какие понятия действительно вводятся и разбираются в шаге «Разбор раздела стр. 126» (стр. 126)?",
+      "case_observation": "",
+      "case_rule": "",
+      "case_conclusion": "",
+      "options": [
+        "Разбор раздела стр. 126",
+        "Случайный параметр вне текста главы",
+        "Выдуманная константа без источника"
+      ],
+      "ordering_items": [],
+      "matching_pairs": [],
+      "blank_acceptable_answers": [],
+      "calculation_unit": "",
+      "calculation_tolerance": 0.05,
+      "correct_answer": [
+        0
+      ],
+      "answer_key_display": "Разбор раздела стр. 126",
+      "explanation": "В шаге «Разбор раздела стр. 126» разбираются: Разбор раздела стр. 126 (стр. 126).",
+      "error_analysis": {},
+      "hint_steps": [],
+      "source_ref": "test_asquith.md, стр. 126",
+      "verbatim_quote": ""
+    },
+    {
+      "task_id": "test_asquith_task_07",
+      "course_id": "test_asquith",
+      "node_id": "asquith_ch7_node_02",
+      "step_id": "test_asquith_step_02",
+      "claim_id": "asquith_ch7_node_02_claim_01",
+      "pdf_page": 130,
+      "printed_page": "130",
+      "task_type": "multi_select",
+      "difficulty_level": "инженерный",
+      "prompt": "Какие понятия действительно вводятся и разбираются в шаге «Разбор раздела стр. 130» (стр. 130)?",
+      "case_observation": "",
+      "case_rule": "",
+      "case_conclusion": "",
+      "options": [
+        "Delta t",
+        "Случайный параметр вне текста главы",
+        "Выдуманная константа без источника"
+      ],
+      "ordering_items": [],
+      "matching_pairs": [],
+      "blank_acceptable_answers": [],
+      "calculation_unit": "",
+      "calculation_tolerance": 0.05,
+      "correct_answer": [
+        0
+      ],
+      "answer_key_display": "Delta t",
+      "explanation": "В шаге «Разбор раздела стр. 130» разбираются: Delta t (стр. 130).",
+      "error_analysis": {},
+      "hint_steps": [],
+      "source_ref": "test_asquith.md, стр. 130",
+      "verbatim_quote": ""
+    },
+    {
+      "task_id": "test_asquith_task_08",
+      "course_id": "test_asquith",
+      "node_id": "asquith_ch7_node_01",
+      "step_id": "test_asquith_step_01",
+      "claim_id": "asquith_ch7_node_01_claim_01",
+      "pdf_page": 126,
+      "printed_page": "126",
+      "task_type": "ordering",
+      "difficulty_level": "инженерный",
+      "prompt": "Расположите темы загруженной главы в логической последовательности изложения:",
+      "case_observation": "",
+      "case_rule": "",
+      "case_conclusion": "",
+      "options": [],
+      "ordering_items": [
+        "ASQUITH AND KRYGOWSKI",
+        "ASQUITH AND KRYGOWSKI",
+        "Разбор раздела стр. 134",
+        "Разбор раздела стр. 130",
+        "Разбор раздела стр. 126"
+      ],
+      "matching_pairs": [],
+      "blank_acceptable_answers": [],
+      "calculation_unit": "",
+      "calculation_tolerance": 0.05,
+      "correct_answer": [
+        "Разбор раздела стр. 126",
+        "Разбор раздела стр. 130",
+        "Разбор раздела стр. 134",
+        "ASQUITH AND KRYGOWSKI",
+        "ASQUITH AND KRYGOWSKI"
+      ],
+      "answer_key_display": "Разбор раздела стр. 126 → Разбор раздела стр. 130 → Разбор раздела стр. 134 → ASQUITH AND KRYGOWSKI → ASQUITH AND KRYGOWSKI",
+      "explanation": "Исходный порядок изложения в главе: Разбор раздела стр. 126 → Разбор раздела стр. 130 → Разбор раздела стр. 134 → ASQUITH AND KRYGOWSKI → ASQUITH AND KRYGOWSKI.",
+      "error_analysis": {},
+      "hint_steps": [],
+      "source_ref": "test_asquith.md, стр. 126",
+      "verbatim_quote": ""
+    },
+    {
+      "task_id": "test_asquith_task_09",
+      "course_id": "test_asquith",
+      "node_id": "asquith_ch7_node_02",
+      "step_id": "test_asquith_step_02",
+      "claim_id": "asquith_ch7_node_02_claim_01",
+      "pdf_page": 130,
+      "printed_page": "130",
+      "task_type": "fill_in_blank",
+      "difficulty_level": "инженерный",
+      "prompt": "Заполните пропуск термином из главы (стр. 130): Ключевое понятие шага (стр. 130): ____ — \\Delta t_{ma})$$ instead of the sonic porosity where:",
+      "case_observation": "",
+      "case_rule": "",
+      "case_conclusion": "",
+      "options": [],
+      "ordering_items": [],
+      "matching_pairs": [],
+      "blank_acceptable_answers": [
+        "Delta t"
+      ],
+      "calculation_unit": "",
+      "calculation_tolerance": 0.05,
+      "correct_answer": "Delta t",
+      "answer_key_display": "Delta t",
+      "explanation": "Правильный термин из текста главы: «Delta t» (стр. 130).",
+      "error_analysis": {},
+      "hint_steps": [],
+      "source_ref": "test_asquith.md, стр. 130",
+      "verbatim_quote": ""
+    }
+  ],
+  "flashcards": [
+    {
+      "card_id": "test_asquith_card_01",
+      "node_id": "asquith_ch7_node_01",
+      "step_id": "test_asquith_step_01",
+      "front_question": "Какой главный вывод следует из шага «Разбор раздела стр. 126»?",
+      "back_answer": "Krygowski, Basic Well Log Analysis: AAPG Methods in Exploration 16, p.",
+      "term_or_formula": "Разбор раздела стр. 126",
+      "pdf_page": 126,
+      "printed_page": "126",
+      "source_ref": "test_asquith.md, стр. 126"
+    },
+    {
+      "card_id": "test_asquith_card_02",
+      "node_id": "asquith_ch7_node_02",
+      "step_id": "test_asquith_step_02",
+      "front_question": "Что означает понятие «Delta t» в контексте шага «Разбор раздела стр. 130»?",
+      "back_answer": "\\Delta t_{ma})$$ instead of the sonic porosity where:",
+      "term_or_formula": "Delta t",
+      "pdf_page": 130,
+      "printed_page": "130",
+      "source_ref": "test_asquith.md, стр. 130"
+    },
+    {
+      "card_id": "test_asquith_card_03",
+      "node_id": "asquith_ch7_node_02",
+      "step_id": "test_asquith_step_02",
+      "front_question": "Какой главный вывод следует из шага «Разбор раздела стр. 130»?",
+      "back_answer": "In practice, especially when calculated and displayed as a curve during a logging job, the following values are used for simplicity: $a = 1.0$, $m = 2.0$.",
+      "term_or_formula": "Delta t",
+      "pdf_page": 130,
+      "printed_page": "130",
+      "source_ref": "test_asquith.md, стр. 130"
+    },
+    {
+      "card_id": "test_asquith_card_04",
+      "node_id": "asquith_ch7_node_03",
+      "step_id": "test_asquith_step_03",
+      "front_question": "Какой главный вывод следует из шага «Разбор раздела стр. 134»?",
+      "back_answer": "If the bulk density or acoustic travel time of the formation, instead of the porosity, is plotted along the x-axis, the x-intercept predicts the matrix value (matrix density or matrix travel time) of the formation.",
+      "term_or_formula": "Разбор раздела стр. 134",
+      "pdf_page": 134,
+      "printed_page": "134",
+      "source_ref": "test_asquith.md, стр. 134"
+    },
+    {
+      "card_id": "test_asquith_card_05",
+      "node_id": "asquith_ch7_node_04",
+      "step_id": "test_asquith_step_04",
+      "front_question": "Что означает понятие «Палетка» в контексте шага «ASQUITH AND KRYGOWSKI»?",
+      "back_answer": "Ключевой термин, встречающийся в тексте главы на стр. 141.",
+      "term_or_formula": "Палетка",
+      "pdf_page": 141,
+      "printed_page": "141",
+      "source_ref": "test_asquith.md, стр. 141"
+    },
+    {
+      "card_id": "test_asquith_card_06",
+      "node_id": "asquith_ch7_node_04",
+      "step_id": "test_asquith_step_04",
+      "front_question": "Что означает понятие «Кривых» в контексте шага «ASQUITH AND KRYGOWSKI»?",
+      "back_answer": "Ключевой термин, встречающийся в тексте главы на стр. 141.",
+      "term_or_formula": "Кривых",
+      "pdf_page": 141,
+      "printed_page": "141",
+      "source_ref": "test_asquith.md, стр. 141"
+    },
+    {
+      "card_id": "test_asquith_card_07",
+      "node_id": "asquith_ch7_node_04",
+      "step_id": "test_asquith_step_04",
+      "front_question": "Какой главный вывод следует из шага «ASQUITH AND KRYGOWSKI»?",
+      "back_answer": "Buckles plots (porosity vs. water saturation).",
+      "term_or_formula": "Палетка",
+      "pdf_page": 141,
+      "printed_page": "141",
+      "source_ref": "test_asquith.md, стр. 141"
+    },
+    {
+      "card_id": "test_asquith_card_08",
+      "node_id": "asquith_ch7_node_05",
+      "step_id": "test_asquith_step_05",
+      "front_question": "Что означает понятие «Проницаемости» в контексте шага «ASQUITH AND KRYGOWSKI»?",
+      "back_answer": "Ключевой термин, встречающийся в тексте главы на стр. 145.",
+      "term_or_formula": "Проницаемости",
+      "pdf_page": 145,
+      "printed_page": "145",
+      "source_ref": "test_asquith.md, стр. 145"
+    },
+    {
+      "card_id": "test_asquith_card_09",
+      "node_id": "asquith_ch7_node_05",
+      "step_id": "test_asquith_step_05",
+      "front_question": "Что означает понятие «Палетка» в контексте шага «ASQUITH AND KRYGOWSKI»?",
+      "back_answer": "Ключевой термин, встречающийся в тексте главы на стр. 145.",
+      "term_or_formula": "Палетка",
+      "pdf_page": 145,
+      "printed_page": "145",
+      "source_ref": "test_asquith.md, стр. 145"
+    },
+    {
+      "card_id": "test_asquith_card_10",
+      "node_id": "asquith_ch7_node_05",
+      "step_id": "test_asquith_step_05",
+      "front_question": "Какой главный вывод следует из шага «ASQUITH AND KRYGOWSKI»?",
+      "back_answer": "Hingle plot (saturation crossplot or resistivity-porosity crossplot) illustrating water-bearing and hydrocarbon-bearing zones in a well.",
+      "term_or_formula": "Проницаемости",
+      "pdf_page": 145,
+      "printed_page": "145",
+      "source_ref": "test_asquith.md, стр. 145"
+    }
+  ],
+  "summary_notes_markdown": "# Конспект: Chapter 7: Log Interpretation (стр. 126–136, рис. 140–146)\n\n## Шаг 1. Разбор раздела стр. 126 (стр. 126)\nKrygowski, 2004, Log Interpretation, in G. Krygowski, Basic Well Log Analysis: AAPG Methods in Exploration 16, p.\n\n## Шаг 2. Разбор раздела стр. 130 (стр. 130)\nLog Interpretation 119 some hydrocarbons, then the other zones contain even more hydrocarbons than anticipated. In practice, especially when calculated and displayed as a curve during a logging job, the following values are used for simplicity: $a = 1.0$, $m = 2.0$.\n\n## Шаг 3. Разбор раздела стр. 134 (стр. 134)\nLog Interpretation 123 zero. If the bulk density or acoustic travel time of the formation, instead of the porosity, is plotted along the x-axis, the x-intercept predicts the matrix value (matrix density or matrix travel time) of the formation.\n\n## Шаг 4. ASQUITH AND KRYGOWSKI (стр. 141)\n130 ASQUITH AND KRYGOWSKI Figure 7.3. Buckles plots (porosity vs. water saturation).\n\n## Шаг 5. ASQUITH AND KRYGOWSKI (стр. 145)\n134 ASQUITH AND KRYGOWSKI Figure 7.7. Hingle plot (saturation crossplot or resistivity-porosity crossplot) illustrating water-bearing and hydrocarbon-bearing zones in a well.\n",
+  "media_passports": [],
+  "bookmark_report": {
+    "passed": true,
+    "evaluation_mode": "internal_calibration",
+    "book_file": "test_asquith.md",
+    "total_checked_objects": 28,
+    "findings": [],
+    "expert_review_queue": [],
+    "counts_by_type": {},
+    "counts_by_verdict": {}
+  },
+  "practicum": null,
+  "offline_html_url": "/outputs/test_stage/test_asquith/index.html",
+  "offline_zip_url": "/outputs/test_stage/test_asquith/test_asquith_offline.zip",
+  "offline_package_size_mb": 0.0414,
+  "offline_size_without_video_mb": 0.2572
+}

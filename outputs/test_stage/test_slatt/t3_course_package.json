@@ -1,0 +1,2306 @@
+{
+  "course_id": "test_slatt",
+  "schema_version": "lithos.t3.package.v2",
+  "domain_package_id": "oil_gas_ru",
+  "book_id": "test_slatt",
+  "book_file": "test_slatt.md",
+  "pdf_file": "test_slatt.md",
+  "book_title": "R. M. Slatt — Stratigraphic Reservoir Characterization",
+  "authors": [
+    "R. M. Slatt"
+  ],
+  "chapter_id": "slatt_ch9",
+  "chapter_title": "§9.3–9.4: River-Dominated Delta Deposits (стр. 410–423)",
+  "is_training": false,
+  "pdf_ranges": [
+    {
+      "start_pdf_page": 410,
+      "end_pdf_page": 423,
+      "start_printed_page": "410",
+      "end_printed_page": "423",
+      "section_label": "§9.3–9.4: River-Dominated Delta Deposits (стр. 410–423)"
+    }
+  ],
+  "layer": {
+    "layer_id": "layer_test_slatt",
+    "schema_version": "lithos.t3.layer.v2",
+    "book_id": "test_slatt",
+    "book_file": "test_slatt.md",
+    "pdf_file": "test_slatt.md",
+    "source_sha256": "6a4308b12ef30f5cf0dcf158230a9cc2ef5a4f7d3fe1d19cecd6c514548b7c52",
+    "book_title": "R. M. Slatt — Stratigraphic Reservoir Characterization",
+    "authors": [
+      "R. M. Slatt"
+    ],
+    "chapter_id": "slatt_ch9",
+    "chapter_title": "§9.3–9.4: River-Dominated Delta Deposits (стр. 410–423)",
+    "is_training": true,
+    "pdf_ranges": [
+      {
+        "start_pdf_page": 410,
+        "end_pdf_page": 423,
+        "start_printed_page": "410",
+        "end_printed_page": "423",
+        "section_label": "§9.3–9.4: River-Dominated Delta Deposits (стр. 410–423)"
+      }
+    ],
+    "nodes": [
+      {
+        "node_id": "slatt_ch9_node_01",
+        "chapter_id": "slatt_ch9",
+        "order": 1,
+        "order_rationale": "Последовательный разбор страниц 410–413 (по меткам <!-- page N -->).",
+        "source_heading": "§9.3–9.4: River-Dominated Delta Deposits (стр. 410–423) (стр. 410–413)",
+        "step_title": "Chapter | 9 Deltaic Deposits and",
+        "summary_2_3_sentences": "Chapter | 9 Deltaic Deposits and Reservoirs 409 It is important for proper subsurface correlations to understand that clinoforms, which represent geological time lines, crosscut lithostratigraphic boundaries. The hypothetical example in Fig.",
+        "primary_difficulty": "conceptual_mechanism",
+        "secondary_difficulty": "terminology_bridge",
+        "primary_difficulty_code": "М",
+        "secondary_difficulty_code": "П",
+        "estimated_minutes": 8,
+        "mechanism": "Chapter | 9 Deltaic Deposits and Reservoirs 409 It is important for proper subsurface correlations to understand that clinoforms, which represent geological time lines, crosscut lithostratigraphic boundaries.",
+        "practice": "The hypothetical example in Fig.",
+        "nuances": "9.10 shows correlations based upon lithofacies (stratigraphic intervals with similarities in well log response) and upon geological time.",
+        "deeper_branch": "Сопоставьте с соседними разделами главы (§9.3–9.4: River-Dominated Delta Deposits (стр. 410–423)).",
+        "quotes_and_pages": [
+          {
+            "unit_id": "test_slatt_p410_u01_01",
+            "pdf_page": 410,
+            "printed_page": "410",
+            "verbatim_quote": "Chapter | 9 Deltaic Deposits and Reservoirs 409 It is important for proper subsurface correlations to understand that clinoforms, which represent geological time lines, crosscut lithostratigraphic boundaries.",
+            "editorial_paraphrase": "Положение со стр. 410 (<!-- page 410 -->): Chapter | 9 Deltaic Deposits and Reservoirs 409 It is important for proper subsurface correlations to understand that clinoforms, which represent geological time lines, crosscut lithostratigraphic boundaries.",
+            "numbers_and_units": [],
+            "conditions": []
+          },
+          {
+            "unit_id": "test_slatt_p410_u01_02",
+            "pdf_page": 410,
+            "printed_page": "410",
+            "verbatim_quote": "The hypothetical example in Fig.",
+            "editorial_paraphrase": "Положение со стр. 410 (<!-- page 410 -->): The hypothetical example in Fig.",
+            "numbers_and_units": [],
+            "conditions": []
+          },
+          {
+            "unit_id": "test_slatt_p411_u01_03",
+            "pdf_page": 411,
+            "printed_page": "411",
+            "verbatim_quote": "410 Stratigraphic Reservoir Characterization for Petroleum Geologists 9.4 RIVER-DOMINATED DELTA DEPOSITS AND RESERVOIRS 9.4.1 Processes and Deposits The Mississippi River Delta (Fig.",
+            "editorial_paraphrase": "Положение со стр. 411 (<!-- page 411 -->): 410 Stratigraphic Reservoir Characterization for Petroleum Geologists 9.4 RIVER-DOMINATED DELTA DEPOSITS AND RESERVOIRS 9.4.1 Processes and Deposits The Mississippi River Delta (Fig.",
+            "numbers_and_units": [],
+            "conditions": []
+          },
+          {
+            "unit_id": "test_slatt_p411_u01_04",
+            "pdf_page": 411,
+            "printed_page": "411",
+            "verbatim_quote": "9.13) has long been considered the “type” river-dominated delta (Fig.",
+            "editorial_paraphrase": "Положение со стр. 411 (<!-- page 411 -->): 9.13) has long been considered the “type” river-dominated delta (Fig.",
+            "numbers_and_units": [],
+            "conditions": []
+          },
+          {
+            "unit_id": "test_slatt_p412_u01_05",
+            "pdf_page": 412,
+            "printed_page": "412",
+            "verbatim_quote": "Chapter | 9 Deltaic Deposits and Reservoirs 411 ---- ━━━ FORMAT 4: CROSS-SECTION / РАЗРЕЗ ━━━ (b) Orientation: Inland delta plain (left) → South China Sea (right).",
+            "editorial_paraphrase": "Положение со стр. 412 (<!-- page 412 -->): Chapter | 9 Deltaic Deposits and Reservoirs 411 ---- ━━━ FORMAT 4: CROSS-SECTION / РАЗРЕЗ ━━━ (b) Orientation: Inland delta plain (left) → South China Sea (right).",
+            "numbers_and_units": [],
+            "conditions": []
+          },
+          {
+            "unit_id": "test_slatt_p412_u01_06",
+            "pdf_page": 412,
+            "printed_page": "412",
+            "verbatim_quote": "Depositional-environment transect: Inland delta plain → Beach ridge delta plain → South China Sea.",
+            "editorial_paraphrase": "Положение со стр. 412 (<!-- page 412 -->): Depositional-environment transect: Inland delta plain → Beach ridge delta plain → South China Sea.",
+            "numbers_and_units": [],
+            "conditions": []
+          }
+        ],
+        "epistemic_split": {
+          "observation": "Chapter | 9 Deltaic Deposits and Reservoirs 409 It is important for proper subsurface correlations to understand that clinoforms, which represent geological time lines, crosscut lithostratigraphic boundaries.",
+          "inference": "The hypothetical example in Fig.",
+          "assumption": "Выводы справедливы в границах допущений источника (стр. 410–413)."
+        },
+        "field_provenance": {},
+        "typed_links": [],
+        "core_terms": [
+          {
+            "term": "Yellow fill",
+            "definition": "Mouth-bar Sandstone.",
+            "first_introduced_pdf_page": 410,
+            "first_introduced_printed_page": "410",
+            "cis_symbol": "—",
+            "west_symbol": "—",
+            "west_term": "Термин источника",
+            "unit": "б/р"
+          },
+          {
+            "term": "Marsh",
+            "definition": "Beach ridge, Marsh/Foreshore",
+            "first_introduced_pdf_page": 410,
+            "first_introduced_printed_page": "410",
+            "cis_symbol": "—",
+            "west_symbol": "—",
+            "west_term": "Термин источника",
+            "unit": "б/р"
+          }
+        ],
+        "threshold_concept": "Yellow fill",
+        "misconception_to_fix": "Не отрывайте расчётные оценки и эмпирические правила от условий их применимости.",
+        "data_transfer": "Применение принципов со стр. 410–413 на практических данных.",
+        "it_analogy_and_limits": "Учебный узел привязан к меткам <!-- page N --> исходного md-файла.",
+        "specialist_manual_steps": [],
+        "decision_points": [],
+        "inefficiency_lens": null,
+        "worked_example": {
+          "status": "present",
+          "not_applicable_reason": "",
+          "problem_number": "",
+          "figure_ref": "",
+          "pdf_page": 410,
+          "printed_page": "410",
+          "conditions": "Note that shaley and heterolithic intervals separate sandy intervals, so that the sands between wells 1 and 2 are not in communication.",
+          "steps": [
+            "Chapter | 9 Deltaic Deposits and Reservoirs 409 It is important for proper subsurface correlations to understand that clinoforms, which represent geological time lines, crosscut li"
+          ],
+          "result": "The hypothetical example in Fig."
+        },
+        "textbook_problems": [],
+        "modern_equivalents": [
+          {
+            "historical_item": "§9.3–9.4: River-Dominated Delta Deposits (стр. 410–423)",
+            "historical_context": "Источник (стр. 410–413)",
+            "modern_analog": "Цифровая интерпретация и моделирование",
+            "modern_context": "Современная инженерная практика",
+            "pdf_page": 410
+          }
+        ],
+        "not_applicable_fields": [],
+        "expert_review_flags": [],
+        "covered_unit_ids": [
+          "test_slatt_p410_u01_01",
+          "test_slatt_p410_u01_02",
+          "test_slatt_p411_u01_03",
+          "test_slatt_p411_u01_04",
+          "test_slatt_p412_u01_05",
+          "test_slatt_p412_u01_06"
+        ],
+        "claim_ids": [
+          "slatt_ch9_node_01_claim_01",
+          "slatt_ch9_node_01_claim_02",
+          "slatt_ch9_node_01_claim_03",
+          "slatt_ch9_node_01_claim_04",
+          "slatt_ch9_node_01_claim_05",
+          "slatt_ch9_node_01_claim_06"
+        ],
+        "computed_values": []
+      },
+      {
+        "node_id": "slatt_ch9_node_02",
+        "chapter_id": "slatt_ch9",
+        "order": 2,
+        "order_rationale": "Последовательный разбор страниц 414–417 (по меткам <!-- page N -->).",
+        "source_heading": "§9.3–9.4: River-Dominated Delta Deposits (стр. 410–423) (стр. 414–417)",
+        "step_title": "━━━ FORMAT 12: CONCEPTUAL DIAGRAM ━━━",
+        "summary_2_3_sentences": "---- ━━━ FORMAT 12: CONCEPTUAL DIAGRAM ━━━ Three-dimensional conceptual block diagram of a deltaic depositional system. Map view shows distributary channels and bays; block sides show prograding sediment bodies and marine deposits.",
+        "primary_difficulty": "conceptual_mechanism",
+        "secondary_difficulty": "terminology_bridge",
+        "primary_difficulty_code": "М",
+        "secondary_difficulty_code": "П",
+        "estimated_minutes": 8,
+        "mechanism": "---- ━━━ FORMAT 12: CONCEPTUAL DIAGRAM ━━━ Three-dimensional conceptual block diagram of a deltaic depositional system.",
+        "practice": "Map view shows distributary channels and bays; block sides show prograding sediment bodies and marine deposits.",
+        "nuances": "North arrow points toward the upper part of the image; horizontal scale is marked 0–10–20–30 km.",
+        "deeper_branch": "Сопоставьте с соседними разделами главы (§9.3–9.4: River-Dominated Delta Deposits (стр. 410–423)).",
+        "quotes_and_pages": [
+          {
+            "unit_id": "test_slatt_p414_u02_01",
+            "pdf_page": 414,
+            "printed_page": "414",
+            "verbatim_quote": "---- ━━━ FORMAT 12: CONCEPTUAL DIAGRAM ━━━ Three-dimensional conceptual block diagram of a deltaic depositional system.",
+            "editorial_paraphrase": "Положение со стр. 414 (<!-- page 414 -->): ---- ━━━ FORMAT 12: CONCEPTUAL DIAGRAM ━━━ Three-dimensional conceptual block diagram of a deltaic depositional system.",
+            "numbers_and_units": [],
+            "conditions": []
+          },
+          {
+            "unit_id": "test_slatt_p414_u02_02",
+            "pdf_page": 414,
+            "printed_page": "414",
+            "verbatim_quote": "Map view shows distributary channels and bays; block sides show prograding sediment bodies and marine deposits.",
+            "editorial_paraphrase": "Положение со стр. 414 (<!-- page 414 -->): Map view shows distributary channels and bays; block sides show prograding sediment bodies and marine deposits.",
+            "numbers_and_units": [],
+            "conditions": []
+          },
+          {
+            "unit_id": "test_slatt_p415_u02_03",
+            "pdf_page": 415,
+            "printed_page": "415",
+            "verbatim_quote": "414 Stratigraphic Reservoir Characterization for Petroleum Geologists ---- ━━━ FORMAT 15: PHOTOGRAPH ━━━ (a) Subject class: landscape photograph.",
+            "editorial_paraphrase": "Положение со стр. 415 (<!-- page 415 -->): 414 Stratigraphic Reservoir Characterization for Petroleum Geologists ---- ━━━ FORMAT 15: PHOTOGRAPH ━━━ (a) Subject class: landscape photograph.",
+            "numbers_and_units": [],
+            "conditions": []
+          },
+          {
+            "unit_id": "test_slatt_p415_u02_04",
+            "pdf_page": 415,
+            "printed_page": "415",
+            "verbatim_quote": "View across a water body toward a vegetated shoreline with buildings.",
+            "editorial_paraphrase": "Положение со стр. 415 (<!-- page 415 -->): View across a water body toward a vegetated shoreline with buildings.",
+            "numbers_and_units": [],
+            "conditions": []
+          },
+          {
+            "unit_id": "test_slatt_p416_u02_05",
+            "pdf_page": 416,
+            "printed_page": "416",
+            "verbatim_quote": "Chapter | 9 Deltaic Deposits and Reservoirs 415 ---- ━━━ FORMAT 12: CONCEPTUAL DIAGRAM ━━━ Plan-view conceptual diagram of a deltaic depositional system.",
+            "editorial_paraphrase": "Положение со стр. 416 (<!-- page 416 -->): Chapter | 9 Deltaic Deposits and Reservoirs 415 ---- ━━━ FORMAT 12: CONCEPTUAL DIAGRAM ━━━ Plan-view conceptual diagram of a deltaic depositional system.",
+            "numbers_and_units": [],
+            "conditions": []
+          },
+          {
+            "unit_id": "test_slatt_p416_u02_06",
+            "pdf_page": 416,
+            "printed_page": "416",
+            "verbatim_quote": "The main map shows coarse alluvial deposits in the upper-left area, passing basinward through fluvial channels, lakes, floodplain, distributary channels, delta-mouth bars, bays, delta front, and prodelta.",
+            "editorial_paraphrase": "Положение со стр. 416 (<!-- page 416 -->): The main map shows coarse alluvial deposits in the upper-left area, passing basinward through fluvial channels, lakes, floodplain, distributary channels, delta-mouth bars, bays, delta front, and prodelta.",
+            "numbers_and_units": [],
+            "conditions": []
+          }
+        ],
+        "epistemic_split": {
+          "observation": "---- ━━━ FORMAT 12: CONCEPTUAL DIAGRAM ━━━ Three-dimensional conceptual block diagram of a deltaic depositional system.",
+          "inference": "Map view shows distributary channels and bays; block sides show prograding sediment bodies and marine deposits.",
+          "assumption": "Выводы справедливы в границах допущений источника (стр. 414–417)."
+        },
+        "field_provenance": {},
+        "typed_links": [
+          {
+            "source_node_id": "slatt_ch9_node_01",
+            "target_node_id": "slatt_ch9_node_02",
+            "link_type": "prerequisite",
+            "link_label_ru": "предпосылка",
+            "rationale": "Материал стр. 414–417 опирается на понятия предыдущего шага."
+          }
+        ],
+        "core_terms": [
+          {
+            "term": "Deep plain",
+            "definition": "dark, nearly structureless interval.",
+            "first_introduced_pdf_page": 414,
+            "first_introduced_printed_page": "414",
+            "cis_symbol": "—",
+            "west_symbol": "—",
+            "west_term": "Термин источника",
+            "unit": "б/р"
+          },
+          {
+            "term": "Subaqueous levee",
+            "definition": "ripple and climbing ripple laminations.",
+            "first_introduced_pdf_page": 414,
+            "first_introduced_printed_page": "414",
+            "cis_symbol": "—",
+            "west_symbol": "—",
+            "west_term": "Термин источника",
+            "unit": "б/р"
+          },
+          {
+            "term": "Bar crest",
+            "definition": "planar laminations.",
+            "first_introduced_pdf_page": 414,
+            "first_introduced_printed_page": "414",
+            "cis_symbol": "—",
+            "west_symbol": "—",
+            "west_term": "Термин источника",
+            "unit": "б/р"
+          }
+        ],
+        "threshold_concept": "Deep plain",
+        "misconception_to_fix": "Не отрывайте расчётные оценки и эмпирические правила от условий их применимости.",
+        "data_transfer": "Применение принципов со стр. 414–417 на практических данных.",
+        "it_analogy_and_limits": "Учебный узел привязан к меткам <!-- page N --> исходного md-файла.",
+        "specialist_manual_steps": [],
+        "decision_points": [],
+        "inefficiency_lens": null,
+        "worked_example": {
+          "status": "present",
+          "not_applicable_reason": "",
+          "problem_number": "",
+          "figure_ref": "",
+          "pdf_page": 414,
+          "printed_page": "414",
+          "conditions": "Vertical depth scale increases downward from 0 to −100 m, −200 m, −400 m, and −600 m.",
+          "steps": [
+            "---- ━━━ FORMAT 12: CONCEPTUAL DIAGRAM ━━━ Three-dimensional conceptual block diagram of a deltaic depositional system."
+          ],
+          "result": "Map view shows distributary channels and bays; block sides show prograding sediment bodies and marine deposits."
+        },
+        "textbook_problems": [],
+        "modern_equivalents": [
+          {
+            "historical_item": "§9.3–9.4: River-Dominated Delta Deposits (стр. 410–423)",
+            "historical_context": "Источник (стр. 414–417)",
+            "modern_analog": "Цифровая интерпретация и моделирование",
+            "modern_context": "Современная инженерная практика",
+            "pdf_page": 414
+          }
+        ],
+        "not_applicable_fields": [],
+        "expert_review_flags": [],
+        "covered_unit_ids": [
+          "test_slatt_p414_u02_01",
+          "test_slatt_p414_u02_02",
+          "test_slatt_p415_u02_03",
+          "test_slatt_p415_u02_04",
+          "test_slatt_p416_u02_05",
+          "test_slatt_p416_u02_06"
+        ],
+        "claim_ids": [
+          "slatt_ch9_node_02_claim_01",
+          "slatt_ch9_node_02_claim_02",
+          "slatt_ch9_node_02_claim_03",
+          "slatt_ch9_node_02_claim_04",
+          "slatt_ch9_node_02_claim_05",
+          "slatt_ch9_node_02_claim_06"
+        ],
+        "computed_values": []
+      },
+      {
+        "node_id": "slatt_ch9_node_03",
+        "chapter_id": "slatt_ch9",
+        "order": 3,
+        "order_rationale": "Последовательный разбор страниц 418–421 (по меткам <!-- page N -->).",
+        "source_heading": "§9.3–9.4: River-Dominated Delta Deposits (стр. 410–423) (стр. 418–421)",
+        "step_title": "Chapter | 9 Deltaic Deposits and",
+        "summary_2_3_sentences": "Chapter | 9 Deltaic Deposits and Reservoirs 417 ---- ━━━ FORMAT 4: CROSS-SECTION / РАЗРЕЗ ━━━ Верхний корреляционный разрез: North–South. Горизонтальный масштаб: 2 miles.",
+        "primary_difficulty": "conceptual_mechanism",
+        "secondary_difficulty": "terminology_bridge",
+        "primary_difficulty_code": "М",
+        "secondary_difficulty_code": "П",
+        "estimated_minutes": 8,
+        "mechanism": "Chapter | 9 Deltaic Deposits and Reservoirs 417 ---- ━━━ FORMAT 4: CROSS-SECTION / РАЗРЕЗ ━━━ Верхний корреляционный разрез: North–South.",
+        "practice": "Горизонтальный масштаб: 2 miles.",
+        "nuances": "Вертикальное преувеличение: V.E. = 74x.",
+        "deeper_branch": "Сопоставьте с соседними разделами главы (§9.3–9.4: River-Dominated Delta Deposits (стр. 410–423)).",
+        "quotes_and_pages": [
+          {
+            "unit_id": "test_slatt_p418_u03_01",
+            "pdf_page": 418,
+            "printed_page": "418",
+            "verbatim_quote": "Chapter | 9 Deltaic Deposits and Reservoirs 417 ---- ━━━ FORMAT 4: CROSS-SECTION / РАЗРЕЗ ━━━ Верхний корреляционный разрез: North–South.",
+            "editorial_paraphrase": "Положение со стр. 418 (<!-- page 418 -->): Chapter | 9 Deltaic Deposits and Reservoirs 417 ---- ━━━ FORMAT 4: CROSS-SECTION / РАЗРЕЗ ━━━ Верхний корреляционный разрез: North–South.",
+            "numbers_and_units": [],
+            "conditions": []
+          },
+          {
+            "unit_id": "test_slatt_p418_u03_02",
+            "pdf_page": 418,
+            "printed_page": "418",
+            "verbatim_quote": "Горизонтальный масштаб: 2 miles.",
+            "editorial_paraphrase": "Положение со стр. 418 (<!-- page 418 -->): Горизонтальный масштаб: 2 miles.",
+            "numbers_and_units": [],
+            "conditions": []
+          },
+          {
+            "unit_id": "test_slatt_p419_u03_03",
+            "pdf_page": 419,
+            "printed_page": "419",
+            "verbatim_quote": "418 Stratigraphic Reservoir Characterization for Petroleum Geologists ---- ━━━ FORMAT 2: WELL LOG / КАРОТАЖНАЯ ДИАГРАММА ━━━ Глубина: ft; глубина увеличивается вниз.",
+            "editorial_paraphrase": "Положение со стр. 419 (<!-- page 419 -->): 418 Stratigraphic Reservoir Characterization for Petroleum Geologists ---- ━━━ FORMAT 2: WELL LOG / КАРОТАЖНАЯ ДИАГРАММА ━━━ Глубина: ft; глубина увеличивается вниз.",
+            "numbers_and_units": [],
+            "conditions": []
+          },
+          {
+            "unit_id": "test_slatt_p419_u03_04",
+            "pdf_page": 419,
+            "printed_page": "419",
+            "verbatim_quote": "Подписанные отметки глубины: 9450, 9500, 9550, 9600 ft.",
+            "editorial_paraphrase": "Положение со стр. 419 (<!-- page 419 -->): Подписанные отметки глубины: 9450, 9500, 9550, 9600 ft.",
+            "numbers_and_units": [],
+            "conditions": []
+          },
+          {
+            "unit_id": "test_slatt_p420_u03_05",
+            "pdf_page": 420,
+            "printed_page": "420",
+            "verbatim_quote": "---- ━━━ FORMAT 2: WELL LOG / КАРОТАЖНАЯ ДИАГРАММА ━━━ Depth reference: vertical bar labelled 0 at top and 100 ft below; depth increases downward.",
+            "editorial_paraphrase": "Положение со стр. 420 (<!-- page 420 -->): ---- ━━━ FORMAT 2: WELL LOG / КАРОТАЖНАЯ ДИАГРАММА ━━━ Depth reference: vertical bar labelled 0 at top and 100 ft below; depth increases downward.",
+            "numbers_and_units": [],
+            "conditions": []
+          },
+          {
+            "unit_id": "test_slatt_p420_u03_06",
+            "pdf_page": 420,
+            "printed_page": "420",
+            "verbatim_quote": "Total displayed depth range is not labelled.",
+            "editorial_paraphrase": "Положение со стр. 420 (<!-- page 420 -->): Total displayed depth range is not labelled.",
+            "numbers_and_units": [],
+            "conditions": []
+          }
+        ],
+        "epistemic_split": {
+          "observation": "Chapter | 9 Deltaic Deposits and Reservoirs 417 ---- ━━━ FORMAT 4: CROSS-SECTION / РАЗРЕЗ ━━━ Верхний корреляционный разрез: North–South.",
+          "inference": "Горизонтальный масштаб: 2 miles.",
+          "assumption": "Выводы справедливы в границах допущений источника (стр. 418–421)."
+        },
+        "field_provenance": {},
+        "typed_links": [
+          {
+            "source_node_id": "slatt_ch9_node_02",
+            "target_node_id": "slatt_ch9_node_03",
+            "link_type": "prerequisite",
+            "link_label_ru": "предпосылка",
+            "rationale": "Материал стр. 418–421 опирается на понятия предыдущего шага."
+          }
+        ],
+        "core_terms": [
+          {
+            "term": "Shale",
+            "definition": "светло-бежевый — Silty Shale",
+            "first_introduced_pdf_page": 418,
+            "first_introduced_printed_page": "418",
+            "cis_symbol": "—",
+            "west_symbol": "—",
+            "west_term": "Термин источника",
+            "unit": "б/р"
+          },
+          {
+            "term": "Shaly Siltstone",
+            "definition": "оранжевый — Siltstone",
+            "first_introduced_pdf_page": 418,
+            "first_introduced_printed_page": "418",
+            "cis_symbol": "—",
+            "west_symbol": "—",
+            "west_term": "Термин источника",
+            "unit": "б/р"
+          },
+          {
+            "term": "Sandstone",
+            "definition": "красный — Conglomerate",
+            "first_introduced_pdf_page": 418,
+            "first_introduced_printed_page": "418",
+            "cis_symbol": "—",
+            "west_symbol": "—",
+            "west_term": "Термин источника",
+            "unit": "б/р"
+          }
+        ],
+        "threshold_concept": "Shale",
+        "misconception_to_fix": "Не отрывайте расчётные оценки и эмпирические правила от условий их применимости.",
+        "data_transfer": "Применение принципов со стр. 418–421 на практических данных.",
+        "it_analogy_and_limits": "Учебный узел привязан к меткам <!-- page N --> исходного md-файла.",
+        "specialist_manual_steps": [],
+        "decision_points": [],
+        "inefficiency_lens": null,
+        "worked_example": {
+          "status": "present",
+          "not_applicable_reason": "",
+          "problem_number": "",
+          "figure_ref": "",
+          "pdf_page": 418,
+          "printed_page": "418",
+          "conditions": "Вертикальная шкала/единицы не указаны; направление вертикальной оси не подписано.",
+          "steps": [
+            "Chapter | 9 Deltaic Deposits and Reservoirs 417 ---- ━━━ FORMAT 4: CROSS-SECTION / РАЗРЕЗ ━━━ Верхний корреляционный разрез: North–South."
+          ],
+          "result": "Горизонтальный масштаб: 2 miles."
+        },
+        "textbook_problems": [],
+        "modern_equivalents": [
+          {
+            "historical_item": "§9.3–9.4: River-Dominated Delta Deposits (стр. 410–423)",
+            "historical_context": "Источник (стр. 418–421)",
+            "modern_analog": "Цифровая интерпретация и моделирование",
+            "modern_context": "Современная инженерная практика",
+            "pdf_page": 418
+          }
+        ],
+        "not_applicable_fields": [],
+        "expert_review_flags": [],
+        "covered_unit_ids": [
+          "test_slatt_p418_u03_01",
+          "test_slatt_p418_u03_02",
+          "test_slatt_p419_u03_03",
+          "test_slatt_p419_u03_04",
+          "test_slatt_p420_u03_05",
+          "test_slatt_p420_u03_06"
+        ],
+        "claim_ids": [
+          "slatt_ch9_node_03_claim_01",
+          "slatt_ch9_node_03_claim_02",
+          "slatt_ch9_node_03_claim_03",
+          "slatt_ch9_node_03_claim_04",
+          "slatt_ch9_node_03_claim_05",
+          "slatt_ch9_node_03_claim_06"
+        ],
+        "computed_values": []
+      },
+      {
+        "node_id": "slatt_ch9_node_04",
+        "chapter_id": "slatt_ch9",
+        "order": 4,
+        "order_rationale": "Последовательный разбор страниц 422–423 (по меткам <!-- page N -->).",
+        "source_heading": "§9.3–9.4: River-Dominated Delta Deposits (стр. 410–423) (стр. 422–423)",
+        "step_title": "Chapter | 9 Deltaic Deposits and",
+        "summary_2_3_sentences": "Chapter | 9 Deltaic Deposits and Reservoirs 421 ---- ━━━ FORMAT 4: CROSS-SECTION / РАЗРЕЗ ━━━ (a) Southwest–Northeast correlation section. Vertical scale: depth; numerical labels 8500, 8600, 8700 at left and 8400, 8500, 8600 at right.",
+        "primary_difficulty": "conceptual_mechanism",
+        "secondary_difficulty": "terminology_bridge",
+        "primary_difficulty_code": "М",
+        "secondary_difficulty_code": "П",
+        "estimated_minutes": 8,
+        "mechanism": "Chapter | 9 Deltaic Deposits and Reservoirs 421 ---- ━━━ FORMAT 4: CROSS-SECTION / РАЗРЕЗ ━━━ (a) Southwest–Northeast correlation section.",
+        "practice": "Vertical scale: depth; numerical labels 8500, 8600, 8700 at left and 8400, 8500, 8600 at right.",
+        "nuances": "Wells, from southwest to northeast: 1.",
+        "deeper_branch": "Сопоставьте с соседними разделами главы (§9.3–9.4: River-Dominated Delta Deposits (стр. 410–423)).",
+        "quotes_and_pages": [
+          {
+            "unit_id": "test_slatt_p422_u04_01",
+            "pdf_page": 422,
+            "printed_page": "422",
+            "verbatim_quote": "Chapter | 9 Deltaic Deposits and Reservoirs 421 ---- ━━━ FORMAT 4: CROSS-SECTION / РАЗРЕЗ ━━━ (a) Southwest–Northeast correlation section.",
+            "editorial_paraphrase": "Положение со стр. 422 (<!-- page 422 -->): Chapter | 9 Deltaic Deposits and Reservoirs 421 ---- ━━━ FORMAT 4: CROSS-SECTION / РАЗРЕЗ ━━━ (a) Southwest–Northeast correlation section.",
+            "numbers_and_units": [],
+            "conditions": []
+          },
+          {
+            "unit_id": "test_slatt_p422_u04_02",
+            "pdf_page": 422,
+            "printed_page": "422",
+            "verbatim_quote": "Vertical scale: depth; numerical labels 8500, 8600, 8700 at left and 8400, 8500, 8600 at right.",
+            "editorial_paraphrase": "Положение со стр. 422 (<!-- page 422 -->): Vertical scale: depth; numerical labels 8500, 8600, 8700 at left and 8400, 8500, 8600 at right.",
+            "numbers_and_units": [],
+            "conditions": []
+          },
+          {
+            "unit_id": "test_slatt_p423_u04_03",
+            "pdf_page": 423,
+            "printed_page": "423",
+            "verbatim_quote": "422 Stratigraphic Reservoir Characterization for Petroleum Geologists ---- ━━━ FORMAT 2: WELL LOG / КАРОТАЖНАЯ ДИАГРАММА ━━━ Vertical multi-track log panel at upper left. - Depth axis is vertical; numerical depth labels are [illegible].",
+            "editorial_paraphrase": "Положение со стр. 423 (<!-- page 423 -->): 422 Stratigraphic Reservoir Characterization for Petroleum Geologists ---- ━━━ FORMAT 2: WELL LOG / КАРОТАЖНАЯ ДИАГРАММА ━━━ Vertical multi-track log panel at upper left. - Depth axis is vertical; numerical depth labels are [illegible].",
+            "numbers_and_units": [],
+            "conditions": []
+          },
+          {
+            "unit_id": "test_slatt_p423_u04_04",
+            "pdf_page": 423,
+            "printed_page": "423",
+            "verbatim_quote": "SAK [illegible]”; “USGNU 1”; “Y-2”; “1A-15”; “1A-6”; “1B-1”; “1E-8”; “1E-8”; “1E-3”. - Internal labels include “A-2”, “A-3”, and “A-4”; other labels are [illegible]. - A scale symbol at lower left is labelled “SCALE” and “Ver.",
+            "editorial_paraphrase": "Положение со стр. 423 (<!-- page 423 -->): SAK [illegible]”; “USGNU 1”; “Y-2”; “1A-15”; “1A-6”; “1B-1”; “1E-8”; “1E-8”; “1E-3”. - Internal labels include “A-2”, “A-3”, and “A-4”; other labels are [illegible]. - A scale symbol at lower left is labelled “SCALE” and “Ver.",
+            "numbers_and_units": [],
+            "conditions": []
+          }
+        ],
+        "epistemic_split": {
+          "observation": "Chapter | 9 Deltaic Deposits and Reservoirs 421 ---- ━━━ FORMAT 4: CROSS-SECTION / РАЗРЕЗ ━━━ (a) Southwest–Northeast correlation section.",
+          "inference": "Vertical scale: depth; numerical labels 8500, 8600, 8700 at left and 8400, 8500, 8600 at right.",
+          "assumption": "Выводы справедливы в границах допущений источника (стр. 422–423)."
+        },
+        "field_provenance": {},
+        "typed_links": [
+          {
+            "source_node_id": "slatt_ch9_node_03",
+            "target_node_id": "slatt_ch9_node_04",
+            "link_type": "prerequisite",
+            "link_label_ru": "предпосылка",
+            "rationale": "Материал стр. 422–423 опирается на понятия предыдущего шага."
+          }
+        ],
+        "core_terms": [
+          {
+            "term": "Разрез",
+            "definition": "Ключевой термин, встречающийся в тексте главы на стр. 422.",
+            "first_introduced_pdf_page": 422,
+            "first_introduced_printed_page": "422",
+            "cis_symbol": "—",
+            "west_symbol": "—",
+            "west_term": "Ключевое понятие главы",
+            "unit": "б/р"
+          },
+          {
+            "term": "Концептуальная",
+            "definition": "Ключевой термин, встречающийся в тексте главы на стр. 422.",
+            "first_introduced_pdf_page": 422,
+            "first_introduced_printed_page": "422",
+            "cis_symbol": "—",
+            "west_symbol": "—",
+            "west_term": "Ключевое понятие главы",
+            "unit": "б/р"
+          }
+        ],
+        "threshold_concept": "Разрез",
+        "misconception_to_fix": "Не отрывайте расчётные оценки и эмпирические правила от условий их применимости.",
+        "data_transfer": "Применение принципов со стр. 422–423 на практических данных.",
+        "it_analogy_and_limits": "Учебный узел привязан к меткам <!-- page N --> исходного md-файла.",
+        "specialist_manual_steps": [],
+        "decision_points": [],
+        "inefficiency_lens": null,
+        "worked_example": {
+          "status": "present",
+          "not_applicable_reason": "",
+          "problem_number": "",
+          "figure_ref": "",
+          "pdf_page": 422,
+          "printed_page": "422",
+          "conditions": "11-23 Lithologic/depositional units shown by colour: - yellow-orange — Fluvial/Crevasse Splay; - bright yellow — Floodplain; - yellow — Distributary Channel; - orange — Distributary Mouth Bar; - pale beige — Bay; - light yellow — Shelf, Prodelta, & Delta Front.",
+          "steps": [
+            "Chapter | 9 Deltaic Deposits and Reservoirs 421 ---- ━━━ FORMAT 4: CROSS-SECTION / РАЗРЕЗ ━━━ (a) Southwest–Northeast correlation section."
+          ],
+          "result": "Vertical scale: depth; numerical labels 8500, 8600, 8700 at left and 8400, 8500, 8600 at right."
+        },
+        "textbook_problems": [],
+        "modern_equivalents": [
+          {
+            "historical_item": "§9.3–9.4: River-Dominated Delta Deposits (стр. 410–423)",
+            "historical_context": "Источник (стр. 422–423)",
+            "modern_analog": "Цифровая интерпретация и моделирование",
+            "modern_context": "Современная инженерная практика",
+            "pdf_page": 422
+          }
+        ],
+        "not_applicable_fields": [],
+        "expert_review_flags": [],
+        "covered_unit_ids": [
+          "test_slatt_p422_u04_01",
+          "test_slatt_p422_u04_02",
+          "test_slatt_p423_u04_03",
+          "test_slatt_p423_u04_04"
+        ],
+        "claim_ids": [
+          "slatt_ch9_node_04_claim_01",
+          "slatt_ch9_node_04_claim_02",
+          "slatt_ch9_node_04_claim_03",
+          "slatt_ch9_node_04_claim_04"
+        ],
+        "computed_values": []
+      }
+    ],
+    "claims": [
+      {
+        "claim_id": "slatt_ch9_node_01_claim_01",
+        "node_id": "slatt_ch9_node_01",
+        "unit_id": "test_slatt_p410_u01_01",
+        "pdf_page": 410,
+        "printed_page": "410",
+        "verbatim_quote": "Chapter | 9 Deltaic Deposits and Reservoirs 409 It is important for proper subsurface correlations to understand that clinoforms, which represent geological time lines, crosscut lithostratigraphic boundaries.",
+        "claim_text": "Chapter | 9 Deltaic Deposits and Reservoirs 409 It is important for proper subsurface correlations to understand that clinoforms, which represent geological time lines, crosscut lithostratigraphic boundaries.",
+        "epistemic_role": "observation",
+        "origin_tag": "author_number",
+        "conditions": [],
+        "numbers_and_units": [],
+        "computed_values": [],
+        "requires_expert_check": false,
+        "expert_check_reason": ""
+      },
+      {
+        "claim_id": "slatt_ch9_node_01_claim_02",
+        "node_id": "slatt_ch9_node_01",
+        "unit_id": "test_slatt_p410_u01_02",
+        "pdf_page": 410,
+        "printed_page": "410",
+        "verbatim_quote": "The hypothetical example in Fig.",
+        "claim_text": "The hypothetical example in Fig.",
+        "epistemic_role": "interpretation",
+        "origin_tag": "author_number",
+        "conditions": [],
+        "numbers_and_units": [],
+        "computed_values": [],
+        "requires_expert_check": false,
+        "expert_check_reason": ""
+      },
+      {
+        "claim_id": "slatt_ch9_node_01_claim_03",
+        "node_id": "slatt_ch9_node_01",
+        "unit_id": "test_slatt_p411_u01_03",
+        "pdf_page": 411,
+        "printed_page": "411",
+        "verbatim_quote": "410 Stratigraphic Reservoir Characterization for Petroleum Geologists 9.4 RIVER-DOMINATED DELTA DEPOSITS AND RESERVOIRS 9.4.1 Processes and Deposits The Mississippi River Delta (Fig.",
+        "claim_text": "410 Stratigraphic Reservoir Characterization for Petroleum Geologists 9.4 RIVER-DOMINATED DELTA DEPOSITS AND RESERVOIRS 9.4.1 Processes and Deposits The Mississippi River Delta (Fig.",
+        "epistemic_role": "observation",
+        "origin_tag": "author_number",
+        "conditions": [],
+        "numbers_and_units": [],
+        "computed_values": [],
+        "requires_expert_check": false,
+        "expert_check_reason": ""
+      },
+      {
+        "claim_id": "slatt_ch9_node_01_claim_04",
+        "node_id": "slatt_ch9_node_01",
+        "unit_id": "test_slatt_p411_u01_04",
+        "pdf_page": 411,
+        "printed_page": "411",
+        "verbatim_quote": "9.13) has long been considered the “type” river-dominated delta (Fig.",
+        "claim_text": "9.13) has long been considered the “type” river-dominated delta (Fig.",
+        "epistemic_role": "interpretation",
+        "origin_tag": "author_number",
+        "conditions": [],
+        "numbers_and_units": [],
+        "computed_values": [],
+        "requires_expert_check": false,
+        "expert_check_reason": ""
+      },
+      {
+        "claim_id": "slatt_ch9_node_01_claim_05",
+        "node_id": "slatt_ch9_node_01",
+        "unit_id": "test_slatt_p412_u01_05",
+        "pdf_page": 412,
+        "printed_page": "412",
+        "verbatim_quote": "Chapter | 9 Deltaic Deposits and Reservoirs 411 ---- ━━━ FORMAT 4: CROSS-SECTION / РАЗРЕЗ ━━━ (b) Orientation: Inland delta plain (left) → South China Sea (right).",
+        "claim_text": "Chapter | 9 Deltaic Deposits and Reservoirs 411 ---- ━━━ FORMAT 4: CROSS-SECTION / РАЗРЕЗ ━━━ (b) Orientation: Inland delta plain (left) → South China Sea (right).",
+        "epistemic_role": "observation",
+        "origin_tag": "author_number",
+        "conditions": [],
+        "numbers_and_units": [],
+        "computed_values": [],
+        "requires_expert_check": false,
+        "expert_check_reason": ""
+      },
+      {
+        "claim_id": "slatt_ch9_node_01_claim_06",
+        "node_id": "slatt_ch9_node_01",
+        "unit_id": "test_slatt_p412_u01_06",
+        "pdf_page": 412,
+        "printed_page": "412",
+        "verbatim_quote": "Depositional-environment transect: Inland delta plain → Beach ridge delta plain → South China Sea.",
+        "claim_text": "Depositional-environment transect: Inland delta plain → Beach ridge delta plain → South China Sea.",
+        "epistemic_role": "interpretation",
+        "origin_tag": "author_number",
+        "conditions": [],
+        "numbers_and_units": [],
+        "computed_values": [],
+        "requires_expert_check": false,
+        "expert_check_reason": ""
+      },
+      {
+        "claim_id": "slatt_ch9_node_02_claim_01",
+        "node_id": "slatt_ch9_node_02",
+        "unit_id": "test_slatt_p414_u02_01",
+        "pdf_page": 414,
+        "printed_page": "414",
+        "verbatim_quote": "---- ━━━ FORMAT 12: CONCEPTUAL DIAGRAM ━━━ Three-dimensional conceptual block diagram of a deltaic depositional system.",
+        "claim_text": "---- ━━━ FORMAT 12: CONCEPTUAL DIAGRAM ━━━ Three-dimensional conceptual block diagram of a deltaic depositional system.",
+        "epistemic_role": "observation",
+        "origin_tag": "author_number",
+        "conditions": [],
+        "numbers_and_units": [],
+        "computed_values": [],
+        "requires_expert_check": false,
+        "expert_check_reason": ""
+      },
+      {
+        "claim_id": "slatt_ch9_node_02_claim_02",
+        "node_id": "slatt_ch9_node_02",
+        "unit_id": "test_slatt_p414_u02_02",
+        "pdf_page": 414,
+        "printed_page": "414",
+        "verbatim_quote": "Map view shows distributary channels and bays; block sides show prograding sediment bodies and marine deposits.",
+        "claim_text": "Map view shows distributary channels and bays; block sides show prograding sediment bodies and marine deposits.",
+        "epistemic_role": "interpretation",
+        "origin_tag": "author_number",
+        "conditions": [],
+        "numbers_and_units": [],
+        "computed_values": [],
+        "requires_expert_check": false,
+        "expert_check_reason": ""
+      },
+      {
+        "claim_id": "slatt_ch9_node_02_claim_03",
+        "node_id": "slatt_ch9_node_02",
+        "unit_id": "test_slatt_p415_u02_03",
+        "pdf_page": 415,
+        "printed_page": "415",
+        "verbatim_quote": "414 Stratigraphic Reservoir Characterization for Petroleum Geologists ---- ━━━ FORMAT 15: PHOTOGRAPH ━━━ (a) Subject class: landscape photograph.",
+        "claim_text": "414 Stratigraphic Reservoir Characterization for Petroleum Geologists ---- ━━━ FORMAT 15: PHOTOGRAPH ━━━ (a) Subject class: landscape photograph.",
+        "epistemic_role": "observation",
+        "origin_tag": "author_number",
+        "conditions": [],
+        "numbers_and_units": [],
+        "computed_values": [],
+        "requires_expert_check": false,
+        "expert_check_reason": ""
+      },
+      {
+        "claim_id": "slatt_ch9_node_02_claim_04",
+        "node_id": "slatt_ch9_node_02",
+        "unit_id": "test_slatt_p415_u02_04",
+        "pdf_page": 415,
+        "printed_page": "415",
+        "verbatim_quote": "View across a water body toward a vegetated shoreline with buildings.",
+        "claim_text": "View across a water body toward a vegetated shoreline with buildings.",
+        "epistemic_role": "interpretation",
+        "origin_tag": "author_number",
+        "conditions": [],
+        "numbers_and_units": [],
+        "computed_values": [],
+        "requires_expert_check": false,
+        "expert_check_reason": ""
+      },
+      {
+        "claim_id": "slatt_ch9_node_02_claim_05",
+        "node_id": "slatt_ch9_node_02",
+        "unit_id": "test_slatt_p416_u02_05",
+        "pdf_page": 416,
+        "printed_page": "416",
+        "verbatim_quote": "Chapter | 9 Deltaic Deposits and Reservoirs 415 ---- ━━━ FORMAT 12: CONCEPTUAL DIAGRAM ━━━ Plan-view conceptual diagram of a deltaic depositional system.",
+        "claim_text": "Chapter | 9 Deltaic Deposits and Reservoirs 415 ---- ━━━ FORMAT 12: CONCEPTUAL DIAGRAM ━━━ Plan-view conceptual diagram of a deltaic depositional system.",
+        "epistemic_role": "observation",
+        "origin_tag": "author_number",
+        "conditions": [],
+        "numbers_and_units": [],
+        "computed_values": [],
+        "requires_expert_check": false,
+        "expert_check_reason": ""
+      },
+      {
+        "claim_id": "slatt_ch9_node_02_claim_06",
+        "node_id": "slatt_ch9_node_02",
+        "unit_id": "test_slatt_p416_u02_06",
+        "pdf_page": 416,
+        "printed_page": "416",
+        "verbatim_quote": "The main map shows coarse alluvial deposits in the upper-left area, passing basinward through fluvial channels, lakes, floodplain, distributary channels, delta-mouth bars, bays, delta front, and prodelta.",
+        "claim_text": "The main map shows coarse alluvial deposits in the upper-left area, passing basinward through fluvial channels, lakes, floodplain, distributary channels, delta-mouth bars, bays, delta front, and prodelta.",
+        "epistemic_role": "interpretation",
+        "origin_tag": "author_number",
+        "conditions": [],
+        "numbers_and_units": [],
+        "computed_values": [],
+        "requires_expert_check": false,
+        "expert_check_reason": ""
+      },
+      {
+        "claim_id": "slatt_ch9_node_03_claim_01",
+        "node_id": "slatt_ch9_node_03",
+        "unit_id": "test_slatt_p418_u03_01",
+        "pdf_page": 418,
+        "printed_page": "418",
+        "verbatim_quote": "Chapter | 9 Deltaic Deposits and Reservoirs 417 ---- ━━━ FORMAT 4: CROSS-SECTION / РАЗРЕЗ ━━━ Верхний корреляционный разрез: North–South.",
+        "claim_text": "Chapter | 9 Deltaic Deposits and Reservoirs 417 ---- ━━━ FORMAT 4: CROSS-SECTION / РАЗРЕЗ ━━━ Верхний корреляционный разрез: North–South.",
+        "epistemic_role": "observation",
+        "origin_tag": "author_number",
+        "conditions": [],
+        "numbers_and_units": [],
+        "computed_values": [],
+        "requires_expert_check": false,
+        "expert_check_reason": ""
+      },
+      {
+        "claim_id": "slatt_ch9_node_03_claim_02",
+        "node_id": "slatt_ch9_node_03",
+        "unit_id": "test_slatt_p418_u03_02",
+        "pdf_page": 418,
+        "printed_page": "418",
+        "verbatim_quote": "Горизонтальный масштаб: 2 miles.",
+        "claim_text": "Горизонтальный масштаб: 2 miles.",
+        "epistemic_role": "interpretation",
+        "origin_tag": "author_number",
+        "conditions": [],
+        "numbers_and_units": [],
+        "computed_values": [],
+        "requires_expert_check": false,
+        "expert_check_reason": ""
+      },
+      {
+        "claim_id": "slatt_ch9_node_03_claim_03",
+        "node_id": "slatt_ch9_node_03",
+        "unit_id": "test_slatt_p419_u03_03",
+        "pdf_page": 419,
+        "printed_page": "419",
+        "verbatim_quote": "418 Stratigraphic Reservoir Characterization for Petroleum Geologists ---- ━━━ FORMAT 2: WELL LOG / КАРОТАЖНАЯ ДИАГРАММА ━━━ Глубина: ft; глубина увеличивается вниз.",
+        "claim_text": "418 Stratigraphic Reservoir Characterization for Petroleum Geologists ---- ━━━ FORMAT 2: WELL LOG / КАРОТАЖНАЯ ДИАГРАММА ━━━ Глубина: ft; глубина увеличивается вниз.",
+        "epistemic_role": "observation",
+        "origin_tag": "author_number",
+        "conditions": [],
+        "numbers_and_units": [],
+        "computed_values": [],
+        "requires_expert_check": false,
+        "expert_check_reason": ""
+      },
+      {
+        "claim_id": "slatt_ch9_node_03_claim_04",
+        "node_id": "slatt_ch9_node_03",
+        "unit_id": "test_slatt_p419_u03_04",
+        "pdf_page": 419,
+        "printed_page": "419",
+        "verbatim_quote": "Подписанные отметки глубины: 9450, 9500, 9550, 9600 ft.",
+        "claim_text": "Подписанные отметки глубины: 9450, 9500, 9550, 9600 ft.",
+        "epistemic_role": "interpretation",
+        "origin_tag": "author_number",
+        "conditions": [],
+        "numbers_and_units": [],
+        "computed_values": [],
+        "requires_expert_check": false,
+        "expert_check_reason": ""
+      },
+      {
+        "claim_id": "slatt_ch9_node_03_claim_05",
+        "node_id": "slatt_ch9_node_03",
+        "unit_id": "test_slatt_p420_u03_05",
+        "pdf_page": 420,
+        "printed_page": "420",
+        "verbatim_quote": "---- ━━━ FORMAT 2: WELL LOG / КАРОТАЖНАЯ ДИАГРАММА ━━━ Depth reference: vertical bar labelled 0 at top and 100 ft below; depth increases downward.",
+        "claim_text": "---- ━━━ FORMAT 2: WELL LOG / КАРОТАЖНАЯ ДИАГРАММА ━━━ Depth reference: vertical bar labelled 0 at top and 100 ft below; depth increases downward.",
+        "epistemic_role": "observation",
+        "origin_tag": "author_number",
+        "conditions": [],
+        "numbers_and_units": [],
+        "computed_values": [],
+        "requires_expert_check": false,
+        "expert_check_reason": ""
+      },
+      {
+        "claim_id": "slatt_ch9_node_03_claim_06",
+        "node_id": "slatt_ch9_node_03",
+        "unit_id": "test_slatt_p420_u03_06",
+        "pdf_page": 420,
+        "printed_page": "420",
+        "verbatim_quote": "Total displayed depth range is not labelled.",
+        "claim_text": "Total displayed depth range is not labelled.",
+        "epistemic_role": "interpretation",
+        "origin_tag": "author_number",
+        "conditions": [],
+        "numbers_and_units": [],
+        "computed_values": [],
+        "requires_expert_check": false,
+        "expert_check_reason": ""
+      },
+      {
+        "claim_id": "slatt_ch9_node_04_claim_01",
+        "node_id": "slatt_ch9_node_04",
+        "unit_id": "test_slatt_p422_u04_01",
+        "pdf_page": 422,
+        "printed_page": "422",
+        "verbatim_quote": "Chapter | 9 Deltaic Deposits and Reservoirs 421 ---- ━━━ FORMAT 4: CROSS-SECTION / РАЗРЕЗ ━━━ (a) Southwest–Northeast correlation section.",
+        "claim_text": "Chapter | 9 Deltaic Deposits and Reservoirs 421 ---- ━━━ FORMAT 4: CROSS-SECTION / РАЗРЕЗ ━━━ (a) Southwest–Northeast correlation section.",
+        "epistemic_role": "observation",
+        "origin_tag": "author_number",
+        "conditions": [],
+        "numbers_and_units": [],
+        "computed_values": [],
+        "requires_expert_check": false,
+        "expert_check_reason": ""
+      },
+      {
+        "claim_id": "slatt_ch9_node_04_claim_02",
+        "node_id": "slatt_ch9_node_04",
+        "unit_id": "test_slatt_p422_u04_02",
+        "pdf_page": 422,
+        "printed_page": "422",
+        "verbatim_quote": "Vertical scale: depth; numerical labels 8500, 8600, 8700 at left and 8400, 8500, 8600 at right.",
+        "claim_text": "Vertical scale: depth; numerical labels 8500, 8600, 8700 at left and 8400, 8500, 8600 at right.",
+        "epistemic_role": "interpretation",
+        "origin_tag": "author_number",
+        "conditions": [],
+        "numbers_and_units": [],
+        "computed_values": [],
+        "requires_expert_check": false,
+        "expert_check_reason": ""
+      },
+      {
+        "claim_id": "slatt_ch9_node_04_claim_03",
+        "node_id": "slatt_ch9_node_04",
+        "unit_id": "test_slatt_p423_u04_03",
+        "pdf_page": 423,
+        "printed_page": "423",
+        "verbatim_quote": "422 Stratigraphic Reservoir Characterization for Petroleum Geologists ---- ━━━ FORMAT 2: WELL LOG / КАРОТАЖНАЯ ДИАГРАММА ━━━ Vertical multi-track log panel at upper left. - Depth axis is vertical; numerical depth labels are [illegible].",
+        "claim_text": "422 Stratigraphic Reservoir Characterization for Petroleum Geologists ---- ━━━ FORMAT 2: WELL LOG / КАРОТАЖНАЯ ДИАГРАММА ━━━ Vertical multi-track log panel at upper left. - Depth axis is vertical; numerical depth labels are [illegible].",
+        "epistemic_role": "observation",
+        "origin_tag": "author_number",
+        "conditions": [],
+        "numbers_and_units": [],
+        "computed_values": [],
+        "requires_expert_check": false,
+        "expert_check_reason": ""
+      },
+      {
+        "claim_id": "slatt_ch9_node_04_claim_04",
+        "node_id": "slatt_ch9_node_04",
+        "unit_id": "test_slatt_p423_u04_04",
+        "pdf_page": 423,
+        "printed_page": "423",
+        "verbatim_quote": "SAK [illegible]”; “USGNU 1”; “Y-2”; “1A-15”; “1A-6”; “1B-1”; “1E-8”; “1E-8”; “1E-3”. - Internal labels include “A-2”, “A-3”, and “A-4”; other labels are [illegible]. - A scale symbol at lower left is labelled “SCALE” and “Ver.",
+        "claim_text": "SAK [illegible]”; “USGNU 1”; “Y-2”; “1A-15”; “1A-6”; “1B-1”; “1E-8”; “1E-8”; “1E-3”. - Internal labels include “A-2”, “A-3”, and “A-4”; other labels are [illegible]. - A scale symbol at lower left is labelled “SCALE” and “Ver.",
+        "epistemic_role": "interpretation",
+        "origin_tag": "author_number",
+        "conditions": [],
+        "numbers_and_units": [],
+        "computed_values": [],
+        "requires_expert_check": false,
+        "expert_check_reason": ""
+      }
+    ],
+    "coverage_map": {
+      "test_slatt_p410_u01_01": "slatt_ch9_node_01",
+      "test_slatt_p410_u01_02": "slatt_ch9_node_01",
+      "test_slatt_p411_u01_03": "slatt_ch9_node_01",
+      "test_slatt_p411_u01_04": "slatt_ch9_node_01",
+      "test_slatt_p412_u01_05": "slatt_ch9_node_01",
+      "test_slatt_p412_u01_06": "slatt_ch9_node_01",
+      "test_slatt_p414_u02_01": "slatt_ch9_node_02",
+      "test_slatt_p414_u02_02": "slatt_ch9_node_02",
+      "test_slatt_p415_u02_03": "slatt_ch9_node_02",
+      "test_slatt_p415_u02_04": "slatt_ch9_node_02",
+      "test_slatt_p416_u02_05": "slatt_ch9_node_02",
+      "test_slatt_p416_u02_06": "slatt_ch9_node_02",
+      "test_slatt_p418_u03_01": "slatt_ch9_node_03",
+      "test_slatt_p418_u03_02": "slatt_ch9_node_03",
+      "test_slatt_p419_u03_03": "slatt_ch9_node_03",
+      "test_slatt_p419_u03_04": "slatt_ch9_node_03",
+      "test_slatt_p420_u03_05": "slatt_ch9_node_03",
+      "test_slatt_p420_u03_06": "slatt_ch9_node_03",
+      "test_slatt_p422_u04_01": "slatt_ch9_node_04",
+      "test_slatt_p422_u04_02": "slatt_ch9_node_04",
+      "test_slatt_p423_u04_03": "slatt_ch9_node_04",
+      "test_slatt_p423_u04_04": "slatt_ch9_node_04"
+    },
+    "excluded_units": {},
+    "ocr_corrections": [],
+    "pedagogical_checks": {}
+  },
+  "registry_report": {
+    "passed": true,
+    "registry_id": "reg_test_slatt",
+    "layer_id": "layer_test_slatt",
+    "book_file": "test_slatt.md",
+    "pdf_ranges": [
+      {
+        "start_pdf_page": 410,
+        "end_pdf_page": 423,
+        "start_printed_page": "410",
+        "end_printed_page": "423",
+        "section_label": "§9.3–9.4: River-Dominated Delta Deposits (стр. 410–423)"
+      }
+    ],
+    "total_registry_units": 22,
+    "covered_units_count": 22,
+    "excluded_units_count": 0,
+    "manual_verification_required_count": 0,
+    "discrepancies": [],
+    "manual_verification_items": [],
+    "summary_by_type": {}
+  },
+  "routing_report": {
+    "course_id": "test_slatt",
+    "chapter_id": "slatt_ch9",
+    "book_file": "test_slatt.md",
+    "domain_package_id": "oil_gas_ru",
+    "total_steps": 4,
+    "covered_steps": 4,
+    "needs_model_steps": 0,
+    "class_a_b_count": 1,
+    "hook_shorts_share_pct": 0.0,
+    "video_heavy_template_coverage": [],
+    "entries": [
+      {
+        "node_id": "slatt_ch9_node_01",
+        "step_id": "test_slatt_step_01",
+        "step_title": "Chapter | 9 Deltaic Deposits and",
+        "video_capacity_score": 7,
+        "video_capacity_features": [],
+        "selected_format": "video_16_9_and_interactive",
+        "routing_rationale": "Маршрутизация с доменом oil_gas_ru (Двойник 3).",
+        "visual_class": "A",
+        "template_id": "delta_progradation_16x9",
+        "model_state": "parametric_geology",
+        "coverage_status": "covered",
+        "artifact_path": "",
+        "missing_requirement": "",
+        "illustration_id": "test_slatt_step_01_illust",
+        "source_ref": "test_slatt.md, стр. 410–413"
+      },
+      {
+        "node_id": "slatt_ch9_node_02",
+        "step_id": "test_slatt_step_02",
+        "step_title": "━━━ FORMAT 12: CONCEPTUAL DIAGRAM ━━━",
+        "video_capacity_score": 3,
+        "video_capacity_features": [],
+        "selected_format": "structured_diagram_table",
+        "routing_rationale": "Маршрутизация с доменом oil_gas_ru (Двойник 3).",
+        "visual_class": "C",
+        "template_id": "delta_progradation_16x9",
+        "model_state": "parametric_geology",
+        "coverage_status": "covered",
+        "artifact_path": "",
+        "missing_requirement": "",
+        "illustration_id": "test_slatt_step_02_illust",
+        "source_ref": "test_slatt.md, стр. 414–417"
+      },
+      {
+        "node_id": "slatt_ch9_node_03",
+        "step_id": "test_slatt_step_03",
+        "step_title": "Chapter | 9 Deltaic Deposits and",
+        "video_capacity_score": 3,
+        "video_capacity_features": [],
+        "selected_format": "structured_diagram_table",
+        "routing_rationale": "Маршрутизация с доменом oil_gas_ru (Двойник 3).",
+        "visual_class": "C",
+        "template_id": "delta_progradation_16x9",
+        "model_state": "parametric_geology",
+        "coverage_status": "covered",
+        "artifact_path": "",
+        "missing_requirement": "",
+        "illustration_id": "test_slatt_step_03_illust",
+        "source_ref": "test_slatt.md, стр. 418–421"
+      },
+      {
+        "node_id": "slatt_ch9_node_04",
+        "step_id": "test_slatt_step_04",
+        "step_title": "Chapter | 9 Deltaic Deposits and",
+        "video_capacity_score": 3,
+        "video_capacity_features": [],
+        "selected_format": "structured_diagram_table",
+        "routing_rationale": "Маршрутизация с доменом oil_gas_ru (Двойник 3).",
+        "visual_class": "C",
+        "template_id": "delta_progradation_16x9",
+        "model_state": "parametric_geology",
+        "coverage_status": "covered",
+        "artifact_path": "",
+        "missing_requirement": "",
+        "illustration_id": "test_slatt_step_04_illust",
+        "source_ref": "test_slatt.md, стр. 422–423"
+      }
+    ],
+    "step_illustration_source_links": []
+  },
+  "scene_specs": [],
+  "steps": [
+    {
+      "step_id": "slatt_ch9_step_01",
+      "node_id": "slatt_ch9_node_01",
+      "order": 1,
+      "estimated_minutes": 8,
+      "difficulty_codes": [
+        "М",
+        "П"
+      ],
+      "source_heading": "§9.3–9.4: River-Dominated Delta Deposits (стр. 410–423) (стр. 410–413)",
+      "step_title": "Chapter | 9 Deltaic Deposits and",
+      "summary_2_3_sentences": "Chapter | 9 Deltaic Deposits and Reservoirs 409 It is important for proper subsurface correlations to understand that clinoforms, which represent geological time lines, crosscut lithostratigraphic boundaries. The hypothetical example in Fig.",
+      "explanation_paragraphs": [
+        {
+          "role": "Физико-геологический механизм",
+          "text": "Chapter | 9 Deltaic Deposits and Reservoirs 409 It is important for proper subsurface correlations to understand that clinoforms, which represent geological time lines, crosscut lithostratigraphic boundaries.",
+          "unit_id": "test_slatt_p410_u01_01",
+          "pdf_page": 410,
+          "printed_page": "410",
+          "source_citation": "Источник: PDF стр. 410 (печ. стр. 410), ед. test_slatt_p410_u01_01",
+          "verbatim_quote": "Chapter | 9 Deltaic Deposits and Reservoirs 409 It is important for proper subsurface correlations to understand that clinoforms, which represent geological time lines, crosscut lithostratigraphic boundaries."
+        },
+        {
+          "role": "Практика работы специалиста",
+          "text": "The hypothetical example in Fig.",
+          "unit_id": "test_slatt_p410_u01_02",
+          "pdf_page": 410,
+          "printed_page": "410",
+          "source_citation": "Источник: PDF стр. 410",
+          "verbatim_quote": "The hypothetical example in Fig."
+        },
+        {
+          "role": "Пороговая идея и перенос в данные",
+          "text": "Yellow fill Перенос в данные: Применение принципов со стр. 410–413 на практических данных.",
+          "unit_id": "test_slatt_p410_u01_01",
+          "pdf_page": 410,
+          "printed_page": "410",
+          "source_citation": "Источник: PDF стр. 410 (печ. стр. 410)",
+          "verbatim_quote": "Chapter | 9 Deltaic Deposits and Reservoirs 409 It is important for proper subsurface correlations to understand that clinoforms, which represent geological time lines, crosscut lithostratigraphic boundaries."
+        }
+      ],
+      "first_use_terms": [
+        {
+          "term": "Yellow fill",
+          "definition": "Mouth-bar Sandstone.",
+          "first_introduced_pdf_page": 410,
+          "first_introduced_printed_page": "410",
+          "cis_symbol": "—",
+          "west_symbol": "—",
+          "west_term": "Термин источника",
+          "unit": "б/р"
+        },
+        {
+          "term": "Marsh",
+          "definition": "Beach ridge, Marsh/Foreshore",
+          "first_introduced_pdf_page": 410,
+          "first_introduced_printed_page": "410",
+          "cis_symbol": "—",
+          "west_symbol": "—",
+          "west_term": "Термин источника",
+          "unit": "б/р"
+        }
+      ],
+      "formulas_decoded": [],
+      "applicability_conditions": [
+        "9.10 shows correlations based upon lithofacies (stratigraphic intervals with similarities in well log response) and upon geological time."
+      ],
+      "worked_example": {
+        "status": "present",
+        "not_applicable_reason": "",
+        "problem_number": "",
+        "figure_ref": "",
+        "pdf_page": 410,
+        "printed_page": "410",
+        "conditions": "Note that shaley and heterolithic intervals separate sandy intervals, so that the sands between wells 1 and 2 are not in communication.",
+        "steps": [
+          "Chapter | 9 Deltaic Deposits and Reservoirs 409 It is important for proper subsurface correlations to understand that clinoforms, which represent geological time lines, crosscut li"
+        ],
+        "result": "The hypothetical example in Fig."
+      },
+      "textbook_problems": [],
+      "tables": [
+        {
+          "title": "Сводная таблица параметров и терминологического моста (Шаг 1)",
+          "headers": [
+            "Параметр / Термин",
+            "Обозначение СНГ",
+            "Международный аналог (West)",
+            "Единицы",
+            "Определение и страница источника"
+          ],
+          "rows": [
+            [
+              "Yellow fill",
+              "—",
+              "— (Термин источника)",
+              "б/р",
+              "Mouth-bar Sandstone. [стр. 410]"
+            ],
+            [
+              "Marsh",
+              "—",
+              "— (Термин источника)",
+              "б/р",
+              "Beach ridge, Marsh/Foreshore [стр. 410]"
+            ]
+          ]
+        }
+      ],
+      "modern_context": [
+        {
+          "historical_item": "§9.3–9.4: River-Dominated Delta Deposits (стр. 410–423)",
+          "historical_context": "Источник (стр. 410–413)",
+          "modern_analog": "Цифровая интерпретация и моделирование",
+          "modern_context": "Современная инженерная практика",
+          "pdf_page": 410
+        }
+      ],
+      "it_analogy_and_limits": "Учебный узел привязан к меткам <!-- page N --> исходного md-файла.",
+      "typical_error": "Не отрывайте расчётные оценки и эмпирические правила от условий их применимости.",
+      "epistemic_split": {
+        "observation": "Chapter | 9 Deltaic Deposits and Reservoirs 409 It is important for proper subsurface correlations to understand that clinoforms, which represent geological time lines, crosscut lithostratigraphic boundaries.",
+        "inference": "The hypothetical example in Fig.",
+        "assumption": "Выводы справедливы в границах допущений источника (стр. 410–413)."
+      },
+      "specialist_manual_steps": [],
+      "decision_points": [],
+      "inefficiency_lens": null,
+      "deeper_branch": "Сопоставьте с соседними разделами главы (§9.3–9.4: River-Dominated Delta Deposits (стр. 410–423)).",
+      "illustration": {
+        "illustration_id": "test_slatt_step_01_illust",
+        "node_id": "slatt_ch9_node_01",
+        "step_id": "test_slatt_step_01",
+        "title": "Chapter | 9 Deltaic Deposits and",
+        "visual_class": "B",
+        "format_kind": "redraw_svg",
+        "source_ref": "test_slatt.md, стр. 410–413 (<!-- page 410 -->)",
+        "redraw_caption": "Схема по меткам <!-- page 410..413 -->",
+        "pdf_page": 410,
+        "printed_page": "410",
+        "claim_id": "slatt_ch9_node_01_claim_01",
+        "asset_rel_path": "illustrations/test_slatt_step_01_illust.svg",
+        "svg_markup": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 760 290\" role=\"img\" aria-label=\"Схема шага: Chapter | 9 Deltaic Deposits and\"><rect width=\"760\" height=\"290\" rx=\"14\" fill=\"#11141B\" /><path d=\"M0 245 Q190 225 380 245 T760 240 L760 290 L0 290 Z\" fill=\"#1A202B\" /><path d=\"M0 264 Q220 250 440 266 T760 258 L760 290 L0 290 Z\" fill=\"#232A38\" /><text x=\"44\" y=\"42\" fill=\"#D97736\" font-size=\"13\" font-weight=\"600\" font-family=\"system-ui, sans-serif\">Схема по источнику · стр. 410–413</text><text x=\"44\" y=\"68\" fill=\"#F4F1EA\" font-size=\"18\" font-weight=\"700\" font-family=\"system-ui, sans-serif\">Chapter | 9 Deltaic Deposits and</text><rect x=\"44\" y=\"84\" width=\"672\" height=\"42\" rx=\"8\" fill=\"#181C24\" stroke=\"#2A3140\" /><circle cx=\"66\" cy=\"105\" r=\"5\" fill=\"#38BDF8\" /><text x=\"84\" y=\"110\" fill=\"#F4F1EA\" font-size=\"14\" font-family=\"system-ui, sans-serif\">Chapter | 9 Deltaic Deposits and Reservoirs 409 It is important for prop</text><rect x=\"44\" y=\"138\" width=\"672\" height=\"42\" rx=\"8\" fill=\"#181C24\" stroke=\"#2A3140\" /><circle cx=\"66\" cy=\"159\" r=\"5\" fill=\"#10B981\" /><text x=\"84\" y=\"164\" fill=\"#F4F1EA\" font-size=\"14\" font-family=\"system-ui, sans-serif\">The hypothetical example in Fig.</text><rect x=\"44\" y=\"192\" width=\"672\" height=\"42\" rx=\"8\" fill=\"#181C24\" stroke=\"#2A3140\" /><circle cx=\"66\" cy=\"213\" r=\"5\" fill=\"#E5954A\" /><text x=\"84\" y=\"218\" fill=\"#F4F1EA\" font-size=\"14\" font-family=\"system-ui, sans-serif\">9.10 shows correlations based upon lithofacies (stratigraphic intervals </text></svg>",
+        "legend_items": [],
+        "scale_and_units": "",
+        "provenance_note": ""
+      },
+      "video_url": null,
+      "video_vtt_url": null,
+      "video_aspect": null,
+      "media_passport_id": null,
+      "ocr_corrections_applied": [],
+      "practicum": null,
+      "data_decision_card": null
+    },
+    {
+      "step_id": "slatt_ch9_step_02",
+      "node_id": "slatt_ch9_node_02",
+      "order": 2,
+      "estimated_minutes": 8,
+      "difficulty_codes": [
+        "М",
+        "П"
+      ],
+      "source_heading": "§9.3–9.4: River-Dominated Delta Deposits (стр. 410–423) (стр. 414–417)",
+      "step_title": "━━━ FORMAT 12: CONCEPTUAL DIAGRAM ━━━",
+      "summary_2_3_sentences": "---- ━━━ FORMAT 12: CONCEPTUAL DIAGRAM ━━━ Three-dimensional conceptual block diagram of a deltaic depositional system. Map view shows distributary channels and bays; block sides show prograding sediment bodies and marine deposits.",
+      "explanation_paragraphs": [
+        {
+          "role": "Физико-геологический механизм",
+          "text": "---- ━━━ FORMAT 12: CONCEPTUAL DIAGRAM ━━━ Three-dimensional conceptual block diagram of a deltaic depositional system.",
+          "unit_id": "test_slatt_p414_u02_01",
+          "pdf_page": 414,
+          "printed_page": "414",
+          "source_citation": "Источник: PDF стр. 414 (печ. стр. 414), ед. test_slatt_p414_u02_01",
+          "verbatim_quote": "---- ━━━ FORMAT 12: CONCEPTUAL DIAGRAM ━━━ Three-dimensional conceptual block diagram of a deltaic depositional system."
+        },
+        {
+          "role": "Практика работы специалиста",
+          "text": "Map view shows distributary channels and bays; block sides show prograding sediment bodies and marine deposits.",
+          "unit_id": "test_slatt_p414_u02_02",
+          "pdf_page": 414,
+          "printed_page": "414",
+          "source_citation": "Источник: PDF стр. 414",
+          "verbatim_quote": "Map view shows distributary channels and bays; block sides show prograding sediment bodies and marine deposits."
+        },
+        {
+          "role": "Пороговая идея и перенос в данные",
+          "text": "Deep plain Перенос в данные: Применение принципов со стр. 414–417 на практических данных.",
+          "unit_id": "test_slatt_p414_u02_01",
+          "pdf_page": 414,
+          "printed_page": "414",
+          "source_citation": "Источник: PDF стр. 414 (печ. стр. 414)",
+          "verbatim_quote": "---- ━━━ FORMAT 12: CONCEPTUAL DIAGRAM ━━━ Three-dimensional conceptual block diagram of a deltaic depositional system."
+        }
+      ],
+      "first_use_terms": [
+        {
+          "term": "Deep plain",
+          "definition": "dark, nearly structureless interval.",
+          "first_introduced_pdf_page": 414,
+          "first_introduced_printed_page": "414",
+          "cis_symbol": "—",
+          "west_symbol": "—",
+          "west_term": "Термин источника",
+          "unit": "б/р"
+        },
+        {
+          "term": "Subaqueous levee",
+          "definition": "ripple and climbing ripple laminations.",
+          "first_introduced_pdf_page": 414,
+          "first_introduced_printed_page": "414",
+          "cis_symbol": "—",
+          "west_symbol": "—",
+          "west_term": "Термин источника",
+          "unit": "б/р"
+        },
+        {
+          "term": "Bar crest",
+          "definition": "planar laminations.",
+          "first_introduced_pdf_page": 414,
+          "first_introduced_printed_page": "414",
+          "cis_symbol": "—",
+          "west_symbol": "—",
+          "west_term": "Термин источника",
+          "unit": "б/р"
+        }
+      ],
+      "formulas_decoded": [],
+      "applicability_conditions": [
+        "North arrow points toward the upper part of the image; horizontal scale is marked 0–10–20–30 km."
+      ],
+      "worked_example": {
+        "status": "present",
+        "not_applicable_reason": "",
+        "problem_number": "",
+        "figure_ref": "",
+        "pdf_page": 414,
+        "printed_page": "414",
+        "conditions": "Vertical depth scale increases downward from 0 to −100 m, −200 m, −400 m, and −600 m.",
+        "steps": [
+          "---- ━━━ FORMAT 12: CONCEPTUAL DIAGRAM ━━━ Three-dimensional conceptual block diagram of a deltaic depositional system."
+        ],
+        "result": "Map view shows distributary channels and bays; block sides show prograding sediment bodies and marine deposits."
+      },
+      "textbook_problems": [],
+      "tables": [
+        {
+          "title": "Сводная таблица параметров и терминологического моста (Шаг 2)",
+          "headers": [
+            "Параметр / Термин",
+            "Обозначение СНГ",
+            "Международный аналог (West)",
+            "Единицы",
+            "Определение и страница источника"
+          ],
+          "rows": [
+            [
+              "Deep plain",
+              "—",
+              "— (Термин источника)",
+              "б/р",
+              "dark, nearly structureless interval. [стр. 414]"
+            ],
+            [
+              "Subaqueous levee",
+              "—",
+              "— (Термин источника)",
+              "б/р",
+              "ripple and climbing ripple laminations. [стр. 414]"
+            ],
+            [
+              "Bar crest",
+              "—",
+              "— (Термин источника)",
+              "б/р",
+              "planar laminations. [стр. 414]"
+            ]
+          ]
+        }
+      ],
+      "modern_context": [
+        {
+          "historical_item": "§9.3–9.4: River-Dominated Delta Deposits (стр. 410–423)",
+          "historical_context": "Источник (стр. 414–417)",
+          "modern_analog": "Цифровая интерпретация и моделирование",
+          "modern_context": "Современная инженерная практика",
+          "pdf_page": 414
+        }
+      ],
+      "it_analogy_and_limits": "Учебный узел привязан к меткам <!-- page N --> исходного md-файла.",
+      "typical_error": "Не отрывайте расчётные оценки и эмпирические правила от условий их применимости.",
+      "epistemic_split": {
+        "observation": "---- ━━━ FORMAT 12: CONCEPTUAL DIAGRAM ━━━ Three-dimensional conceptual block diagram of a deltaic depositional system.",
+        "inference": "Map view shows distributary channels and bays; block sides show prograding sediment bodies and marine deposits.",
+        "assumption": "Выводы справедливы в границах допущений источника (стр. 414–417)."
+      },
+      "specialist_manual_steps": [],
+      "decision_points": [],
+      "inefficiency_lens": null,
+      "deeper_branch": "Сопоставьте с соседними разделами главы (§9.3–9.4: River-Dominated Delta Deposits (стр. 410–423)).",
+      "illustration": {
+        "illustration_id": "test_slatt_step_02_illust",
+        "node_id": "slatt_ch9_node_02",
+        "step_id": "test_slatt_step_02",
+        "title": "━━━ FORMAT 12: CONCEPTUAL DIAGRAM ━━━",
+        "visual_class": "C",
+        "format_kind": "redraw_svg",
+        "source_ref": "test_slatt.md, стр. 414–417 (<!-- page 414 -->)",
+        "redraw_caption": "Схема по меткам <!-- page 414..417 -->",
+        "pdf_page": 414,
+        "printed_page": "414",
+        "claim_id": "slatt_ch9_node_02_claim_01",
+        "asset_rel_path": "illustrations/test_slatt_step_02_illust.svg",
+        "svg_markup": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 760 290\" role=\"img\" aria-label=\"Схема шага: ━━━ FORMAT 12: CONCEPTUAL DIAGRAM ━━━\"><rect width=\"760\" height=\"290\" rx=\"14\" fill=\"#11141B\" /><path d=\"M0 245 Q190 225 380 245 T760 240 L760 290 L0 290 Z\" fill=\"#1A202B\" /><path d=\"M0 264 Q220 250 440 266 T760 258 L760 290 L0 290 Z\" fill=\"#232A38\" /><text x=\"44\" y=\"42\" fill=\"#D97736\" font-size=\"13\" font-weight=\"600\" font-family=\"system-ui, sans-serif\">Схема по источнику · стр. 414–417</text><text x=\"44\" y=\"68\" fill=\"#F4F1EA\" font-size=\"18\" font-weight=\"700\" font-family=\"system-ui, sans-serif\">━━━ FORMAT 12: CONCEPTUAL DIAGRAM ━━━</text><rect x=\"44\" y=\"84\" width=\"672\" height=\"42\" rx=\"8\" fill=\"#181C24\" stroke=\"#2A3140\" /><circle cx=\"66\" cy=\"105\" r=\"5\" fill=\"#10B981\" /><text x=\"84\" y=\"110\" fill=\"#F4F1EA\" font-size=\"14\" font-family=\"system-ui, sans-serif\">---- ━━━ FORMAT 12: CONCEPTUAL DIAGRAM ━━━ Three-dimensional conceptual </text><rect x=\"44\" y=\"138\" width=\"672\" height=\"42\" rx=\"8\" fill=\"#181C24\" stroke=\"#2A3140\" /><circle cx=\"66\" cy=\"159\" r=\"5\" fill=\"#E5954A\" /><text x=\"84\" y=\"164\" fill=\"#F4F1EA\" font-size=\"14\" font-family=\"system-ui, sans-serif\">Map view shows distributary channels and bays; block sides show progradi</text><rect x=\"44\" y=\"192\" width=\"672\" height=\"42\" rx=\"8\" fill=\"#181C24\" stroke=\"#2A3140\" /><circle cx=\"66\" cy=\"213\" r=\"5\" fill=\"#D97736\" /><text x=\"84\" y=\"218\" fill=\"#F4F1EA\" font-size=\"14\" font-family=\"system-ui, sans-serif\">North arrow points toward the upper part of the image; horizontal scale </text></svg>",
+        "legend_items": [],
+        "scale_and_units": "",
+        "provenance_note": ""
+      },
+      "video_url": null,
+      "video_vtt_url": null,
+      "video_aspect": null,
+      "media_passport_id": null,
+      "ocr_corrections_applied": [],
+      "practicum": null,
+      "data_decision_card": null
+    },
+    {
+      "step_id": "slatt_ch9_step_03",
+      "node_id": "slatt_ch9_node_03",
+      "order": 3,
+      "estimated_minutes": 8,
+      "difficulty_codes": [
+        "М",
+        "П"
+      ],
+      "source_heading": "§9.3–9.4: River-Dominated Delta Deposits (стр. 410–423) (стр. 418–421)",
+      "step_title": "Chapter | 9 Deltaic Deposits and",
+      "summary_2_3_sentences": "Chapter | 9 Deltaic Deposits and Reservoirs 417 ---- ━━━ FORMAT 4: CROSS-SECTION / РАЗРЕЗ ━━━ Верхний корреляционный разрез: North–South. Горизонтальный масштаб: 2 miles.",
+      "explanation_paragraphs": [
+        {
+          "role": "Физико-геологический механизм",
+          "text": "Chapter | 9 Deltaic Deposits and Reservoirs 417 ---- ━━━ FORMAT 4: CROSS-SECTION / РАЗРЕЗ ━━━ Верхний корреляционный разрез: North–South.",
+          "unit_id": "test_slatt_p418_u03_01",
+          "pdf_page": 418,
+          "printed_page": "418",
+          "source_citation": "Источник: PDF стр. 418 (печ. стр. 418), ед. test_slatt_p418_u03_01",
+          "verbatim_quote": "Chapter | 9 Deltaic Deposits and Reservoirs 417 ---- ━━━ FORMAT 4: CROSS-SECTION / РАЗРЕЗ ━━━ Верхний корреляционный разрез: North–South."
+        },
+        {
+          "role": "Практика работы специалиста",
+          "text": "Горизонтальный масштаб: 2 miles.",
+          "unit_id": "test_slatt_p418_u03_02",
+          "pdf_page": 418,
+          "printed_page": "418",
+          "source_citation": "Источник: PDF стр. 418",
+          "verbatim_quote": "Горизонтальный масштаб: 2 miles."
+        },
+        {
+          "role": "Пороговая идея и перенос в данные",
+          "text": "Shale Перенос в данные: Применение принципов со стр. 418–421 на практических данных.",
+          "unit_id": "test_slatt_p418_u03_01",
+          "pdf_page": 418,
+          "printed_page": "418",
+          "source_citation": "Источник: PDF стр. 418 (печ. стр. 418)",
+          "verbatim_quote": "Chapter | 9 Deltaic Deposits and Reservoirs 417 ---- ━━━ FORMAT 4: CROSS-SECTION / РАЗРЕЗ ━━━ Верхний корреляционный разрез: North–South."
+        }
+      ],
+      "first_use_terms": [
+        {
+          "term": "Shale",
+          "definition": "светло-бежевый — Silty Shale",
+          "first_introduced_pdf_page": 418,
+          "first_introduced_printed_page": "418",
+          "cis_symbol": "—",
+          "west_symbol": "—",
+          "west_term": "Термин источника",
+          "unit": "б/р"
+        },
+        {
+          "term": "Shaly Siltstone",
+          "definition": "оранжевый — Siltstone",
+          "first_introduced_pdf_page": 418,
+          "first_introduced_printed_page": "418",
+          "cis_symbol": "—",
+          "west_symbol": "—",
+          "west_term": "Термин источника",
+          "unit": "б/р"
+        },
+        {
+          "term": "Sandstone",
+          "definition": "красный — Conglomerate",
+          "first_introduced_pdf_page": 418,
+          "first_introduced_printed_page": "418",
+          "cis_symbol": "—",
+          "west_symbol": "—",
+          "west_term": "Термин источника",
+          "unit": "б/р"
+        }
+      ],
+      "formulas_decoded": [],
+      "applicability_conditions": [
+        "Вертикальное преувеличение: V.E. = 74x."
+      ],
+      "worked_example": {
+        "status": "present",
+        "not_applicable_reason": "",
+        "problem_number": "",
+        "figure_ref": "",
+        "pdf_page": 418,
+        "printed_page": "418",
+        "conditions": "Вертикальная шкала/единицы не указаны; направление вертикальной оси не подписано.",
+        "steps": [
+          "Chapter | 9 Deltaic Deposits and Reservoirs 417 ---- ━━━ FORMAT 4: CROSS-SECTION / РАЗРЕЗ ━━━ Верхний корреляционный разрез: North–South."
+        ],
+        "result": "Горизонтальный масштаб: 2 miles."
+      },
+      "textbook_problems": [],
+      "tables": [
+        {
+          "title": "Сводная таблица параметров и терминологического моста (Шаг 3)",
+          "headers": [
+            "Параметр / Термин",
+            "Обозначение СНГ",
+            "Международный аналог (West)",
+            "Единицы",
+            "Определение и страница источника"
+          ],
+          "rows": [
+            [
+              "Shale",
+              "—",
+              "— (Термин источника)",
+              "б/р",
+              "светло-бежевый — Silty Shale [стр. 418]"
+            ],
+            [
+              "Shaly Siltstone",
+              "—",
+              "— (Термин источника)",
+              "б/р",
+              "оранжевый — Siltstone [стр. 418]"
+            ],
+            [
+              "Sandstone",
+              "—",
+              "— (Термин источника)",
+              "б/р",
+              "красный — Conglomerate [стр. 418]"
+            ]
+          ]
+        }
+      ],
+      "modern_context": [
+        {
+          "historical_item": "§9.3–9.4: River-Dominated Delta Deposits (стр. 410–423)",
+          "historical_context": "Источник (стр. 418–421)",
+          "modern_analog": "Цифровая интерпретация и моделирование",
+          "modern_context": "Современная инженерная практика",
+          "pdf_page": 418
+        }
+      ],
+      "it_analogy_and_limits": "Учебный узел привязан к меткам <!-- page N --> исходного md-файла.",
+      "typical_error": "Не отрывайте расчётные оценки и эмпирические правила от условий их применимости.",
+      "epistemic_split": {
+        "observation": "Chapter | 9 Deltaic Deposits and Reservoirs 417 ---- ━━━ FORMAT 4: CROSS-SECTION / РАЗРЕЗ ━━━ Верхний корреляционный разрез: North–South.",
+        "inference": "Горизонтальный масштаб: 2 miles.",
+        "assumption": "Выводы справедливы в границах допущений источника (стр. 418–421)."
+      },
+      "specialist_manual_steps": [],
+      "decision_points": [],
+      "inefficiency_lens": null,
+      "deeper_branch": "Сопоставьте с соседними разделами главы (§9.3–9.4: River-Dominated Delta Deposits (стр. 410–423)).",
+      "illustration": {
+        "illustration_id": "test_slatt_step_03_illust",
+        "node_id": "slatt_ch9_node_03",
+        "step_id": "test_slatt_step_03",
+        "title": "Chapter | 9 Deltaic Deposits and",
+        "visual_class": "C",
+        "format_kind": "redraw_svg",
+        "source_ref": "test_slatt.md, стр. 418–421 (<!-- page 418 -->)",
+        "redraw_caption": "Схема по меткам <!-- page 418..421 -->",
+        "pdf_page": 418,
+        "printed_page": "418",
+        "claim_id": "slatt_ch9_node_03_claim_01",
+        "asset_rel_path": "illustrations/test_slatt_step_03_illust.svg",
+        "svg_markup": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 760 290\" role=\"img\" aria-label=\"Схема шага: Chapter | 9 Deltaic Deposits and\"><rect width=\"760\" height=\"290\" rx=\"14\" fill=\"#11141B\" /><path d=\"M0 245 Q190 225 380 245 T760 240 L760 290 L0 290 Z\" fill=\"#1A202B\" /><path d=\"M0 264 Q220 250 440 266 T760 258 L760 290 L0 290 Z\" fill=\"#232A38\" /><text x=\"44\" y=\"42\" fill=\"#D97736\" font-size=\"13\" font-weight=\"600\" font-family=\"system-ui, sans-serif\">Схема по источнику · стр. 418–421</text><text x=\"44\" y=\"68\" fill=\"#F4F1EA\" font-size=\"18\" font-weight=\"700\" font-family=\"system-ui, sans-serif\">Chapter | 9 Deltaic Deposits and</text><rect x=\"44\" y=\"84\" width=\"672\" height=\"42\" rx=\"8\" fill=\"#181C24\" stroke=\"#2A3140\" /><circle cx=\"66\" cy=\"105\" r=\"5\" fill=\"#E5954A\" /><text x=\"84\" y=\"110\" fill=\"#F4F1EA\" font-size=\"14\" font-family=\"system-ui, sans-serif\">Chapter | 9 Deltaic Deposits and Reservoirs 417 ---- ━━━ FORMAT 4: CROSS</text><rect x=\"44\" y=\"138\" width=\"672\" height=\"42\" rx=\"8\" fill=\"#181C24\" stroke=\"#2A3140\" /><circle cx=\"66\" cy=\"159\" r=\"5\" fill=\"#D97736\" /><text x=\"84\" y=\"164\" fill=\"#F4F1EA\" font-size=\"14\" font-family=\"system-ui, sans-serif\">Горизонтальный масштаб: 2 miles.</text><rect x=\"44\" y=\"192\" width=\"672\" height=\"42\" rx=\"8\" fill=\"#181C24\" stroke=\"#2A3140\" /><circle cx=\"66\" cy=\"213\" r=\"5\" fill=\"#38BDF8\" /><text x=\"84\" y=\"218\" fill=\"#F4F1EA\" font-size=\"14\" font-family=\"system-ui, sans-serif\">Вертикальное преувеличение: V.E. = 74x.</text></svg>",
+        "legend_items": [],
+        "scale_and_units": "",
+        "provenance_note": ""
+      },
+      "video_url": null,
+      "video_vtt_url": null,
+      "video_aspect": null,
+      "media_passport_id": null,
+      "ocr_corrections_applied": [],
+      "practicum": null,
+      "data_decision_card": null
+    },
+    {
+      "step_id": "slatt_ch9_step_04",
+      "node_id": "slatt_ch9_node_04",
+      "order": 4,
+      "estimated_minutes": 8,
+      "difficulty_codes": [
+        "М",
+        "П"
+      ],
+      "source_heading": "§9.3–9.4: River-Dominated Delta Deposits (стр. 410–423) (стр. 422–423)",
+      "step_title": "Chapter | 9 Deltaic Deposits and",
+      "summary_2_3_sentences": "Chapter | 9 Deltaic Deposits and Reservoirs 421 ---- ━━━ FORMAT 4: CROSS-SECTION / РАЗРЕЗ ━━━ (a) Southwest–Northeast correlation section. Vertical scale: depth; numerical labels 8500, 8600, 8700 at left and 8400, 8500, 8600 at right.",
+      "explanation_paragraphs": [
+        {
+          "role": "Физико-геологический механизм",
+          "text": "Chapter | 9 Deltaic Deposits and Reservoirs 421 ---- ━━━ FORMAT 4: CROSS-SECTION / РАЗРЕЗ ━━━ (a) Southwest–Northeast correlation section.",
+          "unit_id": "test_slatt_p422_u04_01",
+          "pdf_page": 422,
+          "printed_page": "422",
+          "source_citation": "Источник: PDF стр. 422 (печ. стр. 422), ед. test_slatt_p422_u04_01",
+          "verbatim_quote": "Chapter | 9 Deltaic Deposits and Reservoirs 421 ---- ━━━ FORMAT 4: CROSS-SECTION / РАЗРЕЗ ━━━ (a) Southwest–Northeast correlation section."
+        },
+        {
+          "role": "Практика работы специалиста",
+          "text": "Vertical scale: depth; numerical labels 8500, 8600, 8700 at left and 8400, 8500, 8600 at right.",
+          "unit_id": "test_slatt_p422_u04_02",
+          "pdf_page": 422,
+          "printed_page": "422",
+          "source_citation": "Источник: PDF стр. 422",
+          "verbatim_quote": "Vertical scale: depth; numerical labels 8500, 8600, 8700 at left and 8400, 8500, 8600 at right."
+        },
+        {
+          "role": "Пороговая идея и перенос в данные",
+          "text": "Разрез Перенос в данные: Применение принципов со стр. 422–423 на практических данных.",
+          "unit_id": "test_slatt_p422_u04_01",
+          "pdf_page": 422,
+          "printed_page": "422",
+          "source_citation": "Источник: PDF стр. 422 (печ. стр. 422)",
+          "verbatim_quote": "Chapter | 9 Deltaic Deposits and Reservoirs 421 ---- ━━━ FORMAT 4: CROSS-SECTION / РАЗРЕЗ ━━━ (a) Southwest–Northeast correlation section."
+        }
+      ],
+      "first_use_terms": [
+        {
+          "term": "Разрез",
+          "definition": "Ключевой термин, встречающийся в тексте главы на стр. 422.",
+          "first_introduced_pdf_page": 422,
+          "first_introduced_printed_page": "422",
+          "cis_symbol": "—",
+          "west_symbol": "—",
+          "west_term": "Ключевое понятие главы",
+          "unit": "б/р"
+        },
+        {
+          "term": "Концептуальная",
+          "definition": "Ключевой термин, встречающийся в тексте главы на стр. 422.",
+          "first_introduced_pdf_page": 422,
+          "first_introduced_printed_page": "422",
+          "cis_symbol": "—",
+          "west_symbol": "—",
+          "west_term": "Ключевое понятие главы",
+          "unit": "б/р"
+        }
+      ],
+      "formulas_decoded": [],
+      "applicability_conditions": [
+        "Wells, from southwest to northeast: 1."
+      ],
+      "worked_example": {
+        "status": "present",
+        "not_applicable_reason": "",
+        "problem_number": "",
+        "figure_ref": "",
+        "pdf_page": 422,
+        "printed_page": "422",
+        "conditions": "11-23 Lithologic/depositional units shown by colour: - yellow-orange — Fluvial/Crevasse Splay; - bright yellow — Floodplain; - yellow — Distributary Channel; - orange — Distributary Mouth Bar; - pale beige — Bay; - light yellow — Shelf, Prodelta, & Delta Front.",
+        "steps": [
+          "Chapter | 9 Deltaic Deposits and Reservoirs 421 ---- ━━━ FORMAT 4: CROSS-SECTION / РАЗРЕЗ ━━━ (a) Southwest–Northeast correlation section."
+        ],
+        "result": "Vertical scale: depth; numerical labels 8500, 8600, 8700 at left and 8400, 8500, 8600 at right."
+      },
+      "textbook_problems": [],
+      "tables": [
+        {
+          "title": "Сводная таблица параметров и терминологического моста (Шаг 4)",
+          "headers": [
+            "Параметр / Термин",
+            "Обозначение СНГ",
+            "Международный аналог (West)",
+            "Единицы",
+            "Определение и страница источника"
+          ],
+          "rows": [
+            [
+              "Разрез",
+              "—",
+              "— (Ключевое понятие главы)",
+              "б/р",
+              "Ключевой термин, встречающийся в тексте главы на стр. 422. [стр. 422]"
+            ],
+            [
+              "Концептуальная",
+              "—",
+              "— (Ключевое понятие главы)",
+              "б/р",
+              "Ключевой термин, встречающийся в тексте главы на стр. 422. [стр. 422]"
+            ]
+          ]
+        }
+      ],
+      "modern_context": [
+        {
+          "historical_item": "§9.3–9.4: River-Dominated Delta Deposits (стр. 410–423)",
+          "historical_context": "Источник (стр. 422–423)",
+          "modern_analog": "Цифровая интерпретация и моделирование",
+          "modern_context": "Современная инженерная практика",
+          "pdf_page": 422
+        }
+      ],
+      "it_analogy_and_limits": "Учебный узел привязан к меткам <!-- page N --> исходного md-файла.",
+      "typical_error": "Не отрывайте расчётные оценки и эмпирические правила от условий их применимости.",
+      "epistemic_split": {
+        "observation": "Chapter | 9 Deltaic Deposits and Reservoirs 421 ---- ━━━ FORMAT 4: CROSS-SECTION / РАЗРЕЗ ━━━ (a) Southwest–Northeast correlation section.",
+        "inference": "Vertical scale: depth; numerical labels 8500, 8600, 8700 at left and 8400, 8500, 8600 at right.",
+        "assumption": "Выводы справедливы в границах допущений источника (стр. 422–423)."
+      },
+      "specialist_manual_steps": [],
+      "decision_points": [],
+      "inefficiency_lens": null,
+      "deeper_branch": "Сопоставьте с соседними разделами главы (§9.3–9.4: River-Dominated Delta Deposits (стр. 410–423)).",
+      "illustration": {
+        "illustration_id": "test_slatt_step_04_illust",
+        "node_id": "slatt_ch9_node_04",
+        "step_id": "test_slatt_step_04",
+        "title": "Chapter | 9 Deltaic Deposits and",
+        "visual_class": "C",
+        "format_kind": "redraw_svg",
+        "source_ref": "test_slatt.md, стр. 422–423 (<!-- page 422 -->)",
+        "redraw_caption": "Схема по меткам <!-- page 422..423 -->",
+        "pdf_page": 422,
+        "printed_page": "422",
+        "claim_id": "slatt_ch9_node_04_claim_01",
+        "asset_rel_path": "illustrations/test_slatt_step_04_illust.svg",
+        "svg_markup": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 760 290\" role=\"img\" aria-label=\"Схема шага: Chapter | 9 Deltaic Deposits and\"><rect width=\"760\" height=\"290\" rx=\"14\" fill=\"#11141B\" /><path d=\"M0 245 Q190 225 380 245 T760 240 L760 290 L0 290 Z\" fill=\"#1A202B\" /><path d=\"M0 264 Q220 250 440 266 T760 258 L760 290 L0 290 Z\" fill=\"#232A38\" /><text x=\"44\" y=\"42\" fill=\"#D97736\" font-size=\"13\" font-weight=\"600\" font-family=\"system-ui, sans-serif\">Схема по источнику · стр. 422–423</text><text x=\"44\" y=\"68\" fill=\"#F4F1EA\" font-size=\"18\" font-weight=\"700\" font-family=\"system-ui, sans-serif\">Chapter | 9 Deltaic Deposits and</text><rect x=\"44\" y=\"84\" width=\"672\" height=\"42\" rx=\"8\" fill=\"#181C24\" stroke=\"#2A3140\" /><circle cx=\"66\" cy=\"105\" r=\"5\" fill=\"#D97736\" /><text x=\"84\" y=\"110\" fill=\"#F4F1EA\" font-size=\"14\" font-family=\"system-ui, sans-serif\">Chapter | 9 Deltaic Deposits and Reservoirs 421 ---- ━━━ FORMAT 4: CROSS</text><rect x=\"44\" y=\"138\" width=\"672\" height=\"42\" rx=\"8\" fill=\"#181C24\" stroke=\"#2A3140\" /><circle cx=\"66\" cy=\"159\" r=\"5\" fill=\"#38BDF8\" /><text x=\"84\" y=\"164\" fill=\"#F4F1EA\" font-size=\"14\" font-family=\"system-ui, sans-serif\">Vertical scale: depth; numerical labels 8500, 8600, 8700 at left and 840</text><rect x=\"44\" y=\"192\" width=\"672\" height=\"42\" rx=\"8\" fill=\"#181C24\" stroke=\"#2A3140\" /><circle cx=\"66\" cy=\"213\" r=\"5\" fill=\"#10B981\" /><text x=\"84\" y=\"218\" fill=\"#F4F1EA\" font-size=\"14\" font-family=\"system-ui, sans-serif\">Wells, from southwest to northeast: 1.</text></svg>",
+        "legend_items": [],
+        "scale_and_units": "",
+        "provenance_note": ""
+      },
+      "video_url": null,
+      "video_vtt_url": null,
+      "video_aspect": null,
+      "media_passport_id": null,
+      "ocr_corrections_applied": [],
+      "practicum": null,
+      "data_decision_card": null
+    }
+  ],
+  "tasks": [
+    {
+      "task_id": "test_slatt_task_01",
+      "course_id": "test_slatt",
+      "node_id": "slatt_ch9_node_01",
+      "step_id": "test_slatt_step_01",
+      "claim_id": "slatt_ch9_node_01_claim_01",
+      "pdf_page": 410,
+      "printed_page": "410",
+      "task_type": "single_choice",
+      "difficulty_level": "базовый",
+      "prompt": "Какое утверждение точно соответствует тексту главы на стр. 410?",
+      "case_observation": "",
+      "case_rule": "",
+      "case_conclusion": "",
+      "options": [
+        "Верно по источнику (стр. 410): Chapter | 9 Deltaic Deposits and Reservoirs 409 It is important for proper subsurface correlations to understand that clinoforms, which",
+        "Противоречит тексту: The hypothetical example in Fig.",
+        "Не подтверждается на стр. 410: 410 Stratigraphic Reservoir Characterization for Petroleum Geologists 9.4 RIVER-DOMINATED DELTA DEPOSITS AND RESERVOIRS "
+      ],
+      "ordering_items": [],
+      "matching_pairs": [],
+      "blank_acceptable_answers": [],
+      "calculation_unit": "",
+      "calculation_tolerance": 0.05,
+      "correct_answer": 0,
+      "answer_key_display": "Верно по источнику (стр. 410): Chapter | 9 Deltaic Deposits and Reservoirs 409 It is important for proper subsurface correlations to understand that clinoforms, which",
+      "explanation": "Подтверждено цитатой со стр. 410: «Chapter | 9 Deltaic Deposits and Reservoirs 409 It is important for proper subsurface correlations to understand that clinoforms, which represent geological tim».",
+      "error_analysis": {},
+      "hint_steps": [],
+      "source_ref": "test_slatt.md, стр. 410",
+      "verbatim_quote": "Chapter | 9 Deltaic Deposits and Reservoirs 409 It is important for proper subsurface correlations to understand that clinoforms, which represent geological time lines, crosscut lithostratigraphic boundaries."
+    },
+    {
+      "task_id": "test_slatt_task_02",
+      "course_id": "test_slatt",
+      "node_id": "slatt_ch9_node_01",
+      "step_id": "test_slatt_step_01",
+      "claim_id": "slatt_ch9_node_01_claim_02",
+      "pdf_page": 410,
+      "printed_page": "410",
+      "task_type": "single_choice",
+      "difficulty_level": "базовый",
+      "prompt": "Какое утверждение точно соответствует тексту главы на стр. 410?",
+      "case_observation": "",
+      "case_rule": "",
+      "case_conclusion": "",
+      "options": [
+        "Верно по источнику (стр. 410): The hypothetical example in Fig.",
+        "Противоречит тексту: Chapter | 9 Deltaic Deposits and Reservoirs 409 It is important for proper subsurface correlations to understand that cl",
+        "Не подтверждается на стр. 410: 410 Stratigraphic Reservoir Characterization for Petroleum Geologists 9.4 RIVER-DOMINATED DELTA DEPOSITS AND RESERVOIRS "
+      ],
+      "ordering_items": [],
+      "matching_pairs": [],
+      "blank_acceptable_answers": [],
+      "calculation_unit": "",
+      "calculation_tolerance": 0.05,
+      "correct_answer": 0,
+      "answer_key_display": "Верно по источнику (стр. 410): The hypothetical example in Fig.",
+      "explanation": "Подтверждено цитатой со стр. 410: «The hypothetical example in Fig.».",
+      "error_analysis": {},
+      "hint_steps": [],
+      "source_ref": "test_slatt.md, стр. 410",
+      "verbatim_quote": "The hypothetical example in Fig."
+    },
+    {
+      "task_id": "test_slatt_task_03",
+      "course_id": "test_slatt",
+      "node_id": "slatt_ch9_node_01",
+      "step_id": "test_slatt_step_01",
+      "claim_id": "slatt_ch9_node_01_claim_03",
+      "pdf_page": 411,
+      "printed_page": "411",
+      "task_type": "single_choice",
+      "difficulty_level": "базовый",
+      "prompt": "Какое утверждение точно соответствует тексту главы на стр. 411?",
+      "case_observation": "",
+      "case_rule": "",
+      "case_conclusion": "",
+      "options": [
+        "Верно по источнику (стр. 411): 410 Stratigraphic Reservoir Characterization for Petroleum Geologists 9.4 RIVER-DOMINATED DELTA DEPOSITS AND RESERVOIRS 9.4.1 Processes",
+        "Противоречит тексту: Chapter | 9 Deltaic Deposits and Reservoirs 409 It is important for proper subsurface correlations to understand that cl",
+        "Не подтверждается на стр. 411: The hypothetical example in Fig."
+      ],
+      "ordering_items": [],
+      "matching_pairs": [],
+      "blank_acceptable_answers": [],
+      "calculation_unit": "",
+      "calculation_tolerance": 0.05,
+      "correct_answer": 0,
+      "answer_key_display": "Верно по источнику (стр. 411): 410 Stratigraphic Reservoir Characterization for Petroleum Geologists 9.4 RIVER-DOMINATED DELTA DEPOSITS AND RESERVOIRS 9.4.1 Processes",
+      "explanation": "Подтверждено цитатой со стр. 411: «410 Stratigraphic Reservoir Characterization for Petroleum Geologists 9.4 RIVER-DOMINATED DELTA DEPOSITS AND RESERVOIRS 9.4.1 Processes and Deposits The Mississ».",
+      "error_analysis": {},
+      "hint_steps": [],
+      "source_ref": "test_slatt.md, стр. 411",
+      "verbatim_quote": "410 Stratigraphic Reservoir Characterization for Petroleum Geologists 9.4 RIVER-DOMINATED DELTA DEPOSITS AND RESERVOIRS 9.4.1 Processes and Deposits The Mississippi River Delta (Fig."
+    },
+    {
+      "task_id": "test_slatt_task_04",
+      "course_id": "test_slatt",
+      "node_id": "slatt_ch9_node_01",
+      "step_id": "test_slatt_step_01",
+      "claim_id": "slatt_ch9_node_01_claim_04",
+      "pdf_page": 411,
+      "printed_page": "411",
+      "task_type": "single_choice",
+      "difficulty_level": "базовый",
+      "prompt": "Какое утверждение точно соответствует тексту главы на стр. 411?",
+      "case_observation": "",
+      "case_rule": "",
+      "case_conclusion": "",
+      "options": [
+        "Верно по источнику (стр. 411): 9.13) has long been considered the “type” river-dominated delta (Fig.",
+        "Противоречит тексту: Chapter | 9 Deltaic Deposits and Reservoirs 409 It is important for proper subsurface correlations to understand that cl",
+        "Не подтверждается на стр. 411: The hypothetical example in Fig."
+      ],
+      "ordering_items": [],
+      "matching_pairs": [],
+      "blank_acceptable_answers": [],
+      "calculation_unit": "",
+      "calculation_tolerance": 0.05,
+      "correct_answer": 0,
+      "answer_key_display": "Верно по источнику (стр. 411): 9.13) has long been considered the “type” river-dominated delta (Fig.",
+      "explanation": "Подтверждено цитатой со стр. 411: «9.13) has long been considered the “type” river-dominated delta (Fig.».",
+      "error_analysis": {},
+      "hint_steps": [],
+      "source_ref": "test_slatt.md, стр. 411",
+      "verbatim_quote": "9.13) has long been considered the “type” river-dominated delta (Fig."
+    },
+    {
+      "task_id": "test_slatt_task_05",
+      "course_id": "test_slatt",
+      "node_id": "slatt_ch9_node_01",
+      "step_id": "test_slatt_step_01",
+      "claim_id": "slatt_ch9_node_01_claim_05",
+      "pdf_page": 412,
+      "printed_page": "412",
+      "task_type": "single_choice",
+      "difficulty_level": "базовый",
+      "prompt": "Какое утверждение точно соответствует тексту главы на стр. 412?",
+      "case_observation": "",
+      "case_rule": "",
+      "case_conclusion": "",
+      "options": [
+        "Верно по источнику (стр. 412): Chapter | 9 Deltaic Deposits and Reservoirs 411 ---- ━━━ FORMAT 4: CROSS-SECTION / РАЗРЕЗ ━━━ (b) Orientation: Inland delta plain (left",
+        "Противоречит тексту: Chapter | 9 Deltaic Deposits and Reservoirs 409 It is important for proper subsurface correlations to understand that cl",
+        "Не подтверждается на стр. 412: The hypothetical example in Fig."
+      ],
+      "ordering_items": [],
+      "matching_pairs": [],
+      "blank_acceptable_answers": [],
+      "calculation_unit": "",
+      "calculation_tolerance": 0.05,
+      "correct_answer": 0,
+      "answer_key_display": "Верно по источнику (стр. 412): Chapter | 9 Deltaic Deposits and Reservoirs 411 ---- ━━━ FORMAT 4: CROSS-SECTION / РАЗРЕЗ ━━━ (b) Orientation: Inland delta plain (left",
+      "explanation": "Подтверждено цитатой со стр. 412: «Chapter | 9 Deltaic Deposits and Reservoirs 411 ---- ━━━ FORMAT 4: CROSS-SECTION / РАЗРЕЗ ━━━ (b) Orientation: Inland delta plain (left) → South China Sea (righ».",
+      "error_analysis": {},
+      "hint_steps": [],
+      "source_ref": "test_slatt.md, стр. 412",
+      "verbatim_quote": "Chapter | 9 Deltaic Deposits and Reservoirs 411 ---- ━━━ FORMAT 4: CROSS-SECTION / РАЗРЕЗ ━━━ (b) Orientation: Inland delta plain (left) → South China Sea (right)."
+    },
+    {
+      "task_id": "test_slatt_task_06",
+      "course_id": "test_slatt",
+      "node_id": "slatt_ch9_node_01",
+      "step_id": "test_slatt_step_01",
+      "claim_id": "slatt_ch9_node_01_claim_01",
+      "pdf_page": 410,
+      "printed_page": "410",
+      "task_type": "multi_select",
+      "difficulty_level": "инженерный",
+      "prompt": "Какие понятия действительно вводятся и разбираются в шаге «Chapter | 9 Deltaic Deposits and» (стр. 410)?",
+      "case_observation": "",
+      "case_rule": "",
+      "case_conclusion": "",
+      "options": [
+        "Yellow fill",
+        "Marsh",
+        "Случайный параметр вне текста главы",
+        "Выдуманная константа без источника"
+      ],
+      "ordering_items": [],
+      "matching_pairs": [],
+      "blank_acceptable_answers": [],
+      "calculation_unit": "",
+      "calculation_tolerance": 0.05,
+      "correct_answer": [
+        0,
+        1
+      ],
+      "answer_key_display": "Yellow fill, Marsh",
+      "explanation": "В шаге «Chapter | 9 Deltaic Deposits and» разбираются: Yellow fill, Marsh (стр. 410).",
+      "error_analysis": {},
+      "hint_steps": [],
+      "source_ref": "test_slatt.md, стр. 410",
+      "verbatim_quote": ""
+    },
+    {
+      "task_id": "test_slatt_task_07",
+      "course_id": "test_slatt",
+      "node_id": "slatt_ch9_node_02",
+      "step_id": "test_slatt_step_02",
+      "claim_id": "slatt_ch9_node_02_claim_01",
+      "pdf_page": 414,
+      "printed_page": "414",
+      "task_type": "multi_select",
+      "difficulty_level": "инженерный",
+      "prompt": "Какие понятия действительно вводятся и разбираются в шаге «━━━ FORMAT 12: CONCEPTUAL DIAGRAM ━━━» (стр. 414)?",
+      "case_observation": "",
+      "case_rule": "",
+      "case_conclusion": "",
+      "options": [
+        "Deep plain",
+        "Subaqueous levee",
+        "Случайный параметр вне текста главы",
+        "Выдуманная константа без источника"
+      ],
+      "ordering_items": [],
+      "matching_pairs": [],
+      "blank_acceptable_answers": [],
+      "calculation_unit": "",
+      "calculation_tolerance": 0.05,
+      "correct_answer": [
+        0,
+        1
+      ],
+      "answer_key_display": "Deep plain, Subaqueous levee",
+      "explanation": "В шаге «━━━ FORMAT 12: CONCEPTUAL DIAGRAM ━━━» разбираются: Deep plain, Subaqueous levee (стр. 414).",
+      "error_analysis": {},
+      "hint_steps": [],
+      "source_ref": "test_slatt.md, стр. 414",
+      "verbatim_quote": ""
+    },
+    {
+      "task_id": "test_slatt_task_08",
+      "course_id": "test_slatt",
+      "node_id": "slatt_ch9_node_01",
+      "step_id": "test_slatt_step_01",
+      "claim_id": "slatt_ch9_node_01_claim_01",
+      "pdf_page": 410,
+      "printed_page": "410",
+      "task_type": "ordering",
+      "difficulty_level": "инженерный",
+      "prompt": "Расположите темы загруженной главы в логической последовательности изложения:",
+      "case_observation": "",
+      "case_rule": "",
+      "case_conclusion": "",
+      "options": [],
+      "ordering_items": [
+        "Chapter | 9 Deltaic Deposits and",
+        "Chapter | 9 Deltaic Deposits and",
+        "━━━ FORMAT 12: CONCEPTUAL DIAGRAM ━━━",
+        "Chapter | 9 Deltaic Deposits and"
+      ],
+      "matching_pairs": [],
+      "blank_acceptable_answers": [],
+      "calculation_unit": "",
+      "calculation_tolerance": 0.05,
+      "correct_answer": [
+        "Chapter | 9 Deltaic Deposits and",
+        "━━━ FORMAT 12: CONCEPTUAL DIAGRAM ━━━",
+        "Chapter | 9 Deltaic Deposits and",
+        "Chapter | 9 Deltaic Deposits and"
+      ],
+      "answer_key_display": "Chapter | 9 Deltaic Deposits and → ━━━ FORMAT 12: CONCEPTUAL DIAGRAM ━━━ → Chapter | 9 Deltaic Deposits and → Chapter | 9 Deltaic Deposits and",
+      "explanation": "Исходный порядок изложения в главе: Chapter | 9 Deltaic Deposits and → ━━━ FORMAT 12: CONCEPTUAL DIAGRAM ━━━ → Chapter | 9 Deltaic Deposits and → Chapter | 9 Deltaic Deposits and.",
+      "error_analysis": {},
+      "hint_steps": [],
+      "source_ref": "test_slatt.md, стр. 410",
+      "verbatim_quote": ""
+    },
+    {
+      "task_id": "test_slatt_task_09",
+      "course_id": "test_slatt",
+      "node_id": "slatt_ch9_node_01",
+      "step_id": "test_slatt_step_01",
+      "claim_id": "slatt_ch9_node_01_claim_01",
+      "pdf_page": 410,
+      "printed_page": "410",
+      "task_type": "fill_in_blank",
+      "difficulty_level": "инженерный",
+      "prompt": "Заполните пропуск термином из главы (стр. 410): Ключевое понятие шага (стр. 410): ____ — Mouth-bar Sandstone.",
+      "case_observation": "",
+      "case_rule": "",
+      "case_conclusion": "",
+      "options": [],
+      "ordering_items": [],
+      "matching_pairs": [],
+      "blank_acceptable_answers": [
+        "Yellow fill"
+      ],
+      "calculation_unit": "",
+      "calculation_tolerance": 0.05,
+      "correct_answer": "Yellow fill",
+      "answer_key_display": "Yellow fill",
+      "explanation": "Правильный термин из текста главы: «Yellow fill» (стр. 410).",
+      "error_analysis": {},
+      "hint_steps": [],
+      "source_ref": "test_slatt.md, стр. 410",
+      "verbatim_quote": ""
+    },
+    {
+      "task_id": "test_slatt_task_10",
+      "course_id": "test_slatt",
+      "node_id": "slatt_ch9_node_02",
+      "step_id": "test_slatt_step_02",
+      "claim_id": "slatt_ch9_node_02_claim_01",
+      "pdf_page": 414,
+      "printed_page": "414",
+      "task_type": "fill_in_blank",
+      "difficulty_level": "инженерный",
+      "prompt": "Заполните пропуск термином из главы (стр. 414): Ключевое понятие шага (стр. 414): ____ — dark, nearly structureless interval.",
+      "case_observation": "",
+      "case_rule": "",
+      "case_conclusion": "",
+      "options": [],
+      "ordering_items": [],
+      "matching_pairs": [],
+      "blank_acceptable_answers": [
+        "Deep plain"
+      ],
+      "calculation_unit": "",
+      "calculation_tolerance": 0.05,
+      "correct_answer": "Deep plain",
+      "answer_key_display": "Deep plain",
+      "explanation": "Правильный термин из текста главы: «Deep plain» (стр. 414).",
+      "error_analysis": {},
+      "hint_steps": [],
+      "source_ref": "test_slatt.md, стр. 414",
+      "verbatim_quote": ""
+    }
+  ],
+  "flashcards": [
+    {
+      "card_id": "test_slatt_card_01",
+      "node_id": "slatt_ch9_node_01",
+      "step_id": "test_slatt_step_01",
+      "front_question": "Что означает понятие «Yellow fill» в контексте шага «Chapter | 9 Deltaic Deposits and»?",
+      "back_answer": "Mouth-bar Sandstone.",
+      "term_or_formula": "Yellow fill",
+      "pdf_page": 410,
+      "printed_page": "410",
+      "source_ref": "test_slatt.md, стр. 410"
+    },
+    {
+      "card_id": "test_slatt_card_02",
+      "node_id": "slatt_ch9_node_01",
+      "step_id": "test_slatt_step_01",
+      "front_question": "Что означает понятие «Marsh» в контексте шага «Chapter | 9 Deltaic Deposits and»?",
+      "back_answer": "Beach ridge, Marsh/Foreshore",
+      "term_or_formula": "Marsh",
+      "pdf_page": 410,
+      "printed_page": "410",
+      "source_ref": "test_slatt.md, стр. 410"
+    },
+    {
+      "card_id": "test_slatt_card_03",
+      "node_id": "slatt_ch9_node_01",
+      "step_id": "test_slatt_step_01",
+      "front_question": "Какой главный вывод следует из шага «Chapter | 9 Deltaic Deposits and»?",
+      "back_answer": "The hypothetical example in Fig.",
+      "term_or_formula": "Yellow fill",
+      "pdf_page": 410,
+      "printed_page": "410",
+      "source_ref": "test_slatt.md, стр. 410"
+    },
+    {
+      "card_id": "test_slatt_card_04",
+      "node_id": "slatt_ch9_node_02",
+      "step_id": "test_slatt_step_02",
+      "front_question": "Что означает понятие «Deep plain» в контексте шага «━━━ FORMAT 12: CONCEPTUAL DIAGRAM ━━━»?",
+      "back_answer": "dark, nearly structureless interval.",
+      "term_or_formula": "Deep plain",
+      "pdf_page": 414,
+      "printed_page": "414",
+      "source_ref": "test_slatt.md, стр. 414"
+    },
+    {
+      "card_id": "test_slatt_card_05",
+      "node_id": "slatt_ch9_node_02",
+      "step_id": "test_slatt_step_02",
+      "front_question": "Что означает понятие «Subaqueous levee» в контексте шага «━━━ FORMAT 12: CONCEPTUAL DIAGRAM ━━━»?",
+      "back_answer": "ripple and climbing ripple laminations.",
+      "term_or_formula": "Subaqueous levee",
+      "pdf_page": 414,
+      "printed_page": "414",
+      "source_ref": "test_slatt.md, стр. 414"
+    },
+    {
+      "card_id": "test_slatt_card_06",
+      "node_id": "slatt_ch9_node_02",
+      "step_id": "test_slatt_step_02",
+      "front_question": "Какой главный вывод следует из шага «━━━ FORMAT 12: CONCEPTUAL DIAGRAM ━━━»?",
+      "back_answer": "Map view shows distributary channels and bays; block sides show prograding sediment bodies and marine deposits.",
+      "term_or_formula": "Deep plain",
+      "pdf_page": 414,
+      "printed_page": "414",
+      "source_ref": "test_slatt.md, стр. 414"
+    },
+    {
+      "card_id": "test_slatt_card_07",
+      "node_id": "slatt_ch9_node_03",
+      "step_id": "test_slatt_step_03",
+      "front_question": "Что означает понятие «Shale» в контексте шага «Chapter | 9 Deltaic Deposits and»?",
+      "back_answer": "светло-бежевый — Silty Shale",
+      "term_or_formula": "Shale",
+      "pdf_page": 418,
+      "printed_page": "418",
+      "source_ref": "test_slatt.md, стр. 418"
+    },
+    {
+      "card_id": "test_slatt_card_08",
+      "node_id": "slatt_ch9_node_03",
+      "step_id": "test_slatt_step_03",
+      "front_question": "Что означает понятие «Shaly Siltstone» в контексте шага «Chapter | 9 Deltaic Deposits and»?",
+      "back_answer": "оранжевый — Siltstone",
+      "term_or_formula": "Shaly Siltstone",
+      "pdf_page": 418,
+      "printed_page": "418",
+      "source_ref": "test_slatt.md, стр. 418"
+    },
+    {
+      "card_id": "test_slatt_card_09",
+      "node_id": "slatt_ch9_node_03",
+      "step_id": "test_slatt_step_03",
+      "front_question": "Какой главный вывод следует из шага «Chapter | 9 Deltaic Deposits and»?",
+      "back_answer": "Горизонтальный масштаб: 2 miles.",
+      "term_or_formula": "Shale",
+      "pdf_page": 418,
+      "printed_page": "418",
+      "source_ref": "test_slatt.md, стр. 418"
+    },
+    {
+      "card_id": "test_slatt_card_10",
+      "node_id": "slatt_ch9_node_04",
+      "step_id": "test_slatt_step_04",
+      "front_question": "Что означает понятие «Разрез» в контексте шага «Chapter | 9 Deltaic Deposits and»?",
+      "back_answer": "Ключевой термин, встречающийся в тексте главы на стр. 422.",
+      "term_or_formula": "Разрез",
+      "pdf_page": 422,
+      "printed_page": "422",
+      "source_ref": "test_slatt.md, стр. 422"
+    },
+    {
+      "card_id": "test_slatt_card_11",
+      "node_id": "slatt_ch9_node_04",
+      "step_id": "test_slatt_step_04",
+      "front_question": "Что означает понятие «Концептуальная» в контексте шага «Chapter | 9 Deltaic Deposits and»?",
+      "back_answer": "Ключевой термин, встречающийся в тексте главы на стр. 422.",
+      "term_or_formula": "Концептуальная",
+      "pdf_page": 422,
+      "printed_page": "422",
+      "source_ref": "test_slatt.md, стр. 422"
+    },
+    {
+      "card_id": "test_slatt_card_12",
+      "node_id": "slatt_ch9_node_04",
+      "step_id": "test_slatt_step_04",
+      "front_question": "Какой главный вывод следует из шага «Chapter | 9 Deltaic Deposits and»?",
+      "back_answer": "Vertical scale: depth; numerical labels 8500, 8600, 8700 at left and 8400, 8500, 8600 at right.",
+      "term_or_formula": "Разрез",
+      "pdf_page": 422,
+      "printed_page": "422",
+      "source_ref": "test_slatt.md, стр. 422"
+    }
+  ],
+  "summary_notes_markdown": "# Конспект: §9.3–9.4: River-Dominated Delta Deposits (стр. 410–423)\n\n## Шаг 1. Chapter | 9 Deltaic Deposits and (стр. 410)\nChapter | 9 Deltaic Deposits and Reservoirs 409 It is important for proper subsurface correlations to understand that clinoforms, which represent geological time lines, crosscut lithostratigraphic boundaries. The hypothetical example in Fig.\n\n## Шаг 2. ━━━ FORMAT 12: CONCEPTUAL DIAGRAM ━━━ (стр. 414)\n---- ━━━ FORMAT 12: CONCEPTUAL DIAGRAM ━━━ Three-dimensional conceptual block diagram of a deltaic depositional system. Map view shows distributary channels and bays; block sides show prograding sediment bodies and marine deposits.\n\n## Шаг 3. Chapter | 9 Deltaic Deposits and (стр. 418)\nChapter | 9 Deltaic Deposits and Reservoirs 417 ---- ━━━ FORMAT 4: CROSS-SECTION / РАЗРЕЗ ━━━ Верхний корреляционный разрез: North–South. Горизонтальный масштаб: 2 miles.\n\n## Шаг 4. Chapter | 9 Deltaic Deposits and (стр. 422)\nChapter | 9 Deltaic Deposits and Reservoirs 421 ---- ━━━ FORMAT 4: CROSS-SECTION / РАЗРЕЗ ━━━ (a) Southwest–Northeast correlation section. Vertical scale: depth; numerical labels 8500, 8600, 8700 at left and 8400, 8500, 8600 at right.\n",
+  "media_passports": [],
+  "bookmark_report": {
+    "passed": true,
+    "evaluation_mode": "internal_calibration",
+    "book_file": "test_slatt.md",
+    "total_checked_objects": 22,
+    "findings": [],
+    "expert_review_queue": [],
+    "counts_by_type": {},
+    "counts_by_verdict": {}
+  },
+  "practicum": null,
+  "offline_html_url": "/outputs/test_stage/test_slatt/index.html",
+  "offline_zip_url": "/outputs/test_stage/test_slatt/test_slatt_offline.zip",
+  "offline_package_size_mb": 2.5103,
+  "offline_size_without_video_mb": 0.2393
+}

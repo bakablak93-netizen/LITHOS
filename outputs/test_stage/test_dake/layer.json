@@ -1,0 +1,724 @@
+{
+  "layer_id": "layer_test_dake",
+  "schema_version": "lithos.t3.layer.v2",
+  "book_id": "test_dake",
+  "book_file": "test_dake.md",
+  "pdf_file": "test_dake.md",
+  "source_sha256": "41394e0b1255efde527511d767b2262d8c574b2e3ea91035d2f37dfa7af28ce6",
+  "book_title": "L. P. Dake — Fundamentals of Reservoir Engineering",
+  "authors": [
+    "L. P. Dake"
+  ],
+  "chapter_id": "dake_ch5_7",
+  "chapter_title": "Chapter 5 & §7.3: Radial Flow Equation (стр. 75–79, 87–89)",
+  "is_training": true,
+  "pdf_ranges": [
+    {
+      "start_pdf_page": 75,
+      "end_pdf_page": 89,
+      "start_printed_page": "75",
+      "end_printed_page": "89",
+      "section_label": "Chapter 5 & §7.3: Radial Flow Equation (стр. 75–79, 87–89)"
+    }
+  ],
+  "nodes": [
+    {
+      "node_id": "dake_ch5_7_node_01",
+      "chapter_id": "dake_ch5_7",
+      "order": 1,
+      "order_rationale": "Последовательный разбор страниц 75–77 (по меткам <!-- page N -->).",
+      "source_heading": "Chapter 5 & §7.3: Radial Flow Equation (стр. 75–79, 87–89) (стр. 75–77)",
+      "step_title": "DARCY'S LAW AND APPLICATIONS",
+      "summary_2_3_sentences": "130 DARCY'S LAW AND APPLICATIONS 9) Amyx, J.W., Bass, D.M. and Whiting, R.L., 1960. Petroleum Reservoir Engineering — Physical Properties.",
+      "primary_difficulty": "conceptual_mechanism",
+      "secondary_difficulty": "terminology_bridge",
+      "primary_difficulty_code": "М",
+      "secondary_difficulty_code": "П",
+      "estimated_minutes": 8,
+      "mechanism": "130 DARCY'S LAW AND APPLICATIONS 9) Amyx, J.W., Bass, D.M. and Whiting, R.L., 1960.",
+      "practice": "Petroleum Reservoir Engineering — Physical Properties.",
+      "nuances": "10) Herbeck, E.F., Heintz, R.C. and Hastings, J.R., 1976.",
+      "deeper_branch": "Сопоставьте с соседними разделами главы (Chapter 5 & §7.3: Radial Flow Equation (стр. 75–79, 87–89)).",
+      "quotes_and_pages": [
+        {
+          "unit_id": "test_dake_p075_u01_01",
+          "pdf_page": 75,
+          "printed_page": "75",
+          "verbatim_quote": "130 DARCY'S LAW AND APPLICATIONS 9) Amyx, J.W., Bass, D.M. and Whiting, R.L., 1960.",
+          "editorial_paraphrase": "Положение со стр. 75 (<!-- page 75 -->): 130 DARCY'S LAW AND APPLICATIONS 9) Amyx, J.W., Bass, D.M. and Whiting, R.L., 1960.",
+          "numbers_and_units": [],
+          "conditions": []
+        },
+        {
+          "unit_id": "test_dake_p075_u01_02",
+          "pdf_page": 75,
+          "printed_page": "75",
+          "verbatim_quote": "Petroleum Reservoir Engineering — Physical Properties.",
+          "editorial_paraphrase": "Положение со стр. 75 (<!-- page 75 -->): Petroleum Reservoir Engineering — Physical Properties.",
+          "numbers_and_units": [],
+          "conditions": []
+        },
+        {
+          "unit_id": "test_dake_p076_u01_03",
+          "pdf_page": 76,
+          "printed_page": "76",
+          "verbatim_quote": "132 RADIAL DIFFERENTIAL EQUATION FOR FLUID FLOW RADIAL DIFFERENTIAL EQUATION FOR FLUID FLOW 133 c) The formation is completely saturated with a single fluid.",
+          "editorial_paraphrase": "Положение со стр. 76 (<!-- page 76 -->): 132 RADIAL DIFFERENTIAL EQUATION FOR FLUID FLOW RADIAL DIFFERENTIAL EQUATION FOR FLUID FLOW 133 c) The formation is completely saturated with a single fluid.",
+          "numbers_and_units": [],
+          "conditions": []
+        },
+        {
+          "unit_id": "test_dake_p076_u01_04",
+          "pdf_page": 76,
+          "printed_page": "76",
+          "verbatim_quote": "5.1 Radial flow of a single phase fluid in the vicinity of a producing well.",
+          "editorial_paraphrase": "Положение со стр. 76 (<!-- page 76 -->): 5.1 Radial flow of a single phase fluid in the vicinity of a producing well.",
+          "numbers_and_units": [],
+          "conditions": []
+        },
+        {
+          "unit_id": "test_dake_p077_u01_05",
+          "pdf_page": 77,
+          "printed_page": "77",
+          "verbatim_quote": "134 RADIAL DIFFERENTIAL EQUATION FOR FLUID FLOW RADIAL DIFFERENTIAL EQUATION FOR FLUID FLOW 135 a) Transient condition This condition is only applicable for a relatively short period after some pressure disturbance has been created in the reservoir.",
+          "editorial_paraphrase": "Положение со стр. 77 (<!-- page 77 -->): 134 RADIAL DIFFERENTIAL EQUATION FOR FLUID FLOW RADIAL DIFFERENTIAL EQUATION FOR FLUID FLOW 135 a) Transient condition This condition is only applicable for a relatively short period after some pressure disturbance has been created in the reservoir.",
+          "numbers_and_units": [],
+          "conditions": []
+        },
+        {
+          "unit_id": "test_dake_p077_u01_06",
+          "pdf_page": 77,
+          "printed_page": "77",
+          "verbatim_quote": "In terms of the radial flow model this disturbance would be typically caused by altering the well's production rate at $r=rw$.",
+          "editorial_paraphrase": "Положение со стр. 77 (<!-- page 77 -->): In terms of the radial flow model this disturbance would be typically caused by altering the well's production rate at $r=rw$.",
+          "numbers_and_units": [],
+          "conditions": []
+        }
+      ],
+      "epistemic_split": {
+        "observation": "130 DARCY'S LAW AND APPLICATIONS 9) Amyx, J.W., Bass, D.M. and Whiting, R.L., 1960.",
+        "inference": "Petroleum Reservoir Engineering — Physical Properties.",
+        "assumption": "Выводы справедливы в границах допущений источника (стр. 75–77)."
+      },
+      "field_provenance": {},
+      "typed_links": [],
+      "core_terms": [
+        {
+          "term": "Petroleum Reservoir Engineering",
+          "definition": "Physical Properties.",
+          "first_introduced_pdf_page": 75,
+          "first_introduced_printed_page": "75",
+          "cis_symbol": "—",
+          "west_symbol": "—",
+          "west_term": "Термин источника",
+          "unit": "б/р"
+        }
+      ],
+      "threshold_concept": "Petroleum Reservoir Engineering",
+      "misconception_to_fix": "Не отрывайте расчётные оценки и эмпирические правила от условий их применимости.",
+      "data_transfer": "Применение принципов со стр. 75–77 на практических данных.",
+      "it_analogy_and_limits": "Учебный узел привязан к меткам <!-- page N --> исходного md-файла.",
+      "specialist_manual_steps": [],
+      "decision_points": [],
+      "inefficiency_lens": null,
+      "worked_example": {
+        "status": "present",
+        "not_applicable_reason": "",
+        "problem_number": "",
+        "figure_ref": "",
+        "pdf_page": 75,
+        "printed_page": "75",
+        "conditions": "Fundamentals of Tertiary Oil Recovery.",
+        "steps": [
+          "130 DARCY'S LAW AND APPLICATIONS 9) Amyx, J.W., Bass, D.M. and Whiting, R.L., 1960."
+        ],
+        "result": "Petroleum Reservoir Engineering — Physical Properties."
+      },
+      "textbook_problems": [],
+      "modern_equivalents": [
+        {
+          "historical_item": "Chapter 5 & §7.3: Radial Flow Equation (стр. 75–79, 87–89)",
+          "historical_context": "Источник (стр. 75–77)",
+          "modern_analog": "Цифровая интерпретация и моделирование",
+          "modern_context": "Современная инженерная практика",
+          "pdf_page": 75
+        }
+      ],
+      "not_applicable_fields": [],
+      "expert_review_flags": [],
+      "covered_unit_ids": [
+        "test_dake_p075_u01_01",
+        "test_dake_p075_u01_02",
+        "test_dake_p076_u01_03",
+        "test_dake_p076_u01_04",
+        "test_dake_p077_u01_05",
+        "test_dake_p077_u01_06"
+      ],
+      "claim_ids": [
+        "dake_ch5_7_node_01_claim_01",
+        "dake_ch5_7_node_01_claim_02",
+        "dake_ch5_7_node_01_claim_03",
+        "dake_ch5_7_node_01_claim_04",
+        "dake_ch5_7_node_01_claim_05",
+        "dake_ch5_7_node_01_claim_06"
+      ],
+      "computed_values": []
+    },
+    {
+      "node_id": "dake_ch5_7_node_02",
+      "chapter_id": "dake_ch5_7",
+      "order": 2,
+      "order_rationale": "Последовательный разбор страниц 78–87 (по меткам <!-- page N -->).",
+      "source_heading": "Chapter 5 & §7.3: Radial Flow Equation (стр. 75–79, 87–89) (стр. 78–87)",
+      "step_title": "RADIAL DIFFERENTIAL EQUATION FOR FLUID FLOW",
+      "summary_2_3_sentences": "136 RADIAL DIFFERENTIAL EQUATION FOR FLUID FLOW RADIAL DIFFERENTIAL EQUATION FOR FLUID FLOW 137 Fig. The method by which the individual $\\overline{p}i$'s can be determined will be detailed in Chapter 7, sec.",
+      "primary_difficulty": "conceptual_mechanism",
+      "secondary_difficulty": "terminology_bridge",
+      "primary_difficulty_code": "М",
+      "secondary_difficulty_code": "П",
+      "estimated_minutes": 8,
+      "mechanism": "136 RADIAL DIFFERENTIAL EQUATION FOR FLUID FLOW RADIAL DIFFERENTIAL EQUATION FOR FLUID FLOW 137 Fig.",
+      "practice": "The method by which the individual $\\overline{p}i$'s can be determined will be detailed in Chapter 7, sec.",
+      "nuances": "5.4 Radial flow under steady state conditions.",
+      "deeper_branch": "Сопоставьте с соседними разделами главы (Chapter 5 & §7.3: Radial Flow Equation (стр. 75–79, 87–89)).",
+      "quotes_and_pages": [
+        {
+          "unit_id": "test_dake_p078_u02_01",
+          "pdf_page": 78,
+          "printed_page": "78",
+          "verbatim_quote": "136 RADIAL DIFFERENTIAL EQUATION FOR FLUID FLOW RADIAL DIFFERENTIAL EQUATION FOR FLUID FLOW 137 Fig.",
+          "editorial_paraphrase": "Положение со стр. 78 (<!-- page 78 -->): 136 RADIAL DIFFERENTIAL EQUATION FOR FLUID FLOW RADIAL DIFFERENTIAL EQUATION FOR FLUID FLOW 137 Fig.",
+          "numbers_and_units": [],
+          "conditions": []
+        },
+        {
+          "unit_id": "test_dake_p078_u02_02",
+          "pdf_page": 78,
+          "printed_page": "78",
+          "verbatim_quote": "The method by which the individual $\\overline{p}i$'s can be determined will be detailed in Chapter 7, sec.",
+          "editorial_paraphrase": "Положение со стр. 78 (<!-- page 78 -->): The method by which the individual $\\overline{p}i$'s can be determined will be detailed in Chapter 7, sec.",
+          "numbers_and_units": [],
+          "conditions": []
+        },
+        {
+          "unit_id": "test_dake_p079_u02_03",
+          "pdf_page": 79,
+          "printed_page": "79",
+          "verbatim_quote": "For the flow of liquids the above assumptions are quite reasonable and have been frequently applied in the past.",
+          "editorial_paraphrase": "Положение со стр. 79 (<!-- page 79 -->): For the flow of liquids the above assumptions are quite reasonable and have been frequently applied in the past.",
+          "numbers_and_units": [],
+          "conditions": []
+        },
+        {
+          "unit_id": "test_dake_p079_u02_04",
+          "pdf_page": 79,
+          "printed_page": "79",
+          "verbatim_quote": "Dranchuk and Quon$^3$, however, have shown that this simple linearization by deletion must be treated with caution and can only be applied when the product $$cp \\ll 1 \\tag{5.21}$$ This condition makes it necessary to modify the final assumption so that the compressibility is not just constant but both small and constant.",
+          "editorial_paraphrase": "Положение со стр. 79 (<!-- page 79 -->): Dranchuk and Quon$^3$, however, have shown that this simple linearization by deletion must be treated with caution and can only be applied when the product $$cp \\ll 1 \\tag{5.21}$$ This condition makes it necessary to modify the final assumption so that the compressibility is not just constant but both small and constant.",
+          "numbers_and_units": [],
+          "conditions": []
+        },
+        {
+          "unit_id": "test_dake_p087_u02_05",
+          "pdf_page": 87,
+          "printed_page": "87",
+          "verbatim_quote": "154 OILWELL TESTING OILWELL TESTING 155 The constant terminal rate solution is therefore the equation of $p{\\text{ref}}$ versus t for constant rate production for any value of the flowing time.",
+          "editorial_paraphrase": "Положение со стр. 87 (<!-- page 87 -->): 154 OILWELL TESTING OILWELL TESTING 155 The constant terminal rate solution is therefore the equation of $p{\\text{ref}}$ versus t for constant rate production for any value of the flowing time.",
+          "numbers_and_units": [],
+          "conditions": []
+        },
+        {
+          "unit_id": "test_dake_p087_u02_06",
+          "pdf_page": 87,
+          "printed_page": "87",
+          "verbatim_quote": "7.1(b), can normally be divided into three sections depending on the value of the flowing time and the geometry of the reservoir or part of the reservoir being drained by the well.",
+          "editorial_paraphrase": "Положение со стр. 87 (<!-- page 87 -->): 7.1(b), can normally be divided into three sections depending on the value of the flowing time and the geometry of the reservoir or part of the reservoir being drained by the well.",
+          "numbers_and_units": [],
+          "conditions": []
+        }
+      ],
+      "epistemic_split": {
+        "observation": "136 RADIAL DIFFERENTIAL EQUATION FOR FLUID FLOW RADIAL DIFFERENTIAL EQUATION FOR FLUID FLOW 137 Fig.",
+        "inference": "The method by which the individual $\\overline{p}i$'s can be determined will be detailed in Chapter 7, sec.",
+        "assumption": "Выводы справедливы в границах допущений источника (стр. 78–87)."
+      },
+      "field_provenance": {},
+      "typed_links": [
+        {
+          "source_node_id": "dake_ch5_7_node_01",
+          "target_node_id": "dake_ch5_7_node_02",
+          "link_type": "prerequisite",
+          "link_label_ru": "предпосылка",
+          "rationale": "Материал стр. 78–87 опирается на понятия предыдущего шага."
+        }
+      ],
+      "core_terms": [],
+      "threshold_concept": "RADIAL DIFFERENTIAL EQUATION FOR FLUID FLOW",
+      "misconception_to_fix": "Не отрывайте расчётные оценки и эмпирические правила от условий их применимости.",
+      "data_transfer": "Применение принципов со стр. 78–87 на практических данных.",
+      "it_analogy_and_limits": "Учебный узел привязан к меткам <!-- page N --> исходного md-файла.",
+      "specialist_manual_steps": [],
+      "decision_points": [],
+      "inefficiency_lens": null,
+      "worked_example": {
+        "status": "present",
+        "not_applicable_reason": "",
+        "problem_number": "",
+        "figure_ref": "",
+        "pdf_page": 78,
+        "printed_page": "78",
+        "conditions": "The steady state condition applies, after the transient period, to a well draining a cell which has a completely open outer boundary.",
+        "steps": [
+          "136 RADIAL DIFFERENTIAL EQUATION FOR FLUID FLOW RADIAL DIFFERENTIAL EQUATION FOR FLUID FLOW 137 Fig."
+        ],
+        "result": "The method by which the individual $\\overline{p}i$'s can be determined will be detailed in Chapter 7, sec."
+      },
+      "textbook_problems": [],
+      "modern_equivalents": [
+        {
+          "historical_item": "Chapter 5 & §7.3: Radial Flow Equation (стр. 75–79, 87–89)",
+          "historical_context": "Источник (стр. 78–87)",
+          "modern_analog": "Цифровая интерпретация и моделирование",
+          "modern_context": "Современная инженерная практика",
+          "pdf_page": 78
+        }
+      ],
+      "not_applicable_fields": [],
+      "expert_review_flags": [],
+      "covered_unit_ids": [
+        "test_dake_p078_u02_01",
+        "test_dake_p078_u02_02",
+        "test_dake_p079_u02_03",
+        "test_dake_p079_u02_04",
+        "test_dake_p087_u02_05",
+        "test_dake_p087_u02_06"
+      ],
+      "claim_ids": [
+        "dake_ch5_7_node_02_claim_01",
+        "dake_ch5_7_node_02_claim_02",
+        "dake_ch5_7_node_02_claim_03",
+        "dake_ch5_7_node_02_claim_04",
+        "dake_ch5_7_node_02_claim_05",
+        "dake_ch5_7_node_02_claim_06"
+      ],
+      "computed_values": []
+    },
+    {
+      "node_id": "dake_ch5_7_node_03",
+      "chapter_id": "dake_ch5_7",
+      "order": 3,
+      "order_rationale": "Последовательный разбор страниц 88–89 (по меткам <!-- page N -->).",
+      "source_heading": "Chapter 5 & §7.3: Radial Flow Equation (стр. 75–79, 87–89) (стр. 88–89)",
+      "step_title": "Разбор раздела стр. 88",
+      "summary_2_3_sentences": "The integral (7.7) $$\\int{x}^{\\infty} \\frac{e^{-s}}{s} ds = \\int{x}^{\\infty} \\frac{e^{-s}}{s} ds \\quad x = \\frac{\\phi \\mu c r^2}{4kt}$$ is a standard integral, called the exponential integral, and is denoted by ei(x). Qualitatively, the nature of this integral can be understood by considering the component parts, fig.",
+      "primary_difficulty": "conceptual_mechanism",
+      "secondary_difficulty": "terminology_bridge",
+      "primary_difficulty_code": "М",
+      "secondary_difficulty_code": "П",
+      "estimated_minutes": 8,
+      "mechanism": "The integral (7.7) $$\\int{x}^{\\infty} \\frac{e^{-s}}{s} ds = \\int{x}^{\\infty} \\frac{e^{-s}}{s} ds \\quad x = \\frac{\\phi \\mu c r^2}{4kt}$$ is a standard integral, called the exponential integral, and is denoted by ei(x).",
+      "practice": "Qualitatively, the nature of this integral can be understood by considering the component parts, fig.",
+      "nuances": "The integral of curve (c) between x and $\\infty$ will have the shape shown in fig.",
+      "deeper_branch": "Сопоставьте с соседними разделами главы (Chapter 5 & §7.3: Radial Flow Equation (стр. 75–79, 87–89)).",
+      "quotes_and_pages": [
+        {
+          "unit_id": "test_dake_p088_u03_01",
+          "pdf_page": 88,
+          "printed_page": "88",
+          "verbatim_quote": "The integral (7.7) $$\\int{x}^{\\infty} \\frac{e^{-s}}{s} ds = \\int{x}^{\\infty} \\frac{e^{-s}}{s} ds \\quad x = \\frac{\\phi \\mu c r^2}{4kt}$$ is a standard integral, called the exponential integral, and is denoted by ei(x).",
+          "editorial_paraphrase": "Положение со стр. 88 (<!-- page 88 -->): The integral (7.7) $$\\int{x}^{\\infty} \\frac{e^{-s}}{s} ds = \\int{x}^{\\infty} \\frac{e^{-s}}{s} ds \\quad x = \\frac{\\phi \\mu c r^2}{4kt}$$ is a standard integral, called the exponential integral, and is denoted by ei(x).",
+          "numbers_and_units": [],
+          "conditions": []
+        },
+        {
+          "unit_id": "test_dake_p088_u03_02",
+          "pdf_page": 88,
+          "printed_page": "88",
+          "verbatim_quote": "Qualitatively, the nature of this integral can be understood by considering the component parts, fig.",
+          "editorial_paraphrase": "Положение со стр. 88 (<!-- page 88 -->): Qualitatively, the nature of this integral can be understood by considering the component parts, fig.",
+          "numbers_and_units": [],
+          "conditions": []
+        },
+        {
+          "unit_id": "test_dake_p089_u03_03",
+          "pdf_page": 89,
+          "printed_page": "89",
+          "verbatim_quote": "158 OILWELL TESTING OILWELL TESTING 159 ---- ━━━ FORMAT 6: XY PLOT / CHART WITH DATA ━━━ (a) Vertical axis: $e^{-s}$; scale and units not shown.",
+          "editorial_paraphrase": "Положение со стр. 89 (<!-- page 89 -->): 158 OILWELL TESTING OILWELL TESTING 159 ---- ━━━ FORMAT 6: XY PLOT / CHART WITH DATA ━━━ (a) Vertical axis: $e^{-s}$; scale and units not shown.",
+          "numbers_and_units": [],
+          "conditions": []
+        },
+        {
+          "unit_id": "test_dake_p089_u03_04",
+          "pdf_page": 89,
+          "printed_page": "89",
+          "verbatim_quote": "Horizontal axis: $s$; linear scale; range not labelled.",
+          "editorial_paraphrase": "Положение со стр. 89 (<!-- page 89 -->): Horizontal axis: $s$; linear scale; range not labelled.",
+          "numbers_and_units": [],
+          "conditions": []
+        }
+      ],
+      "epistemic_split": {
+        "observation": "The integral (7.7) $$\\int{x}^{\\infty} \\frac{e^{-s}}{s} ds = \\int{x}^{\\infty} \\frac{e^{-s}}{s} ds \\quad x = \\frac{\\phi \\mu c r^2}{4kt}$$ is a standard integral, called the exponential integral, and is denoted by ei(x).",
+        "inference": "Qualitatively, the nature of this integral can be understood by considering the component parts, fig.",
+        "assumption": "Выводы справедливы в границах допущений источника (стр. 88–89)."
+      },
+      "field_provenance": {},
+      "typed_links": [
+        {
+          "source_node_id": "dake_ch5_7_node_02",
+          "target_node_id": "dake_ch5_7_node_03",
+          "link_type": "prerequisite",
+          "link_label_ru": "предпосылка",
+          "rationale": "Материал стр. 88–89 опирается на понятия предыдущего шага."
+        }
+      ],
+      "core_terms": [
+        {
+          "term": "Графика",
+          "definition": "Ключевой термин, встречающийся в тексте главы на стр. 88.",
+          "first_introduced_pdf_page": 88,
+          "first_introduced_printed_page": "88",
+          "cis_symbol": "—",
+          "west_symbol": "—",
+          "west_term": "Ключевое понятие главы",
+          "unit": "б/р"
+        },
+        {
+          "term": "График",
+          "definition": "Ключевой термин, встречающийся в тексте главы на стр. 88.",
+          "first_introduced_pdf_page": 88,
+          "first_introduced_printed_page": "88",
+          "cis_symbol": "—",
+          "west_symbol": "—",
+          "west_term": "Ключевое понятие главы",
+          "unit": "б/р"
+        }
+      ],
+      "threshold_concept": "Графика",
+      "misconception_to_fix": "Не отрывайте расчётные оценки и эмпирические правила от условий их применимости.",
+      "data_transfer": "Применение принципов со стр. 88–89 на практических данных.",
+      "it_analogy_and_limits": "Учебный узел привязан к меткам <!-- page N --> исходного md-файла.",
+      "specialist_manual_steps": [],
+      "decision_points": [],
+      "inefficiency_lens": null,
+      "worked_example": {
+        "status": "present",
+        "not_applicable_reason": "",
+        "problem_number": "",
+        "figure_ref": "",
+        "pdf_page": 88,
+        "printed_page": "88",
+        "conditions": "Thus ei (x) is large for small values of x, since the ei-function is the area under the graph from the particular value of x out to infinity (i.e. the shaded area in curve (c) of fig.",
+        "steps": [
+          "The integral (7.7) $$\\int{x}^{\\infty} \\frac{e^{-s}}{s} ds = \\int{x}^{\\infty} \\frac{e^{-s}}{s} ds \\quad x = \\frac{\\phi \\mu c r^2}{4kt}$$ is a standard integral, called the exponenti"
+        ],
+        "result": "Qualitatively, the nature of this integral can be understood by considering the component parts, fig."
+      },
+      "textbook_problems": [],
+      "modern_equivalents": [
+        {
+          "historical_item": "Chapter 5 & §7.3: Radial Flow Equation (стр. 75–79, 87–89)",
+          "historical_context": "Источник (стр. 88–89)",
+          "modern_analog": "Цифровая интерпретация и моделирование",
+          "modern_context": "Современная инженерная практика",
+          "pdf_page": 88
+        }
+      ],
+      "not_applicable_fields": [],
+      "expert_review_flags": [],
+      "covered_unit_ids": [
+        "test_dake_p088_u03_01",
+        "test_dake_p088_u03_02",
+        "test_dake_p089_u03_03",
+        "test_dake_p089_u03_04"
+      ],
+      "claim_ids": [
+        "dake_ch5_7_node_03_claim_01",
+        "dake_ch5_7_node_03_claim_02",
+        "dake_ch5_7_node_03_claim_03",
+        "dake_ch5_7_node_03_claim_04"
+      ],
+      "computed_values": []
+    }
+  ],
+  "claims": [
+    {
+      "claim_id": "dake_ch5_7_node_01_claim_01",
+      "node_id": "dake_ch5_7_node_01",
+      "unit_id": "test_dake_p075_u01_01",
+      "pdf_page": 75,
+      "printed_page": "75",
+      "verbatim_quote": "130 DARCY'S LAW AND APPLICATIONS 9) Amyx, J.W., Bass, D.M. and Whiting, R.L., 1960.",
+      "claim_text": "130 DARCY'S LAW AND APPLICATIONS 9) Amyx, J.W., Bass, D.M. and Whiting, R.L., 1960.",
+      "epistemic_role": "observation",
+      "origin_tag": "author_number",
+      "conditions": [],
+      "numbers_and_units": [],
+      "computed_values": [],
+      "requires_expert_check": false,
+      "expert_check_reason": ""
+    },
+    {
+      "claim_id": "dake_ch5_7_node_01_claim_02",
+      "node_id": "dake_ch5_7_node_01",
+      "unit_id": "test_dake_p075_u01_02",
+      "pdf_page": 75,
+      "printed_page": "75",
+      "verbatim_quote": "Petroleum Reservoir Engineering — Physical Properties.",
+      "claim_text": "Petroleum Reservoir Engineering — Physical Properties.",
+      "epistemic_role": "interpretation",
+      "origin_tag": "author_number",
+      "conditions": [],
+      "numbers_and_units": [],
+      "computed_values": [],
+      "requires_expert_check": false,
+      "expert_check_reason": ""
+    },
+    {
+      "claim_id": "dake_ch5_7_node_01_claim_03",
+      "node_id": "dake_ch5_7_node_01",
+      "unit_id": "test_dake_p076_u01_03",
+      "pdf_page": 76,
+      "printed_page": "76",
+      "verbatim_quote": "132 RADIAL DIFFERENTIAL EQUATION FOR FLUID FLOW RADIAL DIFFERENTIAL EQUATION FOR FLUID FLOW 133 c) The formation is completely saturated with a single fluid.",
+      "claim_text": "132 RADIAL DIFFERENTIAL EQUATION FOR FLUID FLOW RADIAL DIFFERENTIAL EQUATION FOR FLUID FLOW 133 c) The formation is completely saturated with a single fluid.",
+      "epistemic_role": "observation",
+      "origin_tag": "author_number",
+      "conditions": [],
+      "numbers_and_units": [],
+      "computed_values": [],
+      "requires_expert_check": false,
+      "expert_check_reason": ""
+    },
+    {
+      "claim_id": "dake_ch5_7_node_01_claim_04",
+      "node_id": "dake_ch5_7_node_01",
+      "unit_id": "test_dake_p076_u01_04",
+      "pdf_page": 76,
+      "printed_page": "76",
+      "verbatim_quote": "5.1 Radial flow of a single phase fluid in the vicinity of a producing well.",
+      "claim_text": "5.1 Radial flow of a single phase fluid in the vicinity of a producing well.",
+      "epistemic_role": "interpretation",
+      "origin_tag": "author_number",
+      "conditions": [],
+      "numbers_and_units": [],
+      "computed_values": [],
+      "requires_expert_check": false,
+      "expert_check_reason": ""
+    },
+    {
+      "claim_id": "dake_ch5_7_node_01_claim_05",
+      "node_id": "dake_ch5_7_node_01",
+      "unit_id": "test_dake_p077_u01_05",
+      "pdf_page": 77,
+      "printed_page": "77",
+      "verbatim_quote": "134 RADIAL DIFFERENTIAL EQUATION FOR FLUID FLOW RADIAL DIFFERENTIAL EQUATION FOR FLUID FLOW 135 a) Transient condition This condition is only applicable for a relatively short period after some pressure disturbance has been created in the reservoir.",
+      "claim_text": "134 RADIAL DIFFERENTIAL EQUATION FOR FLUID FLOW RADIAL DIFFERENTIAL EQUATION FOR FLUID FLOW 135 a) Transient condition This condition is only applicable for a relatively short period after some pressure disturbance has been created in the reservoir.",
+      "epistemic_role": "observation",
+      "origin_tag": "author_number",
+      "conditions": [],
+      "numbers_and_units": [],
+      "computed_values": [],
+      "requires_expert_check": false,
+      "expert_check_reason": ""
+    },
+    {
+      "claim_id": "dake_ch5_7_node_01_claim_06",
+      "node_id": "dake_ch5_7_node_01",
+      "unit_id": "test_dake_p077_u01_06",
+      "pdf_page": 77,
+      "printed_page": "77",
+      "verbatim_quote": "In terms of the radial flow model this disturbance would be typically caused by altering the well's production rate at $r=rw$.",
+      "claim_text": "In terms of the radial flow model this disturbance would be typically caused by altering the well's production rate at $r=rw$.",
+      "epistemic_role": "interpretation",
+      "origin_tag": "author_number",
+      "conditions": [],
+      "numbers_and_units": [],
+      "computed_values": [],
+      "requires_expert_check": false,
+      "expert_check_reason": ""
+    },
+    {
+      "claim_id": "dake_ch5_7_node_02_claim_01",
+      "node_id": "dake_ch5_7_node_02",
+      "unit_id": "test_dake_p078_u02_01",
+      "pdf_page": 78,
+      "printed_page": "78",
+      "verbatim_quote": "136 RADIAL DIFFERENTIAL EQUATION FOR FLUID FLOW RADIAL DIFFERENTIAL EQUATION FOR FLUID FLOW 137 Fig.",
+      "claim_text": "136 RADIAL DIFFERENTIAL EQUATION FOR FLUID FLOW RADIAL DIFFERENTIAL EQUATION FOR FLUID FLOW 137 Fig.",
+      "epistemic_role": "observation",
+      "origin_tag": "author_number",
+      "conditions": [],
+      "numbers_and_units": [],
+      "computed_values": [],
+      "requires_expert_check": false,
+      "expert_check_reason": ""
+    },
+    {
+      "claim_id": "dake_ch5_7_node_02_claim_02",
+      "node_id": "dake_ch5_7_node_02",
+      "unit_id": "test_dake_p078_u02_02",
+      "pdf_page": 78,
+      "printed_page": "78",
+      "verbatim_quote": "The method by which the individual $\\overline{p}i$'s can be determined will be detailed in Chapter 7, sec.",
+      "claim_text": "The method by which the individual $\\overline{p}i$'s can be determined will be detailed in Chapter 7, sec.",
+      "epistemic_role": "interpretation",
+      "origin_tag": "author_number",
+      "conditions": [],
+      "numbers_and_units": [],
+      "computed_values": [],
+      "requires_expert_check": false,
+      "expert_check_reason": ""
+    },
+    {
+      "claim_id": "dake_ch5_7_node_02_claim_03",
+      "node_id": "dake_ch5_7_node_02",
+      "unit_id": "test_dake_p079_u02_03",
+      "pdf_page": 79,
+      "printed_page": "79",
+      "verbatim_quote": "For the flow of liquids the above assumptions are quite reasonable and have been frequently applied in the past.",
+      "claim_text": "For the flow of liquids the above assumptions are quite reasonable and have been frequently applied in the past.",
+      "epistemic_role": "observation",
+      "origin_tag": "author_number",
+      "conditions": [],
+      "numbers_and_units": [],
+      "computed_values": [],
+      "requires_expert_check": false,
+      "expert_check_reason": ""
+    },
+    {
+      "claim_id": "dake_ch5_7_node_02_claim_04",
+      "node_id": "dake_ch5_7_node_02",
+      "unit_id": "test_dake_p079_u02_04",
+      "pdf_page": 79,
+      "printed_page": "79",
+      "verbatim_quote": "Dranchuk and Quon$^3$, however, have shown that this simple linearization by deletion must be treated with caution and can only be applied when the product $$cp \\ll 1 \\tag{5.21}$$ This condition makes it necessary to modify the final assumption so that the compressibility is not just constant but both small and constant.",
+      "claim_text": "Dranchuk and Quon$^3$, however, have shown that this simple linearization by deletion must be treated with caution and can only be applied when the product $$cp \\ll 1 \\tag{5.21}$$ This condition makes it necessary to modify the final assumption so that the compressibility is not just constant but both small and constant.",
+      "epistemic_role": "interpretation",
+      "origin_tag": "author_number",
+      "conditions": [],
+      "numbers_and_units": [],
+      "computed_values": [],
+      "requires_expert_check": false,
+      "expert_check_reason": ""
+    },
+    {
+      "claim_id": "dake_ch5_7_node_02_claim_05",
+      "node_id": "dake_ch5_7_node_02",
+      "unit_id": "test_dake_p087_u02_05",
+      "pdf_page": 87,
+      "printed_page": "87",
+      "verbatim_quote": "154 OILWELL TESTING OILWELL TESTING 155 The constant terminal rate solution is therefore the equation of $p{\\text{ref}}$ versus t for constant rate production for any value of the flowing time.",
+      "claim_text": "154 OILWELL TESTING OILWELL TESTING 155 The constant terminal rate solution is therefore the equation of $p{\\text{ref}}$ versus t for constant rate production for any value of the flowing time.",
+      "epistemic_role": "observation",
+      "origin_tag": "author_number",
+      "conditions": [],
+      "numbers_and_units": [],
+      "computed_values": [],
+      "requires_expert_check": false,
+      "expert_check_reason": ""
+    },
+    {
+      "claim_id": "dake_ch5_7_node_02_claim_06",
+      "node_id": "dake_ch5_7_node_02",
+      "unit_id": "test_dake_p087_u02_06",
+      "pdf_page": 87,
+      "printed_page": "87",
+      "verbatim_quote": "7.1(b), can normally be divided into three sections depending on the value of the flowing time and the geometry of the reservoir or part of the reservoir being drained by the well.",
+      "claim_text": "7.1(b), can normally be divided into three sections depending on the value of the flowing time and the geometry of the reservoir or part of the reservoir being drained by the well.",
+      "epistemic_role": "interpretation",
+      "origin_tag": "author_number",
+      "conditions": [],
+      "numbers_and_units": [],
+      "computed_values": [],
+      "requires_expert_check": false,
+      "expert_check_reason": ""
+    },
+    {
+      "claim_id": "dake_ch5_7_node_03_claim_01",
+      "node_id": "dake_ch5_7_node_03",
+      "unit_id": "test_dake_p088_u03_01",
+      "pdf_page": 88,
+      "printed_page": "88",
+      "verbatim_quote": "The integral (7.7) $$\\int{x}^{\\infty} \\frac{e^{-s}}{s} ds = \\int{x}^{\\infty} \\frac{e^{-s}}{s} ds \\quad x = \\frac{\\phi \\mu c r^2}{4kt}$$ is a standard integral, called the exponential integral, and is denoted by ei(x).",
+      "claim_text": "The integral (7.7) $$\\int{x}^{\\infty} \\frac{e^{-s}}{s} ds = \\int{x}^{\\infty} \\frac{e^{-s}}{s} ds \\quad x = \\frac{\\phi \\mu c r^2}{4kt}$$ is a standard integral, called the exponential integral, and is denoted by ei(x).",
+      "epistemic_role": "observation",
+      "origin_tag": "author_number",
+      "conditions": [],
+      "numbers_and_units": [],
+      "computed_values": [],
+      "requires_expert_check": false,
+      "expert_check_reason": ""
+    },
+    {
+      "claim_id": "dake_ch5_7_node_03_claim_02",
+      "node_id": "dake_ch5_7_node_03",
+      "unit_id": "test_dake_p088_u03_02",
+      "pdf_page": 88,
+      "printed_page": "88",
+      "verbatim_quote": "Qualitatively, the nature of this integral can be understood by considering the component parts, fig.",
+      "claim_text": "Qualitatively, the nature of this integral can be understood by considering the component parts, fig.",
+      "epistemic_role": "interpretation",
+      "origin_tag": "author_number",
+      "conditions": [],
+      "numbers_and_units": [],
+      "computed_values": [],
+      "requires_expert_check": false,
+      "expert_check_reason": ""
+    },
+    {
+      "claim_id": "dake_ch5_7_node_03_claim_03",
+      "node_id": "dake_ch5_7_node_03",
+      "unit_id": "test_dake_p089_u03_03",
+      "pdf_page": 89,
+      "printed_page": "89",
+      "verbatim_quote": "158 OILWELL TESTING OILWELL TESTING 159 ---- ━━━ FORMAT 6: XY PLOT / CHART WITH DATA ━━━ (a) Vertical axis: $e^{-s}$; scale and units not shown.",
+      "claim_text": "158 OILWELL TESTING OILWELL TESTING 159 ---- ━━━ FORMAT 6: XY PLOT / CHART WITH DATA ━━━ (a) Vertical axis: $e^{-s}$; scale and units not shown.",
+      "epistemic_role": "observation",
+      "origin_tag": "author_number",
+      "conditions": [],
+      "numbers_and_units": [],
+      "computed_values": [],
+      "requires_expert_check": false,
+      "expert_check_reason": ""
+    },
+    {
+      "claim_id": "dake_ch5_7_node_03_claim_04",
+      "node_id": "dake_ch5_7_node_03",
+      "unit_id": "test_dake_p089_u03_04",
+      "pdf_page": 89,
+      "printed_page": "89",
+      "verbatim_quote": "Horizontal axis: $s$; linear scale; range not labelled.",
+      "claim_text": "Horizontal axis: $s$; linear scale; range not labelled.",
+      "epistemic_role": "interpretation",
+      "origin_tag": "author_number",
+      "conditions": [],
+      "numbers_and_units": [],
+      "computed_values": [],
+      "requires_expert_check": false,
+      "expert_check_reason": ""
+    }
+  ],
+  "coverage_map": {
+    "test_dake_p075_u01_01": "dake_ch5_7_node_01",
+    "test_dake_p075_u01_02": "dake_ch5_7_node_01",
+    "test_dake_p076_u01_03": "dake_ch5_7_node_01",
+    "test_dake_p076_u01_04": "dake_ch5_7_node_01",
+    "test_dake_p077_u01_05": "dake_ch5_7_node_01",
+    "test_dake_p077_u01_06": "dake_ch5_7_node_01",
+    "test_dake_p078_u02_01": "dake_ch5_7_node_02",
+    "test_dake_p078_u02_02": "dake_ch5_7_node_02",
+    "test_dake_p079_u02_03": "dake_ch5_7_node_02",
+    "test_dake_p079_u02_04": "dake_ch5_7_node_02",
+    "test_dake_p087_u02_05": "dake_ch5_7_node_02",
+    "test_dake_p087_u02_06": "dake_ch5_7_node_02",
+    "test_dake_p088_u03_01": "dake_ch5_7_node_03",
+    "test_dake_p088_u03_02": "dake_ch5_7_node_03",
+    "test_dake_p089_u03_03": "dake_ch5_7_node_03",
+    "test_dake_p089_u03_04": "dake_ch5_7_node_03"
+  },
+  "excluded_units": {},
+  "ocr_corrections": [],
+  "pedagogical_checks": {}
+}

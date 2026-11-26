@@ -1,0 +1,10 @@
+{
+  "passed": true,
+  "evaluation_mode": "internal_calibration",
+  "book_file": "test_dake.md",
+  "total_checked_objects": 16,
+  "findings": [],
+  "expert_review_queue": [],
+  "counts_by_type": {},
+  "counts_by_verdict": {}
+}
