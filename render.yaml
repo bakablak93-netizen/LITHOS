@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: lithos-atlas
+    runtime: docker
+    dockerfilePath: ./Dockerfile.render
+    branch: t3-submission
+    plan: free
+    healthCheckPath: /api/health
+    envVars:
+      - key: PYTHONUNBUFFERED
+        value: "1"
